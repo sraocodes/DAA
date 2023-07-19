@@ -1,0 +1,16 @@
+.site-footer {
+  background-color: #dbabab;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  top: 200px; /* assuming slider-container's height is 1000px, we add some extra space */
+}
+
+.footer-content p {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-content a {
+  color: #fff;
+}
