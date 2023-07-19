@@ -1,4 +1,4 @@
-# Phenorob Digital Agriculture Avatar Project
+# Phenorob Digital Agriculture Avatar (DAA) Project
 
 Welcome to the Phenorob Digital Agriculture Avatar (DAA) project repository! I am Dr. Sathyanarayan Rao, a scientific programmer
 at FZ Juelich, Germany. I am building a website for our project.
