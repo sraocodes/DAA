@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{ .Description }}">
+    {{ partial "head.html" . }}    
+    <!-- Adding jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+</head>
+<body>        
+    {{ partial "header.html" . }}    
+    <main>
+        <!-- Adding JavaScript for Slider -->
+         {{ $script := resources.Get "js/slider.js" }}
+         <script src="{{ $script.Permalink }}"></script> 
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+</body>
+</html>

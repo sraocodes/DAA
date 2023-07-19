@@ -1,0 +1,46 @@
+<div class="navbar">
+  <div class="logo-container">
+    <a href="{{ .Site.Data.header.logoURL }}">
+      <img src="{{ .Site.Data.header.logoImagePath | relURL }}" alt="{{ .Site.Data.header.logoAlt }}" class="logo">
+    </a>
+  </div>
+  <div class="headline-links-container">
+    <div class="headline-container">
+      <h1 class="headline">{{ .Site.Data.header.title }}</h1>
+      <h2>{{ .Site.Data.header.description }}</h2>
+    </div>
+
+    <div class="links-container">
+      <div class="dropdown">
+        <button class="dropbtn">{{ .Site.Data.header.ToolsName }} &#9662;</button>
+        <div class="dropdown-menu">
+          {{ range .Site.Data.header.ToolsDropDown }}
+            <a href="{{ .Link }}" target="_blank">{{ .Name }}</a>
+          {{ end }}
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">{{ .Site.Data.header.Link1Name }} &#9662;</button>
+        <div class="dropdown-menu">
+          {{ range .Site.Data.header.Link1Dropdown }}
+            <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+          {{ end }}
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <button class="dropbtn">{{ .Site.Data.header.Link2Name }} &#9662;</button>
+        <div class="dropdown-menu">
+          {{ range .Site.Data.header.Link2Dropdown }}
+             <a href="{{ .url }}">{{ .name }}</a>
+          {{ end }}
+        </div>
+      </div>    
+
+      <div class="dropdown">
+        <a href="{{ .Site.Data.header.Link3Link }}" target="_blank" class="dropbtn">{{ .Site.Data.header.Link3Name }}</a>
+      </div>
+    </div>    
+  </div>
+</div>

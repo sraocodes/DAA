@@ -1,0 +1,18 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Site"
+theme = "PaperModX"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+
+  [[menu.main]]
+    identifier = "members"
+    name = "Members"
+    url = "/members/"
+
+[directories]
+contentDir = "content"

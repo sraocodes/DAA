@@ -1,0 +1,15 @@
+<head>
+  {{$styles:=resources.Get "css/main.css"}}
+  {{$footerStyles:=resources.Get "css/footer.css"}}
+  {{$headerStyles:=resources.Get "css/header.css"}}
+  {{$aboutStyles := resources.Get "css/about.css"}}
+  {{$membersStyles := resources.Get "css/members.css"}}
+
+
+  <link rel="stylesheet" href="{{$styles.RelPermalink}}">
+  <link rel="stylesheet" href="{{$footerStyles.RelPermalink}}">
+  <link rel="stylesheet" href="{{$headerStyles.RelPermalink}}">
+  <link rel="stylesheet" href="{{$aboutStyles.RelPermalink}}">
+  <link rel="stylesheet" href="{{$membersStyles.RelPermalink}}">
+
+</head>

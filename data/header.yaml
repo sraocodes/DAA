@@ -1,0 +1,45 @@
+---
+title: PhenoRob Digital Agricultural Avatar
+description: (Process Based Models for the Future of Crop Production)
+logoURL: /index.html/
+logoAlt: "Logo"
+logoImagePath: "images/DAA.png"
+
+ToolsName: Tools
+ToolsDropDown:
+  - Name: GRANAR
+    Link: https://granar.github.io/
+  - Name: MECHA
+    Link: https://mecharoot.github.io/
+  - Name: CPlantBox
+    Link: https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox
+  - Name: AgroC
+    Link: https://soil-modeling.org/resources-links/model-portal/agroc
+  - Name: Simplace
+    Link: https://www.simplace.net/index.php/simplace-features/who-uses-it
+  - Name: Dumux-ROSI
+    Link: https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi
+  - Name: TerrSysMP
+    Link: https://www.terrsysmp.org/#about
+
+Link1Name: Members
+Link1Link: https://www.example1.com
+Link1Dropdown:
+  - name: Institutes
+    url: https://www.institutes.com
+  - name: People
+    url: "/members/"
+
+Link2Name: DAA
+Link2Link: https://www.example2.com
+Link2Dropdown:
+  - name: About
+    url: "/about/"
+  - name: Goals
+    url: https://www.goals.com
+  - name: Funding
+    url: https://www.funding.com
+
+Link3Name: "Contact"
+Link3Link: "#"
+---

@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<div class="slider-container">
+  <div class="slider">
+    {{ range .Params.slides }}
+    <div class="mySlides">
+      <img src="{{ .image | relURL }}" alt="Slide image">
+      <h2>{{.heading }}</h2>
+      <p>{{ .text }} <a href="{{ .link }}" target="_blank">Learn more</a></p>
+    </div>
+    {{ end }}
+    <a class="prev" href="#" onclick="return false;">&#10094;</a>
+    <a class="next" href="#" onclick="return false;">&#10095;</a>
+  </div>
+
+  <div class="dots-container">
+    {{ range .Params.slides }}
+    <span class="dot"></span>
+    {{ end }}
+  </div>
+</div>
+
+
+{{ end }}

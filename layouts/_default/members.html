@@ -1,0 +1,37 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Members</title>
+  <title>Members</title>
+  <title>Members</title>
+
+
+</head>
+<body>
+  <div id="members" class="members-section">
+    <h2>Members</h2>
+    <ul>
+      {{ range .Page.Params.members }}
+      <li>
+        <div class="member">
+          <div class="member-pic">
+            <img src="{{ .picture }}" alt="{{ .name }}">
+          </div>
+          <div class="member-info">
+            <h4><a href="{{ .link }}" target="_blank">{{ .name }}</a></h4>
+            <p>{{ .education }}</p>
+            <p>Email: <a href="mailto:{{ .email }}">{{ .email }}</a></p>
+          </div>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  <div class="content">
+    {{ .Content }}
+  </div>
+</body>
+</html>
+{{ end }}
