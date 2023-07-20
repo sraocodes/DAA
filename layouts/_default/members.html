@@ -4,10 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Members</title>
-  <title>Members</title>
-  <title>Members</title>
-
-
 </head>
 <body>
   <div id="members" class="members-section">
@@ -20,7 +16,7 @@
             <img src="{{ .picture }}" alt="{{ .name }}">
           </div>
           <div class="member-info">
-            <h4><a href="{{ .link }}" target="_blank">{{ .name }}</a></h4>
+            <h4><a href="{{ .link | absURL }}" target="_blank">{{ .name }}</a></h4>
             <p>{{ .education }}</p>
             <p>Email: <a href="mailto:{{ .email }}">{{ .email }}</a></p>
           </div>

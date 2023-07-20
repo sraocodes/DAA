@@ -1,6 +1,6 @@
 <div class="navbar">
   <div class="logo-container">
-    <a href="{{ .Site.Data.header.logoURL }}">
+    <a href="{{ .Site.BaseURL }}">
       <img src="{{ .Site.Data.header.logoImagePath | relURL }}" alt="{{ .Site.Data.header.logoAlt }}" class="logo">
     </a>
   </div>
@@ -24,7 +24,11 @@
         <button class="dropbtn">{{ .Site.Data.header.Link1Name }} &#9662;</button>
         <div class="dropdown-menu">
           {{ range .Site.Data.header.Link1Dropdown }}
-            <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+            {{ $url := .url }}
+            {{ if not (strings.HasPrefix $url "http") }}
+              {{ $url = printf "%s%s" $.Site.BaseURL $url }}
+            {{ end }}
+            <a href="{{ $url }}">{{ .name }}</a>
           {{ end }}
         </div>
       </div>
@@ -33,7 +37,11 @@
         <button class="dropbtn">{{ .Site.Data.header.Link2Name }} &#9662;</button>
         <div class="dropdown-menu">
           {{ range .Site.Data.header.Link2Dropdown }}
-             <a href="{{ .url }}">{{ .name }}</a>
+            {{ $url := .url }}
+            {{ if not (strings.HasPrefix $url "http") }}
+              {{ $url = printf "%s%s" $.Site.BaseURL $url }}
+            {{ end }}
+            <a href="{{ $url }}">{{ .name }}</a>
           {{ end }}
         </div>
       </div>    
