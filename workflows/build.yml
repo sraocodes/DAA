@@ -13,10 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.115.3'  # Replace with your Hugo version
+      - name: Install Hugo
+        run: |
+          HUGO_VERSION=0.115.3  # Replace with your Hugo version
+          HUGO_BINARY=hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
+          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}
+          sudo dpkg -i ${HUGO_BINARY}
+          hugo version
 
       - name: Build
         run: hugo
