@@ -4,7 +4,7 @@ layout: "members"
 members:
   - name: "Prof. Dr. Andrea Schnepf"
     link: "https://example.com/member1"
-    picture: "/images/andrea.png"
+    picture: "[/images/andrea.png](https://sraocodes.github.io/Phenorob-DAA/images/andrea.png)"
     education: "PhD in Agriculture"
     email: "member1@example.com"
   - name: "Prof. Dr. Guillaume Lobet"
