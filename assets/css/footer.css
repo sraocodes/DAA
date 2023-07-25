@@ -1,6 +1,6 @@
 .site-footer {
-  background-color: #dbabab;
-  color: #fff;
+  background-color: lightgrey;
+  color: #111111;
   padding: 20px 0;
   text-align: center;
   top: 200px; /* assuming slider-container's height is 1000px, we add some extra space */
@@ -12,5 +12,28 @@
 }
 
 .footer-content a {
-  color: #fff;
+  color: #111111;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* YouTube icon in red */
+.social-icons a.youtube-icon {
+  color: red;
+}
+
+/* LinkedIn icon in blue */
+.social-icons a.linkedin-icon {
+  color: blue;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
 }

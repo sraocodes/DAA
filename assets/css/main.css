@@ -120,3 +120,6 @@
   font-weight: bold; /* Bold text */
 }
 
+.slider-container .mySlides a.learn-more {
+  font-size: 36px;
+}
