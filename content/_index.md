@@ -10,8 +10,20 @@ slides:
     heading: "Elevating Agriculture with Process-Based Models"
     text: "The DAA will utilize process-based models to simulate the intricate interactions between biogeochemical, physical, agricultural management, and economic components of agricultural systems."
     link: "https://www.example.com/plantcell" # The link for "Learn more" on this slide
+  - image: "images/slider4.png"
+    heading: "Multi-Scale Models for Agricultural Solutions"
+    text: "GRANAR and MECHA models scrutinize cell-level granular processes and mechanical phenomena. Dumux-ROSI and CPlantBox models focus on plant and organ scales, investigating water transport, growth, and development. Simplace, AgroC, and TerrSysMP models operate at crop and regional scales, unraveling crop growth, carbon dynamics, and broader agricultural interactions."
+    link: "https://www.example.com/plantcell" # The link for "Learn more" on this slide   
+    granar_link: "https://granar.github.io/"
+    mecha_link: "https://mecharoot.github.io/"
+    dumux_link: "https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi"
+    cplantbox_link: "https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox"
+    simplace_link: "https://www.simplace.net/index.php/simplace-features/who-uses-it"
+    agroc_link: "https://soil-modeling.org/resources-links/model-portal/agroc"
+    terrsysmp_link: "https://www.terrsysmp.org/#about"
   - image: "images/slider3.png"
     heading: "Coupling Models for Agricultural Breakthroughs"
     text: "DAA aims to integrate multi-scale models to solve complex agricultural problems. This involves identifying suitable software, establishing connections between their components, calibrating model parameters, and fostering interdisciplinary collaboration."
     link: "https://www.example.com/plantcell" # The link for "Learn more" on this slide
+
 ---
