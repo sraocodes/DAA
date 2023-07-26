@@ -12,6 +12,19 @@
 
     <div class="links-container">
       <div class="dropdown">
+        <button class="dropbtn">{{ .Site.Data.header.Link2Name }} &#9662;</button>
+        <div class="dropdown-menu">
+          {{ range .Site.Data.header.Link2Dropdown }}
+            {{ $url := .url }}
+            {{ if not (strings.HasPrefix $url "http") }}
+              {{ $url = printf "%s%s" $.Site.BaseURL $url }}
+            {{ end }}
+            <a href="{{ $url }}">{{ .name }}</a>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="dropdown">
         <button class="dropbtn">{{ .Site.Data.header.ToolsName }} &#9662;</button>
         <div class="dropdown-menu">
           {{ range .Site.Data.header.ToolsDropDown }}
@@ -19,7 +32,7 @@
           {{ end }}
         </div>
       </div>
-      
+
       <div class="dropdown">
         <button class="dropbtn">{{ .Site.Data.header.Link1Name }} &#9662;</button>
         <div class="dropdown-menu">
@@ -32,23 +45,10 @@
           {{ end }}
         </div>
       </div>
-      
-      <div class="dropdown">
-        <button class="dropbtn">{{ .Site.Data.header.Link2Name }} &#9662;</button>
-        <div class="dropdown-menu">
-          {{ range .Site.Data.header.Link2Dropdown }}
-            {{ $url := .url }}
-            {{ if not (strings.HasPrefix $url "http") }}
-              {{ $url = printf "%s%s" $.Site.BaseURL $url }}
-            {{ end }}
-            <a href="{{ $url }}">{{ .name }}</a>
-          {{ end }}
-        </div>
-      </div>    
 
       <div class="dropdown">
         <a href="{{ .Site.Data.header.Link3Link }}" target="_blank" class="dropbtn">{{ .Site.Data.header.Link3Name }}</a>
       </div>
-    </div>    
+    </div>
   </div>
 </div>
