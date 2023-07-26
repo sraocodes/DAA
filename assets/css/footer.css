@@ -1,9 +1,14 @@
 .site-footer {
-  background-color: lightgrey;
-  color: #111111;
-  padding: 20px 0;
-  text-align: center;
-  top: 200px; /* assuming slider-container's height is 1000px, we add some extra space */
+  display: flex;
+  flex-direction: column; /* Change flex-direction to column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  background-color: #f7f7f7; /* Light grey background */
+  padding: 0 20px;
+  width: 70%; /* Reduce the width to make it thinner */
+  margin: 0 auto;
+  min-height: 50px; 
+  margin-top: 200px; /* Add margin-top to create space between footer and content */
 }
 
 .footer-content p {

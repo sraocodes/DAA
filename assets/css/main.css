@@ -5,18 +5,16 @@
   top: 300px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%; 
-  max-width: 1000px; 
-  min-width: 300px; 
-  height: 700px; 
-  border: 2px solid rgb(94, 94, 94);
-  border-radius: 25px;
+  width: 100%;
+  max-width: 900px;
+  min-width: 300px;
+  height: 700px;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: column; 
-  margin-top: 100px; 
+  flex-direction: column;
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 600px) {
@@ -39,6 +37,8 @@
   cursor: pointer;
   opacity: 0.8;
   transition: opacity 0.3s ease;
+  border-radius: 10px; /* Adding border-radius to make it fancier */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adding box shadow for a fancier look */
 }
 
 .prev:hover,
@@ -55,37 +55,89 @@
 }
 
 .slider img {
-  width: 100%; /* Changed from 250px to 100% */
-  height: auto; /* Changed from 250px to auto */
+  width: 100%;
+  height: auto;
   object-fit: contain;
   border-radius: 25px;
+  border: none; /* Remove the border */
 }
 
-/* Dots container */
+/* Text container */
+.text-container {
+  width: 80%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text-container h2 {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: 'Academic Font', serif; /* Replace 'Georgia' with the academic theme font */
+  color: #333333; /* Dark grey color */
+  padding-top: 20px;
+}
+
+.text-container p {
+  color: #333333; /* Dark grey color */
+  font-size: calc(0.9rem + 0.8vw);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-top: 20px;
+}
+
+.text-container a.learn-more {
+  font-size: 36px;
+  font-family: 'Academic Font', sans-serif; /* Replace 'Helvetica' with the academic theme font */
+  color: #0088cc; /* Blue accent color */
+  text-decoration: none; /* Remove underlines */
+}
+
+.text-container a.learn-more:hover {
+  color: #005580; /* Darker blue on hover */
+}
+
 .dots-container {
   position: absolute;
-  bottom: 10px;
+  top: 850px; /* You can adjust this value to move the dots vertically */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 10px; /* Adjust this value if needed */
+  padding-bottom: 10px;
 }
 
-/* Dots */
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .dots-container {
+    top: 600px; /* Adjust the vertical position for smaller screens */
+  }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 576px) {
+  .dots-container {
+    top: 500px; /* Adjust the vertical position for even smaller screens */
+  }
+}
+
 .dot {
-  height: 15px;
-  width: 15px;
+  position: relative;
+  height: 25px;
+  width: 25px;
   margin: 0 2px;
-  background-color: #bbb;
+  background: linear-gradient(45deg, #ff0008 0%, #fad0c4 99%, #fad0c4 100%);
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  box-shadow: 0 0 10px #fd3700;
+  transition: background-color 0.6s ease, transform 0.6s ease;
+  cursor: pointer;
 }
 
 /* Active Dot */
 .dot.active {
-  background-color: #3849df!important; /* Change this to your desired color for the active slide */
+  background: linear-gradient(45deg, #a18cd1 0%, #fbc2eb 99%, #f41945 100%);
+  box-shadow: 0 0 10px #0145ff;
+  transform: scale(1.2);
 }
 
 .slider-container .mySlides p {
@@ -95,31 +147,23 @@
   padding-top: 20px; /* Added top padding */
   word-wrap: break-word; /* Added word-wrap */
   overflow-wrap: break-word; /* Added overflow-wrap */
+  font-family: 'Times New Roman', serif; /* Academic font */
 }
 
-.slider-container .mySlides {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.slider-container .mySlides img {
-  max-width: 100%;
-  max-height: 40%;
-  object-fit: cover;
-  padding: 0% 0%;
-  margin: 0 auto;
-}
-
-/* Headings in the slides */
 .slider-container .mySlides h2 {
   padding-top: 20px; /* Added top padding */
   font-size: 36px; /* Larger font size */
   font-weight: bold; /* Bold text */
+  font-family: 'Academic Font', serif; /* Replace 'Georgia' with the academic theme font */
 }
 
 .slider-container .mySlides a.learn-more {
   font-size: 36px;
+  font-family: 'Academic Font', sans-serif; /* Replace 'Helvetica' with the academic theme font */
+  color: #0088cc; /* Blue accent color */
+  text-decoration: none; /* Remove underlines */
+}
+
+.slider-container .mySlides a.learn-more:hover {
+  color: #005580; /* Darker blue on hover */
 }
