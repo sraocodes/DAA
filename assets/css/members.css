@@ -71,7 +71,31 @@ body {
   text-overflow: ellipsis; /* Adds an ellipsis (...) when the text overflows */
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 5px;
+  color: #666;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Style Font Awesome icons */
+.fab {
+  font-family: "Font Awesome 5 Brands";
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free";
+}
+
 header, footer {
   width: 100%;
   margin: 0 auto;
 }
+
