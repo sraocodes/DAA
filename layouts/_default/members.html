@@ -1,10 +1,14 @@
 {{ define "main" }}
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/members.css"> <!-- Include the external CSS file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
 <body>
   <div class="members-container">
     <div id="members" class="members-section">
-      <h2>Members</h2>
+      <h2>{{.Title}}</h2>
       <ul>
         {{ range .Params.members }}
         <li>
@@ -13,9 +17,29 @@
               <img src="{{ .picture }}" alt="{{ .name }}">
             </div>
             <div class="member-info">
-              <h4><a href="{{ .link | absURL }}" target="_blank">{{ .name }}</a></h4>
+              <h4>{{ .name }}</a></h4>
               <p>{{ .institute }}</p>
               <p>Email: <a href="mailto:{{ .email }}">{{ .email }}</a></p>
+              <div class="social-icons">
+                {{ if .researchgate }}
+                <a href="{{ .researchgate }}" target="_blank"><i class="fab fa-researchgate"></i></a>
+                {{ end }}
+                {{ if .linkedin }}
+                <a href="{{ .linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                {{ end }}
+                {{ if .google_scholar }}
+                <a href="{{ .google_scholar }}" target="_blank"><i class="fab fa-google"></i></a>
+                {{ end }}
+                {{ if .github }}
+                <a href="{{ .github }}" target="_blank"><i class="fab fa-github"></i></a>
+                {{ end }}
+                {{ if .twitter }}
+                <a href="{{ .twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                {{ end }}
+                {{ if .homepage }}
+                <a href="{{ .homepage }}" target="_blank"><i class="fas fa-globe"></i></a>
+                {{ end }}
+              </div>
             </div>
           </div>
         </li>
