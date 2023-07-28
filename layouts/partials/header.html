@@ -28,7 +28,11 @@
         <button class="dropbtn">{{ .Site.Data.header.ToolsName }} &#9662;</button>
         <div class="dropdown-menu">
           {{ range .Site.Data.header.ToolsDropDown }}
-            <a href="{{ .Link }}" target="_blank">{{ .Name }}</a>
+            {{ $url := .Link }}
+            {{ if not (strings.HasPrefix $url "http") }}
+              {{ $url = printf "%s%s" $.Site.BaseURL $url }}
+            {{ end }}
+            <a href="{{ $url }}">{{ .Name }}</a>
           {{ end }}
         </div>
       </div>
