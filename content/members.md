@@ -1,5 +1,5 @@
 ---
-title: members
+title: Research Team
 layout: "members"
 members:
   - name: "Prof. Dr. Andrea Schnepf"
