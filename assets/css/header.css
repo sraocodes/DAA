@@ -136,3 +136,21 @@ h2 {
 .dropbtn:hover {
   background-color: #005580; /* Darker blue on hover */
 }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .headline-links-container {
+    flex-direction: row;
+  }
+
+  .headline-container {
+    align-items: flex-start;
+  }
+
+  .links-container {
+    justify-content: flex-start;
+  }
+}
