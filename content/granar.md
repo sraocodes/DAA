@@ -23,10 +23,7 @@ sections:
     text: "GRANAR offers a revolutionary approach to studying plant roots by recreating their structure and functionality at a cellular level 
             digitally. It aids agronomists and breeders in understanding and manipulating root anatomy for more efficient water and nutrient uptake, 
             contributing to resilient and high-yielding crop development. Moreover, coupled with other models, GRANAR can predict crop performance 
-            under varying conditions, optimizing farming practices and enhancing precision agriculture."
-    image: "/path/to/image2.jpg"
-    imageWidth: "400px"    
-    imageHeight: "300px"   
+            under varying conditions, optimizing farming practices and enhancing precision agriculture." 
   - name: "Try GRANAR"
     url: "https://granar.github.io/"
 ---
