@@ -7,18 +7,32 @@
   <nav id="single-nav" class="navbar">
     <ul>
       {{ range .Params.sections }}
-      <li><a href="#single-{{ .name | urlize }}">{{ .name }}</a></li>
+      <li>
+        {{ if .url }}
+        <a href="{{ .url }}" target="_blank" class="external">{{ .name }}</a>
+        {{ else }}
+        <a href="#single-{{ .name | urlize }}">{{ .name }}</a>
+        {{ end }}
+      </li>
       {{ end }}
     </ul>
   </nav>
 
   <!-- Page Sections -->
   {{ range .Params.sections }}
-  <section id="single-{{ .name | urlize }}">
+  {{ if not .url }}
+  <section id="single-{{ .name | urlize }}" class="content-section">
     <h2>{{ .name }}</h2>
-    <p>{{ .text | markdownify }}</p>  <!-- For links -->
-    <img src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+    <div class="section-content {{ if or (eq .textPosition "right") (not .textPosition) }}text-right{{ else }}text-left{{ end }}">
+      <div class="text-content">
+        <p>{{ .text | markdownify }}</p>
+      </div>
+      <div class="img-content">
+        <img src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+      </div>
+    </div>
   </section>
+  {{ end }}
   {{ end }}
 
   <!-- Back to Top Button -->
