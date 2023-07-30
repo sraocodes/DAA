@@ -27,9 +27,11 @@
       <div class="text-content">
         <p>{{ .text | markdownify }}</p>
       </div>
+      {{ if .image }}
       <div class="img-content">
         <img src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
       </div>
+      {{ end }}
     </div>
   </section>
   {{ end }}
