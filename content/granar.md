@@ -4,26 +4,33 @@ date: 2023-07-28
 draft: false
 sections:
   - name: "What is GRANAR ?"
-    text: "In simple language, you can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell 
-           basis.GRANAR primarily focuses on the anatomy of individual root sections, rather than simulating the architecture of the entire root 
-           system. It generates explicit representations of root anatomy at a cellular scale."
+    text: "You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. GRANAR primarily focuses on the anatomy of individual root sections, rather than simulating the architecture of the entire root system. It generates explicit representations of root anatomy at a cellular scale. You can check the official site of GRANAR [here](https://granar.github.io/)."
     image: "images/Granar1.jpeg"
-    imageWidth: "300px"    
-    imageHeight: "300px"   
+    imageWidth: "300px"
+    imageHeight: "300px"
     textPosition: "right"
   - name: "GRANAR features"
-    text: " The tool enables a detailed exploration of anatomical features like the number of xylem vessels, the proportion of aerenchyma, the size 
-            of the stele, cortex width, etc. These are all features that would typically be analyzed in a cross-sectional view of a root, rather than 
-            in a whole root system architecture model."
-    image: "images/Granar1.jpeg"
-    imageWidth: "400px"    
-    imageHeight: "400px"   
-    textPosition: "left"  
+    text: "The tool enables a detailed exploration of anatomical features like the number of xylem vessels, the proportion of aerenchyma, the size of the stele, cortex width, etc. These are all features that would typically be analyzed in a cross-sectional view of a root, rather than in a whole root system architecture model."
+    image: "images/Granar2.png"
+    imageWidth: "400px"
+    imageHeight: "400px"
+    textPosition: "left"
   - name: "Why GRANAR ?"
-    text: "GRANAR offers a revolutionary approach to studying plant roots by recreating their structure and functionality at a cellular level 
-            digitally. It aids agronomists and breeders in understanding and manipulating root anatomy for more efficient water and nutrient uptake, 
-            contributing to resilient and high-yielding crop development. Moreover, coupled with other models, GRANAR can predict crop performance 
-            under varying conditions, optimizing farming practices and enhancing precision agriculture." 
+    text: "GRANAR offers a computational approach to study plant roots by recreating their structure and functionality at a cellular level digitally. Moreover, coupled with other models, GRANAR can predict crop performance under varying conditions, optimizing farming practices and enhancing precision agriculture. For e.g:"
+    list:
+      - "Plant Response Insight: GRANAR simulates root anatomies, enhancing understanding of plant    nutrient absorption for growth and resilience."
+      - "Plant Breeding Support: GRANAR's anatomical analysis aids breeders in developing drought-tolerant crops for varied soil qualities."
+      - "Crop Performance Prediction: Coupled with hydraulic models like MECHA, GRANAR forecasts root performance under diverse environmental conditions."   
+    image: "images/Granar3.jpeg"
+    imageWidth: "250px"
+    imageHeight: "250px"
+    textPosition: "right"
+  - name: "GRANAR Limitations"
+    text: "The main limitation of GRANAR, as with any model that focuses on a specific scale or aspect of a system, is that it does not provide a holistic understanding of plant growth and development. While GRANAR is excellent at providing detailed information about root anatomy at the cellular level and its implications on water and nutrient uptake, it cannot directly provide information about how these root traits interact with other plant traits or environmental variables at a larger scale to influence overall plant growth, yield, or response to stress."
+    image: "images/Granar4.gif"
+    imageWidth: "200px"
+    imageHeight: "400px"
+    textPosition: "left"    
   - name: "Try GRANAR"
     url: "https://granar.github.io/"
 ---
