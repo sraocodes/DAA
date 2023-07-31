@@ -1,0 +1,212 @@
+/* =================================== *
+ * GLOBAL STYLES
+ * =================================== */
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/* =================================== *
+ * SINGLE CONTAINER
+ * =================================== */
+.single-container {
+  padding-top: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* =================================== *
+ * TEXT CONTENT
+ * =================================== */
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+}
+
+.text-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.text-content ul li {
+  font-size: calc(0.8rem + 0.8vw);
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 5px solid #c5c7fa;
+  background-color: #f6f8fa;
+  transition: all 0.3s ease-in-out;
+}
+
+.text-content ul li:hover {
+  background-color: #e9ecef;
+  border-left: 5px solid #ff7f7f;
+  transform: translateX(10px);
+}
+
+.text-content p {
+  color: #333333;
+  font-size: calc(0.9rem + 0.8vw);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-top: 20px;
+  text-align: justify;
+}
+
+/* =================================== *
+ * CONTENT SECTION
+ * =================================== */
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+.content-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Academic Font', serif;
+  color: #333333;
+  padding-top: 20px;
+  padding: 10px;
+  background-color: #c5c7fa;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.content-section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* =================================== *
+ * SECTION CONTENT
+ * =================================== */
+.section-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* =================================== *
+ * IMG CONTENT
+ * =================================== */
+.img-content {
+  flex-shrink: 0;
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.img-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* =================================== *
+ * TEXT DIRECTION
+ * =================================== */
+.text-left {
+  flex-direction: row;
+}
+
+.text-right {
+  flex-direction: row-reverse;
+}
+
+/* =================================== *
+ * NAVIGATION
+ * =================================== */
+#single-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  width: 100%;
+  margin: 0 auto;
+  background: none;
+}
+
+#single-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+#single-nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #ff7f7f;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: background-color 0.3s ease;
+}
+
+#single-nav a:hover {
+  background-color: #ff4f4f;
+}
+
+#single-nav a.external::after {
+  content: " →";
+  display: inline-block;
+  transform: rotate(-45deg);
+  font-weight: bold;
+}
+
+/* =================================== *
+ * BACK TO TOP BUTTON
+ * =================================== */
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: #ff7f7f;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
+  line-height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  transform: rotate(-90deg);
+}
+
+#backToTopBtn:hover {
+  background-color: #ff4f4f;
+}
+
+/* =================================== *
+ * RESPONSIVE STYLES
+ * =================================== */
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column;
+  }
+  
+  .text-content, .img-content {
+    flex-basis: 100%;
+  }
+  
+  .text-left, .text-right {
+    flex-direction: column;
+  }
+}
