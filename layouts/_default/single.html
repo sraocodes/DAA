@@ -9,7 +9,7 @@
       {{ range .Params.sections }}
       <li>
         {{ if .url }}
-        <a href="{{ .url }}" target="_blank" class="external">{{ .name }}</a>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="external">{{ .name }}</a>
         {{ else }}
         <a href="#single-{{ .name | urlize }}">{{ .name }}</a>
         {{ end }}
@@ -25,7 +25,16 @@
     <h2>{{ .name }}</h2>
     <div class="section-content {{ if or (eq .textPosition "right") (not .textPosition) }}text-right{{ else }}text-left{{ end }}">
       <div class="text-content">
-        <p>{{ .text | markdownify }}</p>
+        <p>{{ .text | markdownify | replaceRE `(<a href="[^"]*")` `$1 target="_blank"` | safeHTML }}</p>
+        {{ if .list }}
+        <div class="list-content">
+          <ul>
+            {{ range .list }}
+            <li>{{ . | markdownify | safeHTML }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
       </div>
       {{ if .image }}
       <div class="img-content">
