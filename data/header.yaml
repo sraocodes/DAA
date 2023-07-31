@@ -31,7 +31,7 @@ ToolsDropDown:
   - Name: MECHA
     Link: "/mecha/"
   - Name: CPlantBox
-    Link: "/about/#CPlantBox"
+    Link: "/cplantbox/"
   - Name: AgroC
     Link: "/about/#AgroC"
   - Name: Simplace

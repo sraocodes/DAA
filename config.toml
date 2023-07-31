@@ -4,11 +4,6 @@ title = "My New Site"
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-
-  [[menu.main]]
     identifier = "members"
     name = "Members"
     url = "/members/"
@@ -16,3 +11,8 @@ title = "My New Site"
 [directories]
 contentDir = "content"
 publishDir = "docs"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
