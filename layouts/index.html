@@ -7,26 +7,14 @@
       <img src="{{ .image | relURL }}" alt="Slide image">
       <h2>{{ .heading }}</h2>
       {{ $text := .text }}
-      {{ if .granar_link }}
-        {{ $text = replace $text "GRANAR" (print "<a href=\"" .granar_link "\" target=\"_blank\">GRANAR</a>") }}
-      {{ end }}
-      {{ if .mecha_link }}
-        {{ $text = replace $text "MECHA" (print "<a href=\"" .mecha_link "\" target=\"_blank\">MECHA</a>") }}
-      {{ end }}
-      {{ if .dumux_link }}
-        {{ $text = replace $text "Dumux-ROSI" (print "<a href=\"" .dumux_link "\" target=\"_blank\">Dumux-ROSI</a>") }}
-      {{ end }}
-      {{ if .cplantbox_link }}
-        {{ $text = replace $text "CPlantBox" (print "<a href=\"" .cplantbox_link "\" target=\"_blank\">CPlantBox</a>") }}
-      {{ end }}
-      {{ if .simplace_link }}
-        {{ $text = replace $text "Simplace" (print "<a href=\"" .simplace_link "\" target=\"_blank\">Simplace</a>") }}
-      {{ end }}
-      {{ if .agroc_link }}
-        {{ $text = replace $text "AgroC" (print "<a href=\"" .agroc_link "\" target=\"_blank\">AgroC</a>") }}
-      {{ end }}
-      {{ if .terrsysmp_link }}
-        {{ $text = replace $text "TerrSysMP" (print "<a href=\"" .terrsysmp_link "\" target=\"_blank\">TerrSysMP</a>") }}
+      {{ range $key, $value := . }}
+        {{ if (strings.HasSuffix $key "_link") }}
+          {{ if not (strings.HasPrefix $value "http") }}
+            {{ $value = printf "%s%s" $.Site.BaseURL $value }}
+          {{ end }}
+          {{ $linkText := (replace $key "_link" "") | upper }}
+          {{ $text = replace $text $linkText (print "<a href=\"" $value "\" target=\"_blank\">" $linkText "</a>") }}
+        {{ end }}
       {{ end }}
       <p>{{ $text | safeHTML }}</p>
       <p><a href="{{ .link }}" target="_blank">Learn more</a></p>
