@@ -1,25 +1,22 @@
-// Function to check if the "Back to Top" button should be displayed
-function toggleBackToTopButton() {
-  const backToTopBtn = document.getElementById('backToTopBtn');
-  if (window.scrollY > 300) {
-    backToTopBtn.style.display = 'block';
-  } else {
-    backToTopBtn.style.display = 'none';
+document.addEventListener('DOMContentLoaded', () => {
+  // Function to scroll to the top of the page smoothly
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
-  // Calculate and set the position of the button at the midpoint of the screen
-  const windowHeight = window.innerHeight;
-  const buttonHeight = backToTopBtn.offsetHeight;
-  const midpoint = windowHeight / 2;
-  backToTopBtn.style.bottom = `${midpoint - buttonHeight / 2}px`;
-}
+  // Function to toggle the visibility of the "Back to Top" button
+  function toggleBackToTopButton() {
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    if (window.pageYOffset > 300) { // Show backToTopBtn after scrolling 300px
+      backToTopBtn.style.display = 'block';
+    } else {
+      backToTopBtn.style.display = 'none';
+    }
+  }
 
-// Function to scroll back to the top of the page smoothly
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
   // Attach scroll event listener to toggle the button visibility and position
   window.addEventListener('scroll', toggleBackToTopButton);
 
@@ -35,16 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navbarLinks.forEach(link => {
       link.addEventListener('click', (event) => {
-        event.preventDefault();
         const targetSectionId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetSectionId);
+        
+        // Check if the link is an internal link (starts with '#')
+        if (targetSectionId.startsWith('#')) {
+          event.preventDefault();
+          const targetSection = document.querySelector(targetSectionId);
 
-        // Smooth scroll to the target section
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Smooth scroll to the target section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
 
-        // Apply the 'active' class to the target section
-        sections.forEach(section => section.classList.remove('active'));
-        targetSection.classList.add('active');
+          // Apply the 'active' class to the target section
+          sections.forEach(section => section.classList.remove('active'));
+          targetSection.classList.add('active');
+        }
       });
     });
   }
