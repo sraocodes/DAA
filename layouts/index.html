@@ -13,11 +13,11 @@
             {{ $value = printf "%s%s" $.Site.BaseURL $value }}
           {{ end }}
           {{ $linkText := (replace $key "_link" "") | upper }}
-          {{ $text = replace $text $linkText (print "<a href=\"" $value "\" target=\"_blank\">" $linkText "</a>") }}
+          {{ $text = replace $text $linkText (print "<a href=\"" $value "\">" $linkText "</a>") }}
         {{ end }}
       {{ end }}
       <p>{{ $text | safeHTML }}</p>
-      <p><a href="{{ .link }}" target="_blank">Learn more</a></p>
+      <p><a href="{{ .link }}">Learn more</a></p>
     </div>
     {{ end }}
     <a class="prev" href="#" onclick="return false;">&#10094;</a>
