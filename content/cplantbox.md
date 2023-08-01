@@ -17,10 +17,10 @@ sections:
     \\frac{dm}{dt} = I - O
     \\]
     {{< /rawhtml >}}
-    where {{< rawhtml >}}\\(\\frac{dm}{dt}\\){{< /rawhtml >}}  is the change in mass of the system over time, {{< rawhtml >}}\\(I\\){{< /rawhtml >}} is the inflow of mass, and {{< rawhtml >}}\\(O\\){{< /rawhtml >}} is the outflow of mass. In the case of CRootBox, the mass balance equation is used to describe the movement of water and solutes in the root system. The equation takes into account the inflow of water and solutes from the soil, the outflow of water and solutes from the root, and the storage of water and solutes in the root. The equation is solved numerically using a finite difference method, which divides the root system into a grid of discrete points."
-    image: "images/Cplantbox1.png"
-    imageWidth: "250px"
-    imageHeight: "500px"
+    where {{< rawhtml >}}\\(\\frac{dm}{dt}\\){{< /rawhtml >}}  is the change in mass of the system over time, {{< rawhtml >}}\\(I\\){{< /rawhtml >}} is the inflow of mass, and {{< rawhtml >}}\\(O\\){{< /rawhtml >}} is the outflow of mass. In the case of CRootBox, the mass balance equation is used to describe the movement of water and solutes in the root system. The equation takes into account the inflow of water and solutes from the soil, the outflow of water and solutes from the root, and the storage of water and solutes in the root. The equation is solved numerically using a finite difference method, which divides the root system into a grid of discrete points.The workflow to use CPlantBox starts with generating input files, then interpreting parameters based on the input file. Following this, the model creates the topological structure from the seed or root, and finally, the output can be written to be visualized."
+    image: "images/CPlantBox2.gif"
+    imageWidth: "300px"
+    imageHeight: "600px"
     textPosition: "left"
   - name: "C-PlantBox features"
     text: "The main features of C-Plantbox are:"
@@ -29,4 +29,6 @@ sections:
       - "It is flexible and can be coupled with external modelling tools."
       - "It can be used to understand how carbon and water flows influence each other and respond to heterogeneous environmental conditions."   
       - "It is open source, highly accessible and source code available on [github](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox)."
+  - name: "Youtube"
+    url: "https://www.youtube.com/channel/UCPK-pFfpK94jiamgwHxX32Q"
 ---
