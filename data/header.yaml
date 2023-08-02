@@ -33,7 +33,7 @@ ToolsDropDown:
   - Name: CPlantBox
     Link: "/cplantbox/"
   - Name: AgroC
-    Link: "/about/#AgroC"
+    Link: "/agroc/"
   - Name: Simplace
     Link: "/about/#Simplace"
   - Name: Dumux-ROSI
