@@ -37,7 +37,7 @@ ToolsDropDown:
   - Name: Simplace
     Link: "/simplace/"
   - Name: Dumux-ROSI
-    Link: "/about/#Dumux-ROSI"
+    Link: "/dumux/"
   - Name: TerrSysMP
     Link: "/about/#TerrSysMP"
 
