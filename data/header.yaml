@@ -35,7 +35,7 @@ ToolsDropDown:
   - Name: AgroC
     Link: "/agroc/"
   - Name: Simplace
-    Link: "/about/#Simplace"
+    Link: "/simplace/"
   - Name: Dumux-ROSI
     Link: "/about/#Dumux-ROSI"
   - Name: TerrSysMP

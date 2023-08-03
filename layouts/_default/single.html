@@ -23,7 +23,13 @@
   {{ if not .url }}
   <section id="single-{{ .name | urlize }}" class="content-section">
     <h2>{{ .name }}</h2>
-    <div class="section-content {{ if or (eq .textPosition "right") (not .textPosition) }}text-right{{ else }}text-left{{ end }}">
+    {{ if or (eq .textPosition "right") (eq .textPosition "left") }}
+    <div class="section-content {{ if eq .textPosition "right" }}text-right{{ else }}text-left{{ end }}">
+    {{ else if or (eq .textPosition "bottom") (eq .textPosition "top") }}
+    <div class="section-content {{ if eq .textPosition "bottom" }}text-bottom{{ else }}text-top{{ end }}">
+    {{ else }}
+    <div class="section-content">
+    {{ end }}
       <div class="text-content">
         <p>{{ .text | markdownify | replaceRE `(<a href="[^"]*")` `$1 target="_blank"` | safeHTML }}</p>
         {{ if .list }}
@@ -41,6 +47,11 @@
         <img src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
       </div>
       {{ end }}
+      {{ if .videoID }}
+      <div class="video-content {{ if eq .textPosition "bottom" }}order-2{{ else }}order-1{{ end }}">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ .videoID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {{ end }}
     </div>
   </section>
   {{ end }}
@@ -56,3 +67,4 @@
 {{ $singleJs := resources.Get "js/single.js" }}
 <script src="{{ $singleJs.Permalink }}"></script>
 {{ end }}
+

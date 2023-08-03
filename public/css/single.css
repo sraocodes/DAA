@@ -113,13 +113,41 @@
 /* =================================== *
  * TEXT DIRECTION
  * =================================== */
-.text-left {
-  flex-direction: row;
-}
-
-.text-right {
-  flex-direction: row-reverse;
-}
+ .text-left,
+ .text-right {
+   display: flex;
+   flex-direction: row;
+ }
+ 
+ .text-right {
+   flex-direction: row-reverse;
+ }
+ 
+ .text-bottom,
+ .text-top {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+ .text-bottom .img-content,
+ .text-top .img-content {
+   order: 1;
+ }
+ 
+ .text-bottom .text-content,
+ .text-top .text-content {
+   order: 2;
+ }
+ 
+ .text-top .img-content {
+   order: 2;
+ }
+ 
+ .text-top .text-content {
+   order: 1;
+ }
 
 /* =================================== *
  * NAVIGATION
@@ -127,7 +155,7 @@
 #single-nav {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 20px;
+  padding: 20px 30px;
   width: 100%;
   margin: 0 auto;
   background: none;
@@ -150,9 +178,10 @@
   background-color: #ff7f7f;
   border-radius: 5px;
   padding: 10px 15px;
-  margin: 5px;
+  margin: 10px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   transition: background-color 0.3s ease;
+  line-height: 3; 
 }
 
 #single-nav a:hover {
