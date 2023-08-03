@@ -36,7 +36,7 @@
         <div class="list-content">
           <ul>
             {{ range .list }}
-            <li>{{ . | markdownify | safeHTML }}</li>
+            <li>{{ . | markdownify | replaceRE `(<a href="[^"]*")` `$1 target="_blank"` | safeHTML }}</li>
             {{ end }}
           </ul>
         </div>
