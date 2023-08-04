@@ -47,12 +47,17 @@
         <img src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
       </div>
       {{ end }}
-      {{ if .videoID }}
-      <div class="video-content {{ if eq .textPosition "bottom" }}order-2{{ else }}order-1{{ end }}">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ .videoID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {{ if .videos }}
+      {{ range .videos }}
+      <div class="video-block">
+        <p class="video-title">{{ .videoTitle }}</p>
+        <div class="video-content">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ .videoID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
-      {{ end }}
-    </div>
+      {{ end }} 
+      {{ end }}  
+    </div> <!-- Close the .section-content here -->
   </section>
   {{ end }}
   {{ end }}

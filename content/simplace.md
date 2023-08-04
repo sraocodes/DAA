@@ -6,8 +6,9 @@ draft: false
 sections:  
   - name: "What is SIMPLACE?"
     text: "SIMPLACE is an open-source software that helps scientists and farmers manage crops and ecosystems better. It uses computer models to understand complex interactions between crops, soil, and climate. By coupling different modules, each representing a process like water use or plant growth, SIMPLACE offers customizable solutions for different agricultural needs.Its multi-threaded high-performance architecture allows for calibration and simulations at varying spatial scales.You can check the official site of SIMPLACE [here](https://www.simplace.net/index.php)."
-    videoID: "kj6TXkxocCg"
-    textPosition: "top"
+    textPosition: "bottom"
+    videos:
+    - videoID: "kj6TXkxocCg"
   - name: "What can SIMPLACE do?"
     text: "SIMPLACE can help in understanding how climate change affects crops, finding ways to improve farming practices, and developing useful tools for farmers and policymakers. For example, SIMPLACE has a special component that helps study how heat stress affects crops. It also offers an advanced module that looks into soil water balance in great detail. Its customizable nature allows users to choose and combine different components depending on their specific needs."
     list:

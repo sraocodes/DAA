@@ -5,7 +5,7 @@ draft: false
 
 sections:  
   - name: "What is C-PlantBox?"
-    text: "CPlantBox is a full plant modeling framework that focuses on the growth and development of plant architectures, including both the root and shoot systems. It is designed to simulate the complex interactions between carbon and water flows within plants and their response to varying environmental conditions. The framework is built upon an existing root system model called CRootBox and extends it to incorporate the modeling of shoot structures. The framework allows for the representation of a variety of plant species and their specific structures. Visit the official [CPlantBox repository](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox) for installation guide."
+    text: "C-PlantBox is a full plant modeling framework that focuses on the growth and development of plant architectures, including both the root and shoot systems. It is designed to simulate the complex interactions between carbon and water flows within plants and their response to varying environmental conditions. The framework is built upon an existing root system model called CRootBox and extends it to incorporate the modeling of shoot structures. The framework allows for the representation of a variety of plant species and their specific structures. Visit the official [CPlantBox repository](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox) for installation guide."
     image: "images/Cplantbox1.png"
     imageWidth: "250px"
     imageHeight: "300px"
@@ -29,10 +29,16 @@ sections:
       - "It is flexible and can be coupled with external modelling tools."
       - "It can be used to understand how carbon and water flows influence each other and respond to heterogeneous environmental conditions."   
       - "It is open source, highly accessible and source code available on [github](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox)."
-  - name: "C-Plantbox lecture"
-    text: "Explore the world of plant shoot and root architecture with Prof. Dr. Andrea Schnepf's insightful lecture on the C-PlantBox modeling tool. Dive into the intricate mathematics and operational intricacies that power C-PlantBox tool for simulating and analyzing whole plant growth dynamics."
-    videoID: "-YgDnsC3BV8"
-    textPosition: "top"
+  - name: "C-PlantBox lectures"
+    text: "Explore the world of plant shoot and root architecture with Prof. Dr. Andrea Schnepf's insightful talks on the C-PlantBox modeling tool. Dive into the intricate mathematics and operational intricacies that power C-PlantBox tool for simulating and analyzing whole plant growth dynamics."
+    videos: 
+    - videoID: "-YgDnsC3BV8"
+      videoTitle: "What is Cex-PlantBox?"
+    - videoID: "dzeV4U58BYA"
+      videoTitle: "Mathematics behind C-PlantBox"
+    - videoID: "-MjNsvbCf4o"
+      videoTitle: "Modeling a virtual Plant"
+    textPosition: "top"    
   - name: "Youtube"
-    url: "https://www.youtube.com/channel/UCPK-pFfpK94jiamgwHxX32Q"
+    url: "https://www.youtube.com/channel/UCPK-pFfpK94jiamgwHxX32Q"  
 ---

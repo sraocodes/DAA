@@ -104,7 +104,7 @@
             
               
             
-            <a href="https://sraocodes.github.io/Phenorob-DAA//about/#Dumux-ROSI">Dumux-ROSI</a>
+            <a href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
           
             
             
@@ -180,6 +180,12 @@
       
       <li>
         
+        <a href="#single-c-plantbox-lecture">C-PlantBox lecture</a>
+        
+      </li>
+      
+      <li>
+        
         <a href="https://www.youtube.com/channel/UCPK-pFfpK94jiamgwHxX32Q" target="_blank" rel="noopener noreferrer" class="external">Youtube</a>
         
       </li>
@@ -189,82 +195,115 @@
 
   
   
+
+<section id="single-what-is-c-plantbox" class="content-section">
+  <h2>What is C-PlantBox?</h2>
   
-  <section id="single-what-is-c-plantbox" class="content-section">
-    <h2>What is C-PlantBox?</h2>
-    
-    <div class="section-content text-right">
-    
-      <div class="text-content">
-        <p>CPlantBox is a full plant modeling framework that focuses on the growth and development of plant architectures, including both the root and shoot systems. It is designed to simulate the complex interactions between carbon and water flows within plants and their response to varying environmental conditions. The framework is built upon an existing root system model called CRootBox and extends it to incorporate the modeling of shoot structures. The framework allows for the representation of a variety of plant species and their specific structures. Visit the official <a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox" target="_blank">CPlantBox repository</a> for installation guide.</p>
-        
-      </div>
-      
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/Cplantbox1.png" alt="What is C-PlantBox?" style="width: 250px; height: 300px;">
-      </div>
-      
+  <div class="section-content text-right">
+  
+    <div class="text-content">
+      <p>C-PlantBox is a full plant modeling framework that focuses on the growth and development of plant architectures, including both the root and shoot systems. It is designed to simulate the complex interactions between carbon and water flows within plants and their response to varying environmental conditions. The framework is built upon an existing root system model called CRootBox and extends it to incorporate the modeling of shoot structures. The framework allows for the representation of a variety of plant species and their specific structures. Visit the official <a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox" target="_blank">CPlantBox repository</a> for installation guide.</p>
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-how-does-it-work" class="content-section">
-    <h2>How does it work?</h2>
     
-    <div class="section-content text-left">
+    <div class="img-content">
+      <img src="/Phenorob-DAA/images/Cplantbox1.png" alt="What is C-PlantBox?" style="width: 250px; height: 300px;">
+    </div>
     
-      <div class="text-content">
-        <p>The model is based on the mass balance equation, which can be represented as follows:  \[ \frac{dm}{dt} = I - O \] 
+        
+  </div>
+</section>
+
+
+
+<section id="single-how-does-it-work" class="content-section">
+  <h2>How does it work?</h2>
+  
+  <div class="section-content text-left">
+  
+    <div class="text-content">
+      <p>The model is based on the mass balance equation, which can be represented as follows:  \[ \frac{dm}{dt} = I - O \] 
  where \(\frac{dm}{dt}\)
   is the change in mass of the system over time, \(I\)
  is the inflow of mass, and \(O\)
- is the outflow of mass. In the case of CRootBox, the mass balance equation is used to describe the movement of water and solutes in the root system. The equation takes into account the inflow of water and solutes from the soil, the outflow of water and solutes from the root, and the storage of water and solutes in the root. The equation is solved numerically using a finite difference method, which divides the root system into a grid of discrete points.The workflow to use CPlantBox starts with generating input files, then interpreting parameters based on the input file. Following this, the model creates the topological structure from the seed or root, and finally, the output can be written to be visualized.</p>
-        
-      </div>
-      
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/CPlantBox2.gif" alt="How does it work?" style="width: 300px; height: 600px;">
-      </div>
-      
+ is the outflow of mass. In the case of CRootBox, the mass balance equation is used to describe the movement of water and solutes in the root system. The equation takes into account the inflow of water and solutes from the soil, the outflow of water and solutes from the root, and the storage of water and solutes in the root. The equation is solved numerically using a finite difference method, which divides the root system into a grid of discrete points. The workflow to use CPlantBox starts with generating input files, then interpreting parameters based on the input file. Following this, the model creates the topological structure from the seed or root, and finally, the output can be written to be visualized.</p>
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-c-plantbox-features" class="content-section">
-    <h2>C-PlantBox features</h2>
     
-    <div class="section-content">
+    <div class="img-content">
+      <img src="/Phenorob-DAA/images/CPlantBox2.gif" alt="How does it work?" style="width: 300px; height: 650px;">
+    </div>
     
-      <div class="text-content">
-        <p>The main features of C-Plantbox are:</p>
         
-        <div class="list-content">
-          <ul>
-            
-            <li>It is capable of simulating the growth and development of a variety of plant architectures (root and shoot).</li>
-            
-            <li>It is flexible and can be coupled with external modelling tools.</li>
-            
-            <li>It can be used to understand how carbon and water flows influence each other and respond to heterogeneous environmental conditions.</li>
-            
-            <li>It is open source, highly accessible and source code available on <a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox">github</a>.</li>
-            
-          </ul>
-        </div>
-        
+  </div>
+</section>
+
+
+
+<section id="single-c-plantbox-features" class="content-section">
+  <h2>C-PlantBox features</h2>
+  
+  <div class="section-content">
+  
+    <div class="text-content">
+      <p>The main features of C-Plantbox are:</p>
+      
+      <div class="list-content">
+        <ul>
+          
+          <li>It is capable of simulating the growth and development of a variety of plant architectures (root and shoot).</li>
+          
+          <li>It is flexible and can be coupled with external modelling tools.</li>
+          
+          <li>It can be used to understand how carbon and water flows influence each other and respond to heterogeneous environmental conditions.</li>
+          
+          <li>It is open source, highly accessible and source code available on <a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox" target="_blank">github</a>.</li>
+          
+        </ul>
       </div>
       
+    </div>
+    
+        
+  </div>
+</section>
+
+
+
+<section id="single-c-plantbox-lecture" class="content-section">
+  <h2>C-PlantBox lecture</h2>
+  
+  <div class="section-content text-top">
+  
+    <div class="text-content">
+      <p>Explore the world of plant shoot and root architecture with Prof. Dr. Andrea Schnepf&rsquo;s insightful lecture on the C-PlantBox modeling tool. Dive into the intricate mathematics and operational intricacies that power C-PlantBox tool for simulating and analyzing whole plant growth dynamics.</p>
       
     </div>
-  </section>
-  
-  
-  
-  
+    
+    
+    
+    <div class="video-content">
+      <p>What is C-PlantBox?</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-YgDnsC3BV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <div class="video-content">
+      <p>Mathematics behind C-PlantBox</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dzeV4U58BYA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <div class="video-content">
+      <p>Modeling a virtual Plant</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-MjNsvbCf4o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+     
+        
+  </div>
+</section>
+
+
+
+
 
   
   <button id="backToTopBtn" title="Back to Top">&#10148;</button>
