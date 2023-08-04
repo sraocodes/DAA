@@ -93,13 +93,44 @@
   gap: 20px;
 }
 
+.text-right {
+  flex-direction: row-reverse;
+}
+
+.text-left {
+  flex-direction: row;
+}
+
+.text-top, .text-bottom {
+  flex-direction: column;
+}
+
+.text-top .video-block, .text-bottom .video-block {
+  width: 100%;
+}
+
+.text-top .text-content {
+  order: 1;
+}
+
+.text-top .img-content, .text-top .video-block {
+  order: 2;
+}
+
+.text-bottom .text-content {
+  order: 2;
+}
+
+.text-bottom .img-content, .text-bottom .video-block {
+  order: 1;
+}
+
 /* =================================== *
  * IMG CONTENT
  * =================================== */
 .img-content {
   flex-shrink: 0;
-  float: right;
-  margin: 0 0 1em 1em;
+  margin: auto;
 }
 
 .img-content img {
@@ -111,30 +142,21 @@
 }
 
 /* =================================== *
- * TEXT CONTENT
- * =================================== */
- .text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  order: 1;
-}
-
-/* =================================== *
  * VIDEO CONTENT
  * =================================== */
  .video-block {
-  width: 70%; 
+  width: 50%; 
   margin: 20px auto; /* Adjust as needed */
 }
 
 .video-content {
   position: relative;
   overflow: hidden;
-  padding-top: 45%; 
+  padding-top: 33.75%; 
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
   border-radius: 8px; 
+  width: 50%;
+  margin: 0px auto; /* Adjust as needed */
 }
 
 .video-content iframe {
@@ -151,46 +173,7 @@
   margin-bottom: 10px; /* Adjust as needed */
   font-size: 1.2em;
 }
-/* =================================== *
- * TEXT DIRECTION
- * =================================== */
- .text-top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.text-top .text-content {
-  order: 1;
-}
-
-.text-top .img-content {
-  order: 2;
-}
-
-.text-top .video-block {
-  order: 3; /* or 2 if you want videos to appear before the image */
-}
-
-.text-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.text-bottom .text-content {
-  order: 2;
-}
-
-.text-bottom .img-content {
-  order: 1;
-}
-
-.text-bottom .video-block {
-  order: 3; /* or 1 if you want videos to appear before the image */
-}
 /* =================================== *
  * NAVIGATION
  * =================================== */
@@ -270,14 +253,6 @@
  * =================================== */
 @media (max-width: 768px) {
   .section-content {
-    flex-direction: column;
-  }
-  
-  .text-content, .img-content {
-    flex-basis: 100%;
-  }
-  
-  .text-left, .text-right {
     flex-direction: column;
   }
 }

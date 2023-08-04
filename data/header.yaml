@@ -39,7 +39,7 @@ ToolsDropDown:
   - Name: Dumux-ROSI
     Link: "/dumux/"
   - Name: TerrSysMP
-    Link: "/about/#TerrSysMP"
+    Link: "/terrsysmp/"
 
 Link3Name: "Contact"
 Link3Link: "#"

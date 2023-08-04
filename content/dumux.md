@@ -15,7 +15,7 @@ sections:
   - name: "How does DuMux-ROSI work?"
     text: "DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. Utilizing the Richards equation, it enables in-depth simulations of soil water flow dynamics. An input file serves to specify model parameters and initial and boundary conditions. The Python binding facilitates coupling DuMux with CPlantBox, thereby enabling concurrent modeling of root growth and water uptake."
     image: "images/Rosi2.jpg"
-    imageWidth: "650px"
+    imageWidth: "600px"
     imageHeight: "300px"
     textPosition: "bottom"
   - name: "DuMux-ROSI features"

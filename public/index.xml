@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://sraocodes.github.io/Phenorob-DAA/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>TerrSysMP</title>
+      <link>https://sraocodes.github.io/Phenorob-DAA/terrsysmp/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sraocodes.github.io/Phenorob-DAA/terrsysmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>DuMux-ROSI</title>
       <link>https://sraocodes.github.io/Phenorob-DAA/dumux/</link>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
