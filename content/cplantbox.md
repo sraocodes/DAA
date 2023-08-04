@@ -33,7 +33,7 @@ sections:
     text: "Explore the world of plant shoot and root architecture with Prof. Dr. Andrea Schnepf's insightful talks on the C-PlantBox modeling tool. Dive into the intricate mathematics and operational intricacies that power C-PlantBox tool for simulating and analyzing whole plant growth dynamics."
     videos: 
     - videoID: "-YgDnsC3BV8"
-      videoTitle: "What is Cex-PlantBox?"
+      videoTitle: "What is C-PlantBox?"
     - videoID: "dzeV4U58BYA"
       videoTitle: "Mathematics behind C-PlantBox"
     - videoID: "-MjNsvbCf4o"
