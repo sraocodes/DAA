@@ -25,8 +25,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  order: 2;
+  align-items: flex-start; 
 }
 
 .text-content ul {
@@ -94,12 +93,44 @@
   gap: 20px;
 }
 
+.text-right {
+  flex-direction: row-reverse;
+}
+
+.text-left {
+  flex-direction: row;
+}
+
+.text-top, .text-bottom {
+  flex-direction: column;
+}
+
+.text-top .video-block, .text-bottom .video-block {
+  width: 100%;
+}
+
+.text-top .text-content {
+  order: 1;
+}
+
+.text-top .img-content, .text-top .video-block {
+  order: 2;
+}
+
+.text-bottom .text-content {
+  order: 2;
+}
+
+.text-bottom .img-content, .text-bottom .video-block {
+  order: 1;
+}
+
 /* =================================== *
  * IMG CONTENT
  * =================================== */
 .img-content {
-  order: 1;
   flex-shrink: 0;
+  margin: auto;
 }
 
 .img-content img {
@@ -113,56 +144,34 @@
 /* =================================== *
  * VIDEO CONTENT
  * =================================== */
+ .video-block {
+  width: 50%; 
+  margin: 20px auto; /* Adjust as needed */
+}
+
 .video-content {
-  order: 1;
-  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 33.75%; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+  border-radius: 8px; 
+  width: 50%;
+  margin: 0px auto; /* Adjust as needed */
 }
 
 .video-content iframe {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/* =================================== *
- * TEXT DIRECTION
- * =================================== */
-.text-left .text-content {
-  order: 2;
-}
-
-.text-left .img-content,
-.text-left .video-content {
-  order: 1;
-}
-
-.text-right .text-content {
-  order: 1;
-}
-
-.text-right .img-content,
-.text-right .video-content {
-  order: 2;
-}
-
-.text-top .text-content {
-  order: 2;
-}
-
-.text-top .img-content,
-.text-top .video-content {
-  order: 1;
-}
-
-.text-bottom .text-content {
-  order: 1;
-}
-
-.text-bottom .img-content,
-.text-bottom .video-content {
-  order: 2;
+.video-title {
+  text-align: center;
+  color: #000; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust as needed */
+  font-size: 1.2em;
 }
 
 /* =================================== *
@@ -245,14 +254,5 @@
 @media (max-width: 768px) {
   .section-content {
     flex-direction: column;
-  }
-
-  .text-content {
-    order: 2;
-  }
-
-  .img-content,
-  .video-content {
-    order: 1;
   }
 }

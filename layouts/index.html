@@ -1,34 +1,26 @@
 {{ define "main" }}
 
-<div class="slider-container">
-  <div class="slider">
+<div class="card-container">
     {{ range .Params.slides }}
-    <div class="mySlides">
-      <img src="{{ .image | relURL }}" alt="Slide image">
-      <h2>{{ .heading }}</h2>
-      {{ $text := .text }}
-      {{ range $key, $value := . }}
-        {{ if (strings.HasSuffix $key "_link") }}
-          {{ if not (strings.HasPrefix $value "http") }}
-            {{ $value = printf "%s%s" $.Site.BaseURL $value }}
-          {{ end }}
-          {{ $linkText := (replace $key "_link" "") | upper }}
-          {{ $text = replace $text $linkText (print "<a href=\"" $value "\">" $linkText "</a>") }}
-        {{ end }}
-      {{ end }}
-      <p>{{ $text | safeHTML }}</p>
-      <p><a href="{{ .link }}">Learn more</a></p>
+    <div class="card">
+        <img src="{{ .image | relURL }}" alt="Slide image" class="card-img">
+        <div class="card-content">
+            <h2>{{ .heading }}</h2>
+            {{ $text := .text }}
+            {{ range $key, $value := . }}
+                {{ if (strings.HasSuffix $key "_link") }}
+                    {{ if not (strings.HasPrefix $value "http") }}
+                        {{ $value = printf "%s%s" $.Site.BaseURL $value }}
+                    {{ end }}
+                    {{ $linkText := (replace $key "_link" "") | upper }}
+                    {{ $text = replace $text $linkText (print "<a href=\"" $value "\">" $linkText "</a>") }}
+                {{ end }}
+            {{ end }}
+            <p>{{ $text | safeHTML }}</p>
+            <a href="{{ .link }}" class="learn-more">Learn more</a>
+        </div>
     </div>
     {{ end }}
-    <a class="prev" href="#" onclick="return false;">&#10094;</a>
-    <a class="next" href="#" onclick="return false;">&#10095;</a>
-  </div>
-
-  <div class="dots-container">
-    {{ range .Params.slides }}
-    <span class="dot"></span>
-    {{ end }}
-  </div>
 </div>
 
 {{ end }}
