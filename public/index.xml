@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://sraocodes.github.io/Phenorob-DAA/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>PhenoRob DAA</title>
+      <link>https://sraocodes.github.io/Phenorob-DAA/about/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sraocodes.github.io/Phenorob-DAA/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>TerrSysMP</title>
       <link>https://sraocodes.github.io/Phenorob-DAA/terrsysmp/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
@@ -67,15 +76,6 @@
       
       <guid>https://sraocodes.github.io/Phenorob-DAA/simplace/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://sraocodes.github.io/Phenorob-DAA/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://sraocodes.github.io/Phenorob-DAA/about/</guid>
-      <description>DAA Project: About This is some text about the DAA Project.</description>
     </item>
     
     <item>

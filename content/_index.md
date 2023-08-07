@@ -5,7 +5,7 @@ slides:
     text: |
       Digital Agricultural Avatar (DAA) serves as a digital twin of the agricultural system, integrating biogeochemical, physical, management, and economic models. The DAA aims to achieve full model-data reciprocity, empowering 
       stakeholders with unparalleled insights.
-    link: "https://www.example.com/DAA" # The link for "Learn more" on this slide
+    link: "/about/" # The link for "Learn more" on this slide
   - image: "images/2.gif"
     heading: "Elevating Agriculture with Process-Based Models"
     text: "The DAA will utilize process-based models to simulate the intricate interactions between biogeochemical, physical, agricultural management, and economic components of agricultural systems."

@@ -17,7 +17,11 @@
                 {{ end }}
             {{ end }}
             <p>{{ $text | safeHTML }}</p>
-            <a href="{{ .link }}" class="learn-more">Learn more</a>
+            {{ $link := .link }}
+            {{ if not (strings.HasPrefix $link "http") }}
+                {{ $link = printf "%s%s" $.Site.BaseURL $link }}
+            {{ end }}
+            <a href="{{ $link }}" class="learn-more">Learn more</a>
         </div>
     </div>
     {{ end }}

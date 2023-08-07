@@ -18,9 +18,9 @@ Link2Name: DAA
 Link2Link: https://www.example2.com
 Link2Dropdown:
   - name: About
-    url: "/about/#DAA_Project"
+    url: "/about/"
   - name: Goals
-    url: "/about/#Goals_and_tools"
+    url: "/about/"
   - name: Funding
     url: https://www.funding.com
 
