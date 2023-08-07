@@ -13,10 +13,10 @@ sections:
 
   - name: "Process-Based Models"
     text: "A key feature of the PhenoRob DAA is its use of process-based models. Imagine these models as virtual labs where we can simulate how crops respond to different environmental conditions. One crucial factor that these models handle is water availability. By understanding how water influences crop growth and yield, we can optimize irrigation, minimize water usage, and enhance productivity. It's like having a crystal ball to predict how changes in water availability might impact our crops."
-    image: "images/WaterModel.png"
-    imageWidth: "250px"
-    imageHeight: "250px"
-    textPosition: "right"
+    image: "images/pbm.png"
+    imageWidth: "300px"
+    imageHeight: "400px"
+    textPosition: "left"
 
   - name: "Unifying Subprojects"
     text: "The beauty of PhenoRob DAA is its role as a connector. It bridges various subprojects, creating a harmonious collaboration that brings about unified outcomes and joint publications. Over time, we'll see digital twins of various PhenoRob field sites emerge, showcasing the innovative approaches and results of this groundbreaking project."
