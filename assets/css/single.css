@@ -1,9 +1,42 @@
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --header-font: 'Lato', sans-serif;
+  --main-color: #333;
+  --highlight-color: #76b077;
+  --background-color: #FFF;
+  --button-hover-color: #ff4f4f;
+  --section-heading-color: var(--main-color); /* You can adjust this color */
+}
+
 /* =================================== *
  * GLOBAL STYLES
  * =================================== */
- body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
+body {
+  font-family: var(--main-font);
+  background-color: var(--background-color);
+}
+
+/* =================================== *
+ * CARD
+ * =================================== */
+ .card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-content {
+  padding: 20px 20px 30px 20px; /* Adjust the padding as needed */
 }
 
 /* =================================== *
@@ -13,7 +46,7 @@
   padding-top: 80px;
   max-width: 1000px;
   margin: 0 auto;
-  background: #ffffff;
+  background: var(--background-color);
   padding: 20px;
   border-radius: 10px;
 }
@@ -21,11 +54,12 @@
 /* =================================== *
  * TEXT CONTENT
  * =================================== */
-.text-content {
+ .text-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
+  align-items: flex-start;
+  padding: 20px; 
 }
 
 .text-content ul {
@@ -34,23 +68,23 @@
 }
 
 .text-content ul li {
-  font-size: calc(0.8rem + 0.8vw);
+  font-size: calc(0.7rem + 0.6vw); /* Adjust the size as needed */
   margin-bottom: 15px;
   padding: 10px;
-  border-left: 5px solid #c5c7fa;
+  border-left: 5px solid var(--highlight-color);
   background-color: #f6f8fa;
   transition: all 0.3s ease-in-out;
 }
 
 .text-content ul li:hover {
   background-color: #e9ecef;
-  border-left: 5px solid #ff7f7f;
+  border-left: 5px solid var(--secondary-color);
   transform: translateX(10px);
 }
 
 .text-content p {
-  color: #333333;
-  font-size: calc(0.9rem + 0.8vw);
+  color: var(--main-color);
+  font-size: calc(0.8rem + 0.6vw); /* Adjust the size as needed */
   word-wrap: break-word;
   overflow-wrap: break-word;
   padding-top: 20px;
@@ -68,13 +102,13 @@
 }
 
 .content-section h2 {
-  font-size: 24px;
+  font-size: 20px; /* Adjust the size as needed */
   font-weight: bold;
-  font-family: 'Academic Font', serif;
-  color: #333333;
+  font-family: var(--header-font);
+  color: var(--section-heading-color);
   padding-top: 20px;
   padding: 10px;
-  background-color: #c5c7fa;
+  background-color: var(--highlight-color);
   width: fit-content;
   border-radius: 5px;
 }
@@ -144,19 +178,19 @@
 /* =================================== *
  * VIDEO CONTENT
  * =================================== */
- .video-block {
+.video-block {
   width: 50%; 
-  margin: 20px auto; /* Adjust as needed */
+  margin: 20px auto;
 }
 
 .video-content {
   position: relative;
   overflow: hidden;
   padding-top: 33.75%; 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
-  border-radius: 8px; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 8px;
   width: 50%;
-  margin: 0px auto; /* Adjust as needed */
+  margin: 0px auto;
 }
 
 .video-content iframe {
@@ -169,15 +203,15 @@
 
 .video-title {
   text-align: center;
-  color: #000; /* Adjust as needed */
-  margin-bottom: 10px; /* Adjust as needed */
+  color: var(--main-color);
+  margin-bottom: 10px;
   font-size: 1.2em;
 }
 
 /* =================================== *
  * NAVIGATION
  * =================================== */
-#single-nav {
+ #single-nav {
   display: flex;
   flex-wrap: wrap;
   padding: 20px 30px;
@@ -197,20 +231,22 @@
 }
 
 #single-nav a {
-  color: #333;
+  color: var(--section-heading-color); /* Adjust the color as needed */
   text-decoration: none;
   font-weight: bold;
-  background-color: #ff7f7f;
+  background-color: var(--highlight-color); /* Corrected to use highlight-color */
   border-radius: 5px;
   padding: 10px 15px;
   margin: 10px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: background-color 0.3s ease;
-  line-height: 3; 
+  line-height: 3;
+  font-family: var(--header-font);
+  font-size: 20px; /* Adjust the size as needed */
 }
 
 #single-nav a:hover {
-  background-color: #ff4f4f;
+  background-color: var(--button-hover-color);
 }
 
 #single-nav a.external::after {
@@ -231,8 +267,8 @@
   font-size: 16px;
   border: none;
   outline: none;
-  background-color: #ff7f7f;
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
   cursor: pointer;
   padding: 20px;
   border-radius: 50%;
@@ -245,7 +281,7 @@
 }
 
 #backToTopBtn:hover {
-  background-color: #ff4f4f;
+  background-color: var(--button-hover-color);;
 }
 
 /* =================================== *

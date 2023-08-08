@@ -1,5 +1,4 @@
 {{ define "main" }}
-
 <!-- Single Page Container -->
 <div id="single-{{ .Title | urlize }}" class="single-container">
 
@@ -21,7 +20,7 @@
   <!-- Page Sections -->
   {{ range .Params.sections }}
   {{ if not .url }}
-  <section id="single-{{ .name | urlize }}" class="content-section">
+  <section id="single-{{ .name | urlize }}" class="content-section card">
     <h2>{{ .name }}</h2>
     {{ if or (eq .textPosition "right") (eq .textPosition "left") }}
     <div class="section-content {{ if eq .textPosition "right" }}text-right{{ else }}text-left{{ end }}">
@@ -55,8 +54,8 @@
           <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ .videoID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-      {{ end }} 
-      {{ end }}  
+      {{ end }}
+      {{ end }}
     </div> <!-- Close the .section-content here -->
   </section>
   {{ end }}
