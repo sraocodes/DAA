@@ -22,7 +22,7 @@ sections:
     image: "images/DAA_about2.png"
     imageWidth: "250px"
     imageHeight: "450px"
-    textPosition: "left"
+    textPosition: "right"
     list:
       - "Engaging presentation for both users and the public."
       - "Interfaces bridging various models."
