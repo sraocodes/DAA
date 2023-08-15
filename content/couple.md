@@ -17,4 +17,16 @@ sections:
       - "Holistic Representation: Individual models may focus on specific processes due to design constraints. Coupling broadens the scope, providing a more comprehensive view of the system."
       - "Mitigated Shortcomings: All models have limitations, often from necessary approximations. Coupling with a complementary model helps offset these weaknesses."
       - "Dynamic Feedbacks: Coupled models facilitate real-time interactions, allowing for dynamic feedbacks that enrich simulations."
+  - name: "Model Coupling Methods"
+    text: "Model coupling methods are techniques that allow for the integration and communication between different models. These methods are essential in representing intricate processes and interactions in systems like crop modeling. Depending on the level of integration and specific requirements, different methods are employed."
+    list:
+      - "Sequential or One-way Data Transfer Coupling: Basic unidirectional flow of data from one model to another."
+      - "Loose Coupling: Dynamic data exchange between models with automated data transfers."
+      - "Shared Coupling: Models share major components, either a GUI or data storage, fostering deeper integration."
+      - "Joined Coupling: Incorporates both shared GUI and data storage, allowing for deep inter-model interactions."
+      - "Framework or Tool Coupling: Advanced method integrating models within a broader modeling framework for seamless representation."
+    image: "images/coupling2.gif"
+    imageWidth: "800px"
+    imageHeight: "800px"
+    textPosition: "top"
 ---
