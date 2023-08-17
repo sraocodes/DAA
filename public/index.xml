@@ -6,10 +6,19 @@
     <description>Recent content on My New Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Aug 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sraocodes.github.io/Phenorob-DAA/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Multi-Scale Modeling in Crop Systems</title>
+      <link>https://sraocodes.github.io/Phenorob-DAA/multi_scale/</link>
+      <pubDate>Thu, 17 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sraocodes.github.io/Phenorob-DAA/multi_scale/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ProcessBasedModels</title>
@@ -57,20 +66,20 @@
     </item>
     
     <item>
-      <title>coupling</title>
-      <link>https://sraocodes.github.io/Phenorob-DAA/couple/</link>
-      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://sraocodes.github.io/Phenorob-DAA/couple/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CPlantBox</title>
       <link>https://sraocodes.github.io/Phenorob-DAA/cplantbox/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://sraocodes.github.io/Phenorob-DAA/cplantbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Future Coupling in PhenoRob DAA</title>
+      <link>https://sraocodes.github.io/Phenorob-DAA/couple/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sraocodes.github.io/Phenorob-DAA/couple/</guid>
       <description></description>
     </item>
     

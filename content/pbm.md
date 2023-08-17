@@ -42,10 +42,10 @@ sections:
     textPosition: "top"
     videos: 
     - videoID: "mPo-n1lZGXE"
-      videoTitle: "Video 1"
+      videoTitle: "Modeling Approaches"
     - videoID: "kdJI-y14v10"
-      videoTitle: "Video 2"
+      videoTitle: "Crop Growth Modeling"
     - videoID: "-MjNsvbCf4o"
-      videoTitle: "Video 3"
+      videoTitle: "Plant Models"
 
 ---

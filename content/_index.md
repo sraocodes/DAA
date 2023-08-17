@@ -13,7 +13,7 @@ slides:
   - image: "images/3.gif"
     heading: "Multi-Scale Models for Agricultural Solutions"
     text: "GRANAR and MECHA models scrutinize cell-level granular processes and mechanical phenomena. Dumux-ROSI and CPLANTBOX models focus on plant and organ scales, investigating water transport, growth, and development. Simplace, AgroC, and TerrSysMP models operate at crop and regional scales, unraveling crop growth, carbon dynamics, and broader agricultural interactions."
-    link: "https://www.example.com/plantcell" # The link for "Learn more" on this slide   
+    link: "/multi_scale/" # The link for "Learn more" on this slide   
     GRANAR_link: "/granar/"
     MECHA_link: "/mecha/"
     CPLANTBOX_link: "/cplantbox/"

@@ -30,5 +30,5 @@ sections:
     image: "images/coupling2.gif"
     imageWidth: "800px"
     imageHeight: "800px"
-    textPosition: "top"
+    textPosition: "bottom"
 ---
