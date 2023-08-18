@@ -3,13 +3,15 @@
   {{$footerStyles:=resources.Get "css/footer.css"}}
   {{$headerStyles:=resources.Get "css/header.css"}}
   {{$membersStyles:=resources.Get "css/members.css"}}
-  {{$singleStyles:=resources.Get "css/single.css"}} <!-- New CSS file for single.html pages -->
+  {{$singleStyles:=resources.Get "css/single.css"}} 
+  {{$backToTopStyles:=resources.Get "css/back2top.css"}} 
 
   <link rel="stylesheet" href="{{$styles.RelPermalink}}">
   <link rel="stylesheet" href="{{$footerStyles.RelPermalink}}">
   <link rel="stylesheet" href="{{$headerStyles.RelPermalink}}">
   <link rel="stylesheet" href="{{$membersStyles.RelPermalink}}">
-  <link rel="stylesheet" href="{{$singleStyles.RelPermalink}}"> <!-- Link to single.css -->
+  <link rel="stylesheet" href="{{$singleStyles.RelPermalink}}"> 
+  <link rel="stylesheet" href="{{$backToTopStyles.RelPermalink}}"> 
 
   <!-- Font Awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">

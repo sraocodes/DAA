@@ -17,14 +17,19 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s, opacity 0.3s;
   margin-bottom: 3rem;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.3s ease;
+  opacity: 0; /* Set initial opacity to 0 so it starts hidden */
+  transform: translateY(50px); /* Initial position slightly lower */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for animation */
+}
+
+.card.in-view {
+  opacity: 1; /* Full visibility when in view */
+  transform: translateY(0); /* Back to original position */
 }
 
 .card:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* A subtle lift on hover */
 }
 
 .card-img {
@@ -56,11 +61,41 @@ body {
   color: #007BFF;
   text-decoration: none;
   font-weight: bold;
-  border-bottom: 2px solid #007BFF;
-  transition: color 0.3s, border-color 0.3s;
+  border-bottom: 2px solid #007BFF; /* A solid underline to emphasize the link */
+  transition: color 0.3s, border-color 0.3s; /* Smooth transition on hover */
 }
 
 .card-content a.learn-more:hover {
   color: #0056b3;
-  border-color: #0056b3;
+  border-color: #0056b3; /* Darker shade on hover for emphasis */
+}
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 50%;
+  right: 5%;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black background */
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* A bit more shadow for depth */
+  font-size: 30px;
+  line-height: 40px;
+  vertical-align: middle;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Removed 'all', now only animating specific properties */
+}
+
+#backToTopBtn:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Darker when hovered */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover for depth */
+}
+
+#backToTopBtn i.fas {
+  /* If you're using Font Awesome, this will style the icon */
+  font-size: 24px; /* Adjust the size of the arrow */
+  vertical-align: middle;
 }

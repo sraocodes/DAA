@@ -5,7 +5,7 @@ draft: false
 
 sections:  
   - name: "About PhenoRob DAA"
-    text: "The [PhenoRob](https://www.phenorob.de/) Digital Agricultural Avatar (DAA) is a focused sub-project within the overarching PhenoRob initiative. Spearheaded mainly by the teams from [University of Bonn](https://www.uni-bonn.de/) and [ForschungZentrum Juelich](https://www.fz-juelich.de/portal/EN/Home/home_node.html), PhenoRob leverages advanced technology to bring substantial advancements in agriculture. Within this context, the DAA takes on the role of a digital twin for the agricultural system. It amalgamates various models that represent biogeochemical, biophysical, agricultural management, and economic aspects, culminating in a comprehensive tool. By doing so, DAA offers predictive insights, becoming a reliable guide for sustainable farming practices."
+    text: "The [PhenoRob](https://www.phenorob.de/) Digital Agricultural Avatar (DAA) is a focused sub-project within the overarching PhenoRob initiative. Spearheaded mainly by the teams from [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html), PhenoRob leverages advanced technology to bring substantial advancements in agriculture. Within this context, the DAA takes on the role of a digital twin for the agricultural system. It amalgamates various models that represent biogeochemical, biophysical, agricultural management, and economic aspects, culminating in a comprehensive tool. By doing so, DAA offers predictive insights, becoming a reliable guide for sustainable farming practices."
     image: "images/DAA_about1.gif"
     imageWidth: "300px"
     imageHeight: "500px"
@@ -31,7 +31,7 @@ sections:
       - "Video showcases of subproject simulations."
       - "Aspirations for digital twins of PhenoRob field sites."
   - name: "Meet the Team"
-    text: "Behind PhenoRob DAA is an interdisciplinary [team](/Phenorob-DAA/members/) from the [University of Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html). Their diverse backgrounds in fields like computer science, geodesy, robotics, plant science, soil science, economics, and environmental science power this innovative project, setting [PhenoRob](https://www.phenorob.de/) apart as the only [DFG](https://www.dfg.de/)-funded Cluster of Excellence focusing on agriculture."
+    text: "Behind PhenoRob DAA is an interdisciplinary [team](/Phenorob-DAA/members/) from the [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html). Their diverse backgrounds in fields like computer science, geodesy, robotics, plant science, soil science, economics, and environmental science power this innovative project, setting [PhenoRob](https://www.phenorob.de/) apart as the only [DFG](https://www.dfg.de/)-funded Cluster of Excellence focusing on agriculture."
     image: "images/DAA_about3.png"
     imageWidth: "150px"
     imageHeight: "150px"

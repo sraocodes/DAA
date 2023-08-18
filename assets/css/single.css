@@ -257,34 +257,6 @@ body {
 }
 
 /* =================================== *
- * BACK TO TOP BUTTON
- * =================================== */
-#backToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  background-color: var(--secondary-color);
-  color: var(--background-color);
-  cursor: pointer;
-  padding: 20px;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  font-size: 30px;
-  line-height: 40px;
-  display: inline-block;
-  vertical-align: middle;
-  transform: rotate(-90deg);
-}
-
-#backToTopBtn:hover {
-  background-color: var(--button-hover-color);;
-}
-
-/* =================================== *
  * RESPONSIVE STYLES
  * =================================== */
 @media (max-width: 768px) {

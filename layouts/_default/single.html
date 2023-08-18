@@ -62,12 +62,13 @@
   {{ end }}
 
   <!-- Back to Top Button -->
-  <button id="backToTopBtn" title="Back to Top">&#10148;</button>
-</div>
-
+  <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
 {{ end }}
 
 {{ define "scripts" }}
 {{ $singleJs := resources.Get "js/single.js" }}
+{{ $backToTopJs := resources.Get "js/backtotop.js" }} <!-- Get the backtotop.js resource -->
 <script src="{{ $singleJs.Permalink }}"></script>
+<script src="{{ $backToTopJs.Permalink }}"></script> <!-- Include the backtotop.js script -->
 {{ end }}
+

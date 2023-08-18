@@ -26,5 +26,14 @@
     </div>
     {{ end }}
 </div>
-
+<!-- Back to Top Button -->
+<button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
 {{ end }}
+
+{{ define "scripts" }}
+{{ $sliderJs := resources.Get "js/slider.js" }} <!-- Define the variable as $sliderJs -->
+{{ $backToTopJs := resources.Get "js/backtotop.js" }}
+<script src="{{ $sliderJs.Permalink }}"></script>
+<script src="{{ $backToTopJs.Permalink }}"></script>
+{{ end }}
+
