@@ -9,7 +9,18 @@
   <div class="members-container">
     {{ range .Params.groups }}
     <div id="members" class="members-section">
-      <h2>{{.groupTitle}}</h2>
+      {{ if and (in .groupTitle "[") (in .groupTitle "](") (in .groupTitle ")") }}
+        {{ $parts := split .groupTitle "](" }} <!-- Split on the "](" pattern -->
+        {{ $titleWithBrackets := index $parts 0 }} <!-- This will have format "[MECHA" -->
+        {{ $title := replace $titleWithBrackets "[" "" }}
+        {{ $urlParts := split (index $parts 1) ")" }} <!-- Split the URL part on ")" -->
+        {{ $url := index $urlParts 0 }}
+        {{ $remainingText := delimit (slice (index $urlParts 1)) " " }}
+    
+        <h2><a href="{{ $url }}" rel="noopener noreferrer">{{ $title }}</a> {{ $remainingText }}</h2>
+      {{ else }}
+        <h2>{{ .groupTitle }}</h2>
+      {{ end }}
       <ul>
         {{ range .members }}
         <li>
