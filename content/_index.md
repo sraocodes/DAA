@@ -20,6 +20,6 @@ slides:
   - image: "images/4.gif"
     heading: "Coupling Models for Agricultural Breakthroughs"
     text: "DAA aims to integrate multi-scale models to solve complex agricultural problems. This involves identifying suitable software, establishing connections between their components, calibrating model parameters, and fostering interdisciplinary collaboration."
-    link: "https://www.example.com/plantcell" # The link for "Learn more" on this slide
+    link: "/couple/" # The link for "Learn more" on this slide
 
 ---

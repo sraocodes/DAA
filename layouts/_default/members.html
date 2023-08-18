@@ -7,17 +7,18 @@
 </head>
 <body>
   <div class="members-container">
+    {{ range .Params.groups }}
     <div id="members" class="members-section">
-      <h2>{{.Title}}</h2>
+      <h2>{{.groupTitle}}</h2>
       <ul>
-        {{ range .Params.members }}
+        {{ range .members }}
         <li>
           <div class="member">
             <div class="member-pic">
               <img src="{{ .picture }}" alt="{{ .name }}">
             </div>
             <div class="member-info">
-              <h4>{{ .name }}</a></h4>
+              <h4>{{ .name }}</h4>
               <p>{{ .institute }}</p>
               <p>Email: <a href="mailto:{{ .email }}">{{ .email }}</a></p>
               <div class="social-icons">
@@ -46,6 +47,7 @@
         {{ end }}
       </ul>
     </div>
+    {{ end }}
   </div>
   <div class="content">
     {{ .Content }}
