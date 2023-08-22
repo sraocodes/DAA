@@ -31,4 +31,30 @@ sections:
     imageWidth: "800px"
     imageHeight: "800px"
     textPosition: "bottom"
+
+  - name: "Case Study: GRANAR-MECHA"
+    text: "Our phenorob [team](/Phenorob-DAA/members/) members have pioneered this understanding by coupling GRANAR and MECHA, two computational tools that, when combined, offer a holistic view of root anatomy and hydraulics. The coupling of GRANAR, a computational tool designed to generate digital versions of monocotyledon root     anatomical networks, with MECHA, a model estimating root hydraulic properties, has been transformative. This combination has empowered researchers to:"
+    image: "images/granar_mecha.jpg"
+    imageWidth: "800px"
+    imageHeight: "500px"
+    textPosition: "top"
+    list:
+      - "Quantify the effect of individual anatomical features on root's radial conductivity."
+      - "Generate virtual anatomies for experimental observations, even those not observed, to estimate corresponding radial conductivities."
+      - "Explore the theoretical link between anatomy and radial conductivity, assessing the functional importance of individual anatomical properties."
+      - "Understand the relationship between root anatomy and its hydraulic properties, crucial for enhancing crop resilience in changing environmental conditions.
+        [Read the full study](https://pubmed.ncbi.nlm.nih.gov/34355112/)"
+
+  - name: "Case Study: SIMPLACE-CRootbox"
+    text: "Soil compaction, especially at greater depths, is a growing concern in modern agriculture. To address this, our AR team members have innovatively coupled SIMPLACE with CRootbox, providing groundbreaking insights into the implications of deep soil compaction and its effects on plant growth. By integrating SIMPLACE, a process-based model focusing on crop-level dynamics, with CRootbox, a detailed root architectural model, our [team](/Phenorob-DAA/members/) has:"
+    image: "images/simplace_crootbox.jpg"
+    imageWidth: "800px"
+    imageHeight: "500px"
+    textPosition: "top"
+    list:
+      - "Simulated intricate root-soil interactions, understanding the implications of deep soil compaction."
+      - "Established a dynamic feedback system ensuring simulated root density is influenced by a myriad of factors, from soil properties to carbon allocation from shoots."
+      - "Revealed the intrinsic relationship between soil compaction, weather, and crop species, highlighting the magnified implications of soil compaction in warmer, dryer climates."
+      - "Demonstrated that deep loosening can increase absolute root length density, crucial for sustainable agricultural practices.
+      [Explore the detailed investigation](https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full)"
 ---
