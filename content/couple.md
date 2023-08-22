@@ -33,7 +33,7 @@ sections:
     textPosition: "bottom"
 
   - name: "Case Study: GRANAR-MECHA"
-    text: "Our phenorob [team](/Phenorob-DAA/members/) members have pioneered this understanding by coupling GRANAR and MECHA, two computational tools that, when combined, offer a holistic view of root anatomy and hydraulics. The coupling of GRANAR, a computational tool designed to generate digital versions of monocotyledon root     anatomical networks, with MECHA, a model estimating root hydraulic properties, has been transformative. This combination has empowered researchers to:"
+    text: "Our phenorob [team](/Phenorob-DAA/members/) members have pioneered this understanding by coupling [GRANAR](/Phenorob-DAA/granar/) and [MECHA](/Phenorob-DAA/mecha/), two computational tools that, when combined, offer a holistic view of root anatomy and hydraulics. The coupling of GRANAR, a computational tool designed to generate digital versions of monocotyledon root     anatomical networks, with MECHA, a model estimating root hydraulic properties, has been transformative. This combination has empowered researchers to:"
     image: "images/granar_mecha.jpg"
     imageWidth: "800px"
     imageHeight: "500px"
@@ -45,8 +45,8 @@ sections:
       - "Understand the relationship between root anatomy and its hydraulic properties, crucial for enhancing crop resilience in changing environmental conditions.
         [Read the full study](https://pubmed.ncbi.nlm.nih.gov/34355112/)"
 
-  - name: "Case Study: SIMPLACE-CRootbox"
-    text: "Soil compaction, especially at greater depths, is a growing concern in modern agriculture. To address this, our AR team members have innovatively coupled SIMPLACE with CRootbox, providing groundbreaking insights into the implications of deep soil compaction and its effects on plant growth. By integrating SIMPLACE, a process-based model focusing on crop-level dynamics, with CRootbox, a detailed root architectural model, our [team](/Phenorob-DAA/members/) has:"
+  - name: "Case Study: SIMPLACE-CPlantbox"
+    text: "Soil compaction, especially at greater depths, is a growing concern in modern agriculture. To address this, our AR team members have innovatively coupled [SIMPLACE](/Phenorob-DAA/simplace/) with [CPlantbox](/Phenorob-DAA/cplantbox/), providing groundbreaking insights into the implications of deep soil compaction and its effects on plant growth. By integrating SIMPLACE, a process-based model focusing on crop-level dynamics, with CRootbox, a detailed root architectural model, our [team](/Phenorob-DAA/members/) has:"
     image: "images/simplace_crootbox.jpg"
     imageWidth: "800px"
     imageHeight: "500px"
