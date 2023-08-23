@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 // Recursively call the function to achieve indefinite scrambling
                 scrambleRepeatedly(scrambler, originalText);
-            }, 5000);  // 5 seconds delay between scrambles
+            }, 10000);  // 10 seconds delay between scrambles
         });
     }
     
