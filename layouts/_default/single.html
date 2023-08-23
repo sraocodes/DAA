@@ -3,19 +3,28 @@
 <div id="single-{{ .Title | urlize }}" class="single-container">
 
   <!-- Page Navigation -->
-  <nav id="single-nav" class="navbar">
-    <ul>
-      {{ range .Params.sections }}
-      <li>
-        {{ if .url }}
-        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="external">{{ .name }}</a>
-        {{ else }}
-        <a href="#single-{{ .name | urlize }}">{{ .name }}</a>
-        {{ end }}
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
+  <div class="dropdown">
+    <button id="navbarToggle" class="navbar-toggle dropbtn" title="menu">
+      Page Menu
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  
+    <nav id="single-nav" class="dropdown-menu">
+        <ul>
+            {{ range .Params.sections }}
+            <li>
+                {{ if .url }}
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="external">{{ .name }}</a>
+                {{ else }}
+                <a href="#single-{{ .name | urlize }}">{{ .name }}</a>
+                {{ end }}
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
+  </div>
 
   <!-- Page Sections -->
   {{ range .Params.sections }}
@@ -56,7 +65,7 @@
       </div>
       {{ end }}
       {{ end }}
-    </div> <!-- Close the .section-content here -->
+    </div>
   </section>
   {{ end }}
   {{ end }}
@@ -71,4 +80,5 @@
 <script src="{{ $singleJs.Permalink }}"></script>
 <script src="{{ $backToTopJs.Permalink }}"></script> <!-- Include the backtotop.js script -->
 {{ end }}
+
 

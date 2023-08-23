@@ -1,29 +1,18 @@
-// single.js
-
 document.addEventListener('DOMContentLoaded', () => {
-  // Navigation functionality
-  const singleNav = document.querySelector('#single-nav');
-  if (singleNav) {
-    const navbarLinks = singleNav.querySelectorAll('a');
-    const sections = document.querySelectorAll('section');
+  const navbarLinks = document.querySelector('#single-nav ul');
+  const sections = document.querySelectorAll('section');
+  const links = navbarLinks.querySelectorAll('a');
 
-    navbarLinks.forEach(link => {
+  links.forEach(link => {
       link.addEventListener('click', (event) => {
-        const targetSectionId = link.getAttribute('href');
-        
-        // Check if the link is an internal link (starts with '#')
-        if (targetSectionId.startsWith('#')) {
-          event.preventDefault();
-          const targetSection = document.querySelector(targetSectionId);
-
-          // Smooth scroll to the target section
-          targetSection.scrollIntoView({ behavior: 'smooth' });
-
-          // Apply the 'active' class to the target section
-          sections.forEach(section => section.classList.remove('active'));
-          targetSection.classList.add('active');
-        }
+          const targetSectionId = link.getAttribute('href');
+          if (targetSectionId.startsWith('#')) {
+              event.preventDefault();
+              const targetSection = document.querySelector(targetSectionId);
+              targetSection.scrollIntoView({ behavior: 'smooth' });
+              sections.forEach(section => section.classList.remove('active'));
+              targetSection.classList.add('active');
+          }
       });
-    });
-  }
+  });
 });

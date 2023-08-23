@@ -256,6 +256,35 @@ body {
   font-weight: bold;
 }
 
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 20px;
+}
+
+.navbar-toggle span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--section-heading-color);
+  display: block;
+  margin: 3px 0;
+  transition: transform 0.3s ease;
+}
+
+#single-nav.expanded ul {
+  max-height: 500px; /* Adjust the max-height as needed */
+  overflow: auto;
+  transition: max-height 0.3s ease-in-out;
+}
+
 /* =================================== *
  * RESPONSIVE STYLES
  * =================================== */

@@ -1,8 +1,15 @@
-// single.js
-
 document.addEventListener('DOMContentLoaded', () => {
   // Navigation functionality
   const singleNav = document.querySelector('#single-nav');
+  const navbarToggle = document.querySelector('#navbarToggle');
+  
+  if (navbarToggle) {
+    navbarToggle.addEventListener('click', () => {
+      const navbarLinks = singleNav.querySelector('ul');
+      navbarLinks.style.display = navbarLinks.style.display === 'none' ? 'flex' : 'none';
+    });
+  }
+
   if (singleNav) {
     const navbarLinks = singleNav.querySelectorAll('a');
     const sections = document.querySelectorAll('section');
