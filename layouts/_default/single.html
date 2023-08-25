@@ -1,78 +1,66 @@
 {{ define "main" }}
 <!-- Single Page Container -->
-<div id="single-{{ .Title | urlize }}" class="single-container">
+<div id="single-{{ .Title | urlize }}" class="single-container container mt-5">
 
   <!-- Page Navigation -->
-  <div class="dropdown">
-    <button id="navbarToggle" class="navbar-toggle dropbtn" title="menu">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       Page Menu
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <nav id="single-nav" class="dropdown-menu">
-        <ul>
-            {{ range .Params.sections }}
-            <li>
-                {{ if .url }}
-                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="external">{{ .name }}</a>
-                {{ else }}
-                <a href="#single-{{ .name | urlize }}">{{ .name }}</a>
-                {{ end }}
-            </li>
-            {{ end }}
-        </ul>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <ul class="navbar-nav">
+        {{ range .Params.sections }}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ if not .url }}#single-{{ .name | urlize }}{{ else }}{{ .url }}{{ end }}" {{ if .url }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ .name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    
   </div>
 
   <!-- Page Sections -->
   {{ range .Params.sections }}
-  {{ if not .url }}
-  <section id="single-{{ .name | urlize }}" class="content-section card">
-    <h2>{{ .name }}</h2>
-    {{ if or (eq .textPosition "right") (eq .textPosition "left") }}
-    <div class="section-content {{ if eq .textPosition "right" }}text-right{{ else }}text-left{{ end }}">
-    {{ else if or (eq .textPosition "bottom") (eq .textPosition "top") }}
-    <div class="section-content {{ if eq .textPosition "bottom" }}text-bottom{{ else }}text-top{{ end }}">
-    {{ else }}
-    <div class="section-content">
-    {{ end }}
-      <div class="text-content">
-        <p>{{ .text | markdownify | replaceRE `(<a href="[^"]*")` `$1 target="_blank"` | safeHTML }}</p>
-        {{ if .list }}
-        <div class="list-content">
-          <ul>
-            {{ range .list }}
-            <li>{{ . | markdownify | replaceRE `(<a href="[^"]*")` `$1 target="_blank"` | safeHTML }}</li>
-            {{ end }}
-          </ul>
-        </div>
-        {{ end }}
-      </div>
-      {{ if .image }}
-      <div class="img-content">
-        <img src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
-      </div>
+  {{ if not .url }} <!-- Check if the section does not have a URL-only property -->
+  <div id="single-{{ .name | urlize }}" class="card mb-5">
+    <div class="card-body">
+      {{ if not (strings.HasPrefix .name "http") }}
+      <h2 class="card-title">{{ .name }}</h2>
       {{ end }}
+      <div class="row {{ if eq .textPosition "right" }}flex-row-reverse{{ else if eq .textPosition "top" }}flex-column-reverse{{ else if eq .textPosition "bottom" }}flex-column{{ end }}">
+        <div class="col-12">
+          {{ if .image }}
+          <img class="float-{{ if eq .textPosition "right" }}left{{ else }}right{{ end }} img-fluid rounded mr-3 mb-3" src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+          {{ end }}
+          <p class="card-text lead">{{ .text | markdownify | safeHTML }}</p> <!-- Added the 'lead' class to make the text bigger -->
+          {{ if .list }}
+          <ul class="list-group">
+              {{ range .list }}
+              <li class="list-group-item">{{ . | markdownify | safeHTML }}</li> <!-- Using Bootstrap's list-group for a more elegant look -->
+              {{ end }}
+          </ul>
+          {{ end }}
+      </div>      
+      </div>
       {{ if .videos }}
       {{ range .videos }}
-      <div class="video-block">
-        <p class="video-title">{{ .videoTitle }}</p>
-        <div class="video-content">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ .videoID }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+      <p class="text-center mt-3">{{ .videoTitle }}</p>
+      <div class="embed-responsive embed-responsive-16by9 my-4" style="max-width: 60%; margin: auto;">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ .videoID }}" allowfullscreen></iframe>
       </div>
       {{ end }}
       {{ end }}
     </div>
-  </section>
+  </div>
   {{ end }}
   {{ end }}
-
   <!-- Back to Top Button -->
-  <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+  <button id="backToTopBtn" class="btn btn-secondary" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
 {{ end }}
+
+
+
 
 {{ define "scripts" }}
 {{ $singleJs := resources.Get "js/single.js" }}
