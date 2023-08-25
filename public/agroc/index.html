@@ -6,6 +6,7 @@
     <title>Agro-C</title>
     <meta name="description" content="">
     <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
   
   
@@ -28,365 +29,332 @@
   
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 </head>
 <body>        
-    <div class="navbar">
-  <div class="logo-container">
-    <a href="https://sraocodes.github.io/Phenorob-DAA/">
-      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" class="logo">
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="https://sraocodes.github.io/Phenorob-DAA/">
+      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" style="max-height: 75px;">
+  </a>
+
+  
+  <div class="d-flex flex-grow-1 justify-content-center">
+      <div class="text-center">
+          <h1 class="mb-0 display-4">PhenoRob Digital Agricultural Avatar</h1>
+          <h2 class="h5 mb-0">(Process Based Models for the Future of Crop Production)</h2>
+      </div>
   </div>
-  <div class="headline-links-container">
-    <div class="headline-container">
-      <h1 class="headline">PhenoRob Digital Agricultural Avatar</h1>
-      <h2>(Process Based Models for the Future of Crop Production)</h2>
-    </div>
 
-    <div class="links-container">
-      <div class="dropdown">
-        <button class="dropbtn">DAA &#9662;</button>
-        <div class="dropdown-menu">
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
-          
-        </div>
-      </div>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="dropdown">
-        <button class="dropbtn">Tools &#9662;</button>
-        <div class="dropdown-menu">
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DAA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link2Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <button class="dropbtn">Research &#9662;</button>
-        <div class="dropdown-menu">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tools
+              </a>
+              <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <a href="#" target="_blank" class="dropbtn">Contact</a>
-      </div>
-    </div>
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Research
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link1Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
+                  
+              </div>
+          </li>
+
+          
+          <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank">Contact</a>
+          </li>
+      </ul>
   </div>
-</div>
+</nav>
     
     <main>
         
          
          <script src="https://sraocodes.github.io/Phenorob-DAA/js/slider.js"></script> 
         
-
-<div id="single-agro-c" class="single-container">
+<div id="single-agro-c" class="single-container container mt-5">
 
   
-  <div class="dropdown">
-    <button id="navbarToggle" class="navbar-toggle dropbtn" title="menu">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       Page Menu
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <nav id="single-nav" class="dropdown-menu">
-        <ul>
-            
-            <li>
-                
-                <a href="#single-what-is-agro-c">What is Agro-C ?</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-description-of-agro-c-model">Description of Agro-C Model</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-crop-c-sub-model">Crop-C sub-model</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-soil-c-sub-model">Soil-C sub-model</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-net-ecosystem-exchange">Net Ecosystem Exchange</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-features">Features</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062" target="_blank" rel="noopener noreferrer" class="external">Documentation</a>
-                
-            </li>
-            
-        </ul>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-what-is-agro-c" >What is Agro-C ?</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-description-of-agro-c-model" >Description of Agro-C Model</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-crop-c-sub-model" >Crop-C sub-model</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-soil-c-sub-model" >Soil-C sub-model</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-net-ecosystem-exchange" >Net Ecosystem Exchange</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-features" >Features</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062" target="_blank" rel="noopener noreferrer">Documentation</a>
+        </li>
+        
+      </ul>
+    </div>
   </div>
 
   
   
   
-  <section id="single-what-is-agro-c" class="content-section card">
-    <h2>What is Agro-C ?</h2>
-    
-    <div class="section-content text-right">
-    
-      <div class="text-content">
-        <p>AGRO-C is a computer model used to understand how carbon moves in and out of agricultural soil, which is called the &lsquo;carbon budget&rsquo; of the farm or field. The model helps scientists understand how much carbon is being absorbed by crops, how much is stored in the soil, and how much is exchanged with the atmosphere. Understanding the carbon budget of agroecosystems has implications for climate change mitigation and sustainable land management.</p>
-        
-      </div>
+  <div id="single-what-is-agro-c" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">What is Agro-C ?</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/AgroC.png" alt="What is Agro-C ?" style="width: 250px; height: 250px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">AGRO-C is a computer model used to understand how carbon moves in and out of agricultural soil, which is called the &lsquo;carbon budget&rsquo; of the farm or field. The model helps scientists understand how much carbon is being absorbed by crops, how much is stored in the soil, and how much is exchanged with the atmosphere. Understanding the carbon budget of agroecosystems has implications for climate change mitigation and sustainable land management.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-description-of-agro-c-model" class="content-section card">
-    <h2>Description of Agro-C Model</h2>
     
-    <div class="section-content text-left">
-    
-      <div class="text-content">
-        <p>The Agro-C has two main parts:</p>
-        
-        <div class="list-content">
-          <ul>
-            
-            <li>Crop-C: This part simulates how crops grow and take in carbon from the air during photosynthesis.</li>
-            
-            <li>Soil-C: This part simulates what happens to the carbon from crop residues and other organic sources in the soil.</li>
-            
-          </ul>
-        </div>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-description-of-agro-c-model" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Description of Agro-C Model</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/Agroc2.gif" alt="Description of Agro-C Model" style="width: 250px; height: 250px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">The Agro-C has two main parts:</p>
+      
+      <ul class="list-group">
+        
+        <li class="list-group-item">Crop-C: This part simulates how crops grow and take in carbon from the air during photosynthesis.</li>
+        
+        <li class="list-group-item">Soil-C: This part simulates what happens to the carbon from crop residues and other organic sources in the soil.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-crop-c-sub-model" class="content-section card">
-    <h2>Crop-C sub-model</h2>
     
-    <div class="section-content text-right">
-    
-      <div class="text-content">
-        <p>The Crop-C sub-model in AGRO-C focuses on the journey of carbon in the life of a plant. It calculates how much carbon the plant absorbs from the atmosphere through photosynthesis (also known as Gross Primary Production or GPP). It then considers how much of this carbon the plant uses for its own growth and basic life functions, a process known as Autotrophic Respiration (RA). The remaining carbon, termed as Net Primary Production (NPP), is the balance between what the plant takes in and what it uses. The sub-model also tracks how much of this remaining carbon gets transferred into the soil.</p>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-crop-c-sub-model" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Crop-C sub-model</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/Agroc3.gif" alt="Crop-C sub-model" style="width: 250px; height: 300px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">The Crop-C sub-model in AGRO-C focuses on the journey of carbon in the life of a plant. It calculates how much carbon the plant absorbs from the atmosphere through photosynthesis (also known as Gross Primary Production or GPP). It then considers how much of this carbon the plant uses for its own growth and basic life functions, a process known as Autotrophic Respiration (RA). The remaining carbon, termed as Net Primary Production (NPP), is the balance between what the plant takes in and what it uses. The sub-model also tracks how much of this remaining carbon gets transferred into the soil.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-soil-c-sub-model" class="content-section card">
-    <h2>Soil-C sub-model</h2>
     
-    <div class="section-content">
-    
-      <div class="text-content">
-        <p>The Soil-C submodel in AGRO-C helps us understand how organic carbon moves and changes in agricultural soils. It considers the balance between carbon going into the soil and carbon leaving the soil. By considering these processes, the model gives insight into how carbon levels change in agricultural soils over time.</p>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-soil-c-sub-model" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Soil-C sub-model</h2>
+      
+      <p class="card-text" style="font-size: 1.1rem;">The Soil-C submodel in AGRO-C helps us understand how organic carbon moves and changes in agricultural soils. It considers the balance between carbon going into the soil and carbon leaving the soil. By considering these processes, the model gives insight into how carbon levels change in agricultural soils over time.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-net-ecosystem-exchange" class="content-section card">
-    <h2>Net Ecosystem Exchange</h2>
     
-    <div class="section-content text-right">
-    
-      <div class="text-content">
-        <p>Crop-C and Soil-C submodels are linked through the concept of Net Ecosystem Exchange (NEE). NEE represents the balance between carbon gained by the ecosystem and carbon lost by the ecosystem. Understanding NEE helps us determine whether an ecosystem is acting as a net carbon sink (absorbing more carbon than it releases) or a net carbon source (releasing more carbon than it absorbs).</p>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-net-ecosystem-exchange" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Net Ecosystem Exchange</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/Agroc4.gif" alt="Net Ecosystem Exchange" style="width: 250px; height: 300px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">Crop-C and Soil-C submodels are linked through the concept of Net Ecosystem Exchange (NEE). NEE represents the balance between carbon gained by the ecosystem and carbon lost by the ecosystem. Understanding NEE helps us determine whether an ecosystem is acting as a net carbon sink (absorbing more carbon than it releases) or a net carbon source (releasing more carbon than it absorbs).</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-features" class="content-section card">
-    <h2>Features</h2>
     
-    <div class="section-content">
-    
-      <div class="text-content">
-        <p>The main features of Agro-C are:</p>
+  </div>
+  
+  
+  
+  <div id="single-features" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Features</h2>
+      
+      <p class="card-text" style="font-size: 1.1rem;">The main features of Agro-C are:</p>
+      
+      <ul class="list-group">
         
-        <div class="list-content">
-          <ul>
-            
-            <li>It aids in understanding the carbon budget of agricultural ecosystems.</li>
-            
-            <li>It simulates the carbon dynamics considering factors like crop type, management practices, and   climate variables.</li>
-            
-            <li>It divides the carbon budget into Crop-C and Soil-C for better understanding and prediction.</li>
-            
-          </ul>
-        </div>
+        <li class="list-group-item">It aids in understanding the carbon budget of agricultural ecosystems.</li>
         
-      </div>
+        <li class="list-group-item">It simulates the carbon dynamics considering factors like crop type, management practices, and   climate variables.</li>
+        
+        <li class="list-group-item">It divides the carbon budget into Crop-C and Soil-C for better understanding and prediction.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
+    
+  </div>
   
   
   
   
-
   
-  <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+  
+  <button id="backToTopBtn" class="btn btn-secondary" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+</div>
 
     </main>
-    <div id="footer">
-  <footer class="site-footer">
-    <div class="footer-content">
+    <div id="footer" class="container mt-5">
+  <footer class="site-footer text-center bg-light py-4">
       <p></p>
       <p><a href="/privacy-policy">Privacy Policy</a></p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/your_twitter_handle" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
+      <div class="social-icons mt-3">
+          <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
+              <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank" class="text-primary mx-3">
+              <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/your_twitter_handle" target="_blank" class="text-info mx-3">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
       </div>
-    </div>
   </footer>
 </div>
+
 
     
 

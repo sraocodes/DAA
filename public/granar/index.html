@@ -6,6 +6,7 @@
     <title>GRANAR</title>
     <meta name="description" content="">
     <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
   
   
@@ -28,311 +29,290 @@
   
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 </head>
 <body>        
-    <div class="navbar">
-  <div class="logo-container">
-    <a href="https://sraocodes.github.io/Phenorob-DAA/">
-      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" class="logo">
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="https://sraocodes.github.io/Phenorob-DAA/">
+      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" style="max-height: 75px;">
+  </a>
+
+  
+  <div class="d-flex flex-grow-1 justify-content-center">
+      <div class="text-center">
+          <h1 class="mb-0 display-4">PhenoRob Digital Agricultural Avatar</h1>
+          <h2 class="h5 mb-0">(Process Based Models for the Future of Crop Production)</h2>
+      </div>
   </div>
-  <div class="headline-links-container">
-    <div class="headline-container">
-      <h1 class="headline">PhenoRob Digital Agricultural Avatar</h1>
-      <h2>(Process Based Models for the Future of Crop Production)</h2>
-    </div>
 
-    <div class="links-container">
-      <div class="dropdown">
-        <button class="dropbtn">DAA &#9662;</button>
-        <div class="dropdown-menu">
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
-          
-        </div>
-      </div>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="dropdown">
-        <button class="dropbtn">Tools &#9662;</button>
-        <div class="dropdown-menu">
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DAA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link2Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <button class="dropbtn">Research &#9662;</button>
-        <div class="dropdown-menu">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tools
+              </a>
+              <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <a href="#" target="_blank" class="dropbtn">Contact</a>
-      </div>
-    </div>
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Research
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link1Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
+                  
+              </div>
+          </li>
+
+          
+          <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank">Contact</a>
+          </li>
+      </ul>
   </div>
-</div>
+</nav>
     
     <main>
         
          
          <script src="https://sraocodes.github.io/Phenorob-DAA/js/slider.js"></script> 
         
-
-<div id="single-granar" class="single-container">
+<div id="single-granar" class="single-container container mt-5">
 
   
-  <div class="dropdown">
-    <button id="navbarToggle" class="navbar-toggle dropbtn" title="menu">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       Page Menu
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <nav id="single-nav" class="dropdown-menu">
-        <ul>
-            
-            <li>
-                
-                <a href="#single-what-is-granar">What is GRANAR ?</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-granar-features">GRANAR features</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-why-granar">Why GRANAR ?</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-granar-limitations">GRANAR Limitations</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="https://granar.github.io/" target="_blank" rel="noopener noreferrer" class="external">Try GRANAR</a>
-                
-            </li>
-            
-        </ul>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-what-is-granar" >What is GRANAR ?</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-granar-features" >GRANAR features</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-why-granar" >Why GRANAR ?</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-granar-limitations" >GRANAR Limitations</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://granar.github.io/" target="_blank" rel="noopener noreferrer">Try GRANAR</a>
+        </li>
+        
+      </ul>
+    </div>
   </div>
 
   
   
   
-  <section id="single-what-is-granar" class="content-section card">
-    <h2>What is GRANAR ?</h2>
-    
-    <div class="section-content text-right">
-    
-      <div class="text-content">
-        <p>You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. GRANAR primarily focuses on the anatomy of individual root sections, rather than simulating the architecture of the entire root system. It generates explicit representations of root anatomy at a cellular scale. You can check the official site of GRANAR <a href="https://granar.github.io/" target="_blank">here</a>.</p>
-        
-      </div>
+  <div id="single-what-is-granar" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">What is GRANAR ?</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/Granar1.jpeg" alt="What is GRANAR ?" style="width: 300px; height: 300px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. GRANAR primarily focuses on the anatomy of individual root sections, rather than simulating the architecture of the entire root system. It generates explicit representations of root anatomy at a cellular scale. You can check the official site of GRANAR <a href="https://granar.github.io/">here</a>.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-granar-features" class="content-section card">
-    <h2>GRANAR features</h2>
     
-    <div class="section-content text-left">
-    
-      <div class="text-content">
-        <p>The tool enables a detailed exploration of anatomical features like the number of xylem vessels, the proportion of aerenchyma, the size of the stele, cortex width, etc. These are all features that would typically be analyzed in a cross-sectional view of a root, rather than in a whole root system architecture model.</p>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-granar-features" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">GRANAR features</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/Granar2.png" alt="GRANAR features" style="width: 300px; height: 300px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">The tool enables a detailed exploration of anatomical features like the number of xylem vessels, the proportion of aerenchyma, the size of the stele, cortex width, etc. These are all features that would typically be analyzed in a cross-sectional view of a root, rather than in a whole root system architecture model.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-why-granar" class="content-section card">
-    <h2>Why GRANAR ?</h2>
     
-    <div class="section-content text-right">
-    
-      <div class="text-content">
-        <p>GRANAR offers a computational approach to study plant roots by recreating their structure and functionality at a cellular level digitally. Moreover, coupled with other models, GRANAR can predict crop performance under varying conditions, optimizing farming practices and enhancing precision agriculture. For e.g:</p>
-        
-        <div class="list-content">
-          <ul>
-            
-            <li>Plant Response Insight: GRANAR simulates root anatomies, enhancing understanding of plant    nutrient absorption for growth and resilience.</li>
-            
-            <li>Plant Breeding Support: GRANAR&rsquo;s anatomical analysis aids breeders in developing drought-tolerant crops for varied soil qualities.</li>
-            
-            <li>Crop Performance Prediction: Coupled with hydraulic models like MECHA, GRANAR forecasts root performance under diverse environmental conditions.</li>
-            
-          </ul>
-        </div>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-why-granar" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Why GRANAR ?</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/Granar3.jpeg" alt="Why GRANAR ?" style="width: 250px; height: 250px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">GRANAR offers a computational approach to study plant roots by recreating their structure and functionality at a cellular level digitally. Moreover, coupled with other models, GRANAR can predict crop performance under varying conditions, optimizing farming practices and enhancing precision agriculture. For e.g:</p>
+      
+      <ul class="list-group">
+        
+        <li class="list-group-item">Plant Response Insight: GRANAR simulates root anatomies, enhancing understanding of plant    nutrient absorption for growth and resilience.</li>
+        
+        <li class="list-group-item">Plant Breeding Support: GRANAR&rsquo;s anatomical analysis aids breeders in developing drought-tolerant crops for varied soil qualities.</li>
+        
+        <li class="list-group-item">Crop Performance Prediction: Coupled with hydraulic models like MECHA, GRANAR forecasts root performance under diverse environmental conditions.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-granar-limitations" class="content-section card">
-    <h2>GRANAR Limitations</h2>
     
-    <div class="section-content text-left">
-    
-      <div class="text-content">
-        <p>The main limitation of GRANAR, as with any model that focuses on a specific scale or aspect of a system, is that it does not provide a holistic understanding of plant growth and development. While GRANAR is excellent at providing detailed information about root anatomy at the cellular level and its implications on water and nutrient uptake, it cannot directly provide information about how these root traits interact with other plant traits or environmental variables at a larger scale to influence overall plant growth, yield, or response to stress.</p>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-granar-limitations" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">GRANAR Limitations</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/Granar4.gif" alt="GRANAR Limitations" style="width: 200px; height: 400px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">The main limitation of GRANAR, as with any model that focuses on a specific scale or aspect of a system, is that it does not provide a holistic understanding of plant growth and development. While GRANAR is excellent at providing detailed information about root anatomy at the cellular level and its implications on water and nutrient uptake, it cannot directly provide information about how these root traits interact with other plant traits or environmental variables at a larger scale to influence overall plant growth, yield, or response to stress.</p>
       
       
     </div>
-  </section>
+    
+  </div>
   
   
   
   
-
   
-  <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+  
+  <button id="backToTopBtn" class="btn btn-secondary" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+</div>
 
     </main>
-    <div id="footer">
-  <footer class="site-footer">
-    <div class="footer-content">
+    <div id="footer" class="container mt-5">
+  <footer class="site-footer text-center bg-light py-4">
       <p></p>
       <p><a href="/privacy-policy">Privacy Policy</a></p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/your_twitter_handle" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
+      <div class="social-icons mt-3">
+          <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
+              <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank" class="text-primary mx-3">
+              <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/your_twitter_handle" target="_blank" class="text-info mx-3">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
       </div>
-    </div>
   </footer>
 </div>
+
 
     
 

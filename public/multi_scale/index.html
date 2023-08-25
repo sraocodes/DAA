@@ -6,6 +6,7 @@
     <title>Multi-Scale Modeling within PhenoRob DAA</title>
     <meta name="description" content="">
     <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
   
   
@@ -28,325 +29,306 @@
   
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 </head>
 <body>        
-    <div class="navbar">
-  <div class="logo-container">
-    <a href="https://sraocodes.github.io/Phenorob-DAA/">
-      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" class="logo">
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="https://sraocodes.github.io/Phenorob-DAA/">
+      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" style="max-height: 75px;">
+  </a>
+
+  
+  <div class="d-flex flex-grow-1 justify-content-center">
+      <div class="text-center">
+          <h1 class="mb-0 display-4">PhenoRob Digital Agricultural Avatar</h1>
+          <h2 class="h5 mb-0">(Process Based Models for the Future of Crop Production)</h2>
+      </div>
   </div>
-  <div class="headline-links-container">
-    <div class="headline-container">
-      <h1 class="headline">PhenoRob Digital Agricultural Avatar</h1>
-      <h2>(Process Based Models for the Future of Crop Production)</h2>
-    </div>
 
-    <div class="links-container">
-      <div class="dropdown">
-        <button class="dropbtn">DAA &#9662;</button>
-        <div class="dropdown-menu">
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
-          
-        </div>
-      </div>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="dropdown">
-        <button class="dropbtn">Tools &#9662;</button>
-        <div class="dropdown-menu">
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DAA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link2Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <button class="dropbtn">Research &#9662;</button>
-        <div class="dropdown-menu">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tools
+              </a>
+              <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <a href="#" target="_blank" class="dropbtn">Contact</a>
-      </div>
-    </div>
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Research
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link1Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
+                  
+              </div>
+          </li>
+
+          
+          <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank">Contact</a>
+          </li>
+      </ul>
   </div>
-</div>
+</nav>
     
     <main>
         
          
          <script src="https://sraocodes.github.io/Phenorob-DAA/js/slider.js"></script> 
         
-
-<div id="single-multi-scale-modeling-within-phenorob-daa" class="single-container">
+<div id="single-multi-scale-modeling-within-phenorob-daa" class="single-container container mt-5">
 
   
-  <div class="dropdown">
-    <button id="navbarToggle" class="navbar-toggle dropbtn" title="menu">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       Page Menu
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <nav id="single-nav" class="dropdown-menu">
-        <ul>
-            
-            <li>
-                
-                <a href="#single-multi-scale-models">Multi-Scale Models</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-importance">Importance</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-models">Models</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-model-coupling">Model Coupling</a>
-                
-            </li>
-            
-        </ul>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-multi-scale-models" >Multi-Scale Models</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-importance" >Importance</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-models" >Models</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-model-coupling" >Model Coupling</a>
+        </li>
+        
+      </ul>
+    </div>
   </div>
 
   
   
   
-  <section id="single-multi-scale-models" class="content-section card">
-    <h2>Multi-Scale Models</h2>
-    
-    <div class="section-content text-bottom">
-    
-      <div class="text-content">
-        <p>The <a href="/Phenorob-DAA/about/" target="_blank">DAA</a> initiative, proudly integrates multi-scale modeling as a cornerstone of its vision. By coupling two or more process-based models, these multi scale representations provide insights into the comprehensive Genetic-Environment-Management (GEM) interactions that define agricultural ecosystems. These multi-scale modeling framework, encapsulating everything from intricate plant cell processes to vast ecosystem dynamics, function as the underpinnings of our cutting-edge approach towards sustainable agriculture.In crop modeling, the processes can vary from the micro to the macro level, both spatially and temporally. Specifically:</p>
-        
-        <div class="list-content">
-          <ul>
-            
-            <li>Microsecond Scale: Capturing intricate plant cell processes that occur at lightning speed.</li>
-            
-            <li>Day-Night Cycles: Representing the diurnal rhythms of plants and their immediate environment.</li>
-            
-            <li>Days to Years: Encompassing ecosystem dynamics that stretch over days to even years.</li>
-            
-          </ul>
-        </div>
-        
-      </div>
+  <div id="single-multi-scale-models" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Multi-Scale Models</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/milli.gif" alt="Multi-Scale Models" style="width: 800px; height: 500px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">The <a href="/Phenorob-DAA/about/">DAA</a> initiative, proudly integrates multi-scale modeling as a cornerstone of its vision. By coupling two or more process-based models, these multi scale representations provide insights into the comprehensive Genetic-Environment-Management (GEM) interactions that define agricultural ecosystems. These multi-scale modeling framework, encapsulating everything from intricate plant cell processes to vast ecosystem dynamics, function as the underpinnings of our cutting-edge approach towards sustainable agriculture.In crop modeling, the processes can vary from the micro to the macro level, both spatially and temporally. Specifically:</p>
+      
+      <ul class="list-group">
+        
+        <li class="list-group-item">Microsecond Scale: Capturing intricate plant cell processes that occur at lightning speed.</li>
+        
+        <li class="list-group-item">Day-Night Cycles: Representing the diurnal rhythms of plants and their immediate environment.</li>
+        
+        <li class="list-group-item">Days to Years: Encompassing ecosystem dynamics that stretch over days to even years.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-importance" class="content-section card">
-    <h2>Importance</h2>
     
-    <div class="section-content">
-    
-      <div class="text-content">
-        <p>The act of connecting different scales in crop modeling holds critical significance. It aids in assessing agricultural strategies for climate change adaptation, ensuring food security, and promoting environmental sustainability. The intricate G × E × M interactions (Genetics, Environment, Management) profoundly affect crop development, growth, and yield. Given their complexity and nonlinear nature, they pose challenges for empirical experimental designs.</p>
+  </div>
+  
+  
+  
+  <div id="single-importance" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Importance</h2>
+      
+      <p class="card-text" style="font-size: 1.1rem;">The act of connecting different scales in crop modeling holds critical significance. It aids in assessing agricultural strategies for climate change adaptation, ensuring food security, and promoting environmental sustainability. The intricate G × E × M interactions (Genetics, Environment, Management) profoundly affect crop development, growth, and yield. Given their complexity and nonlinear nature, they pose challenges for empirical experimental designs.</p>
+      
+      <ul class="list-group">
         
-        <div class="list-content">
-          <ul>
-            
-            <li>Holistic Understanding: Integrates processes across scales for comprehensive DAA insights.</li>
-            
-            <li>Scenario Analysis: Enables hypothesis testing in varied and future environmental conditions.</li>
-            
-            <li>Resource Optimization: Aids in strategy design for sustainable agriculture.</li>
-            
-            <li>Bridging Gaps: Connects genetic, environmental, and management aspects in crop growth within the PhenoRob DAA ecosystem.</li>
-            
-          </ul>
-        </div>
+        <li class="list-group-item">Holistic Understanding: Integrates processes across scales for comprehensive DAA insights.</li>
         
-      </div>
+        <li class="list-group-item">Scenario Analysis: Enables hypothesis testing in varied and future environmental conditions.</li>
+        
+        <li class="list-group-item">Resource Optimization: Aids in strategy design for sustainable agriculture.</li>
+        
+        <li class="list-group-item">Bridging Gaps: Connects genetic, environmental, and management aspects in crop growth within the PhenoRob DAA ecosystem.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-models" class="content-section card">
-    <h2>Models</h2>
     
-    <div class="section-content text-bottom">
-    
-      <div class="text-content">
-        <p>Our multi-scale modeling arsenal comprises advanced models fine-tuned by the experienced teams at the University of Bonn and Research Center Juelich. These models, which are integral to the PhenoRob DAA, range from understanding granular plant cell processes to analyzing broader agricultural dynamics.</p>
-        
-        <div class="list-content">
-          <ul>
-            
-            <li><strong><a href="/Phenorob-DAA/granar/" target="_blank">GRANAR</a> and <a href="/Phenorob-DAA/mecha/" target="_blank">MECHA</a></strong>: Developed for cell-level processes and mechanical phenomena.</li>
-            
-            <li><strong><a href="/Phenorob-DAA/dumux/" target="_blank">Dumux-ROSI</a> and <a href="/Phenorob-DAA/cplantbox/" target="_blank">CPLANTBOX</a></strong>: Target plant and organ scales, focusing on water transport and growth.</li>
-            
-            <li><strong><a href="/Phenorob-DAA/simplace/" target="_blank">Simplace</a>, <a href="/Phenorob-DAA/agroc/" target="_blank">AgroC</a>, and <a href="/Phenorob-DAA/terrsysmp/" target="_blank">TerrSysMP</a></strong>: Designed for crop and regional scales, they dive deep into growth patterns and ecological interactions.</li>
-            
-          </ul>
-        </div>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-models" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Models</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/3.gif" alt="Models" style="width: 800px; height: 450px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">Our multi-scale modeling arsenal comprises advanced models fine-tuned by the experienced teams at the University of Bonn and Research Center Juelich. These models, which are integral to the PhenoRob DAA, range from understanding granular plant cell processes to analyzing broader agricultural dynamics.</p>
+      
+      <ul class="list-group">
+        
+        <li class="list-group-item"><strong><a href="/Phenorob-DAA/granar/">GRANAR</a> and <a href="/Phenorob-DAA/mecha/">MECHA</a></strong>: Developed for cell-level processes and mechanical phenomena.</li>
+        
+        <li class="list-group-item"><strong><a href="/Phenorob-DAA/dumux/">Dumux-ROSI</a> and <a href="/Phenorob-DAA/cplantbox/">CPLANTBOX</a></strong>: Target plant and organ scales, focusing on water transport and growth.</li>
+        
+        <li class="list-group-item"><strong><a href="/Phenorob-DAA/simplace/">Simplace</a>, <a href="/Phenorob-DAA/agroc/">AgroC</a>, and <a href="/Phenorob-DAA/terrsysmp/">TerrSysMP</a></strong>: Designed for crop and regional scales, they dive deep into growth patterns and ecological interactions.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-model-coupling" class="content-section card">
-    <h2>Model Coupling</h2>
     
-    <div class="section-content text-bottom">
-    
-      <div class="text-content">
-        <p>Multi-scale modeling is achieved by effectively coupling standalone models at varying scales. The process of coupling refers to the harmonized exchange of information between at least two distinct models. Within the complex interplay of soil, plant, and atmosphere, coupling serves as a robust strategy to capture intricate interactions and dependencies. In essence, coupling amplifies the holistic representation of the crop system, enhancing both its comprehensibility and fidelity. <a href="/Phenorob-DAA/couple/" target="_blank">Learn more</a></p>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-model-coupling" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Model Coupling</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/4.gif" alt="Model Coupling" style="width: 800px; height: 450px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">Multi-scale modeling is achieved by effectively coupling standalone models at varying scales. The process of coupling refers to the harmonized exchange of information between at least two distinct models. Within the complex interplay of soil, plant, and atmosphere, coupling serves as a robust strategy to capture intricate interactions and dependencies. In essence, coupling amplifies the holistic representation of the crop system, enhancing both its comprehensibility and fidelity. <a href="/Phenorob-DAA/couple/">Learn more</a></p>
       
       
     </div>
-  </section>
+    
+  </div>
   
   
-
   
-  <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+  
+  <button id="backToTopBtn" class="btn btn-secondary" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+</div>
 
     </main>
-    <div id="footer">
-  <footer class="site-footer">
-    <div class="footer-content">
+    <div id="footer" class="container mt-5">
+  <footer class="site-footer text-center bg-light py-4">
       <p></p>
       <p><a href="/privacy-policy">Privacy Policy</a></p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/your_twitter_handle" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
+      <div class="social-icons mt-3">
+          <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
+              <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank" class="text-primary mx-3">
+              <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/your_twitter_handle" target="_blank" class="text-info mx-3">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
       </div>
-    </div>
   </footer>
 </div>
+
 
     
 

@@ -6,6 +6,7 @@
     <title>SIMPLACE</title>
     <meta name="description" content="">
     <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
   
   
@@ -28,326 +29,318 @@
   
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 </head>
 <body>        
-    <div class="navbar">
-  <div class="logo-container">
-    <a href="https://sraocodes.github.io/Phenorob-DAA/">
-      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" class="logo">
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="https://sraocodes.github.io/Phenorob-DAA/">
+      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" style="max-height: 75px;">
+  </a>
+
+  
+  <div class="d-flex flex-grow-1 justify-content-center">
+      <div class="text-center">
+          <h1 class="mb-0 display-4">PhenoRob Digital Agricultural Avatar</h1>
+          <h2 class="h5 mb-0">(Process Based Models for the Future of Crop Production)</h2>
+      </div>
   </div>
-  <div class="headline-links-container">
-    <div class="headline-container">
-      <h1 class="headline">PhenoRob Digital Agricultural Avatar</h1>
-      <h2>(Process Based Models for the Future of Crop Production)</h2>
-    </div>
 
-    <div class="links-container">
-      <div class="dropdown">
-        <button class="dropbtn">DAA &#9662;</button>
-        <div class="dropdown-menu">
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
-          
-        </div>
-      </div>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="dropdown">
-        <button class="dropbtn">Tools &#9662;</button>
-        <div class="dropdown-menu">
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DAA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link2Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <button class="dropbtn">Research &#9662;</button>
-        <div class="dropdown-menu">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tools
+              </a>
+              <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <a href="#" target="_blank" class="dropbtn">Contact</a>
-      </div>
-    </div>
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Research
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link1Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
+                  
+              </div>
+          </li>
+
+          
+          <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank">Contact</a>
+          </li>
+      </ul>
   </div>
-</div>
+</nav>
     
     <main>
         
          
          <script src="https://sraocodes.github.io/Phenorob-DAA/js/slider.js"></script> 
         
-
-<div id="single-simplace" class="single-container">
+<div id="single-simplace" class="single-container container mt-5">
 
   
-  <div class="dropdown">
-    <button id="navbarToggle" class="navbar-toggle dropbtn" title="menu">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       Page Menu
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <nav id="single-nav" class="dropdown-menu">
-        <ul>
-            
-            <li>
-                
-                <a href="#single-what-is-simplace">What is SIMPLACE?</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-what-can-simplace-do">What can SIMPLACE do?</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-why-is-simplace-special">Why is SIMPLACE special?</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-case-studies">Case Studies</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="https://www.simplace.net/" target="_blank" rel="noopener noreferrer" class="external">official site</a>
-                
-            </li>
-            
-        </ul>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-what-is-simplace" >What is SIMPLACE?</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-what-can-simplace-do" >What can SIMPLACE do?</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-why-is-simplace-special" >Why is SIMPLACE special?</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-case-studies" >Case Studies</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.simplace.net/" target="_blank" rel="noopener noreferrer">official site</a>
+        </li>
+        
+      </ul>
+    </div>
   </div>
 
   
   
   
-  <section id="single-what-is-simplace" class="content-section card">
-    <h2>What is SIMPLACE?</h2>
-    
-    <div class="section-content text-top">
-    
-      <div class="text-content">
-        <p>SIMPLACE is an open-source software that helps scientists and farmers manage crops and ecosystems better. It uses computer models to understand complex interactions between crops, soil, and climate. By coupling different modules, each representing a process like water use or plant growth, SIMPLACE offers customizable solutions for different agricultural needs.Its multi-threaded high-performance architecture allows for calibration and simulations at varying spatial scales.You can check the official site of SIMPLACE <a href="https://www.simplace.net/index.php" target="_blank">here</a>.</p>
-        
-      </div>
+  <div id="single-what-is-simplace" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">What is SIMPLACE?</h2>
       
-      
-      
-      <div class="video-block">
-        <p class="video-title"></p>
-        <div class="video-content">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/kj6TXkxocCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">SIMPLACE is an open-source software that helps scientists and farmers manage crops and ecosystems better. It uses computer models to understand complex interactions between crops, soil, and climate. By coupling different modules, each representing a process like water use or plant growth, SIMPLACE offers customizable solutions for different agricultural needs.Its multi-threaded high-performance architecture allows for calibration and simulations at varying spatial scales.You can check the official site of SIMPLACE <a href="https://www.simplace.net/index.php">here</a>.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-what-can-simplace-do" class="content-section card">
-    <h2>What can SIMPLACE do?</h2>
     
-    <div class="section-content text-left">
-    
-      <div class="text-content">
-        <p>SIMPLACE can help in understanding how climate change affects crops, finding ways to improve farming practices, and developing useful tools for farmers and policymakers. For example, SIMPLACE has a special component that helps study how heat stress affects crops. It also offers an advanced module that looks into soil water balance in great detail. Its customizable nature allows users to choose and combine different components depending on their specific needs.</p>
-        
-        <div class="list-content">
-          <ul>
-            
-            <li>Assess climate change impacts: How will changes in climate affect our crops?</li>
-            
-            <li>Improve farming strategies: How can we farm more efficiently and sustainably?</li>
-            
-            <li>Develop decision tools: Make smarter decisions about managing crops.</li>
-            
-            <li>Understand heat stress: Gain insights into how heat affects crop yields.</li>
-            
-            <li>Study soil water balance: Look into water levels in the soil in detail.</li>
-            
-          </ul>
-        </div>
-        
+    <div class="card-footer">
+      
+      <div class="embed-responsive embed-responsive-16by9 my-4">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kj6TXkxocCg" allowfullscreen></iframe>
       </div>
+      
+    </div>
+    
+  </div>
+  
+  
+  
+  <div id="single-what-can-simplace-do" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">What can SIMPLACE do?</h2>
+      
+      <p class="card-text" style="font-size: 1.1rem;">SIMPLACE can help in understanding how climate change affects crops, finding ways to improve farming practices, and developing useful tools for farmers and policymakers. For example, SIMPLACE has a special component that helps study how heat stress affects crops. It also offers an advanced module that looks into soil water balance in great detail. Its customizable nature allows users to choose and combine different components depending on their specific needs.</p>
+      
+      <ul class="list-group">
+        
+        <li class="list-group-item">Assess climate change impacts: How will changes in climate affect our crops?</li>
+        
+        <li class="list-group-item">Improve farming strategies: How can we farm more efficiently and sustainably?</li>
+        
+        <li class="list-group-item">Develop decision tools: Make smarter decisions about managing crops.</li>
+        
+        <li class="list-group-item">Understand heat stress: Gain insights into how heat affects crop yields.</li>
+        
+        <li class="list-group-item">Study soil water balance: Look into water levels in the soil in detail.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-why-is-simplace-special" class="content-section card">
-    <h2>Why is SIMPLACE special?</h2>
     
-    <div class="section-content">
-    
-      <div class="text-content">
-        <p>SIMPLACE can operate at various scales depending on the nature of the study and the chosen components. It&rsquo;s highly versatile and can handle simulations at the plant level (individual crops), field level (a particular farming plot), landscape level (an entire farming region), or even larger scales such as regional or global assessments.The flexibility of the SIMPLACE framework, with its customizable SimComponents, enables this adaptability. Users can combine different modules to model processes relevant to their scale of interest, from small-scale farm management strategies to large-scale climate change impact assessments.</p>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-why-is-simplace-special" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Why is SIMPLACE special?</h2>
+      
+      <p class="card-text" style="font-size: 1.1rem;">SIMPLACE can operate at various scales depending on the nature of the study and the chosen components. It&rsquo;s highly versatile and can handle simulations at the plant level (individual crops), field level (a particular farming plot), landscape level (an entire farming region), or even larger scales such as regional or global assessments.The flexibility of the SIMPLACE framework, with its customizable SimComponents, enables this adaptability. Users can combine different modules to model processes relevant to their scale of interest, from small-scale farm management strategies to large-scale climate change impact assessments.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-case-studies" class="content-section card">
-    <h2>Case Studies</h2>
     
-    <div class="section-content">
-    
-      <div class="text-content">
-        <p>SIMPLACE has been used to simulate the growth and development of various crops in numerous studies:</p>
+  </div>
+  
+  
+  
+  <div id="single-case-studies" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Case Studies</h2>
+      
+      <p class="card-text" style="font-size: 1.1rem;">SIMPLACE has been used to simulate the growth and development of various crops in numerous studies:</p>
+      
+      <ul class="list-group">
         
-        <div class="list-content">
-          <ul>
-            
-            <li><a href="https://www.frontiersin.org/articles/10.3389/fsufs.2022.1058775/full" target="_blank">Srivastava et al. (2022)</a> used SIMPLACE to estimate the yield gaps of cassava at the state level in Nigeria.</li>
-            
-            <li><a href="https://www.nature.com/articles/s41598-018-23101-2" target="_blank">Rezaei et al. (2018)</a> used SIMPLACE to quantify the effect of using the phenology traits of cultivars planted in the 1950s and 1960s as compared to modern cultivars on wheat growth simulations in Germany.</li>
-            
-            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S037842901530071X" target="_blank">Tao et al. (2017)</a> used eight models, including SIMPLACE, to design future crop ideotypes for barley in Finland and Spain by linking model parameters and genotypic traits.</li>
-            
-            <li><a href="https://www.sciencedirect.com/science/article/pii/S1161030116302532?casa_token=5VaxkhAkQK0AAAAA:HBlTek58V58Y8OFY1oLg7ToSil5OHDw0-RKeqxs_a5_-0V3NnA6sMXhsbGZmC4PEFpSsnw0W3g" target="_blank">Seidel et al. and Yin et al. (2017)</a> used SIMPLACE to simulate crop rotations and nutrient uptake to analyze the impact of P fertilizer omission on the biomass production of five crops in a long-term experiment in Dikopshof, Germany.</li>
-            
-            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0308521X16305947" target="_blank">Hoffmann et al. (2018)</a> used twelve models, including SIMPLACE, to assess how inter-annual variability of attainable yield affects the magnitude of yield gaps for wheat and maize across ten sites with contrasting environmental conditions.</li>
-            
-            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S1161030115300010" target="_blank">Kollas et al. (2015)</a> conducted the first model inter-comparison study on crop rotations considering fifteen crop models, including SIMPLACE, and ten different crops, including wheat and maize.</li>
-            
-          </ul>
-        </div>
+        <li class="list-group-item"><a href="https://www.frontiersin.org/articles/10.3389/fsufs.2022.1058775/full">Srivastava et al. (2022)</a> used SIMPLACE to estimate the yield gaps of cassava at the state level in Nigeria.</li>
         
-      </div>
+        <li class="list-group-item"><a href="https://www.nature.com/articles/s41598-018-23101-2">Rezaei et al. (2018)</a> used SIMPLACE to quantify the effect of using the phenology traits of cultivars planted in the 1950s and 1960s as compared to modern cultivars on wheat growth simulations in Germany.</li>
+        
+        <li class="list-group-item"><a href="https://www.sciencedirect.com/science/article/abs/pii/S037842901530071X">Tao et al. (2017)</a> used eight models, including SIMPLACE, to design future crop ideotypes for barley in Finland and Spain by linking model parameters and genotypic traits.</li>
+        
+        <li class="list-group-item"><a href="https://www.sciencedirect.com/science/article/pii/S1161030116302532?casa_token=5VaxkhAkQK0AAAAA:HBlTek58V58Y8OFY1oLg7ToSil5OHDw0-RKeqxs_a5_-0V3NnA6sMXhsbGZmC4PEFpSsnw0W3g">Seidel et al. and Yin et al. (2017)</a> used SIMPLACE to simulate crop rotations and nutrient uptake to analyze the impact of P fertilizer omission on the biomass production of five crops in a long-term experiment in Dikopshof, Germany.</li>
+        
+        <li class="list-group-item"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0308521X16305947">Hoffmann et al. (2018)</a> used twelve models, including SIMPLACE, to assess how inter-annual variability of attainable yield affects the magnitude of yield gaps for wheat and maize across ten sites with contrasting environmental conditions.</li>
+        
+        <li class="list-group-item"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1161030115300010">Kollas et al. (2015)</a> conducted the first model inter-comparison study on crop rotations considering fifteen crop models, including SIMPLACE, and ten different crops, including wheat and maize.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
+    
+  </div>
   
   
   
   
-
   
-  <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+  
+  <button id="backToTopBtn" class="btn btn-secondary" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+</div>
 
     </main>
-    <div id="footer">
-  <footer class="site-footer">
-    <div class="footer-content">
+    <div id="footer" class="container mt-5">
+  <footer class="site-footer text-center bg-light py-4">
       <p></p>
       <p><a href="/privacy-policy">Privacy Policy</a></p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/your_twitter_handle" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
+      <div class="social-icons mt-3">
+          <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
+              <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank" class="text-primary mx-3">
+              <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/your_twitter_handle" target="_blank" class="text-info mx-3">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
       </div>
-    </div>
   </footer>
 </div>
+
 
     
 

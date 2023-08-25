@@ -28,7 +28,21 @@ class TextScramble {
         let output = '';
         let complete = 0;
         for (let i = 0, n = this.queue.length; i < n; i++) {
-            // ... [rest of the logic]
+            const { from, to, start, end, char } = this.queue[i];
+            if (this.frame >= end) {
+                complete++;
+                output += to;
+            } else if (this.frame >= start) {
+                if (!char || Math.random() < 0.28) {
+                    const randomChar = this.chars[Math.floor(Math.random() * this.chars.length)];
+                    this.queue[i].char = randomChar;
+                    output += `<span class="dud">${randomChar}</span>`;
+                } else {
+                    output += char;
+                }
+            } else {
+                output += from;
+            }
         }
         this.el.innerHTML = output;
         if (complete === this.queue.length) {
@@ -42,7 +56,6 @@ class TextScramble {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
     let cards = document.querySelectorAll('.card');
     let windowHeight = window.innerHeight;
@@ -52,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const h2 = card.querySelector('h2');
         return h2 ? new TextScramble(h2) : null;
     });
-    
+
     function checkPosition() {
         let delay = 0;
     
@@ -83,5 +96,3 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkPosition);
     window.addEventListener('resize', checkPosition);
 });
-
-

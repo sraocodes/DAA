@@ -6,6 +6,7 @@
     <title>Future Coupling in PhenoRob DAA</title>
     <meta name="description" content="">
     <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
   
   
@@ -28,363 +29,341 @@
   
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 </head>
 <body>        
-    <div class="navbar">
-  <div class="logo-container">
-    <a href="https://sraocodes.github.io/Phenorob-DAA/">
-      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" class="logo">
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="https://sraocodes.github.io/Phenorob-DAA/">
+      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" style="max-height: 75px;">
+  </a>
+
+  
+  <div class="d-flex flex-grow-1 justify-content-center">
+      <div class="text-center">
+          <h1 class="mb-0 display-4">PhenoRob Digital Agricultural Avatar</h1>
+          <h2 class="h5 mb-0">(Process Based Models for the Future of Crop Production)</h2>
+      </div>
   </div>
-  <div class="headline-links-container">
-    <div class="headline-container">
-      <h1 class="headline">PhenoRob Digital Agricultural Avatar</h1>
-      <h2>(Process Based Models for the Future of Crop Production)</h2>
-    </div>
 
-    <div class="links-container">
-      <div class="dropdown">
-        <button class="dropbtn">DAA &#9662;</button>
-        <div class="dropdown-menu">
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
-          
-        </div>
-      </div>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="dropdown">
-        <button class="dropbtn">Tools &#9662;</button>
-        <div class="dropdown-menu">
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DAA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link2Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <button class="dropbtn">Research &#9662;</button>
-        <div class="dropdown-menu">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tools
+              </a>
+              <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <a href="#" target="_blank" class="dropbtn">Contact</a>
-      </div>
-    </div>
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Research
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link1Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
+                  
+              </div>
+          </li>
+
+          
+          <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank">Contact</a>
+          </li>
+      </ul>
   </div>
-</div>
+</nav>
     
     <main>
         
          
          <script src="https://sraocodes.github.io/Phenorob-DAA/js/slider.js"></script> 
         
-
-<div id="single-future-coupling-in-phenorob-daa" class="single-container">
+<div id="single-future-coupling-in-phenorob-daa" class="single-container container mt-5">
 
   
-  <div class="dropdown">
-    <button id="navbarToggle" class="navbar-toggle dropbtn" title="menu">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       Page Menu
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <nav id="single-nav" class="dropdown-menu">
-        <ul>
-            
-            <li>
-                
-                <a href="#single-introduction">Introduction</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-model-coupling">Model Coupling</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-model-coupling-methods">Model Coupling Methods</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-case-study-granar-mecha">Case Study: GRANAR-MECHA</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-case-study-simplace-cplantbox">Case Study: SIMPLACE-CPlantbox</a>
-                
-            </li>
-            
-        </ul>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-introduction" >Introduction</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-model-coupling" >Model Coupling</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-model-coupling-methods" >Model Coupling Methods</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-case-study-granar-mecha" >Case Study: GRANAR-MECHA</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-case-study-simplace-cplantbox" >Case Study: SIMPLACE-CPlantbox</a>
+        </li>
+        
+      </ul>
+    </div>
   </div>
 
   
   
   
-  <section id="single-introduction" class="content-section card">
-    <h2>Introduction</h2>
-    
-    <div class="section-content text-bottom">
-    
-      <div class="text-content">
-        <p>The PhenoRob Digital Agricultural Avatar (DAA) initiative is poised to redefine the boundaries of agronomic understanding. At this foundational stage, the DAA project envisions harnessing the power of coupling to bridge the complexities of crop modeling. From the nuanced molecular interactions within plant cells to vast regional climate patterns, the plan is to use coupling as an essential strategy in the DAA framework. By aiming to integrate various models in the future, the DAA aspires to offer a more comprehensive and accurate digital twin of the crop ecosystem.</p>
-        
-      </div>
+  <div id="single-introduction" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Introduction</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/coupling1.jpg" alt="Introduction" style="width: 500px; height: 500px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">The PhenoRob Digital Agricultural Avatar (DAA) initiative is poised to redefine the boundaries of agronomic understanding. At this foundational stage, the DAA project envisions harnessing the power of coupling to bridge the complexities of crop modeling. From the nuanced molecular interactions within plant cells to vast regional climate patterns, the plan is to use coupling as an essential strategy in the DAA framework. By aiming to integrate various models in the future, the DAA aspires to offer a more comprehensive and accurate digital twin of the crop ecosystem.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-model-coupling" class="content-section card">
-    <h2>Model Coupling</h2>
     
-    <div class="section-content">
-    
-      <div class="text-content">
-        <p>A key future endeavor of the PhenoRob DAA is to adopt model coupling. While specific implementations are still on the horizon, the goal is to amalgamate different models, ensuring the digital twin effectively represents the vast agronomic system. Through planned coupling techniques, the DAA aims to achieve several key benefits:</p>
+  </div>
+  
+  
+  
+  <div id="single-model-coupling" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Model Coupling</h2>
+      
+      <p class="card-text" style="font-size: 1.1rem;">A key future endeavor of the PhenoRob DAA is to adopt model coupling. While specific implementations are still on the horizon, the goal is to amalgamate different models, ensuring the digital twin effectively represents the vast agronomic system. Through planned coupling techniques, the DAA aims to achieve several key benefits:</p>
+      
+      <ul class="list-group">
         
-        <div class="list-content">
-          <ul>
-            
-            <li>Augmented Accuracy: By leveraging the potential strengths of individual models for enhanced precision.</li>
-            
-            <li>Holistic Representation: Expanding the scope to provide a comprehensive view as envisioned by the DAA project.</li>
-            
-            <li>Mitigated Shortcomings: Aiming to offset model limitations for a robust digital representation.</li>
-            
-            <li>Dynamic Feedbacks: Facilitating potential real-time interactions for enriched simulations.</li>
-            
-          </ul>
-        </div>
+        <li class="list-group-item">Augmented Accuracy: By leveraging the potential strengths of individual models for enhanced precision.</li>
         
-      </div>
+        <li class="list-group-item">Holistic Representation: Expanding the scope to provide a comprehensive view as envisioned by the DAA project.</li>
+        
+        <li class="list-group-item">Mitigated Shortcomings: Aiming to offset model limitations for a robust digital representation.</li>
+        
+        <li class="list-group-item">Dynamic Feedbacks: Facilitating potential real-time interactions for enriched simulations.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-model-coupling-methods" class="content-section card">
-    <h2>Model Coupling Methods</h2>
     
-    <div class="section-content text-bottom">
-    
-      <div class="text-content">
-        <p>The PhenoRob DAA has laid out an ambitious roadmap for incorporating various coupling methods to ensure seamless integration of models. While these techniques are part of the project&rsquo;s future aspirations, they are foundational to the DAA&rsquo;s goal of creating an accurate digital twin.</p>
-        
-        <div class="list-content">
-          <ul>
-            
-            <li>Sequential or One-way Data Transfer Coupling: Envisioned for simpler interactions within the DAA framework.</li>
-            
-            <li>Loose Coupling: A planned approach for dynamic data exchange in the DAA&rsquo;s multi-model setup.</li>
-            
-            <li>Shared Coupling: Aiming for models to share major components for deeper integration within DAA.</li>
-            
-            <li>Joined Coupling: An aspiration for deeper inter-model interactions to enhance simulation accuracy.</li>
-            
-            <li>Framework or Tool Coupling: Integrating models within a broader DAA framework for a seamless digital representation is a key objective.</li>
-            
-          </ul>
-        </div>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-model-coupling-methods" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Model Coupling Methods</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/coupling2.jpeg" alt="Model Coupling Methods" style="width: 800px; height: 800px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">The PhenoRob DAA has laid out an ambitious roadmap for incorporating various coupling methods to ensure seamless integration of models. While these techniques are part of the project&rsquo;s future aspirations, they are foundational to the DAA&rsquo;s goal of creating an accurate digital twin.</p>
+      
+      <ul class="list-group">
+        
+        <li class="list-group-item">Sequential or One-way Data Transfer Coupling: Envisioned for simpler interactions within the DAA framework.</li>
+        
+        <li class="list-group-item">Loose Coupling: A planned approach for dynamic data exchange in the DAA&rsquo;s multi-model setup.</li>
+        
+        <li class="list-group-item">Shared Coupling: Aiming for models to share major components for deeper integration within DAA.</li>
+        
+        <li class="list-group-item">Joined Coupling: An aspiration for deeper inter-model interactions to enhance simulation accuracy.</li>
+        
+        <li class="list-group-item">Framework or Tool Coupling: Integrating models within a broader DAA framework for a seamless digital representation is a key objective.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-case-study-granar-mecha" class="content-section card">
-    <h2>Case Study: GRANAR-MECHA</h2>
     
-    <div class="section-content text-top">
-    
-      <div class="text-content">
-        <p>Our phenorob <a href="/Phenorob-DAA/members/" target="_blank">team</a> members have pioneered this understanding by coupling <a href="/Phenorob-DAA/granar/" target="_blank">GRANAR</a> and <a href="/Phenorob-DAA/mecha/" target="_blank">MECHA</a>, two computational tools that, when combined, offer a holistic view of root anatomy and hydraulics. The coupling of GRANAR, a computational tool designed to generate digital versions of monocotyledon root     anatomical networks, with MECHA, a model estimating root hydraulic properties, has been transformative. This combination has empowered researchers to:</p>
+  </div>
+  
+  
+  
+  <div id="single-case-study-granar-mecha" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Case Study: GRANAR-MECHA</h2>
+      
+      <p class="card-text" style="font-size: 1.1rem;">Our phenorob <a href="/Phenorob-DAA/members/">team</a> members have pioneered this understanding by coupling <a href="/Phenorob-DAA/granar/">GRANAR</a> and <a href="/Phenorob-DAA/mecha/">MECHA</a>, two computational tools that, when combined, offer a holistic view of root anatomy and hydraulics. The coupling of GRANAR, a computational tool designed to generate digital versions of monocotyledon root     anatomical networks, with MECHA, a model estimating root hydraulic properties, has been transformative. This combination has empowered researchers to:</p>
+      
+      <ul class="list-group">
         
-        <div class="list-content">
-          <ul>
-            
-            <li>Quantify the effect of individual anatomical features on root&rsquo;s radial conductivity.</li>
-            
-            <li>Generate virtual anatomies for experimental observations, even those not observed, to estimate corresponding radial conductivities.</li>
-            
-            <li>Explore the theoretical link between anatomy and radial conductivity, assessing the functional importance of individual anatomical properties.</li>
-            
-            <li>Understand the relationship between root anatomy and its hydraulic properties, crucial for enhancing crop resilience in changing environmental conditions. <a href="https://pubmed.ncbi.nlm.nih.gov/34355112/" target="_blank">Read the full study</a></li>
-            
-          </ul>
-        </div>
+        <li class="list-group-item">Quantify the effect of individual anatomical features on root&rsquo;s radial conductivity.</li>
         
-      </div>
+        <li class="list-group-item">Generate virtual anatomies for experimental observations, even those not observed, to estimate corresponding radial conductivities.</li>
+        
+        <li class="list-group-item">Explore the theoretical link between anatomy and radial conductivity, assessing the functional importance of individual anatomical properties.</li>
+        
+        <li class="list-group-item">Understand the relationship between root anatomy and its hydraulic properties, crucial for enhancing crop resilience in changing environmental conditions. <a href="https://pubmed.ncbi.nlm.nih.gov/34355112/">Read the full study</a></li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-case-study-simplace-cplantbox" class="content-section card">
-    <h2>Case Study: SIMPLACE-CPlantbox</h2>
     
-    <div class="section-content text-top">
-    
-      <div class="text-content">
-        <p>Soil compaction, especially at greater depths, is a growing concern in modern agriculture. To address this, our team have innovatively coupled <a href="/Phenorob-DAA/simplace/" target="_blank">SIMPLACE</a> with <a href="/Phenorob-DAA/cplantbox/" target="_blank">CPlantbox</a>, providing groundbreaking insights into the implications of deep soil compaction and its effects on plant growth. By integrating SIMPLACE, a process-based model focusing on crop-level dynamics, with CRootbox, a detailed root architectural model, our <a href="/Phenorob-DAA/members/" target="_blank">team</a> has:</p>
+  </div>
+  
+  
+  
+  <div id="single-case-study-simplace-cplantbox" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Case Study: SIMPLACE-CPlantbox</h2>
+      
+      <p class="card-text" style="font-size: 1.1rem;">Soil compaction, especially at greater depths, is a growing concern in modern agriculture. To address this, our team have innovatively coupled <a href="/Phenorob-DAA/simplace/">SIMPLACE</a> with <a href="/Phenorob-DAA/cplantbox/">CPlantbox</a>, providing groundbreaking insights into the implications of deep soil compaction and its effects on plant growth. By integrating SIMPLACE, a process-based model focusing on crop-level dynamics, with CRootbox, a detailed root architectural model, our <a href="/Phenorob-DAA/members/">team</a> has:</p>
+      
+      <ul class="list-group">
         
-        <div class="list-content">
-          <ul>
-            
-            <li>Simulated intricate root-soil interactions, understanding the implications of deep soil compaction.</li>
-            
-            <li>Established a dynamic feedback system ensuring simulated root density is influenced by a myriad of factors, from soil properties to carbon allocation from shoots.</li>
-            
-            <li>Revealed the intrinsic relationship between soil compaction, weather, and crop species, highlighting the magnified implications of soil compaction in warmer, dryer climates.</li>
-            
-            <li>Demonstrated that deep loosening can increase absolute root length density, crucial for sustainable agricultural practices. <a href="https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full" target="_blank">Explore the detailed investigation</a></li>
-            
-          </ul>
-        </div>
+        <li class="list-group-item">Simulated intricate root-soil interactions, understanding the implications of deep soil compaction.</li>
         
-      </div>
+        <li class="list-group-item">Established a dynamic feedback system ensuring simulated root density is influenced by a myriad of factors, from soil properties to carbon allocation from shoots.</li>
+        
+        <li class="list-group-item">Revealed the intrinsic relationship between soil compaction, weather, and crop species, highlighting the magnified implications of soil compaction in warmer, dryer climates.</li>
+        
+        <li class="list-group-item">Demonstrated that deep loosening can increase absolute root length density, crucial for sustainable agricultural practices. <a href="https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full">Explore the detailed investigation</a></li>
+        
+      </ul>
       
       
     </div>
-  </section>
+    
+  </div>
   
   
-
   
-  <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+  
+  <button id="backToTopBtn" class="btn btn-secondary" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+</div>
 
     </main>
-    <div id="footer">
-  <footer class="site-footer">
-    <div class="footer-content">
+    <div id="footer" class="container mt-5">
+  <footer class="site-footer text-center bg-light py-4">
       <p></p>
       <p><a href="/privacy-policy">Privacy Policy</a></p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/your_twitter_handle" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
+      <div class="social-icons mt-3">
+          <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
+              <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank" class="text-primary mx-3">
+              <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/your_twitter_handle" target="_blank" class="text-info mx-3">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
       </div>
-    </div>
   </footer>
 </div>
+
 
     
 

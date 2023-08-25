@@ -1,5 +1,4 @@
 {{ define "main" }}
-<!-- Single Page Container -->
 <div id="single-{{ .Title | urlize }}" class="single-container container mt-5">
 
   <!-- Page Navigation -->
@@ -17,35 +16,60 @@
         {{ end }}
       </ul>
     </div>
-    
   </div>
 
   <!-- Page Sections -->
   {{ range .Params.sections }}
-  {{ if not .url }} <!-- Check if the section does not have a URL-only property -->
+  {{ if not .url }}
   <div id="single-{{ .name | urlize }}" class="card mb-5">
     <div class="card-body">
-      {{ if not (strings.HasPrefix .name "http") }}
       <h2 class="card-title">{{ .name }}</h2>
-      {{ end }}
-      <div class="row {{ if eq .textPosition "right" }}flex-row-reverse{{ else if eq .textPosition "top" }}flex-column-reverse{{ else if eq .textPosition "bottom" }}flex-column{{ end }}">
-        <div class="col-12">
+      <div class="row">
+        {{ if or (eq .textPosition "left") (eq .textPosition "right") }}
+        {{ if eq .textPosition "right" }}
+        <div class="col-auto">
           {{ if .image }}
-          <img class="float-{{ if eq .textPosition "right" }}left{{ else }}right{{ end }} img-fluid rounded mr-3 mb-3" src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+          <img class="img-fluid rounded mb-2" src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
           {{ end }}
-          <p class="card-text lead">{{ .text | markdownify | safeHTML }}</p> <!-- Added the 'lead' class to make the text bigger -->
+        </div>
+        {{ end }}
+        <div class="col">
+          <p class="card-text" style="font-size: 1.2em;">{{ .text | markdownify | safeHTML }}</p>
           {{ if .list }}
-          <ul class="list-group">
-              {{ range .list }}
-              <li class="list-group-item">{{ . | markdownify | safeHTML }}</li> <!-- Using Bootstrap's list-group for a more elegant look -->
-              {{ end }}
-          </ul>
+          <div class="list-group">
+            {{ range .list }}
+            <a href="#" class="list-group-item list-group-item-action">{{ . | markdownify | safeHTML }}</a>
+            {{ end }}
+          </div>
           {{ end }}
-      </div>      
+        </div>
+        {{ if eq .textPosition "left" }}
+        <div class="col-auto">
+          {{ if .image }}
+          <img class="img-fluid rounded mb-2" src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+          {{ end }}
+        </div>
+        {{ end }}
+        {{ else }}
+        {{ if .image }}
+        <div class="col-md-12 text-center">
+          <img class="img-fluid rounded mb-2" src="{{ .image | relURL }}" alt="{{ .name }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+        </div>
+        {{ end }}
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">{{ .text | markdownify | safeHTML }}</p>
+          {{ if .list }}
+          <div class="list-group">
+            {{ range .list }}
+            <div class="list-group-item">{{ . | markdownify | safeHTML }}</div>
+            {{ end }}
+          </div>                
+          {{ end }}
+        </div>
+        {{ end }}
       </div>
       {{ if .videos }}
       {{ range .videos }}
-      <p class="text-center mt-3">{{ .videoTitle }}</p>
       <div class="embed-responsive embed-responsive-16by9 my-4" style="max-width: 60%; margin: auto;">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ .videoID }}" allowfullscreen></iframe>
       </div>
@@ -55,9 +79,12 @@
   </div>
   {{ end }}
   {{ end }}
+
   <!-- Back to Top Button -->
   <button id="backToTopBtn" class="btn btn-secondary" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+</div>
 {{ end }}
+
 
 
 

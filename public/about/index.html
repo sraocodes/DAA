@@ -6,6 +6,7 @@
     <title>PhenoRob DAA: Enhancing Agriculture with Digital Twins</title>
     <meta name="description" content="">
     <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   
   
   
@@ -28,309 +29,290 @@
   
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 </head>
 <body>        
-    <div class="navbar">
-  <div class="logo-container">
-    <a href="https://sraocodes.github.io/Phenorob-DAA/">
-      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" class="logo">
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="https://sraocodes.github.io/Phenorob-DAA/">
+      <img src="/Phenorob-DAA/images/DAA.png" alt="Logo" style="max-height: 75px;">
+  </a>
+
+  
+  <div class="d-flex flex-grow-1 justify-content-center">
+      <div class="text-center">
+          <h1 class="mb-0 display-4">PhenoRob Digital Agricultural Avatar</h1>
+          <h2 class="h5 mb-0">(Process Based Models for the Future of Crop Production)</h2>
+      </div>
   </div>
-  <div class="headline-links-container">
-    <div class="headline-container">
-      <h1 class="headline">PhenoRob Digital Agricultural Avatar</h1>
-      <h2>(Process Based Models for the Future of Crop Production)</h2>
-    </div>
 
-    <div class="links-container">
-      <div class="dropdown">
-        <button class="dropbtn">DAA &#9662;</button>
-        <div class="dropdown-menu">
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
-          
-        </div>
-      </div>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="dropdown">
-        <button class="dropbtn">Tools &#9662;</button>
-        <div class="dropdown-menu">
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DAA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link2Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//about/">About</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//pbm/">Process Based Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//multi_scale/">Multi Scale Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//couple/">Coupling Models</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <button class="dropbtn">Research &#9662;</button>
-        <div class="dropdown-menu">
           
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
-          
-            
-            
-              
-            
-            <a href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
-          
-        </div>
-      </div>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tools
+              </a>
+              <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//granar/">GRANAR</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//mecha/">MECHA</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//cplantbox/">CPlantBox</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//agroc/">AgroC</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//simplace/">Simplace</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//dumux/">Dumux-ROSI</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//terrsysmp/">TerrSysMP</a>
+                  
+              </div>
+          </li>
 
-      <div class="dropdown">
-        <a href="#" target="_blank" class="dropbtn">Contact</a>
-      </div>
-    </div>
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Research
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link1Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//members/">Research Team</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Research Area</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA/%25!s%28%3cnil%3e%29">Publications</a>
+                  
+              </div>
+          </li>
+
+          
+          <li class="nav-item">
+              <a class="nav-link" href="#" target="_blank">Contact</a>
+          </li>
+      </ul>
   </div>
-</div>
+</nav>
     
     <main>
         
          
          <script src="https://sraocodes.github.io/Phenorob-DAA/js/slider.js"></script> 
         
-
-<div id="single-phenorob-daa-enhancing-agriculture-with-digital-twins" class="single-container">
+<div id="single-phenorob-daa-enhancing-agriculture-with-digital-twins" class="single-container container mt-5">
 
   
-  <div class="dropdown">
-    <button id="navbarToggle" class="navbar-toggle dropbtn" title="menu">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       Page Menu
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
-  
-    <nav id="single-nav" class="dropdown-menu">
-        <ul>
-            
-            <li>
-                
-                <a href="#single-about-phenorob-daa">About PhenoRob DAA</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-process-based-models">Process-Based Models</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-phenorob-daa-platform">Phenorob-DAA Platform</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="#single-meet-the-team">Meet the Team</a>
-                
-            </li>
-            
-        </ul>
-    </nav>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-about-phenorob-daa" >About PhenoRob DAA</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-process-based-models" >Process-Based Models</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-phenorob-daa-platform" >Phenorob-DAA Platform</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-meet-the-team" >Meet the Team</a>
+        </li>
+        
+      </ul>
+    </div>
   </div>
 
   
   
   
-  <section id="single-about-phenorob-daa" class="content-section card">
-    <h2>About PhenoRob DAA</h2>
-    
-    <div class="section-content text-right">
-    
-      <div class="text-content">
-        <p>The <a href="https://www.phenorob.de/" target="_blank">PhenoRob</a> Digital Agricultural Avatar (DAA) is a focused sub-project within the overarching PhenoRob initiative. Spearheaded mainly by the teams from <a href="https://www.uni-bonn.de/" target="_blank">Universität Bonn</a> and <a href="https://www.fz-juelich.de/portal/EN/Home/home_node.html" target="_blank">Forschungszentrum Jülich</a>, PhenoRob leverages advanced technology to bring substantial advancements in agriculture. Within this context, the DAA takes on the role of a digital twin for the agricultural system. It amalgamates various models that represent biogeochemical, biophysical, agricultural management, and economic aspects, culminating in a comprehensive tool. By doing so, DAA offers predictive insights, becoming a reliable guide for sustainable farming practices.</p>
-        
-      </div>
+  <div id="single-about-phenorob-daa" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">About PhenoRob DAA</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/DAA_about1.gif" alt="About PhenoRob DAA" style="width: 300px; height: 500px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">The <a href="https://www.phenorob.de/">PhenoRob</a> Digital Agricultural Avatar (DAA) is a focused sub-project within the overarching PhenoRob initiative. Spearheaded mainly by the teams from <a href="https://www.uni-bonn.de/">Universität Bonn</a> and <a href="https://www.fz-juelich.de/portal/EN/Home/home_node.html">Forschungszentrum Jülich</a>, PhenoRob leverages advanced technology to bring substantial advancements in agriculture. Within this context, the DAA takes on the role of a digital twin for the agricultural system. It amalgamates various models that represent biogeochemical, biophysical, agricultural management, and economic aspects, culminating in a comprehensive tool. By doing so, DAA offers predictive insights, becoming a reliable guide for sustainable farming practices.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-process-based-models" class="content-section card">
-    <h2>Process-Based Models</h2>
     
-    <div class="section-content text-left">
-    
-      <div class="text-content">
-        <p>A key feature of the PhenoRob DAA is its utilization of process-based models. Think of these models as sophisticated virtual labs where we can simulate how crops react to a myriad of environmental factors, from varying weather conditions to nutrient stress. Beyond just water availability, these models provide insights into how factors like temperature fluctuations, rainfall patterns, and soil nutrient levels influence crop growth and yield. This allows us to strategize around irrigation, fertilization, and other agricultural interventions, ensuring we maximize productivity while using resources efficiently.</p>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-process-based-models" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Process-Based Models</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/pbm.png" alt="Process-Based Models" style="width: 300px; height: 400px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">A key feature of the PhenoRob DAA is its utilization of process-based models. Think of these models as sophisticated virtual labs where we can simulate how crops react to a myriad of environmental factors, from varying weather conditions to nutrient stress. Beyond just water availability, these models provide insights into how factors like temperature fluctuations, rainfall patterns, and soil nutrient levels influence crop growth and yield. This allows us to strategize around irrigation, fertilization, and other agricultural interventions, ensuring we maximize productivity while using resources efficiently.</p>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-phenorob-daa-platform" class="content-section card">
-    <h2>Phenorob-DAA Platform</h2>
     
-    <div class="section-content text-right">
-    
-      <div class="text-content">
-        <p>The Phenorob-DAA will be an engaging platform that presents models for users and the public, bridging different models for data amalgamation. It enhances collaboration, raises PhenoRob&rsquo;s profile, shares predictions on biomass and yield, and plans to develop digital replicas of PhenoRob sites. The main features:</p>
-        
-        <div class="list-content">
-          <ul>
-            
-            <li>Engaging presentation for both users and the public.</li>
-            
-            <li>Interfaces bridging various models.</li>
-            
-            <li>Promotes joint publications among subprojects.</li>
-            
-            <li>Predictions on biomass and crop yield.</li>
-            
-            <li>Video showcases of subproject simulations.</li>
-            
-            <li>Aspirations for digital twins of PhenoRob field sites.</li>
-            
-          </ul>
-        </div>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-phenorob-daa-platform" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Phenorob-DAA Platform</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/DAA_about2.png" alt="Phenorob-DAA Platform" style="width: 250px; height: 450px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">The Phenorob-DAA will be an engaging platform that presents models for users and the public, bridging different models for data amalgamation. It enhances collaboration, raises PhenoRob&rsquo;s profile, shares predictions on biomass and yield, and plans to develop digital replicas of PhenoRob sites. The main features:</p>
+      
+      <ul class="list-group">
+        
+        <li class="list-group-item">Engaging presentation for both users and the public.</li>
+        
+        <li class="list-group-item">Interfaces bridging various models.</li>
+        
+        <li class="list-group-item">Promotes joint publications among subprojects.</li>
+        
+        <li class="list-group-item">Predictions on biomass and crop yield.</li>
+        
+        <li class="list-group-item">Video showcases of subproject simulations.</li>
+        
+        <li class="list-group-item">Aspirations for digital twins of PhenoRob field sites.</li>
+        
+      </ul>
       
       
     </div>
-  </section>
-  
-  
-  
-  <section id="single-meet-the-team" class="content-section card">
-    <h2>Meet the Team</h2>
     
-    <div class="section-content text-right">
-    
-      <div class="text-content">
-        <p>Behind PhenoRob DAA is an interdisciplinary <a href="/Phenorob-DAA/members/" target="_blank">team</a> from the <a href="https://www.uni-bonn.de/" target="_blank">Universität Bonn</a> and <a href="https://www.fz-juelich.de/portal/EN/Home/home_node.html" target="_blank">Forschungszentrum Jülich</a>. Their diverse backgrounds in fields like computer science, geodesy, robotics, plant science, soil science, economics, and environmental science power this innovative project, setting <a href="https://www.phenorob.de/" target="_blank">PhenoRob</a> apart as the only <a href="https://www.dfg.de/" target="_blank">DFG</a>-funded Cluster of Excellence focusing on agriculture.</p>
-        
-      </div>
+  </div>
+  
+  
+  
+  <div id="single-meet-the-team" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Meet the Team</h2>
       
-      <div class="img-content">
-        <img src="/Phenorob-DAA/images/DAA_about3.png" alt="Meet the Team" style="width: 150px; height: 150px;">
-      </div>
+      <p class="card-text" style="font-size: 1.1rem;">Behind PhenoRob DAA is an interdisciplinary <a href="/Phenorob-DAA/members/">team</a> from the <a href="https://www.uni-bonn.de/">Universität Bonn</a> and <a href="https://www.fz-juelich.de/portal/EN/Home/home_node.html">Forschungszentrum Jülich</a>. Their diverse backgrounds in fields like computer science, geodesy, robotics, plant science, soil science, economics, and environmental science power this innovative project, setting <a href="https://www.phenorob.de/">PhenoRob</a> apart as the only <a href="https://www.dfg.de/">DFG</a>-funded Cluster of Excellence focusing on agriculture.</p>
       
       
     </div>
-  </section>
+    
+  </div>
   
   
-
   
-  <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+  
+  <button id="backToTopBtn" class="btn btn-secondary" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+</div>
 
     </main>
-    <div id="footer">
-  <footer class="site-footer">
-    <div class="footer-content">
+    <div id="footer" class="container mt-5">
+  <footer class="site-footer text-center bg-light py-4">
       <p></p>
       <p><a href="/privacy-policy">Privacy Policy</a></p>
-      <div class="social-icons">
-        <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/your_twitter_handle" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
+      <div class="social-icons mt-3">
+          <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
+              <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank" class="text-primary mx-3">
+              <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/your_twitter_handle" target="_blank" class="text-info mx-3">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
       </div>
-    </div>
   </footer>
 </div>
+
 
     
 

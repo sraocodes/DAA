@@ -1,16 +1,3 @@
-.site-footer {
-  display: flex;
-  flex-direction: column; /* Change flex-direction to column */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  background-color: #f7f7f7; /* Light grey background */
-  padding: 0 20px;
-  width: 70%; /* Reduce the width to make it thinner */
-  margin: 0 auto;
-  min-height: 50px; 
-  margin-top: 200px; /* Add margin-top to create space between footer and content */
-}
-
 .footer-content p {
   margin: 0;
   padding: 0;
@@ -20,25 +7,17 @@
   color: #111111;
 }
 
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
-  font-size: 20px;
-  margin-right: 10px;
-}
-
 /* YouTube icon in red */
-.social-icons a.youtube-icon {
+.social-icons a[href*="youtube"] {
   color: red;
 }
 
 /* LinkedIn icon in blue */
-.social-icons a.linkedin-icon {
+.social-icons a[href*="linkedin"] {
   color: blue;
 }
 
-.social-icons a:last-child {
-  margin-right: 0;
+/* Twitter icon in its brand color */
+.social-icons a[href*="twitter"] {
+  color: #00acee;
 }
