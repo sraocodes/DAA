@@ -50,7 +50,7 @@ class TextScramble {
         } else {
             setTimeout(() => {
                 this.frameRequest = requestAnimationFrame(this.update);
-            }, 20);  // Introduce a 50ms delay
+            }, 5);  // Reduced delay to 5ms for faster scrambling
             this.frame++;
         }        
     }
@@ -66,15 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return h2 ? new TextScramble(h2) : null;
     });
 
-    function scrambleRepeatedly(scrambler, originalText) {
-        scrambler.setText(originalText).then(() => {
-            setTimeout(() => {
-                // Recursively call the function to achieve indefinite scrambling
-                scrambleRepeatedly(scrambler, originalText);
-            }, 10000);  // 10 seconds delay between scrambles
-        });
-    }
-    
     function checkPosition() {
         let delay = 0;
     
@@ -88,18 +79,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
                 // Scramble the h2 heading of this card if it exists
                 if (scramblers[index]) {
-                    // Only start the indefinite scramble if it hasn't been started before
+                    // Only scramble if it hasn't been scrambled before
                     if (!card.classList.contains('scrambled')) {
                         let originalText = card.querySelector('h2').textContent;
-                        scrambleRepeatedly(scramblers[index], originalText);
+                        scramblers[index].setText(originalText);
                         card.classList.add('scrambled');
                     }
                 }
             }
         });
     }
-    
-    
 
     // Initial check to animate cards that are already in view
     checkPosition();
@@ -107,4 +96,3 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkPosition);
     window.addEventListener('resize', checkPosition);
 });
-
