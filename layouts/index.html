@@ -1,31 +1,37 @@
 {{ define "main" }}
 
-<div class="card-container">
-    {{ range .Params.slides }}
-    <div class="card">
-        <img src="{{ .image | relURL }}" alt="Slide image" class="card-img">
-        <div class="card-content">
-            <h2>{{ .heading }}</h2>
-            {{ $text := .text }}
-            {{ range $key, $value := . }}
-                {{ if (strings.HasSuffix $key "_link") }}
-                    {{ if not (strings.HasPrefix $value "http") }}
-                        {{ $value = printf "%s%s" $.Site.BaseURL $value }}
+<div class="container mt-5">
+    <div class="row">
+        {{ range .Params.slides }}
+        <div class="col-md-6 col-lg-6 mb-4"> <!-- Adjusted Bootstrap grid classes -->
+            <div class="card custom-card">
+                <img src="{{ .image | relURL }}" alt="Slide image" class="card-img-top custom-card-img">
+                <div class="card-body">
+                    <h2 class="card-title">{{ .heading }}</h2>
+                    {{ $text := .text }}
+                    {{ range $key, $value := . }}
+                        {{ if (strings.HasSuffix $key "_link") }}
+                            {{ if not (strings.HasPrefix $value "http") }}
+                                {{ $value = printf "%s%s" $.Site.BaseURL $value }}
+                            {{ end }}
+                            {{ $linkText := (replace $key "_link" "") | upper }}
+                            {{ $text = replace $text $linkText (print "<a href=\"" $value "\">" $linkText "</a>") }}
+                        {{ end }}
                     {{ end }}
-                    {{ $linkText := (replace $key "_link" "") | upper }}
-                    {{ $text = replace $text $linkText (print "<a href=\"" $value "\">" $linkText "</a>") }}
-                {{ end }}
-            {{ end }}
-            <p>{{ $text | safeHTML }}</p>
-            {{ $link := .link }}
-            {{ if not (strings.HasPrefix $link "http") }}
-                {{ $link = printf "%s%s" $.Site.BaseURL $link }}
-            {{ end }}
-            <a href="{{ $link }}" class="learn-more">Learn more</a>
+                    <p class="card-text">{{ $text | safeHTML }}</p>
+                    {{ $link := .link }}
+                    {{ if not (strings.HasPrefix $link "http") }}
+                        {{ $link = printf "%s%s" $.Site.BaseURL $link }}
+                    {{ end }}
+                    <a href="{{ $link }}" class="card-link learn-more">Learn more</a>
+                </div>
+            </div>
         </div>
+        {{ end }}
     </div>
-    {{ end }}
 </div>
+
+
 <!-- Back to Top Button -->
 <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
 {{ end }}
