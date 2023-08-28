@@ -6,9 +6,9 @@ draft: false
 sections:  
   - name: "Introduction"
     text: "The PhenoRob Digital Agricultural Avatar (DAA) initiative is poised to redefine the boundaries of agronomic understanding. At this foundational stage, the DAA project envisions harnessing the power of coupling to bridge the complexities of crop modeling. From the nuanced molecular interactions within plant cells to vast regional climate patterns, the plan is to use coupling as an essential strategy in the DAA framework. By aiming to integrate various models in the future, the DAA aspires to offer a more comprehensive and accurate digital twin of the crop ecosystem."
-    image: "images/coupling1.jpg"
-    imageWidth: "500px"
-    imageHeight: "500px"
+    image: "images/4.gif"
+    imageWidth: "800px"
+    imageHeight: "450px"
     textPosition: "bottom"
 
   - name: "Model Coupling"
