@@ -29,6 +29,18 @@ sections:
       - "It is flexible and can be coupled with external modelling tools."
       - "It can be used to understand how carbon and water flows influence each other and respond to heterogeneous environmental conditions."   
       - "It is open source, highly accessible and source code available on [github](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox)."
+  - name: "Data Structure for C-PlantBox Input"
+    text: "The C-PlantBox framework requires specific data structures for its input to ensure accurate modeling. These structures define the parameters and conditions for both root and shoot systems simulation."
+    list:
+      - "**Parameter Set**: Defines plant-specific characteristics, such as growth rate, branching frequency, etc."
+      - "**Environmental Data**: Information on soil type, humidity, light conditions, and other external factors."
+      - "**Initial Conditions**: Defines the starting state of the plant system for simulation. This might include initial root length, shoot height, etc."
+      - "**Temporal Data**: Information on how certain parameters might change over time, such as light cycles or seasonal changes."
+    note: "It's crucial to ensure that input data is accurate and complete. Inaccuracies can lead to erroneous simulations. Refer to the C-PlantBox documentation for detailed guidance on input data structuring."
+    image: "images/cplantbox_input.gif" # Optionally, you can add an image illustrating the data structure
+    imageWidth: "250px"
+    imageHeight: "500px"
+    textPosition: "right"
   - name: "C-PlantBox lectures"
     text: "Explore the world of plant shoot and root architecture with Prof. Dr. Andrea Schnepf's insightful talks on the C-PlantBox modeling tool. Dive into the intricate mathematics and operational intricacies that power C-PlantBox tool for simulating and analyzing whole plant growth dynamics."
     videos: 
