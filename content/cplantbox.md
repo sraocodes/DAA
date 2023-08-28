@@ -41,6 +41,18 @@ sections:
     imageWidth: "250px"
     imageHeight: "500px"
     textPosition: "right"
+  - name: "Try It Online with Binder!"
+    text: "If you'd like to explore and run C-Plantbox without any installations on your local machine, C-Plantbox team have a convenient solution for you – [Binder](http://b.cplantbox.com/)! With just a click, you can have an interactive environment to play with the code and data in this notebook."
+    list:
+      - "**Introduction to the Subject**: Delving deep into the basics to ensure a good grasp of the core concepts."
+      - "**Interactive Examples**: Modify and execute code to see real-time results."
+      - "**Visualizations**: Data-driven insights represented visually for easy understanding."
+      - "**Exercises**: Apply what you've learned through simple exercises."
+    note: "Click the button below to launch this notebook on Binder. Make sure you have a stable internet connection for the best experience."
+    image: "https://mybinder.org/static/logo.svg" # The official Binder logo
+    imageWidth: "200px"
+    imageHeight: "100px"
+    textPosition: "left"
   - name: "C-PlantBox lectures"
     text: "Explore the world of plant shoot and root architecture with Prof. Dr. Andrea Schnepf's insightful talks on the C-PlantBox modeling tool. Dive into the intricate mathematics and operational intricacies that power C-PlantBox tool for simulating and analyzing whole plant growth dynamics."
     videos: 
