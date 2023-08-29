@@ -200,19 +200,23 @@
       <ul class="navbar-nav">
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-what-is-mecha" >What is MECHA</a>
+          <a class="nav-link" href="#single-what-is-mecha" >What is MECHA?</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-why-mecha" >Why MECHA</a>
+          <a class="nav-link" href="#single-why-mecha" >Why MECHA?</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-try-mecha-online-with-shinyapps-or-binder" >Try MECHA Online with ShinyApps or Binder</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-mecha-file-structure" >MECHA File Structure</a>
         </li>
         
         <li class="nav-item">
           <a class="nav-link" href="#single-limitations-of-mecha" >Limitations of MECHA</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="https://mecharoot.github.io/" target="_blank" rel="noopener noreferrer">Try MECHA</a>
         </li>
         
       </ul>
@@ -224,18 +228,18 @@
   
   <div id="single-what-is-mecha" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">What is MECHA</h2>
+      <h2 class="card-title">What is MECHA?</h2>
       <div class="row">
         
         
         <div class="col-auto">
           
-          <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/mecha1.png" alt="What is MECHA" style="width: 300px; height: 400px;">
+          <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/mecha1.png" alt="What is MECHA?" style="width: 300px; height: 400px;">
           
         </div>
         
         <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">MECHA is a mathematical model that helps to understand how water flows through the roots of plants. It takes into account the different structures within the root, such as cell walls and membranes, and calculates how water moves through them. This model can be used to test different hypotheses about how water is transported in roots and can help to improve our understanding of plant water relations. For more details, please visit the official site of MECHA <a href="https://mecharoot.github.io//">here</a>.</p>
+          <p class="card-text" style="font-size: 1.2em;">MECHA is a mathematical model that aids in understanding the movement of water through plant roots. This model considers various root structures, including cell walls and membranes, to calculate water flow. The tool enables researchers to examine various hypotheses about root water transport, enhancing our grasp on plant water relations. Dive deeper into MECHA by visiting its <a href="https://mecharoot.github.io/">official site</a>.</p>
           
         </div>
         
@@ -249,14 +253,82 @@
   
   <div id="single-why-mecha" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">Why MECHA</h2>
+      <h2 class="card-title">Why MECHA?</h2>
       <div class="row">
         
         
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">MECHA is a useful tool that can help plant breeders to test different scenarios and hypotheses related to root water/nutrient transport. By using MECHA, researchers can get a better understanding of how plants capture and transport water, which is important for optimizing crop yields and improving agricultural sustainability. This knowledge can then be used to inform future research and agricultural practices, ultimately leading to more efficient and sustainable crop production.</p>
+          <p class="card-text" style="font-size: 1.2em;">MECHA proves invaluable for plant breeders, enabling them to simulate various scenarios and hypotheses related to root water/nutrient transport. Leveraging MECHA, researchers can better understand plant water absorption and transportation, which is pivotal for maximizing crop yields and bolstering agricultural sustainability. Such insights can drive future agricultural research and best practices.</p>
           
         </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-try-mecha-online-with-shinyapps-or-binder" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Try MECHA Online with ShinyApps or Binder</h2>
+      <div class="row">
+        
+        
+        <div class="col">
+          <p class="card-text" style="font-size: 1.2em;">Interested in testing MECHA without any installations? Mecha <a href="/Phenorob-DAA/members/">team</a> have the perfect solution for you – <a href="https://plantmodelling.shinyapps.io/mecha/">ShinyApps</a> and <a href="https://mybinder.org/v2/gh/HeymansAdrien/GranarMecha/main">Binder</a>. In just one click, immerse yourself in an interactive environment, exploring the code and data of this model.</p>
+          
+        </div>
+        
+        <div class="col-auto">
+          
+          <img class="img-fluid rounded mb-2" src="https://mybinder.org/static/logo.svg" alt="Try MECHA Online with ShinyApps or Binder" style="width: 200px; height: 100px;">
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-mecha-file-structure" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">MECHA File Structure</h2>
+      <div class="row">
+        
+        
+        <div class="col-auto">
+          
+        </div>
+        
+        <div class="col">
+          <p class="card-text" style="font-size: 1.2em;">To facilitate accurate simulations, MECHA employs a specific file structure. Familiarizing yourself with this structure can optimize your usage of the model.</p>
+          
+          <div class="list-group">
+            
+            <a href="#" class="list-group-item list-group-item-action"><strong>INPUT FILES</strong>: MECHA requires four parameter files stored in the /in folder:</a>
+            
+            <a href="#" class="list-group-item list-group-item-action">General.xml: Covers general simulation parameters.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action">BC.xml: Sets boundary conditions for the simulation, determining if the soil is dry, wet, or partially in contact with the root.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action">Geometry.xml: Defines the root section geometry parameters, allowing you to select the root section for the simulation.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action">Hydraulics.xml: Covers the hydraulic parameters of various simulation variables.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action"><strong>OUTPUT FILES</strong>: MECHA saves output files in a folder specified in the General.xml input file, under the Output tag. These files include:</a>
+            
+            <a href="#" class="list-group-item list-group-item-action">*.PVTK files: Geometry files compatible with Paraview.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action">Macro_prop_i.txt files: These provide a summary of simulation results, incorporating the radial data.</a>
+            
+          </div>
+          
+        </div>
+        
         
       </div>
       
@@ -272,15 +344,15 @@
         
         
         <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">While MECHA is a powerful tool, it does have certain limitations (like any other models):</p>
+          <p class="card-text" style="font-size: 1.2em;">Despite MECHA&rsquo;s prowess, it does have certain constraints:</p>
           
           <div class="list-group">
             
-            <a href="#" class="list-group-item list-group-item-action">Dimension Limitation: The current form of MECHA does not incorporate a third spatial dimension, which could limit its accuracy in predicting water pressure and flow along roots.</a>
+            <a href="#" class="list-group-item list-group-item-action">Dimension Limitation: MECHA currently operates in two dimensions, potentially affecting its precision in predicting water pressure and root flow.</a>
             
-            <a href="#" class="list-group-item list-group-item-action">Focus on Hydraulics: MECHA primarily focuses on the hydraulic properties of cells, and may not fully account for other environmental factors affecting plant water relations.</a>
+            <a href="#" class="list-group-item list-group-item-action">Focus on Hydraulics: The model emphasizes the hydraulic properties of cells, potentially overlooking other environmental factors impacting plant water relations.</a>
             
-            <a href="#" class="list-group-item list-group-item-action">Data Dependency: The model requires detailed and accurate input data, and includes assumptions that might not fully capture the complexities of real-world processes.</a>
+            <a href="#" class="list-group-item list-group-item-action">Data Dependency: MECHA necessitates detailed and precise input data, incorporating assumptions that might not encompass the intricacies of real-world processes.</a>
             
           </div>
           
@@ -297,8 +369,6 @@
       
     </div>
   </div>
-  
-  
   
   
 
