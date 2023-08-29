@@ -5,14 +5,14 @@ draft: false
 
 sections:  
   - name: "What is Agro-C ?"
-    text: "AGRO-C is a computer model used to understand how carbon moves in and out of agricultural soil, which is called the 'carbon budget' of the farm or field. The model helps scientists understand how much carbon is being absorbed by crops, how much is stored in the soil, and how much is exchanged with the atmosphere. Understanding the carbon budget of agroecosystems has implications for climate change mitigation and sustainable land management."
+    text: "AGRO-C is a computer model used to understand how carbon moves in and out of agricultural soil, which is called the 'carbon budget' of the farm or field. The model helps scientists understand how much carbon is being absorbed by crops, how much is stored in the soil, and how much is exchanged with the atmosphere. Understanding the carbon budget of agroecosystems has implications for climate change mitigation and sustainable land management.Visit the official [AGRO-C documentation](https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062) for detailed information."
     image: "images/AgroC.png"
     imageWidth: "250px"
     imageHeight: "250px"
     textPosition: "right"
 
   - name: "Description of Agro-C Model"
-    text: "The Agro-C has two main parts:"
+    text: "The Agro-C model is a coupling of the SOILCO2/RothC model and the SUCROS model for crop growth. It simulates water, heat, and CO2 flux in a soil column, as well as the turnover of depth-specific carbon pools. The model has been validated in various laboratory and field studies, ensuring its accuracy and reliability.The Agro-C has two main parts:"
     list:
       - "Crop-C: This part simulates how crops grow and take in carbon from the air during photosynthesis."
       - "Soil-C: This part simulates what happens to the carbon from crop residues and other organic sources in the soil."
@@ -44,7 +44,26 @@ sections:
       - "It aids in understanding the carbon budget of agricultural ecosystems."
       - "It simulates the carbon dynamics considering factors like crop type, management practices, and   climate variables."
       - "It divides the carbon budget into Crop-C and Soil-C for better understanding and prediction." 
+      - "Validated through extensive laboratory and field studies."
 
-  - name: "Documentation"
-    url: "https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062"
+  - name: "Software and Implementation"
+    text: "Agro-C is developed using Fortran90, a powerful and widely-used programming language for numerical and scientific computing."
+    list:
+      - "Compiler Requirement: To install and run Agro-C, you will need a Fortran compiler."
+      - "Platform Support: The model comes with a makefile for Linux and Mac. However, for Windows users, the installation and setup process is more manual and might require additional steps."
+      - "Code Repository: The source codes for Agro-C can be accessed and downloaded from the SVN repository. Use the following command to checkout the latest version: `svn co svn://icg4lts.icg.kfa-juelich.de/agroc_codes_v3`."
+
+  - name: "Data Structure: Model Input and Output Variables"
+    text: "The Agro-C model requires specific input data and produces detailed output data for comprehensive analysis."
+    list:
+      - "**Model Input Data**:"
+      - "Daily weather data: Maximum, minimum, and mean air temperature, solar radiation, and precipitation."
+      - "Soil properties: Clay fraction, bulk density, pH, concentrations of organic carbon, and total nitrogen."
+      - "Farming management: Dates of planting and harvest, timing and rates of fertilizer application, manure inputs, and crop residue management."
+      - "Atmospheric CO2 concentration."
+      - "**Model Output Data**:"
+      - "Crop carbon: Gross primary production, autotrophic respiration, and net primary production."
+      - "Soil carbon: Heterotrophic respiration and organic carbon."
+      - "Net ecosystem exchange: Net CO2 exchange between cropland and the atmosphere."
+
 ---
