@@ -45,6 +45,17 @@ sections:
     imageHeight: "300px"
     textPosition: "bottom"
 
+  - name: "DuMux-ROSI File Structure"
+    text: "DuMux-ROSI, designed for simulating soil water dynamics and root-soil interactions, employs a specific file structure. Understanding this structure can enhance your experience with the tool."
+    list:
+      - "**CODE REPRESENTATION**: DuMux-ROSI has distinct code representations for various model equations. Key files include:"
+      - "`localresidual.hh`: This file, located in `/dumux/dumux/porousmediumflow/Richards/`, defines the storage term of the model equations."
+      - "`richardsproblem.hh`: Found in `dumux-rosi/rosi_benchmarking/soil_richards/`, this file implements the boundary conditions specified in the input file."
+      - "**FLUX TERM**: The flux term's implementation is deep-rooted in the code. Depending on the flux type, its implementation can be found in `/dumux/dumux/flux`."
+      - "**INPUT FILES**: DuMux-ROSI uses input files to specify model parameters, initial conditions, and boundary conditions. An example input file is `b1a_1d.input` located in `dumux-rosi/rosi_benchmarking/soil_richards/input/`."
+      - "**RUNNING EXAMPLES**: Instructions for running simulations are provided in the [DuMux-ROSI Manual](https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi/blob/master/Manual.pdf). Navigate to the desired directory and execute the specified commands."
+      - "**SOIL PROPERTIES**: Soil properties are defined using the Van Genuchten model. Parameters for different soil layers can be set, including residual water content, saturated water content, and more."
+
 
   - name: "DuMux-ROSI features"
     text: "Key features of DuMux-ROSI include:"
@@ -52,6 +63,7 @@ sections:
       - "Easily interchangeable models for root and soil subsystems."
       - "Fully implicit, nonlinear framework leveraging a Newton–Raphson scheme."
       - "Flexibility in modifying, adding, or swapping nonlinear constitutive equations, intricate boundary conditions, and fluid and material relations."
+      - "**VISUALIZATION**: DuMux-ROSI supports result visualization, offering insights into various processes. The tool's visualization capabilities are integral for researchers and professionals alike."
 
   - name: "Installation Guide for DuMux-ROSI"
     text: "This installation guide provides a general overview for setting up DuMux-ROSI on Linux systems. For detailed instructions, refer to the [DuMux-ROSI Manual](https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi/blob/master/Manual.pdf)."
