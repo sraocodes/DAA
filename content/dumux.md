@@ -19,20 +19,28 @@ sections:
       - "Open-source nature, fostering community-driven enhancements and applications."
 
   - name: "How does DuMux-ROSI work?"
-    text: "DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. At its core lies the Richards equation, a fundamental equation in soil physics that describes unsaturated water flow in porous media. This equation is given by:"
+    text: "DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. At its core lies the Richards equation, a fundamental equation in soil physics that describes unsaturated water flow in porous media. This equation is given by:
     {{< rawhtml >}}
     \\[
-    \\frac{\\partial (\\rho_w \\Phi S)}{\\partial t} - \\nabla \cdot \\frac{\\kappa}{\\mu} \\rho_w K (\\nabla p_w - \\rho_w g) = 0
+    \\frac{\\partial (\\rho_w \\Phi S)}{\\partial t} - \\nabla . \\frac{\\kappa}{\\mu} \\rho_w K (\\nabla p_w - \\rho_w g) = 0
     \\]
     {{< /rawhtml >}}
-    text: "Where:"
+
+    where"
     list:
       - "{{< rawhtml >}}\\( \\theta \\){{< /rawhtml >}}: Volumetric water content of the soil. It represents the fraction of the volume of soil that is occupied by water."
       - "{{< rawhtml >}}\\( t \\){{< /rawhtml >}}: Time. The equation describes how the water content changes over time."
       - "{{< rawhtml >}}\\nabla{{< /rawhtml >}}: Nabla operator (gradient operator). It indicates spatial variation or gradient."
       - "{{< rawhtml >}}K(\\theta){{< /rawhtml >}}: Hydraulic conductivity. It describes how easily water can flow through the soil and often depends on the water content \\( \\theta \\)."
       - "{{< rawhtml >}}\\( \\psi \\){{< /rawhtml >}}: Soil water potential. It represents the energy status of water in soil and drives the flow of water."
-      - "z: Vertical coordinate (depth in the soil). The term {{< rawhtml >}}\\( \\psi + z \\){{< /rawhtml >}} accounts for both the soil water potential and gravitational potential."
+      - "z: Vertical coordinate (depth in the soil). The term {{< rawhtml >}}\\( \\psi + z \\){{< /rawhtml >}} accounts for both the soil water potential and   gravitational potential."
+      - "{{< rawhtml >}}\\( \\rho_w \\){{< /rawhtml >}}: Water density."
+      - "{{< rawhtml >}}\\( \\Phi \\){{< /rawhtml >}}: Porosity of the soil."
+      - "{{< rawhtml >}}\\( S \\){{< /rawhtml >}}: Saturation of the soil."
+      - "{{< rawhtml >}}\\( \\kappa \\){{< /rawhtml >}}: Relative permeability."
+      - "{{< rawhtml >}}\\( \\mu \\){{< /rawhtml >}}: Dynamic viscosity."
+      - "{{< rawhtml >}}\\( p_w \\){{< /rawhtml >}}: Absolute pressure of the wetting phase (water)."
+      - "g: Gravitational acceleration."
     image: "images/Rosi2.jpg"
     imageWidth: "600px"
     imageHeight: "300px"
