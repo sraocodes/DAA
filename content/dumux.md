@@ -28,15 +28,15 @@ sections:
 
     where"
     list:
-      - "{{< rawhtml >}}\\( \\theta \\){{< /rawhtml >}}: Volumetric water content of the soil. It represents the fraction of the volume of soil that is occupied by water."
+      - "{{< rawhtml >}}\\( S \\){{< /rawhtml >}}: Saturation of the soil."
+      - "{{< rawhtml >}}\\( \\Phi \\){{< /rawhtml >}}: Porosity of the soil."
+      - "{{< rawhtml >}}\\( \\theta \\ = \\Phi S){{< /rawhtml >}}: Volumetric water content of the soil. It represents the fraction of the volume of soil that is occupied by water."
       - "{{< rawhtml >}}\\( t \\){{< /rawhtml >}}: Time. The equation describes how the water content changes over time."
       - "{{< rawhtml >}}\\nabla{{< /rawhtml >}}: Nabla operator (gradient operator). It indicates spatial variation or gradient."
       - "{{< rawhtml >}}K(\\theta){{< /rawhtml >}}: Hydraulic conductivity. It describes how easily water can flow through the soil and often depends on the water content \\( \\theta \\)."
       - "{{< rawhtml >}}\\( \\psi \\){{< /rawhtml >}}: Soil water potential. It represents the energy status of water in soil and drives the flow of water."
       - "z: Vertical coordinate (depth in the soil). The term {{< rawhtml >}}\\( \\psi + z \\){{< /rawhtml >}} accounts for both the soil water potential and   gravitational potential."
       - "{{< rawhtml >}}\\( \\rho_w \\){{< /rawhtml >}}: Water density."
-      - "{{< rawhtml >}}\\( \\Phi \\){{< /rawhtml >}}: Porosity of the soil."
-      - "{{< rawhtml >}}\\( S \\){{< /rawhtml >}}: Saturation of the soil."
       - "{{< rawhtml >}}\\( \\kappa \\){{< /rawhtml >}}: Relative permeability."
       - "{{< rawhtml >}}\\( \\mu \\){{< /rawhtml >}}: Dynamic viscosity."
       - "{{< rawhtml >}}\\( p_w \\){{< /rawhtml >}}: Absolute pressure of the wetting phase (water)."
