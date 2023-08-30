@@ -42,7 +42,7 @@ sections:
     text: "For a step-by-step installation guide, please refer to the official [TerrSysMP site](https://www.terrsysmp.org/). The platform is designed to be compatible with various computing environments, from personal laptops to high-performance computing clusters."
 
   - name: "Development and Collaboration"
-    text: "Developed by the Center for High-Performance Scientific Computing in Terrestrial Systems (HPSC-TerrSys), TerrSysMP is a collaborative effort involving multiple universities and research centers primarily based in Germany."
+    text: "Developed by the Center for High-Performance Scientific Computing in Terrestrial Systems [HPSC-TerrSys](https://www.hpsc-terrsys.de/), TerrSysMP is a collaborative effort involving multiple universities and research centers primarily based in Germany."
 
   - name: "Additional Resources"
     list:
