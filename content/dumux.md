@@ -19,7 +19,7 @@ sections:
       - "Open-source nature, fostering community-driven enhancements and applications."
 
   - name: "How does DuMux-ROSI work?"
-    text: "DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. At its core lies the Richards equation, a fundamental equation in soil physics that describes unsaturated water flow in porous media. This equation is given by:
+    text: "DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. At its core lies the Richards equation, a fundamental equation in soil physics that describes unsaturated water flow in porous media. Utilizing the Richards equation, it enables in-depth simulations of soil water flow dynamics. An input file serves to specify model parameters and initial and boundary conditions. The Python binding facilitates coupling DuMux with CPlantBox, thereby enabling concurrent modeling of root growth and water uptake. This Richards equation solved in DuMux-ROSI can be written as:
     {{< rawhtml >}}
     \\[
     \\frac{\\partial (\\rho_w \\Phi S)}{\\partial t} - ∇ . \\frac{\\kappa}{\\mu} \\rho_w K (∇ p_w - \\rho_w g) = 0
