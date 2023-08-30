@@ -32,7 +32,7 @@ sections:
       - "{{< rawhtml >}}\\( \\Phi \\){{< /rawhtml >}}: Porosity of the soil."
       - "{{< rawhtml >}}\\( \\theta \\){{< /rawhtml >}}: Volumetric water content of the soil, given by {{< rawhtml >}}\\( \\theta = \\Phi S \\){{< /rawhtml >}}. It represents the fraction of the volume of soil that is occupied by water."
       - "{{< rawhtml >}}\\( t \\){{< /rawhtml >}}: Time. The equation describes how the water content changes over time."
-      - "{{< rawhtml >}}∇{{< rawhtml >}}: gradient operator. It indicates spatial variation or gradient."
+      - "∇: gradient operator. It indicates spatial variation or gradient."
       - "K: Hydraulic conductivity. It describes how easily water can flow through the soil."
       - "{{< rawhtml >}}\\( \\psi \\){{< /rawhtml >}}: Soil water potential. It represents the energy status of water in soil and drives the flow of water."
       - "{{< rawhtml >}}\\( \\rho_w \\){{< /rawhtml >}}: Water density."
