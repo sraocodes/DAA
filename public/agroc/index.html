@@ -224,7 +224,11 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062" target="_blank" rel="noopener noreferrer">Documentation</a>
+          <a class="nav-link" href="#single-software-and-implementation" >Software and Implementation</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-data-structure-model-input-and-output-variables" >Data Structure: Model Input and Output Variables</a>
         </li>
         
       </ul>
@@ -247,7 +251,7 @@
         </div>
         
         <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">AGRO-C is a computer model used to understand how carbon moves in and out of agricultural soil, which is called the &lsquo;carbon budget&rsquo; of the farm or field. The model helps scientists understand how much carbon is being absorbed by crops, how much is stored in the soil, and how much is exchanged with the atmosphere. Understanding the carbon budget of agroecosystems has implications for climate change mitigation and sustainable land management.</p>
+          <p class="card-text" style="font-size: 1.2em;">AGRO-C is a computer model used to understand how carbon moves in and out of agricultural soil, which is called the &lsquo;carbon budget&rsquo; of the farm or field. The model helps scientists understand how much carbon is being absorbed by crops, how much is stored in the soil, and how much is exchanged with the atmosphere. Understanding the carbon budget of agroecosystems has implications for climate change mitigation and sustainable land management.Visit the official <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062">AGRO-C documentation</a> for detailed information.</p>
           
         </div>
         
@@ -266,7 +270,7 @@
         
         
         <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">The Agro-C has two main parts:</p>
+          <p class="card-text" style="font-size: 1.2em;">The Agro-C model is a coupling of the SOILCO2/RothC model and the SUCROS model for crop growth. It simulates water, heat, and CO2 flux in a soil column, as well as the turnover of depth-specific carbon pools. The model has been validated in various laboratory and field studies, ensuring its accuracy and reliability.The Agro-C has two main parts:</p>
           
           <div class="list-group">
             
@@ -377,6 +381,8 @@
             
             <div class="list-group-item">It divides the carbon budget into Crop-C and Soil-C for better understanding and prediction.</div>
             
+            <div class="list-group-item">Validated through extensive laboratory and field studies.</div>
+            
           </div>                
           
         </div>
@@ -387,6 +393,72 @@
   </div>
   
   
+  
+  <div id="single-software-and-implementation" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Software and Implementation</h2>
+      <div class="row">
+        
+        
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">Agro-C is developed using Fortran90, a powerful and widely-used programming language for numerical and scientific computing.</p>
+          
+          <div class="list-group">
+            
+            <div class="list-group-item">Compiler Requirement: To install and run Agro-C, you will need a Fortran compiler.</div>
+            
+            <div class="list-group-item">Platform Support: The model comes with a makefile for Linux and Mac. However, for Windows users, the installation and setup process is more manual and might require additional steps.</div>
+            
+            <div class="list-group-item">Code Repository: The source codes for Agro-C can be accessed and downloaded from the SVN repository. Use the following command to checkout the latest version: <code>svn co svn://icg4lts.icg.kfa-juelich.de/agroc_codes_v3</code>.</div>
+            
+          </div>                
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-data-structure-model-input-and-output-variables" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Data Structure: Model Input and Output Variables</h2>
+      <div class="row">
+        
+        
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">The Agro-C model requires specific input data and produces detailed output data for comprehensive analysis.</p>
+          
+          <div class="list-group">
+            
+            <div class="list-group-item"><strong>Model Input Data</strong>:</div>
+            
+            <div class="list-group-item">Daily weather data: Maximum, minimum, and mean air temperature, solar radiation, and precipitation.</div>
+            
+            <div class="list-group-item">Soil properties: Clay fraction, bulk density, pH, concentrations of organic carbon, and total nitrogen.</div>
+            
+            <div class="list-group-item">Farming management: Dates of planting and harvest, timing and rates of fertilizer application, manure inputs, and crop residue management.</div>
+            
+            <div class="list-group-item">Atmospheric CO2 concentration.</div>
+            
+            <div class="list-group-item"><strong>Model Output Data</strong>:</div>
+            
+            <div class="list-group-item">Crop carbon: Gross primary production, autotrophic respiration, and net primary production.</div>
+            
+            <div class="list-group-item">Soil carbon: Heterotrophic respiration and organic carbon.</div>
+            
+            <div class="list-group-item">Net ecosystem exchange: Net CO2 exchange between cropland and the atmosphere.</div>
+            
+          </div>                
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
   
   
 

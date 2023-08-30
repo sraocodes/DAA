@@ -12,20 +12,48 @@ sections:
     textPosition: "left"
   - name: "Why DuMux?"
     text: "DuMuX boasts an extensive collection of porous media models, encompassing compositional, multiphase, and non-isothermal models, along with a wealth of constitutive laws. Unlike typical plant-scale models that rely solely on the Richards equation to simulate soil water dynamics, DuMuX offers flexibility by supporting various soil flow models. For instance, it can incorporate a miscible two-phase two-component, non-isothermal model, complete with evaporation processes."  
+    list:
+      - "Advanced numerical schemes ensuring accuracy and stability."
+      - "Support for various soil flow models beyond the Richards equation."
+      - "Integration capabilities with other models, enhancing simulation fidelity."
+      - "Open-source nature, fostering community-driven enhancements and applications."
+
   - name: "How does DuMux-ROSI work?"
-    text: "DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. Utilizing the Richards equation, it enables in-depth simulations of soil water flow dynamics. An input file serves to specify model parameters and initial and boundary conditions. The Python binding facilitates coupling DuMux with CPlantBox, thereby enabling concurrent modeling of root growth and water uptake."
+    text: "DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. At its core lies the Richards equation, a fundamental equation in soil physics that describes unsaturated water flow in porous media. This equation is given by:
+    {{< rawhtml >}}
+    \\[
+    \\frac{\\partial \\theta}{\\partial t} = \\nabla . [K(\\theta) ∇ (\\psi + z)]
+    \\]
+    {{< /rawhtml >}}
+
+    where"
+    list:
+      - "\\( \\theta \\): Volumetric water content of the soil. It represents the fraction of the volume of soil that is occupied by water."
+      - "\\( t \\): Time. The equation describes how the water content changes over time."
+      - "∇: Nabla operator (gradient operator). It indicates spatial variation or gradient."
+      - "K(\\( \\theta \\)): Hydraulic conductivity. It describes how easily water can flow through the soil and often depends on the water content \\( \\theta \\)."
+      - "\\( \\psi \\): Soil water potential. It represents the energy status of water in soil and drives the flow of water."
+      - "z: Vertical coordinate (depth in the soil). The term \\( \\psi + z \\) accounts for both the soil water potential and gravitational potential."
     image: "images/Rosi2.jpg"
     imageWidth: "600px"
     imageHeight: "300px"
     textPosition: "bottom"
+
   - name: "DuMux-ROSI features"
     text: "Key features of DuMux-ROSI include:"
     list:
       - "Easily interchangeable models for root and soil subsystems."
       - "Fully implicit, nonlinear framework leveraging a Newton–Raphson scheme."
       - "Flexibility in modifying, adding, or swapping nonlinear constitutive equations, intricate boundary conditions, and fluid and material relations."
-      - "Open-source, highly accessible, with the source code available on [github](https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi)."
-  - name: "Additional Resources"
-    url: "https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi/blob/master/Manual.pdf"
-    text: "For more detailed instructions on model parameterization, consult the [DuMux-ROSI Manual](https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi/blob/master/Manual.pdf)."
+
+  - name: "Installation Guide for DuMux-ROSI"
+    text: "This installation guide provides a general overview for setting up DuMux-ROSI on Linux systems. For detailed instructions, refer to the [DuMux-ROSI Manual](https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi/blob/master/Manual.pdf)."
+    list:
+      - "Ensure a recent version of c++ compiler and python3 is installed."
+      - "Install essential tools: git, cmake, libboost, pip, Java Runtime Environment, and Paraview."
+      - "Install necessary Python packages: numpy, scipy, and matplotlib."
+      - "Set up a dedicated DUMUX directory."
+      - "Download and install DUNE core and external modules."
+      - "Retrieve and set up dumux, dumux-rosi, alugrid, and CRootBox from their repositories."
+      - "For CRootBox, build using `cmake` and `make` commands."
 ---
