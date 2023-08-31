@@ -212,6 +212,10 @@
         </li>
         
         <li class="nav-item">
+          <a class="nav-link" href="#single-dumux-rosi-file-structure" >DuMux-ROSI File Structure</a>
+        </li>
+        
+        <li class="nav-item">
           <a class="nav-link" href="#single-dumux-rosi-features" >DuMux-ROSI features</a>
         </li>
         
@@ -260,6 +264,18 @@
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">DuMuX boasts an extensive collection of porous media models, encompassing compositional, multiphase, and non-isothermal models, along with a wealth of constitutive laws. Unlike typical plant-scale models that rely solely on the Richards equation to simulate soil water dynamics, DuMuX offers flexibility by supporting various soil flow models. For instance, it can incorporate a miscible two-phase two-component, non-isothermal model, complete with evaporation processes.</p>
           
+          <div class="list-group">
+            
+            <div class="list-group-item">Advanced numerical schemes ensuring accuracy and stability.</div>
+            
+            <div class="list-group-item">Support for various soil flow models beyond the Richards equation.</div>
+            
+            <div class="list-group-item">Integration capabilities with other models, enhancing simulation fidelity.</div>
+            
+            <div class="list-group-item">Open-source nature, fostering community-driven enhancements and applications.</div>
+            
+          </div>                
+          
         </div>
         
       </div>
@@ -280,7 +296,72 @@
         </div>
         
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. Utilizing the Richards equation, it enables in-depth simulations of soil water flow dynamics. An input file serves to specify model parameters and initial and boundary conditions. The Python binding facilitates coupling DuMux with CPlantBox, thereby enabling concurrent modeling of root growth and water uptake.</p>
+          <p class="card-text" style="font-size: 1.2em;">DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. At its core lies the Richards equation, a fundamental equation in soil physics that describes unsaturated water flow in porous media. Utilizing the Richards equation, it enables in-depth simulations of soil water flow dynamics. An input file serves to specify model parameters and initial and boundary conditions. The Python binding facilitates coupling DuMux with CPlantBox, thereby enabling concurrent modeling of root growth and water uptake. This Richards equation solved in DuMux-ROSI can be written as: {{&lt; rawhtml &gt;}} [ \frac{\partial (\rho_w \Phi S)}{\partial t} - ∇ . \frac{\kappa}{\mu} \rho_w K (∇ p_w - \rho_w g) = 0 ] {{&lt; /rawhtml &gt;}}
+where</p>
+          
+          <div class="list-group">
+            
+            <div class="list-group-item">{{&lt; rawhtml &gt;}}( S ){{&lt; /rawhtml &gt;}}: Saturation of the soil.</div>
+            
+            <div class="list-group-item">{{&lt; rawhtml &gt;}}( \Phi ){{&lt; /rawhtml &gt;}}: Porosity of the soil.</div>
+            
+            <div class="list-group-item">{{&lt; rawhtml &gt;}}( \theta ){{&lt; /rawhtml &gt;}}: Volumetric water content of the soil, given by {{&lt; rawhtml &gt;}}( \theta = \Phi S ){{&lt; /rawhtml &gt;}}. It represents the fraction of the volume of soil that is occupied by water.</div>
+            
+            <div class="list-group-item">{{&lt; rawhtml &gt;}}( t ){{&lt; /rawhtml &gt;}}: Time. The equation describes how the water content changes over time.</div>
+            
+            <div class="list-group-item">∇: gradient operator. It indicates spatial variation or gradient.</div>
+            
+            <div class="list-group-item">K: Hydraulic conductivity. It describes how easily water can flow through the soil.</div>
+            
+            <div class="list-group-item">{{&lt; rawhtml &gt;}}( \psi ){{&lt; /rawhtml &gt;}}: Soil water potential. It represents the energy status of water in soil and drives the flow of water.</div>
+            
+            <div class="list-group-item">{{&lt; rawhtml &gt;}}( \rho_w ){{&lt; /rawhtml &gt;}}: Water density.</div>
+            
+            <div class="list-group-item">{{&lt; rawhtml &gt;}}( \kappa ){{&lt; /rawhtml &gt;}}: Relative permeability.</div>
+            
+            <div class="list-group-item">{{&lt; rawhtml &gt;}}( \mu ){{&lt; /rawhtml &gt;}}: Dynamic viscosity.</div>
+            
+            <div class="list-group-item">{{&lt; rawhtml &gt;}}( p_w ){{&lt; /rawhtml &gt;}}: Absolute pressure of the wetting phase (water).</div>
+            
+            <div class="list-group-item">g: Gravitational acceleration.</div>
+            
+          </div>                
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-dumux-rosi-file-structure" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">DuMux-ROSI File Structure</h2>
+      <div class="row">
+        
+        
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">DuMux-ROSI, designed for simulating soil water dynamics and root-soil interactions, employs a specific file structure. Understanding this structure can enhance your experience with the tool.</p>
+          
+          <div class="list-group">
+            
+            <div class="list-group-item"><strong>CODE REPRESENTATION</strong>: DuMux-ROSI has distinct code representations for various model equations. Key files include:</div>
+            
+            <div class="list-group-item"><code>localresidual.hh</code>: This file, located in <code>/dumux/dumux/porousmediumflow/Richards/</code>, defines the storage term of the model equations.</div>
+            
+            <div class="list-group-item"><code>richardsproblem.hh</code>: Found in <code>dumux-rosi/rosi_benchmarking/soil_richards/</code>, this file implements the boundary conditions specified in the input file.</div>
+            
+            <div class="list-group-item"><strong>FLUX TERM</strong>: The flux term&rsquo;s implementation is deep-rooted in the code. Depending on the flux type, its implementation can be found in <code>/dumux/dumux/flux</code>.</div>
+            
+            <div class="list-group-item"><strong>INPUT FILES</strong>: DuMux-ROSI uses input files to specify model parameters, initial conditions, and boundary conditions. An example input file is <code>b1a_1d.input</code> located in <code>dumux-rosi/rosi_benchmarking/soil_richards/input/</code>.</div>
+            
+            <div class="list-group-item"><strong>RUNNING EXAMPLES</strong>: Instructions for running simulations are provided in the <a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi/blob/master/Manual.pdf">DuMux-ROSI Manual</a>. Navigate to the desired directory and execute the specified commands.</div>
+            
+            <div class="list-group-item"><strong>SOIL PROPERTIES</strong>: Soil properties are defined using the Van Genuchten model. Parameters for different soil layers can be set, including residual water content, saturated water content, and more.</div>
+            
+          </div>                
           
         </div>
         
@@ -308,7 +389,7 @@
             
             <div class="list-group-item">Flexibility in modifying, adding, or swapping nonlinear constitutive equations, intricate boundary conditions, and fluid and material relations.</div>
             
-            <div class="list-group-item">Open-source, highly accessible, with the source code available on <a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/dumux-rosi">github</a>.</div>
+            <div class="list-group-item"><strong>VISUALIZATION</strong>: DuMux-ROSI supports result visualization, offering insights into various processes. The tool&rsquo;s visualization capabilities are integral for researchers and professionals alike.</div>
             
           </div>                
           
