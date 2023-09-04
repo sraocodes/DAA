@@ -28,6 +28,21 @@ sections:
       - "**Transformers**: Sometimes, the data we fetch needs a little tweaking to fit the requirements of our simulation. Transformers in SIMPLACE help in adjusting or harmonizing this data."
       - "**Outputs**: After running a simulation, you'd want to see the results, right? SIMPLACE can write these outputs in various formats. The most common one is CSV, which is like a spreadsheet. But if you're handling more complex data, formats like NetCDF come in handy. There's also a special 'MEMORY' format that lets advanced users access results directly from the computer's memory, making simulations even faster!"
 
+  - name: "Component in SIMPLACE"
+    text: "SIMPLACE offers a variety of components, each designed to simulate specific processes or interactions in the agricultural domain. These components can be grouped into broader categories based on their primary functions and applications. Here's a breakdown:"
+    list:
+      - "Crop Physiology and Management: This category encompasses components that directly influence or simulate crop growth, physiology, and management practices. Components include [SimpleTranspirationReductionFactor](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/SimpleTranspirationReductionFactor.html), [VernalisationAndPhotoresponse](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/VernalisationAndPhotoresponse.html), [Co2InfluenceOnLUE](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnLUE.html), [Co2InfluenceOnTranspiration](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnTranspiration.html), [Fertilizer](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/Fertilizer.html), and [SimpleIrrigation](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/SimpleIrrigation.html)."
+      - "Environmental Interactions: Focuses on interactions between crops and their environment. Components include [ReferenceETPriestleyTaylor](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/evapotran/ReferenceETPriestleyTaylor.html)."
+      - "Soil and Water Dynamics: Delves into soil properties, water balance, and interactions. Components include [HillFlow1D](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/lintulcc/HillFlow1DLintulCCDiurnal.html) and [ErosionFreebairn](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/erosion/ErosionFreebairn.html)."
+      - "Experimental and Advanced Models: Consists of experimental components and advanced models. Components include [FarmFinance](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/FarmFinance.html), [Gecros](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/gecros/Gecros.html), and [LintulBiomass](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/lintul/LintulBiomass.html)."
+      - "Utilities and Miscellaneous: Includes utility components that offer specific functionalities. Components include: ArrayResampler, SimpleCounter, and InterpolatedValueFromTable."
+    image: "images/simcomponents.gif"
+    imageWidth: "600px"
+    imageHeight: "600px"
+    textPosition: "bottom"
+
+
+
   - name: "Why is SIMPLACE special?"
     text: "SIMPLACE can operate at various scales depending on the nature of the study and the chosen components. It's highly versatile and can handle simulations at the plant level (individual crops), field level (a particular farming plot), landscape level (an entire farming region), or even larger scales such as regional or global assessments.The flexibility of the SIMPLACE framework, with its customizable SimComponents, enables this adaptability. Users can combine different modules to model processes relevant to their scale of interest, from small-scale farm management strategies to large-scale climate change impact assessments."
   - name: "Case Studies"

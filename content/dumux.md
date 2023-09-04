@@ -25,7 +25,6 @@ sections:
     \\frac{\\partial (\\rho_w \\Phi S)}{\\partial t} - ∇ . \\frac{\\kappa}{\\mu} \\rho_w K (∇ p_w - \\rho_w g) = 0
     \\]
     {{< /rawhtml >}}
-
     where"
     list:
       - "{{< rawhtml >}}\\( S \\){{< /rawhtml >}}: Saturation of the soil."

@@ -18,7 +18,7 @@ slides:
     MECHA_link: "/mecha/"
     CPLANTBOX_link: "/cplantbox/"
   - image: "images/4.gif"
-    heading: "Coupling Models for Agricultural Breakthroughs"
+    heading: "Coupling Models for Agricultural Research"
     text: "DAA aims to integrate multi-scale models to solve complex agricultural problems. This involves identifying suitable software, establishing connections between their components, calibrating model parameters, and fostering interdisciplinary collaboration."
     link: "/couple/" # The link for "Learn more" on this slide
 
