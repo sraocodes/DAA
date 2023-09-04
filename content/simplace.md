@@ -41,8 +41,6 @@ sections:
     imageHeight: "600px"
     textPosition: "bottom"
 
-
-
   - name: "Why is SIMPLACE special?"
     text: "SIMPLACE can operate at various scales depending on the nature of the study and the chosen components. It's highly versatile and can handle simulations at the plant level (individual crops), field level (a particular farming plot), landscape level (an entire farming region), or even larger scales such as regional or global assessments.The flexibility of the SIMPLACE framework, with its customizable SimComponents, enables this adaptability. Users can combine different modules to model processes relevant to their scale of interest, from small-scale farm management strategies to large-scale climate change impact assessments."
   - name: "Case Studies"
