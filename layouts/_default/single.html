@@ -71,7 +71,7 @@
                           <p>{{ .item | markdownify }}</p>
                           <ol class="list-unstyled ml-4">
                               {{ range .sublist }}
-                                  <li class="list-group-item bg-light">{{ . }}</li>
+                              <li class="list-group-item bg-light">{{ . | markdownify }}</li>
                               {{ end }}
                           </ol>
                       </li>
