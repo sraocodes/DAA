@@ -1,58 +1,26 @@
-// TextScramble class
-class TextScramble {
+// TextAppear class
+class TextAppear {
     constructor(el) {
         this.el = el;
-        this.chars = '!<>-_\\/[]{}—=+*^?#________';
         this.update = this.update.bind(this);
     }
 
     setText(newText) {
-        const oldText = this.el.innerText;
-        const length = Math.max(oldText.length, newText.length);
-        const promise = new Promise(resolve => this.resolve = resolve);
-        this.queue = [];
-        for (let i = 0; i < length; i++) {
-            const from = oldText[i] || '';
-            const to = newText[i] || '';
-            const start = Math.floor(Math.random() * 50);
-            const end = start + Math.floor(Math.random() * 50);
-            this.queue.push({ from, to, start, end });
-        }
+        this.text = newText;
+        this.el.innerText = ''; // Clear the existing text
+        this.index = 0; // Start from the first character
         cancelAnimationFrame(this.frameRequest);
-        this.frame = 0;
         this.update();
-        return promise;
     }
 
     update() {
-        let output = '';
-        let complete = 0;
-        for (let i = 0, n = this.queue.length; i < n; i++) {
-            const { from, to, start, end, char } = this.queue[i];
-            if (this.frame >= end) {
-                complete++;
-                output += to;
-            } else if (this.frame >= start) {
-                if (!char || Math.random() < 0.28) {
-                    const randomChar = this.chars[Math.floor(Math.random() * this.chars.length)];
-                    this.queue[i].char = randomChar;
-                    output += `<span class="dud">${randomChar}</span>`;
-                } else {
-                    output += char;
-                }
-            } else {
-                output += from;
-            }
-        }
-        this.el.innerHTML = output;
-        if (complete === this.queue.length) {
-            this.resolve();
-        } else {
+        if (this.index < this.text.length) {
+            this.el.innerText += this.text[this.index]; // Add the next character
+            this.index++;
             setTimeout(() => {
                 this.frameRequest = requestAnimationFrame(this.update);
-            }, 5);  // Reduced delay to 5ms for faster scrambling
-            this.frame++;
-        }        
+            }, 100);  // Delay between each character appearing
+        }
     }
 }
 
@@ -60,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let cards = document.querySelectorAll('.card');
     let windowHeight = window.innerHeight;
 
-    // Create an instance of TextScramble for each h2
-    const scramblers = Array.from(cards).map(card => {
+    // Create an instance of TextAppear for each h2
+    const appeares = Array.from(cards).map(card => {
         const h2 = card.querySelector('h2');
-        return h2 ? new TextScramble(h2) : null;
+        return h2 ? new TextAppear(h2) : null;
     });
 
     function checkPosition() {
@@ -77,13 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.style.transitionDelay = `${delay}s`;
                 card.classList.add('in-view');
     
-                // Scramble the h2 heading of this card if it exists
-                if (scramblers[index]) {
-                    // Only scramble if it hasn't been scrambled before
-                    if (!card.classList.contains('scrambled')) {
+                // Display the h2 heading of this card letter by letter if it exists
+                if (appeares[index]) {
+                    // Only display if it hasn't been displayed before
+                    if (!card.classList.contains('appeared')) {
                         let originalText = card.querySelector('h2').textContent;
-                        scramblers[index].setText(originalText);
-                        card.classList.add('scrambled');
+                        appeares[index].setText(originalText);
+                        card.classList.add('appeared');
                     }
                 }
             }

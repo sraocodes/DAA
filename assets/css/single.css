@@ -208,6 +208,18 @@ body {
   font-size: 1.2em;
 }
 
+.sublist-link {
+  background-color: #f8f9fa;  /* Light grey, similar to Bootstrap's bg-light */
+  display: block;
+  padding: 0.5rem 1.25rem;   /* This is similar to Bootstrap's list-group-item padding */
+}
+.sublist-link:hover {
+  text-decoration: none; /* To prevent the default underline on hover */
+  background-color: #e9ecef;  /* A slightly darker shade on hover */
+}
+
+
+
 /* =================================== *
  * RESPONSIVE STYLES
  * =================================== */
@@ -216,3 +228,4 @@ body {
     flex-direction: column;
   }
 }
+

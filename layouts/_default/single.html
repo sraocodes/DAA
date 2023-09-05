@@ -58,15 +58,41 @@
         {{ end }}
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">{{ .text | markdownify | safeHTML }}</p>
+
+          <!------------------------------------------------------------------------------------- -->
+          <!-- handle lists in the single pages -->
+          
           {{ if .list }}
-          <div class="list-group">
-            {{ range .list }}
-            <div class="list-group-item">{{ . | markdownify | safeHTML }}</div>
-            {{ end }}
-          </div>                
+          <ol class="list-group">
+              {{ range .list }}
+                  <!-- If the entry has a sublist -->
+                  {{ if and (isset . "item") (isset . "sublist") }}
+                      <li class="list-group-item">
+                          <p>{{ .item | markdownify | safeHTML }}</p>
+                          <ol class="list-unstyled ml-4">
+                              {{ range .sublist }}
+                                  <li class="list-group-item bg-light">{{ . | markdownify | safeHTML }}</li>
+                              {{ end }}
+                          </ol>
+                      </li>
+                  <!-- If the entry does not have a sublist but has an item -->
+                  {{ else if isset . "item" }}
+                      <li class="list-group-item">{{ .item | markdownify | safeHTML }}</li>
+                  <!-- If it's just a regular list entry without named 'item' field -->
+                  {{ else }}
+                      <li class="list-group-item">{{ . | markdownify | safeHTML }}</li>
+                  {{ end }}
+              {{ end }}
+          </ol>
           {{ end }}
-        </div>
-        {{ end }}
+
+
+
+          <!------------------------------------------------------------------------------------- -->    
+          
+          
+      </div>
+      {{ end }}
       </div>
       {{ if .videos }}
       {{ range .videos }}
@@ -87,9 +113,6 @@
   <button id="backToTopBtn" class="btn btn-secondary" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
 </div>
 {{ end }}
-
-
-
 
 
 {{ define "scripts" }}

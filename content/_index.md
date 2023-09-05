@@ -7,11 +7,11 @@ slides:
       stakeholders with unparalleled insights.
     link: "/about/" 
   - image: "images/2.gif"
-    heading: "Elevating Agriculture with Process-Based Models"
+    heading: "Process-Based Models"
     text: "The DAA will utilize process-based models to simulate the intricate interactions between biogeochemical, physical, agricultural management, and economic components of agricultural systems."
     link: "/pbm/" 
   - image: "images/3.gif"
-    heading: "Multi-Scale Models for Agricultural Solutions"
+    heading: "Multi-Scale Models"
     text: "GRANAR and MECHA models scrutinize cell-level granular processes and mechanical phenomena. DUMUXROSI and CPLANTBOX models focus on plant and organ scales, investigating water transport, growth, and development. SIMPLACE, AGROC, and TSMP models operate at crop and regional scales, unraveling crop growth, carbon dynamics, and broader agricultural interactions."
     link: "/multi_scale/"  
     GRANAR_link: "/granar/"
@@ -22,7 +22,7 @@ slides:
     AGROC_link: "/agroc/"
     TSMP_link: "/terrsysmp/"
   - image: "images/4.gif"
-    heading: "Coupling Models for Agricultural Research"
+    heading: "Coupled Models"
     text: "DAA aims to integrate multi-scale models to solve complex agricultural problems. This involves identifying suitable software, establishing connections between their components, calibrating model parameters, and fostering interdisciplinary collaboration."
     link: "/couple/" 
 

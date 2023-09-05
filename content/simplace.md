@@ -4,7 +4,7 @@ date: 2023-07-28
 draft: false
 
 sections:  
-  - name: "What is SIMPLACE?"
+  - name: "Soil Compaction at Depth"
     text: "SIMPLACE is an open-source software that helps scientists and farmers manage crops and ecosystems better. It uses computer models to understand complex interactions between crops, soil, and climate. By coupling different modules, each representing a process like water use or plant growth, SIMPLACE offers customizable solutions for different agricultural needs.Its multi-threaded high-performance architecture allows for calibration and simulations at varying spatial scales.You can check the official site of SIMPLACE [here](https://www.simplace.net/index.php)."
     textPosition: "top"
     videos:
@@ -31,11 +31,36 @@ sections:
   - name: "Component in SIMPLACE"
     text: "SIMPLACE offers a variety of components, each designed to simulate specific processes or interactions in the agricultural domain. These components can be grouped into broader categories based on their primary functions and applications. Here's a breakdown:"
     list:
-      - "Crop Physiology and Management: This category encompasses components that directly influence or simulate crop growth, physiology, and management practices. Components include [SimpleTranspirationReductionFactor](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/SimpleTranspirationReductionFactor.html), [VernalisationAndPhotoresponse](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/VernalisationAndPhotoresponse.html), [Co2InfluenceOnLUE](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnLUE.html), [Co2InfluenceOnTranspiration](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnTranspiration.html), [Fertilizer](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/Fertilizer.html), and [SimpleIrrigation](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/SimpleIrrigation.html)."
-      - "Environmental Interactions: Focuses on interactions between crops and their environment. Components include [ReferenceETPriestleyTaylor](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/evapotran/ReferenceETPriestleyTaylor.html)."
-      - "Soil and Water Dynamics: Delves into soil properties, water balance, and interactions. Components include [HillFlow1D](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/lintulcc/HillFlow1DLintulCCDiurnal.html) and [ErosionFreebairn](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/erosion/ErosionFreebairn.html)."
-      - "Experimental and Advanced Models: Consists of experimental components and advanced models. Components include [FarmFinance](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/FarmFinance.html), [Gecros](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/gecros/Gecros.html), and [LintulBiomass](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/lintul/LintulBiomass.html)."
-      - "Utilities and Miscellaneous: Includes utility components that offer specific functionalities. Components include: ArrayResampler, SimpleCounter, and InterpolatedValueFromTable."
+      - item: "Crop Physiology and Management: Components that simulate crop growth, physiology, and management practices."
+        sublist:
+          - "[SimpleTranspirationReductionFactor](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/SimpleTranspirationReductionFactor.html): Calculates transpiration reduction factor as ratio of actual and potential transpiration."
+          - "[VernalisationAndPhotoresponse](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/VernalisationAndPhotoresponse.html): Reduces daily temperature increment by vernalisation and photoresponse."
+          - "[Co2InfluenceOnLUE](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnLUE.html): Calculates LUE in dependence of CO2 concentration in the atmosphere."
+          - "[Co2InfluenceOnTranspiration](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnTranspiration.html): Reduces the Transpiration due to increasing CO2) concentration in the atmosphere."
+          - "[Fertilizer](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/Fertilizer.html): Calculates the amount of major nutrients."
+          - "[SimpleIrrigation](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/SimpleIrrigation.html): Applies irrigation using table values designed for Lintul5."
+
+      - item: "Environmental Interactions: Components focusing on interactions between crops and their environment."
+        sublist:
+          - "[ReferenceETPriestleyTaylor](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/evapotran/ReferenceETPriestleyTaylor.html): Calculates reference evapotranspiration ET0 according to the Priestley-Taylor method."
+
+      - item: "Soil and Water Dynamics: Components that delve into soil properties, water balance, and interactions."
+        sublist:
+          - "[HillFlow1D](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/lintulcc/HillFlow1DLintulCCDiurnal.html): SimComponent for transient simulations of soil water balance."
+          - "[ErosionFreebairn](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/erosion/ErosionFreebairn.html): [Description not provided in the HTML]"
+
+      - item: "Experimental and Advanced Models: Components that consist of experimental and advanced models."
+        sublist:
+          - "[FarmFinance](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/FarmFinance.html): [Description not provided in the HTML]"
+          - "[Gecros](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/gecros/Gecros.html): Simulates crop biomass by calculating photosynthesis."
+          - "[LintulBiomass](https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/lintul/LintulBiomass.html)"
+
+      - item: "Utilities and Miscellaneous: Utility components offering specific functionalities."
+        sublist:
+          - "ArrayResampler: Resamples array values from one resolution to another."
+          - "SimpleCounter: Provides a resettable counter of simulation days."
+          - "InterpolatedValueFromTable: Interpolates values from a table of x and y values."
+
     image: "images/simcomponents.gif"
     imageWidth: "600px"
     imageHeight: "600px"

@@ -43,6 +43,14 @@ ToolsDropDown:
   - Name: TerrSysMP
     Link: "/terrsysmp/"
 
+CoupledModelsName: Coupled Models
+CoupledModelsDropdown:
+  - name: Casestudy1
+    url: "/casestudy1/"
+  - name: Casestudy2
+    url: "/casestudy2/"
+
+
 Link3Name: "Contact"
 Link3Link: "#"
 ---
