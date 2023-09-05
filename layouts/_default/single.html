@@ -68,7 +68,7 @@
                   <!-- If the entry has a sublist -->
                   {{ if and (isset . "item") (isset . "sublist") }}
                       <li class="list-group-item">
-                          <p>{{ .item }}</p>
+                          <p>{{ .item | markdownify }}</p>
                           <ol class="list-unstyled ml-4">
                               {{ range .sublist }}
                                   <li class="list-group-item bg-light">{{ . }}</li>
