@@ -61,24 +61,21 @@
 
           <!------------------------------------------------------------------------------------- -->
           <!-- handle lists in the single pages -->
-          
+
           {{ if .list }}
           <ol class="list-group">
               {{ range .list }}
-                  <!-- If the entry has a sublist -->
                   {{ if and (isset . "item") (isset . "sublist") }}
                       <li class="list-group-item">
-                          <p>{{ .item | markdownify | safeHTML }}</p>
+                          <p>{{ with .item }}{{ . | markdownify | safeHTML }}{{ end }}</p>
                           <ol class="list-unstyled ml-4">
                               {{ range .sublist }}
                                   <li class="list-group-item bg-light">{{ . | markdownify | safeHTML }}</li>
                               {{ end }}
                           </ol>
                       </li>
-                  <!-- If the entry does not have a sublist but has an item -->
                   {{ else if isset . "item" }}
                       <li class="list-group-item">{{ .item | markdownify | safeHTML }}</li>
-                  <!-- If it's just a regular list entry without named 'item' field -->
                   {{ else }}
                       <li class="list-group-item">{{ . | markdownify | safeHTML }}</li>
                   {{ end }}
