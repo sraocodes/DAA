@@ -15,13 +15,18 @@ class TextAppear {
 
     update() {
         if (this.index < this.text.length) {
-            this.el.innerText += this.text[this.index]; // Add the next character
+            let charToAdd = this.text[this.index];
+            if (charToAdd === ' ') {
+                charToAdd = '&nbsp;'; // Use a non-breaking space for spaces
+            }
+            this.el.innerHTML += charToAdd; // Use innerHTML instead of innerText
             this.index++;
             setTimeout(() => {
                 this.frameRequest = requestAnimationFrame(this.update);
-            }, 100);  // Delay between each character appearing
+            }, 30);  // Delay between each character appearing
         }
     }
+    
 }
 
 document.addEventListener('DOMContentLoaded', function() {

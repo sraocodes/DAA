@@ -175,6 +175,28 @@
               </div>
           </li>
 
+           
+           <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="coupledModelsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Coupled Models
+                </a>
+                <div class="dropdown-menu" aria-labelledby="coupledModelsDropdown">
+                    
+                        
+                        
+                            
+                        
+                        <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//casestudy1/">Casestudy1</a>
+                    
+                        
+                        
+                            
+                        
+                        <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//casestudy2/">Casestudy2</a>
+                    
+                </div>
+           </li>
+
           
           <li class="nav-item">
               <a class="nav-link" href="#" target="_blank">Contact</a>
@@ -271,21 +293,43 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">TerrSysMP employs the <a href="https://www.esiwace.eu/the-project/past-phases/esiwace2-1/software-support/sup_OASIS">OASIS3-MCT</a> coupler, a pivotal software layer that manages the exchange of information between its component models. This ensures a seamless and accurate simulation of the entire subsurface-land-atmosphere system, capturing intricate interactions and feedbacks.</p>
+
           
-          <div class="list-group">
-            
-            <div class="list-group-item">During initialization: OASIS-MCT routines define the model variables for exchange and establish parallel communication between the coupled models.</div>
-            
-            <div class="list-group-item">During runtime: OASIS-MCT is called at specific intervals to manage data exchange, supporting interpolation and scaling operations for the variables.</div>
-            
-            <div class="list-group-item">Operational Mode: TerrSysMP uses a multiple program multiple data (MPMD) approach, where different program executables run independently in the same parallel environment, sharing a global communicator.</div>
-            
-            <div class="list-group-item">Data Transfer: The global communicator, facilitated by the OASIS3-MCT library, ensures smooth data transfer between component models.</div>
-            
-          </div>                
           
-        </div>
-        
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item">During initialization: OASIS-MCT routines define the model variables for exchange and establish parallel communication between the coupled models.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">During runtime: OASIS-MCT is called at specific intervals to manage data exchange, supporting interpolation and scaling operations for the variables.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">Operational Mode: TerrSysMP uses a multiple program multiple data (MPMD) approach, where different program executables run independently in the same parallel environment, sharing a global communicator.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">Data Transfer: The global communicator, facilitated by the OASIS3-MCT library, ensures smooth data transfer between component models.</li>
+                  
+              
+          </ol>
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -301,19 +345,38 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">TerrSysMP is a synergy of three core components, each with a specialized role:</p>
+
           
-          <div class="list-group">
-            
-            <div class="list-group-item">COSMO or ICON Model: Responsible for simulating atmospheric dynamics, including weather and climate.</div>
-            
-            <div class="list-group-item">CLM (Community Land Model): Manages land surface processes like soil moisture, vegetation interactions, and energy balance.</div>
-            
-            <div class="list-group-item">ParFlow: Specializes in simulating subsurface hydrological processes, including groundwater flow and solute transport.</div>
-            
-          </div>                
           
-        </div>
-        
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item">COSMO or ICON Model: Responsible for simulating atmospheric dynamics, including weather and climate.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">CLM (Community Land Model): Manages land surface processes like soil moisture, vegetation interactions, and energy balance.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">ParFlow: Specializes in simulating subsurface hydrological processes, including groundwater flow and solute transport.</li>
+                  
+              
+          </ol>
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -329,19 +392,38 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">TerrSysMP offers several unique capabilities:</p>
+
           
-          <div class="list-group">
-            
-            <div class="list-group-item">Highly detailed simulations of water cycles, climate change impacts, and land-atmosphere interactions.</div>
-            
-            <div class="list-group-item">Scalable from laptops to supercomputers, making it versatile for various research needs.</div>
-            
-            <div class="list-group-item">Open-source and community-driven, with code available on <a href="https://github.com/HPSCTerrSys/TSMP">GitHub</a>.</div>
-            
-          </div>                
           
-        </div>
-        
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item">Highly detailed simulations of water cycles, climate change impacts, and land-atmosphere interactions.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">Scalable from laptops to supercomputers, making it versatile for various research needs.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">Open-source and community-driven, with code available on <a href="https://github.com/HPSCTerrSys/TSMP">GitHub</a>.</li>
+                  
+              
+          </ol>
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -357,9 +439,19 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">For a step-by-step installation guide, please refer to the official <a href="https://www.terrsysmp.org/">TerrSysMP site</a>. The platform is designed to be compatible with various computing environments, from personal laptops to high-performance computing clusters.</p>
+
           
-        </div>
-        
+          
+          
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -375,9 +467,19 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">Developed by the Center for High-Performance Scientific Computing in Terrestrial Systems <a href="https://www.hpsc-terrsys.de/">HPSC-TerrSys</a>, TerrSysMP is a collaborative effort involving multiple universities and research centers primarily based in Germany.</p>
+
           
-        </div>
-        
+          
+          
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -393,17 +495,33 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;"></p>
+
           
-          <div class="list-group">
-            
-            <div class="list-group-item">For video tutorials and webinars, visit <a href="https://www.youtube.com/@hpscterrsys1962">TSMP Youtube</a>.</div>
-            
-            <div class="list-group-item">For more in-depth information and updates, visit the <a href="https://www.terrsysmp.org/">official site</a>.</div>
-            
-          </div>                
           
-        </div>
-        
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item">For video tutorials and webinars, visit <a href="https://www.youtube.com/@hpscterrsys1962">TSMP Youtube</a>.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">For more in-depth information and updates, visit the <a href="https://www.terrsysmp.org/">official site</a>.</li>
+                  
+              
+          </ol>
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>

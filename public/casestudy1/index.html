@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MECHA</title>
+    <title>CaseStudy1</title>
     <meta name="description" content="">
     <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -210,7 +210,7 @@
          
          <script src="https://sraocodes.github.io/Phenorob-DAA/js/slider.js"></script> 
         
-<div id="single-mecha" class="single-container container mt-5">
+<div id="single-casestudy1" class="single-container container mt-5">
 
   
   <div class="d-flex justify-content-between align-items-center mb-4">
@@ -222,23 +222,15 @@
       <ul class="navbar-nav">
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-what-is-mecha" >What is MECHA?</a>
+          <a class="nav-link" href="#single-deep-dive-soil-compaction-insights" >Deep Dive: Soil Compaction Insights</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-why-mecha" >Why MECHA?</a>
+          <a class="nav-link" href="#single-rooted-insights-bridging-models" >Rooted Insights: Bridging Models</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-try-mecha-online-with-shinyapps-or-binder" >Try MECHA Online with ShinyApps or Binder</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#single-mecha-file-structure" >MECHA File Structure</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#single-limitations-of-mecha" >Limitations of MECHA</a>
+          <a class="nav-link" href="#single-coupling-of-c-rootbox-with-simplace" >Coupling of C-RootBox with Simplace</a>
         </li>
         
       </ul>
@@ -248,43 +240,37 @@
   
   
   
-  <div id="single-what-is-mecha" class="card mb-5">
+  <div id="single-deep-dive-soil-compaction-insights" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">What is MECHA?</h2>
-      <div class="row">
-        
-        
-        <div class="col-auto">
-          
-          <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/mecha1.png" alt="What is MECHA?" style="width: 300px; height: 400px;">
-          
-        </div>
-        
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">MECHA is a mathematical model that aids in understanding the movement of water through plant roots. This model considers various root structures, including cell walls and membranes, to calculate water flow. The tool enables researchers to examine various hypotheses about root water transport, enhancing our grasp on plant water relations. Dive deeper into MECHA by visiting its <a href="https://mecharoot.github.io/">official site</a>.</p>
-          
-        </div>
-        
-        
-      </div>
-      
-    </div>
-  </div>
-  
-  
-  
-  <div id="single-why-mecha" class="card mb-5">
-    <div class="card-body">
-      <h2 class="card-title">Why MECHA?</h2>
+      <h2 class="card-title">Deep Dive: Soil Compaction Insights</h2>
       <div class="row">
         
         
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">MECHA proves invaluable for plant breeders, enabling them to simulate various scenarios and hypotheses related to root water/nutrient transport. Leveraging MECHA, researchers can better understand plant water absorption and transportation, which is pivotal for maximizing crop yields and bolstering agricultural sustainability. Such insights can drive future agricultural research and best practices.</p>
+          <p class="card-text" style="font-size: 1.2em;">Soil compaction, predominantly caused by heavy machinery on agricultural land, significantly affects plant growth, especially their ability to absorb nutrients. The depth and extent of this compaction, particularly beyond 45 centimeters, remain a concern. While the damaging effects of heavy machinery like tractors and harvesters can be mitigated to some extent by tactics like reducing tire air pressure, compaction can still occur in the deeper soil strata. Techniques exist to loosen compaction up to 45 cm deep, but addressing deeper soil compaction remains a complex challenge. Delving into this issue, phenorob <a href="/Phenorob-DAA/members/">team</a> conducted an innovative study. By coupling a 1D field-scale crop-soil model from the <a href="/Phenorob-DAA/simplace/">SIMPLACE</a> framework with the 3D architectural root model <a href="/Phenorob-DAA/cplantbox/">CPlantbox</a>, the team aimed to understand root behaviors and responses in compacted soil. These models operate on a daily timestep, offering insights into the nuanced interactions between plant roots and their environment.</p>
 
           
           
           
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item">Soil compaction hinders nutrient absorption in plants.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">Deep soil compaction&rsquo;s impacts on plant growth are still ambiguous.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">Coupled Models shed light on root behaviors in compacted soil, especially deep-rooted reactions.</li>
+                  
+              
+          </ol>
           
 
 
@@ -301,20 +287,28 @@
   
   
   
-  <div id="single-try-mecha-online-with-shinyapps-or-binder" class="card mb-5">
+  <div id="single-rooted-insights-bridging-models" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">Try MECHA Online with ShinyApps or Binder</h2>
+      <h2 class="card-title">Rooted Insights: Bridging Models</h2>
       <div class="row">
         
         
         <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">Interested in testing MECHA without any installations? Mecha <a href="/Phenorob-DAA/members/">team</a> have the perfect solution for you – <a href="https://plantmodelling.shinyapps.io/mecha/">ShinyApps</a> and <a href="https://mybinder.org/v2/gh/HeymansAdrien/GranarMecha/main">Binder</a>. In just one click, immerse yourself in an interactive environment, exploring the code and data of this model.</p>
+          <p class="card-text" style="font-size: 1.2em;">The <a href="https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full">study</a> showcases the interconnected dynamics of soil strength and root elongation, highlighting the necessity of a coupled model to understand deep soil compaction. While the process-based dynamic model <a href="/Phenorob-DAA/simplace/">SIMPLACE</a> offers a broad perspective on plant-environment interactions, it might not delve deep enough into root dynamics, a niche <a href="/Phenorob-DAA/cplantbox/">CPlantbox</a> fills expertly. However, solely depending on <a href="/Phenorob-DAA/cplantbox/">CPlantbox</a> could miss the bigger picture of holistic plant dynamics and broader field conditions. Marrying these models provides a holistic lens, capturing the complex interplay between a plant and its multifaceted environment.</p>
+          
+          <div class="list-group">
+            
+            <a href="#" class="list-group-item list-group-item-action">SIMPLACE offers broad views but might miss detailed root dynamics.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action">CRootbox provides deep insights into root behaviors but might overlook larger plant-environment interactions.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action">Coupling both models yields a comprehensive tool, enhancing our understanding of plant responses to environmental shifts.</a>
+            
+          </div>
           
         </div>
         
         <div class="col-auto">
-          
-          <img class="img-fluid rounded mb-2" src="https://mybinder.org/static/logo.svg" alt="Try MECHA Online with ShinyApps or Binder" style="width: 200px; height: 100px;">
           
         </div>
         
@@ -326,77 +320,95 @@
   
   
   
-  <div id="single-mecha-file-structure" class="card mb-5">
+  <div id="single-coupling-of-c-rootbox-with-simplace" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">MECHA File Structure</h2>
+      <h2 class="card-title">Coupling of C-RootBox with Simplace</h2>
       <div class="row">
         
         
-        <div class="col-auto">
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">The dynamic coupling of CRootbox with SIMPLACE, facilitated through a Python binding, results in the SIMPLACE-cRootbox system. Within SIMPLACE, specific SimComponents such as EvapTranDemand, SlimWater, LintulPhenology, and LintulBiomass play pivotal roles in determining various aspects of crop growth and development. The daily root biomass increment calculated by SIMPLACE is transformed into a potential root elongation (RE) value, which is then provided as input to CRootbox. This potential RE is a measure of how much the roots could potentially grow based on conditions like soil quality, water availability, and nutrient levels. CRootbox then simulates the actual root system and determines the root length density (RLD). This actual RLD is then fed back into SIMPLACE. If the potential RE from SIMPLACE exceeds the maximum possible elongation, CRootbox proportionally reduces root growth. This creates a feedback loop where the root biomass provided by SIMPLACE determines the maximal root elongation, ensuring that root growth limitations due to soil physical stresses are considered before potential root growth limitations due to biomass provided by the shoot.</p>
+
           
-        </div>
-        
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">To facilitate accurate simulations, MECHA employs a specific file structure. Familiarizing yourself with this structure can optimize your usage of the model.</p>
           
-          <div class="list-group">
-            
-            <a href="#" class="list-group-item list-group-item-action"><strong>INPUT FILES</strong>: MECHA requires four parameter files stored in the /in folder:</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">General.xml: Covers general simulation parameters.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">BC.xml: Sets boundary conditions for the simulation, determining if the soil is dry, wet, or partially in contact with the root.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">Geometry.xml: Defines the root section geometry parameters, allowing you to select the root section for the simulation.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">Hydraulics.xml: Covers the hydraulic parameters of various simulation variables.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action"><strong>OUTPUT FILES</strong>: MECHA saves output files in a folder specified in the General.xml input file, under the Output tag. These files include:</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">*.PVTK files: Geometry files compatible with Paraview.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">Macro_prop_i.txt files: These provide a summary of simulation results, incorporating the radial data.</a>
-            
-          </div>
           
-        </div>
-        
-        
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <p><strong>Integration</strong></p>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light"><strong>Method</strong>: Python script.</li>
+                              
+                                  <li class="list-group-item bg-light"><strong>Result</strong>: Combined system termed SIMPLACE-cRootbox.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <p><strong>SIMPLACE Components</strong></p>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light"><strong>EvapTranDemand</strong>: Estimates potential crop transpiration.</li>
+                              
+                                  <li class="list-group-item bg-light"><strong>SlimWater</strong>: Computes soil water dynamics.</li>
+                              
+                                  <li class="list-group-item bg-light"><strong>LintulPhenology</strong>: Calculates crop development stage.</li>
+                              
+                                  <li class="list-group-item bg-light"><strong>LintulBiomass</strong>: Determines daily root biomass increment.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <p><strong>Data Flow</strong></p>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light"><strong>From SIMPLACE to CRootbox</strong>: Potential root elongation (RE) derived from SIMPLACE&rsquo;s components.</li>
+                              
+                                  <li class="list-group-item bg-light"><strong>From CRootbox to SIMPLACE</strong>: Actual root length density (RLD) simulated by CRootbox.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <p><strong>Feedback Mechanism</strong></p>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light"><strong>Growth Prioritization</strong>: Emphasis on soil factors over shoot-derived biomass restrictions.</li>
+                              
+                                  <li class="list-group-item bg-light"><strong>Mathematical Representation</strong>: If {{&lt; rawhtml &gt;}}( RE_{potential} &gt; RE_{max} ){{&lt; rawhtml &gt;}}, CRootbox adjusts to ensure {{&lt; rawhtml &gt;}}( RLD_{actual} \leq RLD_{potential} {{&lt; rawhtml &gt;}}).</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+          </ol>
+          
+
+
+
+              
+          
+          
       </div>
       
-    </div>
-  </div>
-  
-  
-  
-  <div id="single-limitations-of-mecha" class="card mb-5">
-    <div class="card-body">
-      <h2 class="card-title">Limitations of MECHA</h2>
-      <div class="row">
-        
-        
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">Despite MECHA&rsquo;s prowess, it does have certain constraints:</p>
-          
-          <div class="list-group">
-            
-            <a href="#" class="list-group-item list-group-item-action">Dimension Limitation: MECHA currently operates in two dimensions, potentially affecting its precision in predicting water pressure and root flow.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">Focus on Hydraulics: The model emphasizes the hydraulic properties of cells, potentially overlooking other environmental factors impacting plant water relations.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">Data Dependency: MECHA necessitates detailed and precise input data, incorporating assumptions that might not encompass the intricacies of real-world processes.</a>
-            
-          </div>
-          
-        </div>
-        
-        <div class="col-auto">
-          
-          <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/Mecha2.gif" alt="Limitations of MECHA" style="width: 200px; height: 500px;">
-          
-        </div>
-        
-        
       </div>
       
     </div>

@@ -175,6 +175,28 @@
               </div>
           </li>
 
+           
+           <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="coupledModelsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Coupled Models
+                </a>
+                <div class="dropdown-menu" aria-labelledby="coupledModelsDropdown">
+                    
+                        
+                        
+                            
+                        
+                        <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//casestudy1/">Casestudy1</a>
+                    
+                        
+                        
+                            
+                        
+                        <a class="dropdown-item" href="https://sraocodes.github.io/Phenorob-DAA//casestudy2/">Casestudy2</a>
+                    
+                </div>
+           </li>
+
           
           <li class="nav-item">
               <a class="nav-link" href="#" target="_blank">Contact</a>
@@ -200,7 +222,7 @@
       <ul class="navbar-nav">
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-what-is-simplace" >What is SIMPLACE?</a>
+          <a class="nav-link" href="#single-soil-compaction-at-depth" >Soil Compaction at Depth</a>
         </li>
         
         <li class="nav-item">
@@ -234,17 +256,27 @@
   
   
   
-  <div id="single-what-is-simplace" class="card mb-5">
+  <div id="single-soil-compaction-at-depth" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">What is SIMPLACE?</h2>
+      <h2 class="card-title">Soil Compaction at Depth</h2>
       <div class="row">
         
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">SIMPLACE is an open-source software that helps scientists and farmers manage crops and ecosystems better. It uses computer models to understand complex interactions between crops, soil, and climate. By coupling different modules, each representing a process like water use or plant growth, SIMPLACE offers customizable solutions for different agricultural needs.Its multi-threaded high-performance architecture allows for calibration and simulations at varying spatial scales.You can check the official site of SIMPLACE <a href="https://www.simplace.net/index.php">here</a>.</p>
+
           
-        </div>
-        
+          
+          
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
       
@@ -306,21 +338,43 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">SIMPLACE is designed to be user-friendly and adaptable. One of its strengths is the way it handles data. Let&rsquo;s break it down:</p>
+
           
-          <div class="list-group">
-            
-            <div class="list-group-item"><strong>Interfaces</strong>: Think of interfaces as connectors. They link to external data sources, like weather data or soil information. SIMPLACE can read various formats such as CSV, JSON, NetCDF, DBF, and XML. So, whether you have data in a simple spreadsheet or a complex database, SIMPLACE can understand it!</div>
-            
-            <div class="list-group-item"><strong>Resources</strong>: Once SIMPLACE connects to an external data source using an interface, it fetches the data and stores it in a special container called VarMap. This is where the data waits to be used by the simulation components. If needed, there&rsquo;s also a feature to filter or select specific parts of the data.</div>
-            
-            <div class="list-group-item"><strong>Transformers</strong>: Sometimes, the data we fetch needs a little tweaking to fit the requirements of our simulation. Transformers in SIMPLACE help in adjusting or harmonizing this data.</div>
-            
-            <div class="list-group-item"><strong>Outputs</strong>: After running a simulation, you&rsquo;d want to see the results, right? SIMPLACE can write these outputs in various formats. The most common one is CSV, which is like a spreadsheet. But if you&rsquo;re handling more complex data, formats like NetCDF come in handy. There&rsquo;s also a special &lsquo;MEMORY&rsquo; format that lets advanced users access results directly from the computer&rsquo;s memory, making simulations even faster!</div>
-            
-          </div>                
           
-        </div>
-        
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Interfaces</strong>: Think of interfaces as connectors. They link to external data sources, like weather data or soil information. SIMPLACE can read various formats such as CSV, JSON, NetCDF, DBF, and XML. So, whether you have data in a simple spreadsheet or a complex database, SIMPLACE can understand it!</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Resources</strong>: Once SIMPLACE connects to an external data source using an interface, it fetches the data and stores it in a special container called VarMap. This is where the data waits to be used by the simulation components. If needed, there&rsquo;s also a feature to filter or select specific parts of the data.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Transformers</strong>: Sometimes, the data we fetch needs a little tweaking to fit the requirements of our simulation. Transformers in SIMPLACE help in adjusting or harmonizing this data.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Outputs</strong>: After running a simulation, you&rsquo;d want to see the results, right? SIMPLACE can write these outputs in various formats. The most common one is CSV, which is like a spreadsheet. But if you&rsquo;re handling more complex data, formats like NetCDF come in handy. There&rsquo;s also a special &lsquo;MEMORY&rsquo; format that lets advanced users access results directly from the computer&rsquo;s memory, making simulations even faster!</li>
+                  
+              
+          </ol>
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -340,23 +394,108 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">SIMPLACE offers a variety of components, each designed to simulate specific processes or interactions in the agricultural domain. These components can be grouped into broader categories based on their primary functions and applications. Here&rsquo;s a breakdown:</p>
+
           
-          <div class="list-group">
-            
-            <div class="list-group-item">Crop Physiology and Management: This category encompasses components that directly influence or simulate crop growth, physiology, and management practices. Components include <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/SimpleTranspirationReductionFactor.html">SimpleTranspirationReductionFactor</a>, <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/VernalisationAndPhotoresponse.html">VernalisationAndPhotoresponse</a>, <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnLUE.html">Co2InfluenceOnLUE</a>, <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnTranspiration.html">Co2InfluenceOnTranspiration</a>, <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/Fertilizer.html">Fertilizer</a>, and <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/SimpleIrrigation.html">SimpleIrrigation</a>.</div>
-            
-            <div class="list-group-item">Environmental Interactions: Focuses on interactions between crops and their environment. Components include <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/evapotran/ReferenceETPriestleyTaylor.html">ReferenceETPriestleyTaylor</a>.</div>
-            
-            <div class="list-group-item">Soil and Water Dynamics: Delves into soil properties, water balance, and interactions. Components include <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/lintulcc/HillFlow1DLintulCCDiurnal.html">HillFlow1D</a> and <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/erosion/ErosionFreebairn.html">ErosionFreebairn</a>.</div>
-            
-            <div class="list-group-item">Experimental and Advanced Models: Consists of experimental components and advanced models. Components include <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/FarmFinance.html">FarmFinance</a>, <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/gecros/Gecros.html">Gecros</a>, and <a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/lintul/LintulBiomass.html">LintulBiomass</a>.</div>
-            
-            <div class="list-group-item">Utilities and Miscellaneous: Includes utility components that offer specific functionalities. Components include: ArrayResampler, SimpleCounter, and InterpolatedValueFromTable.</div>
-            
-          </div>                
           
-        </div>
-        
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <p>Crop Physiology and Management: Components that simulate crop growth, physiology, and management practices.</p>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/SimpleTranspirationReductionFactor.html">SimpleTranspirationReductionFactor</a>: Calculates transpiration reduction factor as ratio of actual and potential transpiration.</li>
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/VernalisationAndPhotoresponse.html">VernalisationAndPhotoresponse</a>: Reduces daily temperature increment by vernalisation and photoresponse.</li>
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnLUE.html">Co2InfluenceOnLUE</a>: Calculates LUE in dependence of CO2 concentration in the atmosphere.</li>
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/crop/co2/Co2InfluenceOnTranspiration.html">Co2InfluenceOnTranspiration</a>: Reduces the Transpiration due to increasing CO2) concentration in the atmosphere.</li>
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/Fertilizer.html">Fertilizer</a>: Calculates the amount of major nutrients.</li>
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/management/SimpleIrrigation.html">SimpleIrrigation</a>: Applies irrigation using table values designed for Lintul5.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <p>Environmental Interactions: Components focusing on interactions between crops and their environment.</p>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/evapotran/ReferenceETPriestleyTaylor.html">ReferenceETPriestleyTaylor</a>: Calculates reference evapotranspiration ET0 according to the Priestley-Taylor method.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <p>Soil and Water Dynamics: Components that delve into soil properties, water balance, and interactions.</p>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/lintulcc/HillFlow1DLintulCCDiurnal.html">HillFlow1D</a>: SimComponent for transient simulations of soil water balance.</li>
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/erosion/ErosionFreebairn.html">ErosionFreebairn</a>: [Description not provided in the HTML]</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <p>Experimental and Advanced Models: Components that consist of experimental and advanced models.</p>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/experimental/FarmFinance.html">FarmFinance</a>: [Description not provided in the HTML]</li>
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/gecros/Gecros.html">Gecros</a>: Simulates crop biomass by calculating photosynthesis.</li>
+                              
+                                  <li class="list-group-item bg-light"><a href="https://simplace.net/doc/simplace_modules/net/simplace/sim/components/models/lintul/LintulBiomass.html">LintulBiomass</a></li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <p>Utilities and Miscellaneous: Utility components offering specific functionalities.</p>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light">ArrayResampler: Resamples array values from one resolution to another.</li>
+                              
+                                  <li class="list-group-item bg-light">SimpleCounter: Provides a resettable counter of simulation days.</li>
+                              
+                                  <li class="list-group-item bg-light">InterpolatedValueFromTable: Interpolates values from a table of x and y values.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+          </ol>
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -372,9 +511,19 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">SIMPLACE can operate at various scales depending on the nature of the study and the chosen components. It&rsquo;s highly versatile and can handle simulations at the plant level (individual crops), field level (a particular farming plot), landscape level (an entire farming region), or even larger scales such as regional or global assessments.The flexibility of the SIMPLACE framework, with its customizable SimComponents, enables this adaptability. Users can combine different modules to model processes relevant to their scale of interest, from small-scale farm management strategies to large-scale climate change impact assessments.</p>
+
           
-        </div>
-        
+          
+          
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -390,25 +539,53 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">SIMPLACE has been used to simulate the growth and development of various crops in numerous studies:</p>
+
           
-          <div class="list-group">
-            
-            <div class="list-group-item"><a href="https://www.frontiersin.org/articles/10.3389/fsufs.2022.1058775/full">Srivastava et al. (2022)</a> used SIMPLACE to estimate the yield gaps of cassava at the state level in Nigeria.</div>
-            
-            <div class="list-group-item"><a href="https://www.nature.com/articles/s41598-018-23101-2">Rezaei et al. (2018)</a> used SIMPLACE to quantify the effect of using the phenology traits of cultivars planted in the 1950s and 1960s as compared to modern cultivars on wheat growth simulations in Germany.</div>
-            
-            <div class="list-group-item"><a href="https://www.sciencedirect.com/science/article/abs/pii/S037842901530071X">Tao et al. (2017)</a> used eight models, including SIMPLACE, to design future crop ideotypes for barley in Finland and Spain by linking model parameters and genotypic traits.</div>
-            
-            <div class="list-group-item"><a href="https://www.sciencedirect.com/science/article/pii/S1161030116302532?casa_token=5VaxkhAkQK0AAAAA:HBlTek58V58Y8OFY1oLg7ToSil5OHDw0-RKeqxs_a5_-0V3NnA6sMXhsbGZmC4PEFpSsnw0W3g">Seidel et al. and Yin et al. (2017)</a> used SIMPLACE to simulate crop rotations and nutrient uptake to analyze the impact of P fertilizer omission on the biomass production of five crops in a long-term experiment in Dikopshof, Germany.</div>
-            
-            <div class="list-group-item"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0308521X16305947">Hoffmann et al. (2018)</a> used twelve models, including SIMPLACE, to assess how inter-annual variability of attainable yield affects the magnitude of yield gaps for wheat and maize across ten sites with contrasting environmental conditions.</div>
-            
-            <div class="list-group-item"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1161030115300010">Kollas et al. (2015)</a> conducted the first model inter-comparison study on crop rotations considering fifteen crop models, including SIMPLACE, and ten different crops, including wheat and maize.</div>
-            
-          </div>                
           
-        </div>
-        
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item"><a href="https://www.frontiersin.org/articles/10.3389/fsufs.2022.1058775/full">Srivastava et al. (2022)</a> used SIMPLACE to estimate the yield gaps of cassava at the state level in Nigeria.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><a href="https://www.nature.com/articles/s41598-018-23101-2">Rezaei et al. (2018)</a> used SIMPLACE to quantify the effect of using the phenology traits of cultivars planted in the 1950s and 1960s as compared to modern cultivars on wheat growth simulations in Germany.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><a href="https://www.sciencedirect.com/science/article/abs/pii/S037842901530071X">Tao et al. (2017)</a> used eight models, including SIMPLACE, to design future crop ideotypes for barley in Finland and Spain by linking model parameters and genotypic traits.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><a href="https://www.sciencedirect.com/science/article/pii/S1161030116302532?casa_token=5VaxkhAkQK0AAAAA:HBlTek58V58Y8OFY1oLg7ToSil5OHDw0-RKeqxs_a5_-0V3NnA6sMXhsbGZmC4PEFpSsnw0W3g">Seidel et al. and Yin et al. (2017)</a> used SIMPLACE to simulate crop rotations and nutrient uptake to analyze the impact of P fertilizer omission on the biomass production of five crops in a long-term experiment in Dikopshof, Germany.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0308521X16305947">Hoffmann et al. (2018)</a> used twelve models, including SIMPLACE, to assess how inter-annual variability of attainable yield affects the magnitude of yield gaps for wheat and maize across ten sites with contrasting environmental conditions.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1161030115300010">Kollas et al. (2015)</a> conducted the first model inter-comparison study on crop rotations considering fifteen crop models, including SIMPLACE, and ten different crops, including wheat and maize.</li>
+                  
+              
+          </ol>
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -424,21 +601,43 @@
         
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">Diving into SIMPLACE? Great choice! At its core, SIMPLACE is crafted using Java, making it versatile and widely compatible. Whether you&rsquo;re a beginner or an expert, SIMPLACE offers tools that cater to all levels of expertise. Here&rsquo;s a quick guide to get you started:</p>
+
           
-          <div class="list-group">
-            
-            <div class="list-group-item">Data Handling: SIMPLACE has a unique way of managing data. It can link to external data sources and store them for simulations. Plus, it has built-in tools to ensure the data fits just right for your specific needs.</div>
-            
-            <div class="list-group-item">Development Environment: If you&rsquo;ve heard of Eclipse, you&rsquo;re in luck! It&rsquo;s the recommended tool to work with SIMPLACE. It&rsquo;s like a one-stop-shop for editing, testing, and managing your SIMPLACE projects.</div>
-            
-            <div class="list-group-item">Advanced Features: For those who love to tinker, SIMPLACE lets you create new components, play around with XML files, and even run specific Java tests to ensure everything&rsquo;s running smoothly.</div>
-            
-            <div class="list-group-item">Need Help? Check out the <a href="https://simplace.net/doc/">official documentation</a> for step-by-step guides and tips on using Eclipse with SIMPLACE.</div>
-            
-          </div>                
           
-        </div>
-        
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item">Data Handling: SIMPLACE has a unique way of managing data. It can link to external data sources and store them for simulations. Plus, it has built-in tools to ensure the data fits just right for your specific needs.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">Development Environment: If you&rsquo;ve heard of Eclipse, you&rsquo;re in luck! It&rsquo;s the recommended tool to work with SIMPLACE. It&rsquo;s like a one-stop-shop for editing, testing, and managing your SIMPLACE projects.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">Advanced Features: For those who love to tinker, SIMPLACE lets you create new components, play around with XML files, and even run specific Java tests to ensure everything&rsquo;s running smoothly.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item">Need Help? Check out the <a href="https://simplace.net/doc/">official documentation</a> for step-by-step guides and tips on using Eclipse with SIMPLACE.</li>
+                  
+              
+          </ol>
+          
+
+
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
