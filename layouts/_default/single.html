@@ -65,23 +65,27 @@
           {{ if .list }}
           <ol class="list-group">
               {{ range .list }}
+                  <!-- If the entry has a sublist -->
                   {{ if and (isset . "item") (isset . "sublist") }}
                       <li class="list-group-item">
-                          <p>{{ with .item }}{{ . | markdownify | safeHTML }}{{ end }}</p>
+                          <p>{{ .item }}</p>
                           <ol class="list-unstyled ml-4">
                               {{ range .sublist }}
-                                  <li class="list-group-item bg-light">{{ . | markdownify | safeHTML }}</li>
+                                  <li class="list-group-item bg-light">{{ . }}</li>
                               {{ end }}
                           </ol>
                       </li>
+                  <!-- If the entry does not have a sublist but has an item -->
                   {{ else if isset . "item" }}
-                      <li class="list-group-item">{{ .item | markdownify | safeHTML }}</li>
+                      <li class="list-group-item">{{ .item }}</li>
+                  <!-- If it's just a regular list entry without named 'item' field -->
                   {{ else }}
-                      <li class="list-group-item">{{ . | markdownify | safeHTML }}</li>
+                      <li class="list-group-item">{{ . }}</li>
                   {{ end }}
               {{ end }}
           </ol>
           {{ end }}
+          
 
 
 
