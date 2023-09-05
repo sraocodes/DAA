@@ -43,5 +43,6 @@ sections:
       - item: "**Feedback Mechanism**"
         sublist:
           - "**Growth Prioritization**: Emphasis on soil factors over shoot-derived biomass restrictions."
-          - "**Mathematical Representation**: If {{< rawhtml >}}\\( RE_{potential} > RE_{max} \\){{< rawhtml >}}, CRootbox adjusts to ensure {{< rawhtml >}}\\( RLD_{actual} \\leq RLD_{potential} \\{{< rawhtml >}})."
+          - "**Mathematical Representation**: If {{< rawhtml >}}\\( RE_{potential} > RE_{max} \\){{< /rawhtml >}}, CRootbox adjusts to ensure {{< rawhtml >}}\\( RLD_{actual} \\leq RLD_{potential} \\){{< /rawhtml >}}."
+
 ---
