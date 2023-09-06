@@ -48,6 +48,10 @@ sections:
         sublist:
           - "**Growth Prioritization**: Emphasis on soil factors over shoot-derived biomass restrictions."
           - "**Mathematical Representation**: If {{< rawhtml >}}\\( RE_{potential} > RE_{max} \\){{< /rawhtml >}}, CRootbox adjusts to ensure {{< rawhtml >}}\\( RLD_{actual} \\leq RLD_{potential} \\){{< /rawhtml >}}. In other words, if potential root elongation was higher than the maximum allowed, CRootbox would reduce root growth equally across all roots"
+    image: "images/simcroproot.jpeg"
+    imageWidth: "650px"
+    imageHeight: "350px"
+    textPosition: "bottom"
 
   - name: "Impact of Soil Loosening on Crops"
     text: "The study used the integrated SIMPLACE-CRootbox model to explore how deep soil loosening affects the growth of spring barley and winter wheat. The model highlighted the relationship between soil compaction, weather, and crop species, emphasizing the role of soil strength. Here are the key takeaways:"
