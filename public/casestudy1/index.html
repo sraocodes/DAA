@@ -336,7 +336,7 @@
                   
                   
                       <li class="list-group-item">
-                          <p><strong>Integration</strong></p>
+                          <strong>Integration</strong>:CRootbox and SIMPLACE are coupled to provide a realistic representation of root growth
                           <ol class="list-unstyled ml-4">
                               
                                   <li class="list-group-item bg-light"><strong>Method</strong>: Python script.</li>
@@ -351,14 +351,14 @@
                   
                   
                       <li class="list-group-item">
-                          <p><strong>SIMPLACE Components</strong></p>
+                          <strong>SIMPLACE Components</strong>: Specific components like EvapTranDemand, SlimWater, LintulPhenology, and LintulBiomass are involved in the process
                           <ol class="list-unstyled ml-4">
                               
-                                  <li class="list-group-item bg-light"><strong>EvapTranDemand</strong>: Estimates potential crop transpiration.</li>
+                                  <li class="list-group-item bg-light"><strong>EvapTranDemand</strong>: Estimates potential crop transpiration and potential soil evaporation using a modified Penman approach.</li>
                               
-                                  <li class="list-group-item bg-light"><strong>SlimWater</strong>: Computes soil water dynamics.</li>
+                                  <li class="list-group-item bg-light"><strong>SlimWater</strong>: Computes soil water dynamics, estimating daily change in soil water content based on factors like crop water uptake, soil evaporation,   surface runoff, and seepage below the root zone.</li>
                               
-                                  <li class="list-group-item bg-light"><strong>LintulPhenology</strong>: Calculates crop development stage.</li>
+                                  <li class="list-group-item bg-light"><strong>LintulPhenology</strong>: Calculates the development stage of a crop.</li>
                               
                                   <li class="list-group-item bg-light"><strong>LintulBiomass</strong>: Determines daily root biomass increment.</li>
                               
@@ -370,7 +370,7 @@
                   
                   
                       <li class="list-group-item">
-                          <p><strong>Data Flow</strong></p>
+                          <strong>Data Flow</strong>
                           <ol class="list-unstyled ml-4">
                               
                                   <li class="list-group-item bg-light"><strong>From SIMPLACE to CRootbox</strong>: Potential root elongation (RE) derived from SIMPLACE&rsquo;s components.</li>
@@ -385,12 +385,12 @@
                   
                   
                       <li class="list-group-item">
-                          <p><strong>Feedback Mechanism</strong></p>
+                          <strong>Feedback Mechanism</strong>:Ensures that root growth limitations due to soil physical stresses are considered before those due to biomass
                           <ol class="list-unstyled ml-4">
                               
                                   <li class="list-group-item bg-light"><strong>Growth Prioritization</strong>: Emphasis on soil factors over shoot-derived biomass restrictions.</li>
                               
-                                  <li class="list-group-item bg-light"><strong>Mathematical Representation</strong>: If {{&lt; rawhtml &gt;}}( RE_{potential} &gt; RE_{max} ){{&lt; /rawhtml &gt;}}, CRootbox adjusts to ensure {{&lt; rawhtml &gt;}}( RLD_{actual} \leq RLD_{potential} ){{&lt; /rawhtml &gt;}}.</li>
+                                  <li class="list-group-item bg-light"><strong>Mathematical Representation</strong>: If {{&lt; rawhtml &gt;}}( RE_{potential} &gt; RE_{max} ){{&lt; /rawhtml &gt;}}, CRootbox adjusts to ensure {{&lt; rawhtml &gt;}}( RLD_{actual} \leq RLD_{potential} ){{&lt; /rawhtml &gt;}}. In other words, if potential root elongation was higher than the maximum allowed, CRootbox would reduce root growth equally across all roots</li>
                               
                           </ol>
                       </li>

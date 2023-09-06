@@ -45,9 +45,9 @@ ToolsDropDown:
 
 CoupledModelsName: Coupled Models
 CoupledModelsDropdown:
-  - name: Casestudy1
+  - name: Simplace-CPlantbox
     url: "/casestudy1/"
-  - name: Casestudy2
+  - name: GRANAR-Mecha
     url: "/casestudy2/"
 
 

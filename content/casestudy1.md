@@ -11,6 +11,10 @@ sections:
       - "Soil compaction hinders nutrient absorption in plants."
       - "Deep soil compaction's impacts on plant growth are still ambiguous."
       - "Coupled Models shed light on root behaviors in compacted soil, especially deep-rooted reactions."
+    image: "images/soilcompact.jpg"
+    imageWidth: "600px"
+    imageHeight: "400px"
+    textPosition: "bottom"
 
   - name: "Rooted Insights: Bridging Models"
     text: "The [study](https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full) showcases the interconnected dynamics of soil strength and root elongation, highlighting the necessity of a coupled model to understand deep soil compaction. While the process-based dynamic model [SIMPLACE](/Phenorob-DAA/simplace/) offers a broad perspective on plant-environment interactions, it might not delve deep enough into root dynamics, a niche [CPlantbox](/Phenorob-DAA/cplantbox/) fills expertly. However, solely depending on [CPlantbox](/Phenorob-DAA/cplantbox/) could miss the bigger picture of holistic plant dynamics and broader field conditions. Marrying these models provides a holistic lens, capturing the complex interplay between a plant and its multifaceted environment."
@@ -44,5 +48,30 @@ sections:
         sublist:
           - "**Growth Prioritization**: Emphasis on soil factors over shoot-derived biomass restrictions."
           - "**Mathematical Representation**: If {{< rawhtml >}}\\( RE_{potential} > RE_{max} \\){{< /rawhtml >}}, CRootbox adjusts to ensure {{< rawhtml >}}\\( RLD_{actual} \\leq RLD_{potential} \\){{< /rawhtml >}}. In other words, if potential root elongation was higher than the maximum allowed, CRootbox would reduce root growth equally across all roots"
+
+  - name: "Impact of Soil Loosening on Crops"
+    text: "The study used the integrated SIMPLACE-CRootbox model to explore how deep soil loosening affects the growth of spring barley and winter wheat. The model highlighted the relationship between soil compaction, weather, and crop species, emphasizing the role of soil strength. Here are the key takeaways:"
+    textPosition: "top"
+    list:
+      - "**Enhanced Growth with Loosening**: Deep loosening improved root growth, leading to better crop productivity, especially in dry conditions."
+      - "**Model Accuracy**: The model effectively simulated root growth from emergence to flowering, capturing the effects of subsoil loosening on both roots and shoots."
+      - "**Soil Compaction Insights**: Soil strength, influenced by compaction and moisture, plays a crucial role in root growth. Dense layers can restrict access to deeper soil moisture, especially in warmer climates."
+      - "**Agronomic Implications**: Understanding root adaptation to soil conditions can guide cultivar selection and breeding, promoting sustainable agriculture."
+      - "**Model's Potential**: This tool can assess the impact of different root traits under various conditions, paving the way for advanced cultivar research and selection."
+    image: "images/rootgrowth.png"
+    imageWidth: "600px"
+    imageHeight: "400px"
+    textPosition: "bottom"
+
+  - name: "Conclusions: What this study can promise?"
+    text: "The integration of the SIMPLACE and CRootbox models has paved the way for a comprehensive understanding of root-soil interactions and the broader implications of soil compaction at depth. This coupled model is not just a theoretical tool; it holds the promise of tangible benefits for the agricultural sector. By simulating the intricate relationship between soil compaction, weather, and crop species, the model provides insights that are crucial for maintaining agricultural productivity, especially in the face of changing environmental conditions. Furthermore, the model's ability to simulate the adaptive plasticity of roots to local soil conditions is a game-changer. It offers a platform for in-depth exploration of genotype-environment-management interactions, allowing for informed cultivar selection and targeted research on promising root traits. This in silico approach to understanding root growth patterns and their impact on yield is a testament to the model's potential in shaping sustainable agricultural practices for the future. Here are the key takeaways:"
+    textPosition: "top"
+    list:
+      - "**In-depth Understanding**: The coupled model offers a comprehensive perspective on root-soil interactions, highlighting the effects of soil compaction."
+      - "**Adaptive Plasticity**: The model effectively simulates the roots' ability to adapt to local soil conditions, emphasizing the importance of understanding root system adaptation for site-specific cultivar selection and breeding."
+      - "**Future Crop Ideotypes**: The model can be used to identify and design future crop ideotypes, aiding in the development of crops best suited for specific environmental conditions."
+      - "**In Silico Breeding**: The model allows for the exploration of genotype-environment-management interactions, paving the way for in silico breeding and research on promising root traits."
+      - "**Sustainable Agriculture**: By providing insights into the effects of soil compaction and weather on crop species, the model plays a pivotal role in promoting sustainable agricultural practices."
+      - "Find more on this study from the article [published in Front. Plant Sci. Journal](https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full)"
 
 ---

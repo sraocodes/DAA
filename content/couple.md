@@ -50,5 +50,5 @@ sections:
       - "Established a dynamic feedback system ensuring simulated root density is influenced by a myriad of factors, from soil properties to carbon allocation from shoots."
       - "Revealed the intrinsic relationship between soil compaction, weather, and crop species, highlighting the magnified implications of soil compaction in warmer, dryer climates."
       - "Demonstrated that deep loosening can increase absolute root length density, crucial for sustainable agricultural practices.
-      [Explore the detailed investigation](https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full)"
+      [Explore the detailed investigation](/Phenorob-DAA/casestudy1/)"
 ---
