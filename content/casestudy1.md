@@ -23,16 +23,16 @@ sections:
   - name: "Coupling of C-RootBox with Simplace"
     text: "The dynamic coupling of CRootbox with SIMPLACE, facilitated through a Python binding, results in the SIMPLACE-cRootbox system. Within SIMPLACE, specific SimComponents such as EvapTranDemand, SlimWater, LintulPhenology, and LintulBiomass play pivotal roles in determining various aspects of crop growth and development. The daily root biomass increment calculated by SIMPLACE is transformed into a potential root elongation (RE) value, which is then provided as input to CRootbox. This potential RE is a measure of how much the roots could potentially grow based on conditions like soil quality, water availability, and nutrient levels. CRootbox then simulates the actual root system and determines the root length density (RLD). This actual RLD is then fed back into SIMPLACE. If the potential RE from SIMPLACE exceeds the maximum possible elongation, CRootbox proportionally reduces root growth. This creates a feedback loop where the root biomass provided by SIMPLACE determines the maximal root elongation, ensuring that root growth limitations due to soil physical stresses are considered before potential root growth limitations due to biomass provided by the shoot."
     list:
-      - item: "**Integration**"
+      - item: "**Integration**:CRootbox and SIMPLACE are coupled to provide a realistic representation of root growth"
         sublist:
           - "**Method**: Python script."
           - "**Result**: Combined system termed SIMPLACE-cRootbox."
 
-      - item: "**SIMPLACE Components**"
+      - item: "**SIMPLACE Components**: Specific components like EvapTranDemand, SlimWater, LintulPhenology, and LintulBiomass are involved in the process"
         sublist:
-          - "**EvapTranDemand**: Estimates potential crop transpiration."
-          - "**SlimWater**: Computes soil water dynamics."
-          - "**LintulPhenology**: Calculates crop development stage."
+          - "**EvapTranDemand**: Estimates potential crop transpiration and potential soil evaporation using a modified Penman approach."
+          - "**SlimWater**: Computes soil water dynamics, estimating daily change in soil water content based on factors like crop water uptake, soil evaporation,   surface runoff, and seepage below the root zone."
+          - "**LintulPhenology**: Calculates the development stage of a crop."
           - "**LintulBiomass**: Determines daily root biomass increment."
 
       - item: "**Data Flow**"
@@ -40,9 +40,9 @@ sections:
           - "**From SIMPLACE to CRootbox**: Potential root elongation (RE) derived from SIMPLACE's components."
           - "**From CRootbox to SIMPLACE**: Actual root length density (RLD) simulated by CRootbox."
 
-      - item: "**Feedback Mechanism**"
+      - item: "**Feedback Mechanism**:Ensures that root growth limitations due to soil physical stresses are considered before those due to biomass"
         sublist:
           - "**Growth Prioritization**: Emphasis on soil factors over shoot-derived biomass restrictions."
-          - "**Mathematical Representation**: If {{< rawhtml >}}\\( RE_{potential} > RE_{max} \\){{< /rawhtml >}}, CRootbox adjusts to ensure {{< rawhtml >}}\\( RLD_{actual} \\leq RLD_{potential} \\){{< /rawhtml >}}."
+          - "**Mathematical Representation**: If {{< rawhtml >}}\\( RE_{potential} > RE_{max} \\){{< /rawhtml >}}, CRootbox adjusts to ensure {{< rawhtml >}}\\( RLD_{actual} \\leq RLD_{potential} \\){{< /rawhtml >}}. In other words, if potential root elongation was higher than the maximum allowed, CRootbox would reduce root growth equally across all roots"
 
 ---

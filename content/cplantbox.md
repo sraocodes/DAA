@@ -5,7 +5,7 @@ draft: false
 
 sections:  
   - name: "What is C-PlantBox?"
-    text: "C-PlantBox is a full plant modeling framework that focuses on the growth and development of plant architectures, including both the root and shoot systems. It is designed to simulate the complex interactions between carbon and water flows within plants and their response to varying environmental conditions. The framework is built upon an existing root system model called CRootBox and extends it to incorporate the modeling of shoot structures. The framework allows for the representation of a variety of plant species and their specific structures. Visit the official [CPlantBox repository](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox) for installation guide."
+    text: "C-PlantBox is a full plant modeling framework that focuses on the growth and development of plant architectures, including both the root and shoot systems. It is designed to simulate the complex interactions between carbon and water flows within plants and their response to varying environmental conditions. The framework is built upon an existing root system model called CRootBox and extends it to incorporate the modeling of shoot structures. The framework allows for the representation of a variety of plant species and their specific structures. Visit the official [CPlantBox repository](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox) for more information."
     image: "images/Cplantbox1.png"
     imageWidth: "250px"
     imageHeight: "300px"
