@@ -4,7 +4,7 @@ date: 2023-07-28
 draft: false
 
 sections:  
-  - name: "Soil Compaction at Depth"
+  - name: "What is Simplace?"
     text: "SIMPLACE is an open-source software that helps scientists and farmers manage crops and ecosystems better. It uses computer models to understand complex interactions between crops, soil, and climate. By coupling different modules, each representing a process like water use or plant growth, SIMPLACE offers customizable solutions for different agricultural needs.Its multi-threaded high-performance architecture allows for calibration and simulations at varying spatial scales.You can check the official site of SIMPLACE [here](https://www.simplace.net/index.php)."
     textPosition: "top"
     videos:
