@@ -6,10 +6,19 @@
     <description>Recent content on My New Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sraocodes.github.io/Phenorob-DAA/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Publication</title>
+      <link>https://sraocodes.github.io/Phenorob-DAA/publication/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sraocodes.github.io/Phenorob-DAA/publication/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Multi-Scale Modeling within PhenoRob DAA</title>
@@ -75,7 +84,7 @@
     </item>
     
     <item>
-      <title>CaseStudy1</title>
+      <title>CaseStudy2</title>
       <link>https://sraocodes.github.io/Phenorob-DAA/casestudy2/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
       

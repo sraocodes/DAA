@@ -13,7 +13,7 @@ Link1Dropdown:
   - name: Research Area
     url: 
   - name: Publications
-    url: 
+    url: "/publication/"
 Link2Name: DAA
 Link2Link: https://www.example2.com
 Link2Dropdown:
