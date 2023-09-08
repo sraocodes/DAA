@@ -25,7 +25,7 @@ sections:
     textPosition: "left"
     image: "images/wheat.gif"
     imageWidth: "720px"
-    imageHeight: "310px"
+    imageHeight: "350px"
     textPosition: "bottom"
 
   - name: "Coupling of C-RootBox with Simplace"
