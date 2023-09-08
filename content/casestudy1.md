@@ -23,6 +23,10 @@ sections:
       - "CRootbox provides deep insights into root behaviors but might overlook larger plant-environment interactions."
       - "Coupling both models yields a comprehensive tool, enhancing our understanding of plant responses to environmental shifts."
     textPosition: "left"
+    image: "images/wheat.gif"
+    imageWidth: "720px"
+    imageHeight: "310px"
+    textPosition: "bottom"
 
   - name: "Coupling of C-RootBox with Simplace"
     text: "The dynamic coupling of CRootbox with SIMPLACE, facilitated through a Python binding, results in the SIMPLACE-cRootbox system. Within SIMPLACE, specific SimComponents such as EvapTranDemand, SlimWater, LintulPhenology, and LintulBiomass play pivotal roles in determining various aspects of crop growth and development. The daily root biomass increment calculated by SIMPLACE is transformed into a potential root elongation (RE) value, which is then provided as input to CRootbox. This potential RE is a measure of how much the roots could potentially grow based on conditions like soil quality, water availability, and nutrient levels. CRootbox then simulates the actual root system and determines the root length density (RLD). This actual RLD is then fed back into SIMPLACE. If the potential RE from SIMPLACE exceeds the maximum possible elongation, CRootbox proportionally reduces root growth. This creates a feedback loop where the root biomass provided by SIMPLACE determines the maximal root elongation, ensuring that root growth limitations due to soil physical stresses are considered before potential root growth limitations due to biomass provided by the shoot."
