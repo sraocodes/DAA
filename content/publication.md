@@ -7,15 +7,25 @@ sections:
   - name: "AGRO-C"
     text: "AGRO-C related publications"
     list:
-      - "(2021) S De Cannière et al., [Constraining water limitation of photosynthesis in a crop growth model with sun-induced chlorophyll fluorescence](https://www.sciencedirect.com/science/article/pii/S0034425721004429)"
-      - "(2019) GR Maharjan et al., [Effects of input data aggregation on simulated crop yields in temperate and Mediterranean climates](https://www.sciencedirect.com/science/article/abs/pii/S1161030118301394)"
-      - "(2009) Y Huang et al., [Agro-C: a biogeophysical model for simulating the carbon budget of agroecosystems](https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062)"
-      - "(2018) R Žydelis et al., [A model study on the effect of water and cold stress on maize development under nemoral climate](https://www.sciencedirect.com/science/article/abs/pii/S0168192318302715)"
-      - "(2020) C Brogi, JA Huisman, M Herbst et al., [Simulation of spatial variability in crop leaf area index and yield using agroecosystem modeling and geophysics‐based quantitative soil information](https://acsess.onlinelibrary.wiley.com/doi/full/10.1002/vzj2.20009)"
-      - "(2017) A Klosterhalfen et al., [Multi-site calibration and validation of a net ecosystem carbon exchange model for croplands](https://www.sciencedirect.com/science/article/abs/pii/S0304380017300054)"
-      - "(2017) L Brilli, L Bechini, M Bindi, M Carozzi, D Cavalli et al., [Review and analysis of strengths and weaknesses of agro-ecosystem models for simulating C and N fluxes](https://www.sciencedirect.com/science/article/abs/pii/S0048969717307295?via%3Dihub)"
-      - "(2008) M Herbst, HJ Hellebrand, J Bauer, JA Huisman et al., [Multiyear heterotrophic soil respiration: Evaluation of a coupled CO2 transport and carbon turnover model](https://www.sciencedirect.com/science/article/abs/pii/S0304380008000811?via%3Dihub)"
-      - "(2020) J Groh, E Diamantopoulos, X Duan, F Ewert et al., [Crop growth and soil water fluxes at erosion‐affected arable sites: Using weighing lysimeter data for model intercomparison](https://doi.org/10.1002/vzj2.20058)"
+      - "**[1]** (2021) S De Cannière et al., [Constraining water limitation of photosynthesis in a crop growth model with sun-induced chlorophyll fluorescence](https://www.sciencedirect.com/science/article/pii/S0034425721004429)"
+      - "**[2]** (2021) Zhang, Q. et al., [Accuracy and uncertainty analysis of staple food crop modelling by the process-based Agro-C model](https://doi.org/10.1007/s00484-020-02053-1)"
+      - "**[3]** (2020) C Brogi, JA Huisman, M Herbst et al., [Simulation of spatial variability in crop leaf area index and yield using agroecosystem modeling and geophysics‐based quantitative soil information](https://acsess.onlinelibrary.wiley.com/doi/full/10.1002/vzj2.20009)"
+      - "**[4]** (2020) J Groh, E Diamantopoulos, X Duan, F Ewert et al., [Crop growth and soil water fluxes at erosion‐affected arable sites: Using weighing lysimeter data for model intercomparison](https://doi.org/10.1002/vzj2.20058)"
+      - "**[5]** (2019) GR Maharjan et al., [Effects of input data aggregation on simulated crop yields in temperate and Mediterranean climates](https://www.sciencedirect.com/science/article/abs/pii/S1161030118301394)"
+      - "**[6]** (2018) R Žydelis et al., [A model study on the effect of water and cold stress on maize development under nemoral climate](https://www.sciencedirect.com/science/article/abs/pii/S0168192318302715)"
+      - "**[7]** (2017) A Klosterhalfen et al., [Multi-site calibration and validation of a net ecosystem carbon exchange model for croplands](https://www.sciencedirect.com/science/article/abs/pii/S0304380017300054)"
+      - "**[8]** (2017) L Brilli, L Bechini, M Bindi, M Carozzi, D Cavalli et al., [Review and analysis of strengths and weaknesses of agro-ecosystem models for simulating C and N fluxes](https://www.sciencedirect.com/science/article/abs/pii/S0048969717307295?via%3Dihub)"
+      - "**[9]** (2009) Y Huang et al., [Agro-C: a biogeophysical model for simulating the carbon budget of agroecosystems](https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062)"
+      - "**[10]** (2008) M Herbst, HJ Hellebrand, J Bauer, JA Huisman et al., [Multiyear heterotrophic soil respiration: Evaluation of a coupled CO2 transport and carbon turnover model](https://www.sciencedirect.com/science/article/abs/pii/S0304380008000811?via%3Dihub)"
+      - "**[11]** (1993) Jiří Šimůnek, Donald L. Suarez, [Modeling of carbon dioxide transport and production in soil: 1. Model development](https://doi.org/10.1029/92WR02225)"
+
+  - name: "C-PlantBox"
+    text: "C-PlantBox related publications"
+    list:
+      - "**[1]** (2018) Xiao-Ran Zhou et al., [Presentation of CPlantBox: a whole functional-structural plant model (root and shoot) coupled with a mechanistic resolution of carbon and water flows](https://doi.org/10.1109/PMA.2018.8611617) - Conference: 2018 6th International Symposium on Plant Growth Modeling, Simulation, Visualization and Applications (PMA)"
+      - "**[2]** (2020) Xiao-Ran Zhou, Andrea Schnepf, Jan Vanderborght, Daniel Leitner, André Lacointe, Harry Vereecken, Guillaume Lobet, [CPlantBox, a whole-plant modelling framework for the simulation of water- and carbon-related processes](https://doi.org/10.1093/insilicoplants/diaa001) - in silico Plants, Volume 2, Issue 1"
+
+
 
 
 
