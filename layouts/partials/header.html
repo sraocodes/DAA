@@ -52,22 +52,6 @@
               </div>
           </li>
 
-          <!-- Dropdown 3 -->
-          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  {{ .Site.Data.header.Link1Name }}
-              </a>
-              <div class="dropdown-menu" aria-labelledby="link1Dropdown">
-                  {{ range .Site.Data.header.Link1Dropdown }}
-                      {{ $url := .url }}
-                      {{ if not (strings.HasPrefix $url "http") }}
-                          {{ $url = printf "%s%s" $.Site.BaseURL $url }}
-                      {{ end }}
-                      <a class="dropdown-item" href="{{ $url }}">{{ .name }}</a>
-                  {{ end }}
-              </div>
-          </li>
-
            <!-- Coupled Models Dropdown -->
            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="coupledModelsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -84,10 +68,26 @@
                 </div>
            </li>
 
+            <!-- Research-->
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ .Site.Data.header.Link1Name }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="link1Dropdown">
+                {{ range .Site.Data.header.Link1Dropdown }}
+                    {{ $url := .url }}
+                    {{ if not (strings.HasPrefix $url "http") }}
+                        {{ $url = printf "%s%s" $.Site.BaseURL $url }}
+                    {{ end }}
+                    <a class="dropdown-item" href="{{ $url }}">{{ .name }}</a>
+                {{ end }}
+            </div>
+            </li>
+
           <!-- Link without Dropdown -->
-          <li class="nav-item">
+           <li class="nav-item">
               <a class="nav-link" href="{{ .Site.Data.header.Link3Link }}" target="_blank">{{ .Site.Data.header.Link3Name }}</a>
-          </li>
+           </li>
       </ul>
   </div>
 </nav>
