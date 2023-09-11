@@ -1,8 +1,13 @@
 {{ define "main" }}
 
 <div class="container mt-5">
+
+
+
+    <!-- Slide set 1 -->
+    <h3>Phenorob DAA Overview</h3> <!-- Heading for cardset -->
     <div class="row">
-        {{ range .Params.slides }}
+        {{ range .Params.slides_set1 }}
         <div class="col-md-6 col-lg-6 mb-4"> <!-- Adjusted Bootstrap grid classes -->
             <div class="card custom-card">
                 <img src="{{ .image | relURL }}" alt="Slide image" class="card-img-top custom-card-img">
@@ -29,6 +34,52 @@
         </div>
         {{ end }}
     </div>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!-- Barrier 1 -->
+    {{ range .Params.barrier_1 }}
+    <div class="row mt-4">
+        <div class="col-12">
+            <img src="{{ .content | relURL }}" alt="Barrier image" class="img-fluid w-100" style="height: 200px;">
+        </div> 
+    </div>
+    {{ end }}
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Gap between Barrier 1 and Slide set 2 -->
+    <div class="mt-4"></div> 
+
+    <!-- Slide set 2 -->
+    <h3>Our Models</h3> 
+    <div class="row">
+        {{ range .Params.slides_set2 }}
+        <div class="col-md-6 col-lg-6 mb-4"> <!-- Adjusted Bootstrap grid classes -->
+            <div class="card custom-card">
+                <img src="{{ .image | relURL }}" alt="Slide image" class="card-img-top custom-card-img">
+                <div class="card-body">
+                    <h2 class="card-title">{{ .heading }}</h2>
+                    {{ $text := .text }}
+                    {{ range $key, $value := . }}
+                        {{ if (strings.HasSuffix $key "_link") }}
+                            {{ if not (strings.HasPrefix $value "http") }}
+                                {{ $value = printf "%s%s" $.Site.BaseURL $value }}
+                            {{ end }}
+                            {{ $linkText := (replace $key "_link" "") | upper }}
+                            {{ $text = replace $text $linkText (print "<a href=\"" $value "\">" $linkText "</a>") }}
+                        {{ end }}
+                    {{ end }}
+                    <p class="card-text">{{ $text | safeHTML }}</p>
+                    {{ $link := .link }}
+                    {{ if not (strings.HasPrefix $link "http") }}
+                        {{ $link = printf "%s%s" $.Site.BaseURL $link }}
+                    {{ end }}
+                    <a href="{{ $link }}" class="card-link learn-more">Learn more</a>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------->
+    
 </div>
 
 

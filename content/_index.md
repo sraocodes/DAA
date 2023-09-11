@@ -1,5 +1,5 @@
 ---
-slides:
+slides_set1:
   - image: "images/1.gif"
     heading: "What is DAA?"
     text: |
@@ -25,5 +25,16 @@ slides:
     heading: "Coupled Models"
     text: "DAA aims to integrate multi-scale models to solve complex agricultural problems. This involves identifying suitable software, establishing connections between their components, calibrating model parameters, and fostering interdisciplinary collaboration."
     link: "/couple/" 
+
+barrier_1:
+  - type: "image"
+    content: "images/barrier1.gif" 
+
+slides_set2:
+  - image: "images/granar_set2.gif"
+    heading: "GRANAR"
+    text: |
+      GRANAR is a cutting-edge tool that recreates the cellular structure of plant roots. It not only provides in-depth root anatomy but, when combined with other models, predicts crop performance, aiding in drought-resistant plant breeding. 
+    link: "/granar/" 
 
 ---

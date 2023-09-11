@@ -5,7 +5,7 @@ draft: false
 sections:
   - name: "What is GRANAR?"
     text: "GRANAR is a sophisticated tool designed to recreate the intricate structure of plant roots at a cellular level. It delves deep into the anatomy of individual root sections, offering explicit representations of root anatomy. You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. For a more hands-on experience, explore the [official GRANAR site](https://granar.github.io/)."
-    image: "images/Granar1.jpeg"
+    image: "images/granar.gif"
     imageWidth: "300px"
     imageHeight: "300px"
     textPosition: "right"  

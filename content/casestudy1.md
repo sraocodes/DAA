@@ -33,7 +33,7 @@ sections:
     list:
       - item: "**Integration**:CRootbox and SIMPLACE are coupled to provide a realistic representation of root growth"
         sublist:
-          - "**Method**: Python script."
+          - "**Method**: Python interface between the two models."
           - "**Result**: Combined system termed SIMPLACE-cRootbox."
 
       - item: "**SIMPLACE Components**: Specific components like EvapTranDemand, SlimWater, LintulPhenology, and LintulBiomass are involved in the process"
