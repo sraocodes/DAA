@@ -35,6 +35,6 @@ slides_set2:
     heading: "GRANAR"
     text: |
       GRANAR is a cutting-edge tool that recreates the cellular structure of plant roots. It not only provides in-depth root anatomy but, when combined with other models, predicts crop performance, aiding in drought-resistant plant breeding. 
-    link: "/granar/" 
+    link: "/mecha/" 
 
 ---
