@@ -47,5 +47,20 @@ slides_set2:
     text: "C-PlantBox is a holistic plant modeling tool, capturing both root and shoot systems. It simulates intricate interactions between carbon and water flows in diverse environmental conditions."
     link: "/cplantbox/"
 
+  - image: "images/AgroC.png"
+    heading: "Agro-C"
+    text: "Agro-C is a comprehensive model decoding the carbon dynamics in agricultural soil. It delves into the carbon journey of crops and the soil's organic carbon movement. It's pivotal for understanding agricultural carbon budgets and addressing climate change."
+    link: "/agroc/"
+
+  - image: "images/simplace.jpg"
+    heading: "SIMPLACE"
+    text: "SIMPLACE is an open-source modeling framework for managing crops and ecosystems, understanding complex interactions, and offering customizable agricultural solutions."
+    link: "/simplace/"
+
+  - image: "images/Rosi1.png"
+    heading: "DuMux-ROSI"
+    text: "DuMux-ROSI is an advanced integration of DuMux with CPlantBox, offering enhanced soil water dynamics and root-soil interaction simulations, supported by a diverse range of porous media models."
+    link: "/dumux/"
+
 
 ---
