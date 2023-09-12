@@ -31,10 +31,21 @@ barrier_1:
     content: "images/barrier1.gif" 
 
 slides_set2:
-  - image: "images/granar_set2.gif"
+  - image: "images/granar.gif"
     heading: "GRANAR"
     text: |
       GRANAR is a cutting-edge tool that recreates the cellular structure of plant roots. It not only provides in-depth root anatomy but, when combined with other models, predicts crop performance, aiding in drought-resistant plant breeding. 
-    link: "/mecha/" 
+    link: "/granar/" 
+  
+  - image: "images/mecha1.png"
+    heading: "MECHA"
+    text: "MECHA is a mathematical model enhancing understanding of water transport in plant roots. It aids breeders in simulating scenarios related to root water/nutrient transport, and offers interactive online testing via platforms like ShinyApps and Binder."
+    link: "/mecha/"
+
+  - image: "images/Cplantbox1.png"
+    heading: "C-PlantBox"
+    text: "C-PlantBox is a holistic plant modeling tool, capturing both root and shoot systems. It simulates intricate interactions between carbon and water flows in diverse environmental conditions."
+    link: "/cplantbox/"
+
 
 ---
