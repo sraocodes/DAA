@@ -62,5 +62,10 @@ slides_set2:
     text: "DuMux-ROSI is an advanced integration of DuMux with CPlantBox, offering enhanced soil water dynamics and root-soil interaction simulations, supported by a diverse range of porous media models."
     link: "/dumux/"
 
+  - image: "images/terrsysmp1.jpg"
+    heading: "TerrSysMP"
+    text: "TerrSysMP is a comprehensive platform fusing the COSMO or ICON atmospheric models, CLM, and ParFlow for deep insights into interactions between the atmosphere, land surface, and subsurface."
+    link: "/terrsysmp/"
+
 
 ---
