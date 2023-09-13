@@ -52,11 +52,11 @@
     <h3>Our Models</h3> 
     <div class="row">
         {{ range .Params.slides_set2 }}
-        <div class="col-md-4 col-lg-3 mb-4"> <!-- Adjusted Bootstrap grid classes -->
-            <div class="card custom-card">
-                <img src="{{ .image | relURL }}" alt="Slide image" class="card-img-top custom-card-img-sm"> <!-- Added custom-card-img-sm class for smaller images -->
-                <div class="card-body">
-                    <a href="{{ $.Site.BaseURL }}{{ .link }}" class="card-link">
+        <div class="col-md-4 col-lg-3 mb-4">
+            <div class="card custom-card d-flex flex-column"> <!-- Added d-flex and flex-column here -->
+                <img src="{{ .image | relURL }}" alt="Slide image" class="card-img-top custom-card-img-sm">
+                <div class="card-body d-flex flex-column"> <!-- Added d-flex and flex-column here for good measure, in case it's needed for inner elements -->
+                    <a href="{{ $.Site.BaseURL }}{{ .link }}" class="card-link mb-auto"> <!-- Added mb-auto here -->
                         <h2 class="card-title">{{ .heading }}</h2>
                     </a>
                     {{ $text := .text }}
@@ -82,7 +82,20 @@
     </div>
 
     <!----------------------------------------------------------------------------------------------------------------->
-    
+    <!-- Barrier 2 -->
+    {{ range .Params.barrier_2 }}
+    <div class="row mt-4">
+        <div class="col-12">
+            <img src="{{ .content | relURL }}" alt="Barrier image" class="img-fluid w-100" style="height: 200px;">
+        </div> 
+    </div>
+    {{ end }}
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Gap between Barrier 2 and Slide set 3 -->
+    <div class="mt-4"></div> 
+
+
+
 </div>
 
 

@@ -4,11 +4,12 @@ body {
   line-height: 1.6;
 }
 
+/* Existing Card Styles */
 .custom-card {
   border: 1px solid #e5e5e5;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s; /* Merged Transform Transition */
   opacity: 0;
   transform: translateY(50px);
 }
@@ -20,7 +21,7 @@ body {
 
 .custom-card:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.05); /* Merged Hover Effect */
 }
 
 .custom-card-img {
@@ -49,4 +50,24 @@ body {
 .card-content a.learn-more:hover {
   color: #0056b3;
   border-color: #0056b3;
+}
+
+/* New CSS for Equal Height and Centering Last Row */
+
+.row.equal-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card.custom-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card.custom-card .card-body {
+    flex: 1 1 auto;
+}
+
+.row.center-last-row {
+    justify-content: center;
 }
