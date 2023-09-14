@@ -24,11 +24,6 @@ body {
   transform: translateY(-10px) scale(1.05); /* Merged Hover Effect */
 }
 
-.custom-card-img {
-  height: 450px; 
-  object-fit: cover;
-}
-
 .card-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
