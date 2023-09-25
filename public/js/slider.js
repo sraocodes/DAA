@@ -30,7 +30,12 @@ class TextAppear {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    let cards = document.querySelectorAll('.card');
+    let container = document.getElementById('indexPageContainer');
+
+    // If the specific container is not found, exit early.
+    if (!container) return;
+
+    let cards = container.querySelectorAll('.card');
     let windowHeight = window.innerHeight;
 
     // Create an instance of TextAppear for each h2
@@ -38,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const h2 = card.querySelector('h2');
         return h2 ? new TextAppear(h2) : null;
     });
+
 
     function checkPosition() {
         let delay = 0;

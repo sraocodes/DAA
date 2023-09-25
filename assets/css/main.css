@@ -21,7 +21,9 @@ body {
 
 .custom-card:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-10px) scale(1.05); /* Merged Hover Effect */
+  transform: translateY(-10px) scale(1.1); /* Merged Hover Effect */
+  transform: rotateY(10deg);
+  transition: transform 0.5s;
 }
 
 .card-content h2 {
