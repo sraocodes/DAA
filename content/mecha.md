@@ -4,21 +4,25 @@ date: 2023-07-28
 draft: false
 sections:
   - name: "What is MECHA?"
-    text: "MECHA is a mathematical model that aids in understanding the movement of water through plant roots. This model considers various root structures, including cell walls and membranes, to calculate water flow. The tool enables researchers to examine various hypotheses about root water transport, enhancing our grasp on plant water relations. Dive deeper into MECHA by visiting its [official site](https://mecharoot.github.io/)."
-    image: "images/mecha1.png"
-    imageWidth: "300px"    
-    imageHeight: "400px"  
-    textPosition: "right"
+    text: "MECHA is a mathematical model designed to compute the flow of water through various parts of individual cells in a complete root cross-section. This includes the cell walls, membranes, and plasmodesmata. The model takes into account detailed root anatomical descriptions and a minimal set of cell-level hydraulic properties. It uses experimental data on the permeability of cell walls, membranes, and plasmodesmata. The model also considers hydraulic principles at both the cell and root segment scales. Dive deeper into MECHA by visiting its [official site](https://mecharoot.github.io/)."
+    image: "images/mecha1.jpg"
+    imageWidth: "600px"    
+    imageHeight: "600px"  
+    textPosition: "top"
 
-  - name: "Why MECHA?"
-    text: "MECHA proves invaluable for plant breeders, enabling them to simulate various scenarios and hypotheses related to root water/nutrient transport. Leveraging MECHA, researchers can better understand plant water absorption and transportation, which is pivotal for maximizing crop yields and bolstering agricultural sustainability. Such insights can drive future agricultural research and best practices."
-    
-  - name: "Try MECHA Online with ShinyApps or Binder"
-    text: "Interested in testing MECHA without any installations? Mecha [team](/Phenorob-DAA/members/) have the perfect solution for you – [ShinyApps](https://plantmodelling.shinyapps.io/mecha/) and [Binder](https://mybinder.org/v2/gh/HeymansAdrien/GranarMecha/main). In just one click, immerse yourself in an interactive environment, exploring the code and data of this model."
-    image: "https://mybinder.org/static/logo.svg" # The official Binder logo
-    imageWidth: "200px"
-    imageHeight: "100px"
-    textPosition: "left"
+  - name: "How Does MECHA Work?"
+    text: "MECHA calculates the root reflection coefficient (sr) and root radial hydraulic conductivity (kr) by combining root anatomical data with cell hydraulic properties. It simulates water flow at the cellular level, resulting in kr predictions that align with experimental findings. MECHA seamlessly transitions from cell-level hydraulics to the broader root cross-section, offering an in-depth view of water transport in roots. Here's a breakdown of how kr of roots are computed in MECHA:"
+    list:
+      - "**Cell-Level Hydraulic Network**: MECHA computes the flow of water through the walls, membranes, and plasmodesmata of each individual cell throughout a complete root cross-section. This detailed hydraulic network at the cell level provides the foundation for upscaling."
+      - "**Parameterization with Experimental Data**: The model is parameterized using experimental cell-scale hydraulic properties. These properties include:Conductivity of plasma membranes (Lp), Conductivity of cell walls (kw), and Conductance of plasmodesmata (KPD)"
+      - "**Predicting Root Hydraulic Properties**: From the detailed cell-level computations, MECHA predicts the root reflection coefficient (sr) and root radial hydraulic conductivity (kr) for the root cylinder approach used in plant-scale models. This prediction connects hydraulic theories across scales. "
+      - "**Comparison with Experimental Data**: The simulated kr values from MECHA fall within the range of measured kr values for maize roots. The model's predictions are validated by comparing them with experimental data from literature."
+      - "**Sensitivity Analyses**: MECHA conducts sensitivity analyses to quantify the impact of various cell hydraulic properties on kr. For instance, the model assesses the sensitivity of kr to the permeability of cortex cells (Lp) and other parameters."
+      - "**Further Reference**: The image of root architecture level above as well as Mecha working details was taken from the following [publication.](https://doi.org/10.1002/pld3.334)"
+    image: "images/mecha2.jpg"
+    imageWidth: "700px"
+    imageHeight: "350px"
+    textPosition: "bottom"  
     
   - name: "MECHA File Structure"
     text: "To facilitate accurate simulations, MECHA employs a specific file structure. Familiarizing yourself with this structure can optimize your usage of the model."
@@ -44,4 +48,11 @@ sections:
     imageWidth: "200px"    
     imageHeight: "500px"  
     textPosition: "left"
+
+  - name: "Try MECHA Online with ShinyApps or Binder"
+    text: "Interested in testing MECHA without any installations? Mecha [team](/Phenorob-DAA/members/) have the perfect solution for you – [ShinyApps](https://plantmodelling.shinyapps.io/mecha/) and [Binder](https://mybinder.org/v2/gh/HeymansAdrien/GranarMecha/main). In just one click, immerse yourself in an interactive environment, exploring the code and data of this model."
+    image: "https://mybinder.org/static/logo.svg" # The official Binder logo
+    imageWidth: "200px"
+    imageHeight: "100px"
+    textPosition: "left"   
 ---
