@@ -37,4 +37,7 @@ sections:
     imageWidth: "600px"
     imageHeight: "300px"
     textPosition: "bottom"
+
+  - name: "Learn more"
+    text: "For those keen on exploring this coupling study further, check out the [`GRANAR-MECHA coupling publication`](https://doi.org/10.1104/pp.19.00617)"
 ---
