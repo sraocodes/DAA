@@ -4,11 +4,26 @@ date: 2023-07-28
 draft: false
 sections:
   - name: "What is GRANAR?"
-    text: "GRANAR is a model that creates detailed cell networks of root cross-sections based on a select set of root anatomical features. These features can be obtained using image analysis software like ImageJ, RootScan, PHIV-RootCell, or RootAnalyzer. The model constructs the anatomy by placing cell layers around the root's center. The position and size of each cell are determined by the cell type radius and a degree of randomness. This randomness means that even with the same input parameters, each simulation might produce slightly different anatomies. The model can simulate different vascular patterns, depending on whether it's modeling a monocot or dicot root. You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. For a more hands-on experience, explore the [official GRANAR site](https://granar.github.io/)."
+    text: "GRANAR, the Generator of Root ANAtomy in R, is a computational tool designed to simulate root anatomical networks. These networks are crafted using easily accessible anatomical features, which can be obtained from open-access image analysis software and root cross-section images. Once the root anatomy is generated, it can be saved as an XML file. The model can simulate different vascular patterns, depending on whether it's modeling a monocot or dicot root. You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. For a more hands-on experience, explore the [official GRANAR site](https://granar.github.io/)."
     image: "images/granar_set2.gif"
     imageWidth: "600px"
     imageHeight: "400px"
     textPosition: "bottom"      
+
+  - name: "How Does GRANAR Work?"
+    text: "GRANAR begins with a detailed cross-sectional image of the root, capturing its intricate anatomical features and transform the image into a digital root anatomical network, showcasing the cellular intricacies and connections. GRANAR offers a detailed representation of root network structure, pinpointing the location of each cell and tissue. Let's delve deeper into how GRANAR constructs the root structure and the parameters it uses:"
+    list:
+      - "GRANAR begins by extracting key anatomical traits from root cross-section images, offering a detailed insight into the root's anatomy."
+      - "Using the extracted anatomical traits measured along the root axes, linear regressions are computed against the distance to the root tip for each root type. This helps understand the variations in anatomical traits along the root."
+      - "The coefficients derived from the linear models help estimate GRANAR's input parameters at every desired location along the root. If no significant difference is observed between the distance along the root and the anatomical traits from a uniform model, the average value of the anatomical traits is utilized."
+      - "For the relationship between the size of the stele and the metaxylem, a Napierian logarithmic transformation is applied to both the stele area and the metaxylem. This relationship is then integrated into the GRANAR parametrization procedure."
+      - "With the input parameters defined, GRANAR can simulate representative root cross-sections for each root type at any longitudinal position."
+      - "Besides the root cross-sections, locations of hydrophobic barriers and metaxylem maturation zones are added based on staining signals, offering more details about the root's anatomy, especially concerning water movement barriers."
+    image: "images/granar1.jpg"
+    imageWidth: "700px"
+    imageHeight: "350px"
+    textPosition: "bottom"
+
 
   - name: "Parameters Used by GRANAR"
     text: "GRANAR uses various anatomical parameters to simulate the cellular anatomy of roots. Each parameter represents a specific aspect of the root's structure. For instance, 'parenchyma' refers to the primary tissue in plants, involved in storage, photosynthesis, and secretion. 'Pericycle' is a layer of cells surrounding the vascular bundles in plants, playing a crucial role in secondary growth. 'Cortex' is the tissue occurring between the epidermis and the vascular tissue, responsible for storage in roots. 'Xylem' is the vascular tissue responsible for the transport of water and nutrients from the roots to the shoots and leaves. Let's delve deeper into the specific parameters GRANAR uses:"
@@ -21,24 +36,10 @@ sections:
       - "**Epidermis:** The outermost layer of cells covering the root. Parameters include Cell diameter and Number of layers."
       - "**Xylem:** Responsible for transporting water and nutrients. Parameters include Max cell diameter, Number of xylem poles, and Ratio (protoxylem vs metaxylem)."
       - "**Aerenchyma:** Air-filled cavities within the plant tissue, aiding in gas exchange. Parameters include Proportion and Number of radial cavities."
-    image: "images/granarparam.png"
+    image: "images/granarparam.jpg"
     imageWidth: "600px"
     imageHeight: "600px"
-    textPosition: "bottom" 
-
-  - name: "How Does GRANAR Work?"
-    text: "GRANAR is a sophisticated model that simulates the cellular anatomy of roots. It visualizes the root as a combination of interconnected tubes (the xylem vessels) set within a sponge-like structure (the root's cellular anatomy). These tubes are crucial for water transport, while the sponge-like structure absorbs water from the surrounding soil. GRANAR offers a detailed representation of this structure, pinpointing the location of each cell and tissue. The primary input for GRANAR is the root cross-section images, which are processed to extract vital anatomical traits. These traits form the foundation for the model's simulations. Let's delve deeper into how GRANAR constructs the root structure and the parameters it uses:"
-    list:
-      - "GRANAR begins by extracting key anatomical traits from root cross-section images, offering a detailed insight into the root's anatomy."
-      - "Using the extracted anatomical traits measured along the root axes, linear regressions are computed against the distance to the root tip for each root type. This helps understand the variations in anatomical traits along the root."
-      - "The coefficients derived from the linear models help estimate GRANAR's input parameters at every desired location along the root. If no significant difference is observed between the distance along the root and the anatomical traits from a uniform model, the average value of the anatomical traits is utilized."
-      - "For the relationship between the size of the stele and the metaxylem, a Napierian logarithmic transformation is applied to both the stele area and the metaxylem. This relationship is then integrated into the GRANAR parametrization procedure."
-      - "With the input parameters defined, GRANAR can simulate representative root cross-sections for each root type at any longitudinal position."
-      - "Besides the root cross-sections, locations of hydrophobic barriers and metaxylem maturation zones are added based on staining signals, offering more details about the root's anatomy, especially concerning water movement barriers."
-    image: "images/granar1.jpg"
-    imageWidth: "100px"
-    imageHeight: "800px"
-    textPosition: "right"
+    textPosition: "top" 
 
   - name: "GRANAR Features"
     text: "GRANAR is a versatile tool designed for simulating and analyzing root anatomy. Here's a glimpse of its key capabilities:"
@@ -55,7 +56,7 @@ sections:
     list:
       - "**Detailed Root Anatomy:** Generates cell networks of root cross-sections from key anatomical features."
       - "**High Accuracy:** Reproduces root cross-section anatomies with impressive precision when compared to experimental data."
-      - "**Versatility:** Can simulate different vascular patterns, catering to both monocot and dicot root structures."
+      - "**Versatility:** Can simulate different vascular patterns, including monocot and dicot root structures."
       - "**Integration Potential:** Seamlessly integrates with hydraulic models like MECHA, providing a comprehensive view of root hydraulic properties."
       - "**Time Efficiency:** Dramatically reduces the time required for root anatomy simulations. While other methods can take up to 10 hours, GRANAR accomplishes the task in just 10 minutes."
     image: "images/whygranar.jpg"
