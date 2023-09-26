@@ -49,8 +49,11 @@ sections:
       - "**Seamless Integration**: Features a MECHA-GRANAR connection for smooth data exchange in XML format, essential for radial conductivity calculations."
       - "**ImageJ Compatibility**: Integrates with ImageJ software for extracting anatomical features from specific datasets."
       - "**Open Data**: Advocates transparency with data available under the CC-BY 4.0 International license."
-    textPosition: "left"
- 
+    image: "images/granarfeatures.jpg"
+    imageWidth: "300px"
+    imageHeight: "600px"
+    textPosition: "right"  
+
   - name: "Why GRANAR?"
     text: "GRANAR can serve as a bridge to understanding plant roots at a cellular level, offering a detailed window into the intricate cellular networks of root cross-sections. Its capability to simulate root anatomies based on select anatomical features can make it an important tool for advanced agricultural research and plant breeding practises. Ref: the above image is taken from the [`GRANAR publication`](https://doi.org/10.1104/pp.19.00617)"
     list:
