@@ -226,11 +226,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-why-mecha" >Why MECHA?</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#single-try-mecha-online-with-shinyapps-or-binder" >Try MECHA Online with ShinyApps or Binder</a>
+          <a class="nav-link" href="#single-how-does-mecha-work" >How Does MECHA Work?</a>
         </li>
         
         <li class="nav-item">
@@ -239,6 +235,10 @@
         
         <li class="nav-item">
           <a class="nav-link" href="#single-limitations-of-mecha" >Limitations of MECHA</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-try-mecha-online-with-shinyapps-or-binder" >Try MECHA Online with ShinyApps or Binder</a>
         </li>
         
       </ul>
@@ -254,33 +254,12 @@
       <div class="row">
         
         
-        <div class="col-auto">
-          
-          <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/mecha1.png" alt="What is MECHA?" style="width: 300px; height: 400px;">
-          
+        <div class="col-md-12 text-center">
+          <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/mecha1.jpg" alt="What is MECHA?" style="width: 600px; height: 600px;">
         </div>
-        
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">MECHA is a mathematical model that aids in understanding the movement of water through plant roots. This model considers various root structures, including cell walls and membranes, to calculate water flow. The tool enables researchers to examine various hypotheses about root water transport, enhancing our grasp on plant water relations. Dive deeper into MECHA by visiting its <a href="https://mecharoot.github.io/">official site</a>.</p>
-          
-        </div>
-        
-        
-      </div>
-      
-    </div>
-  </div>
-  
-  
-  
-  <div id="single-why-mecha" class="card mb-5">
-    <div class="card-body">
-      <h2 class="card-title">Why MECHA?</h2>
-      <div class="row">
-        
         
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">MECHA proves invaluable for plant breeders, enabling them to simulate various scenarios and hypotheses related to root water/nutrient transport. Leveraging MECHA, researchers can better understand plant water absorption and transportation, which is pivotal for maximizing crop yields and bolstering agricultural sustainability. Such insights can drive future agricultural research and best practices.</p>
+          <p class="card-text" style="font-size: 1.2em;">MECHA is a mathematical model designed to compute the flow of water through various parts of individual cells in a complete root cross-section. This includes the cell walls, membranes, and plasmodesmata. The model takes into account detailed root anatomical descriptions and a minimal set of cell-level hydraulic properties. It uses experimental data on the permeability of cell walls, membranes, and plasmodesmata. The model also considers hydraulic principles at both the cell and root segment scales. Dive deeper into MECHA by visiting its <a href="https://mecharoot.github.io/">official site</a>.</p>
 
           
           
@@ -299,24 +278,63 @@
   
   
   
-  <div id="single-try-mecha-online-with-shinyapps-or-binder" class="card mb-5">
+  <div id="single-how-does-mecha-work" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">Try MECHA Online with ShinyApps or Binder</h2>
+      <h2 class="card-title">How Does MECHA Work?</h2>
       <div class="row">
         
         
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">Interested in testing MECHA without any installations? Mecha <a href="/Phenorob-DAA/members/">team</a> have the perfect solution for you – <a href="https://plantmodelling.shinyapps.io/mecha/">ShinyApps</a> and <a href="https://mybinder.org/v2/gh/HeymansAdrien/GranarMecha/main">Binder</a>. In just one click, immerse yourself in an interactive environment, exploring the code and data of this model.</p>
-          
+        <div class="col-md-12 text-center">
+          <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/mecha2.jpg" alt="How Does MECHA Work?" style="width: 700px; height: 350px;">
         </div>
         
-        <div class="col-auto">
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">MECHA calculates the root reflection coefficient (sr) and root radial hydraulic conductivity (kr) by combining root anatomical data with cell hydraulic properties. It simulates water flow at the cellular level, resulting in kr predictions that align with experimental findings. MECHA seamlessly transitions from cell-level hydraulics to the broader root cross-section, offering an in-depth view of water transport in roots. Here&rsquo;s a breakdown of how kr of roots are computed in MECHA:</p>
+
           
-          <img class="img-fluid rounded mb-2" src="https://mybinder.org/static/logo.svg" alt="Try MECHA Online with ShinyApps or Binder" style="width: 200px; height: 100px;">
           
-        </div>
-        
-        
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Cell-Level Hydraulic Network</strong>: MECHA computes the flow of water through the walls, membranes, and plasmodesmata of each individual cell throughout a complete root cross-section. This detailed hydraulic network at the cell level provides the foundation for upscaling.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Parameterization with Experimental Data</strong>: The model is parameterized using experimental cell-scale hydraulic properties. These properties include:Conductivity of plasma membranes (Lp), Conductivity of cell walls (kw), and Conductance of plasmodesmata (KPD)</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Predicting Root Hydraulic Properties</strong>: From the detailed cell-level computations, MECHA predicts the root reflection coefficient (sr) and root radial hydraulic conductivity (kr) for the root cylinder approach used in plant-scale models. This prediction connects hydraulic theories across scales.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Comparison with Experimental Data</strong>: The simulated kr values from MECHA fall within the range of measured kr values for maize roots. The model&rsquo;s predictions are validated by comparing them with experimental data from literature.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Sensitivity Analyses</strong>: MECHA conducts sensitivity analyses to quantify the impact of various cell hydraulic properties on kr. For instance, the model assesses the sensitivity of kr to the permeability of cortex cells (Lp) and other parameters.</li>
+                  
+              
+                  
+                  
+                      <li class="list-group-item"><strong>Further Reference</strong>: The image of root architecture level above as well as Mecha working details was taken from the following <a href="https://doi.org/10.1002/pld3.334">publication.</a></li>
+                  
+              
+          </ol>
+          
+
+              
+          
+          
+      </div>
+      
       </div>
       
     </div>
@@ -391,6 +409,31 @@
         <div class="col-auto">
           
           <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/Mecha2.gif" alt="Limitations of MECHA" style="width: 200px; height: 500px;">
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-try-mecha-online-with-shinyapps-or-binder" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Try MECHA Online with ShinyApps or Binder</h2>
+      <div class="row">
+        
+        
+        <div class="col">
+          <p class="card-text" style="font-size: 1.2em;">Interested in testing MECHA without any installations? Mecha <a href="/Phenorob-DAA/members/">team</a> have the perfect solution for you – <a href="https://plantmodelling.shinyapps.io/mecha/">ShinyApps</a> and <a href="https://mybinder.org/v2/gh/HeymansAdrien/GranarMecha/main">Binder</a>. In just one click, immerse yourself in an interactive environment, exploring the code and data of this model.</p>
+          
+        </div>
+        
+        <div class="col-auto">
+          
+          <img class="img-fluid rounded mb-2" src="https://mybinder.org/static/logo.svg" alt="Try MECHA Online with ShinyApps or Binder" style="width: 200px; height: 100px;">
           
         </div>
         
