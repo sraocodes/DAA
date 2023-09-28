@@ -234,11 +234,11 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-limitations-of-mecha" >Limitations of MECHA</a>
+          <a class="nav-link" href="#single-try-mecha-online-with-shinyapps-or-binder" >Try MECHA Online with ShinyApps or Binder</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-try-mecha-online-with-shinyapps-or-binder" >Try MECHA Online with ShinyApps or Binder</a>
+          <a class="nav-link" href="#single-limitations-of-mecha" >Limitations of MECHA</a>
         </li>
         
       </ul>
@@ -359,56 +359,21 @@
             
             <a href="#" class="list-group-item list-group-item-action"><strong>INPUT FILES</strong>: MECHA requires four parameter files stored in the /in folder:</a>
             
-            <a href="#" class="list-group-item list-group-item-action">General.xml: Covers general simulation parameters.</a>
+            <a href="#" class="list-group-item list-group-item-action">General.xml: Covers general simulation parameters. <a href="https://github.com/MECHARoot/MECHA/blob/master/in/General.xml">link to General.xml</a></a>
             
-            <a href="#" class="list-group-item list-group-item-action">BC.xml: Sets boundary conditions for the simulation, determining if the soil is dry, wet, or partially in contact with the root.</a>
+            <a href="#" class="list-group-item list-group-item-action">BC.xml: Sets boundary conditions for the simulation, determining if the soil is dry, wet, or partially in contact with the root. <a href="https://github.com/MECHARoot/MECHA/blob/master/in/BC.xml">Link to BC.xml</a></a>
             
-            <a href="#" class="list-group-item list-group-item-action">Geometry.xml: Defines the root section geometry parameters, allowing you to select the root section for the simulation.</a>
+            <a href="#" class="list-group-item list-group-item-action">Geometry.xml: Defines the root section geometry parameters, allowing you to select the root section for the simulation.<a href="https://github.com/MECHARoot/MECHA/blob/master/in/Maize1_Geometry.xml">Link to Geometry.xml</a></a>
             
-            <a href="#" class="list-group-item list-group-item-action">Hydraulics.xml: Covers the hydraulic parameters of various simulation variables.</a>
+            <a href="#" class="list-group-item list-group-item-action">Hydraulics.xml: Covers the hydraulic parameters of various simulation variables.<a href="https://github.com/MECHARoot/MECHA/blob/master/in/Hydraulics.xml">Link to Hydraulics.xml</a></a>
             
             <a href="#" class="list-group-item list-group-item-action"><strong>OUTPUT FILES</strong>: MECHA saves output files in a folder specified in the General.xml input file, under the Output tag. These files include:</a>
             
             <a href="#" class="list-group-item list-group-item-action">*.PVTK files: Geometry files compatible with Paraview.</a>
             
-            <a href="#" class="list-group-item list-group-item-action">Macro_prop_i.txt files: These provide a summary of simulation results, incorporating the radial data.</a>
+            <a href="#" class="list-group-item list-group-item-action">Macro_prop_i.txt files: These provide a summary of simulation results, incorporating the radial data (<strong>root reflection coefficient and root radial hydraulic conductivity</strong>).</a>
             
           </div>
-          
-        </div>
-        
-        
-      </div>
-      
-    </div>
-  </div>
-  
-  
-  
-  <div id="single-limitations-of-mecha" class="card mb-5">
-    <div class="card-body">
-      <h2 class="card-title">Limitations of MECHA</h2>
-      <div class="row">
-        
-        
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">Despite MECHA&rsquo;s prowess, it does have certain constraints:</p>
-          
-          <div class="list-group">
-            
-            <a href="#" class="list-group-item list-group-item-action">Dimension Limitation: MECHA currently operates in two dimensions, potentially affecting its precision in predicting water pressure and root flow.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">Focus on Hydraulics: The model emphasizes the hydraulic properties of cells, potentially overlooking other environmental factors impacting plant water relations.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">Data Dependency: MECHA necessitates detailed and precise input data, incorporating assumptions that might not encompass the intricacies of real-world processes.</a>
-            
-          </div>
-          
-        </div>
-        
-        <div class="col-auto">
-          
-          <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/Mecha2.gif" alt="Limitations of MECHA" style="width: 200px; height: 500px;">
           
         </div>
         
@@ -434,6 +399,43 @@
         <div class="col-auto">
           
           <img class="img-fluid rounded mb-2" src="https://mybinder.org/static/logo.svg" alt="Try MECHA Online with ShinyApps or Binder" style="width: 200px; height: 100px;">
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-limitations-of-mecha" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Limitations of MECHA</h2>
+      <div class="row">
+        
+        
+        <div class="col">
+          <p class="card-text" style="font-size: 1.2em;">Despite MECHA&rsquo;s prowess, it does have certain constraints:</p>
+          
+          <div class="list-group">
+            
+            <a href="#" class="list-group-item list-group-item-action"><strong>Dimension Limitation</strong>: The current version of MECHA is suitable for addressing questions of water flow in root segments with little variation along the longitudinal axis in terms of hydraulic properties. This means it&rsquo;s primarily designed for root segments that don&rsquo;t have significant changes in hydraulic properties along their length, such as the distal differentiated 10 cm of maize roots grown in hydroponics, excluding the elongation zone.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action"><strong>Longitudinal Variations</strong>: The model does not inherently account for longitudinal variations of hydraulic properties or root environment.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action"><strong>Focus on Hydraulics</strong>: The model emphasizes the hydraulic properties of cells, potentially overlooking other environmental factors impacting plant water relations.</a>
+            
+            <a href="#" class="list-group-item list-group-item-action"><strong>Data Dependency</strong>: MECHA necessitates detailed and precise input data, incorporating assumptions that might not encompass the intricacies of real-world processes. The illustrations in the study focus on a limited number of default, high, and low parameter values from the literature. Although a wide range of cell hydraulic parameter values were tested, there might be limitations in capturing the full range of possible hydraulic behaviors in all root types.</a>
+            
+          </div>
+          
+        </div>
+        
+        <div class="col-auto">
+          
+          <img class="img-fluid rounded mb-2" src="/Phenorob-DAA/images/Mecha2.gif" alt="Limitations of MECHA" style="width: 200px; height: 500px;">
           
         </div>
         
