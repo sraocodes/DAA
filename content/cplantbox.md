@@ -10,7 +10,7 @@ sections:
     imageWidth: "250px"
     imageHeight: "300px"
     textPosition: "right"
-    
+
   - name: "How does it work?"
     text: "The workflow to use CPlantBox starts with generating input files, then interpreting parameters based on the input file. Following this, the model creates the topological structure from the seed or root, and finally, the output can be written to be visualized.The C-PlantBox framework requires specific data structures for its input to ensure accurate modeling. These structures define the parameters and conditions for both root and shoot systems simulation."
     list:
@@ -24,20 +24,19 @@ sections:
     textPosition: "bottom"
 
   - name: "C-PlantBox features"
-    text: "CPlantBox is designed to be flexible and can be coupled with external models. It has been coupled with the carbon and water flow model, PiafMunch. This coupling allows for fast simulations on complex plant structures, including the simulation of carbon and water flows within the plant. The main features of C-Plantbox are:"
+    text: "CPlantBox integrates various modules from other Functional Structural Plant Models (FSPMs) into a single user-friendly framework, enhancing the representation of carbon and water fluxes in the soil-plant-atmosphere continuum. This comprehensive approach enables feedback between plant growth and water-carbon fluxes, with carbon partitioning emerging as a model property. CPlantBox offers flexibility in spatial and temporal resolution and can represent diverse plants. It aims to test genotype-environment-management interactions and their emergent properties. Technically, it uses graph formalism for organism representation, combining **C++** speed with **Python's** clarity. For example, it has been coupled with the carbon and water flow model, PiafMunch. This coupling allows for fast simulations on complex plant structures, including the simulation of carbon and water flows within the plant. The highlights:"
     list:
       - "It is capable of simulating the growth and development of a variety of plant architectures (root and shoot)."
       - "It is flexible and can be coupled with external modelling tools."
-      - "It can be used to understand how carbon and water flows influence each other and respond to heterogeneous environmental conditions."   
       - "It is open source, highly accessible and source code available on [github](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox)."
   
   - name: "Try It Online with Binder!"
-    text: "If you'd like to explore and run C-Plantbox without any installations on your local machine, C-Plantbox team have a convenient solution for you – [Binder](http://b.cplantbox.com/)! With just a click, you can have an interactive environment to play with the code and data in this notebook."
+    text: "If you'd like to explore and run C-Plantbox without any installations on your local machine, C-Plantbox team have a convenient solution for you – [Binder](http://b.cplantbox.com/)! With just a click, you can have an interactive environment to play with the code and data in this notebook. What are you waiting for?"
     list:
-      - "**Introduction to the Subject**: Delving deep into the basics to ensure a good grasp of the core concepts."
-      - "**Interactive Examples**: Modify and execute code to see real-time results."
-      - "**Visualizations**: Data-driven insights represented visually for easy understanding."
-      - "**Exercises**: Apply what you've learned through simple exercises."
+      - "**Introduction**: Delving deep into the basics to ensure a good grasp of the core plant modeling concepts."
+      - "**Interactive Examples**: Modify and execute code to see real-time plant root and shoot growths."
+      - "**Visualizations**: Python codes and vtk format output enables easy visualization of created plant architectures."
+      - "**Exercises**: Apply what you've learned through simple exercises and examples."
     note: "Click the button below to launch this notebook on Binder. Make sure you have a stable internet connection for the best experience."
     image: "https://mybinder.org/static/logo.svg" # The official Binder logo
     imageWidth: "200px"
