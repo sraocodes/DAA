@@ -87,6 +87,30 @@
           {{ end }}
 
           <!------------------------------------------------------------------------------------- -->    
+          <!-- handle tables in the single pages -->
+
+          {{ if .table }}
+          <div class="table-responsive ml-3">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+                <tr>
+                  {{ range .table.headers }}
+                  <th>{{ . }}</th>
+                  {{ end }}
+                </tr>
+              </thead>
+              <tbody>
+                {{ range .table.rows }}
+                <tr>
+                  {{ range . }}
+                  <td>{{ . | markdownify | safeHTML }}</td> <!-- Render Markdown content -->
+                  {{ end }}
+                </tr>
+                {{ end }}
+              </tbody>
+            </table>
+          </div>
+          {{ end }}
           
           
       </div>
