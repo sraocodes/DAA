@@ -102,17 +102,34 @@
               <tbody>
                 {{ range .table.rows }}
                 <tr>
+                  {{ $index := 0 }} <!-- Initialize an index variable -->
                   {{ range . }}
-                  <td>{{ . | markdownify | safeHTML }}</td> <!-- Render Markdown content -->
+                  {{ if eq $index 1 }} <!-- Check if it's the second column -->
+                    <td>
+                      {{ if and (isset . 0) (isset . 1) }} <!-- Check if it's a list -->
+                        <ul>
+                          {{ range . }} <!-- Loop through the list items -->
+                            <li>{{ . | markdownify | safeHTML }}</li>
+                          {{ end }}
+                        </ul>
+                      {{ else }}
+                        {{ . | markdownify | safeHTML }}
+                      {{ end }}
+                    </td>
+                  {{ else }}
+                    <td>{{ . | markdownify | safeHTML }}</td>
+                  {{ end }}
+                  {{ $index = add $index 1 }} <!-- Increment the index variable -->
                   {{ end }}
                 </tr>
                 {{ end }}
               </tbody>
             </table>
           </div>
-          {{ end }}
+          {{ end }}        
           
-          
+          <!------------------------------------------------------------------------------------- -->    
+       
       </div>
       {{ end }}
       </div>
