@@ -253,6 +253,10 @@
           <a class="nav-link" href="#single-data-structure-model-input-and-output-variables" >Data Structure: Model Input and Output Variables</a>
         </li>
         
+        <li class="nav-item">
+          <a class="nav-link" href="#single-tight-coupling-with-other-models" >Tight Coupling with other models</a>
+        </li>
+        
       </ul>
     </div>
   </div>
@@ -360,9 +364,10 @@
               
           
 
+                  
           
-          
-          
+              
+       
       </div>
       
       </div>
@@ -438,9 +443,10 @@
               
           
 
+                  
           
-          
-          
+              
+       
       </div>
       
       </div>
@@ -486,9 +492,10 @@
               
           
 
+                  
           
-          
-          
+              
+       
       </div>
       
       </div>
@@ -564,9 +571,181 @@
               
           
 
+                  
+          
+              
+       
+      </div>
+      
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-tight-coupling-with-other-models" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Tight Coupling with other models</h2>
+      <div class="row">
+        
+        
+        <div class="col-md-12 text-center">
+          <img class="img-fluid rounded mb-2" src="/images/cplantbox4.jpg" alt="Tight Coupling with other models" style="width: 885px; height: 576px;">
+        </div>
+        
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">The main objective of coupling CPlantBox with PiafMunch and Dumux is to simulate the carbon and water flow within the plant-soil system. PiafMunch is responsible for handling the carbon flow module within the plant while DuMux is used to simulate soil water flow. When coupled with CPlantBox, it allows for a comprehensive simulation of the soil–plant–atmosphere continuum, considering both water and carbon fluxes. Similarly the objective of integrating the FvCB-stomatal regulation module with CPlantBox is to simulate the processes of transpiration and photosynthesis, particularly in the leaf blades, and to provide a comprehensive understanding of the plant&rsquo;s response to environmental conditions. The below table gives further details:</p>
+
           
           
           
+          
+
+              
+          
+
+          
+          <div class="table-responsive ml-3">
+            <table class="table table-bordered table-striped table-hover">
+              <thead>
+                <tr>
+                  
+                  <th>Model</th>
+                  
+                  <th>Parameters Exchanged</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>From <strong>CPlantBox</strong> to <strong>PiafMunch</strong></td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Information related to plant growth, structure, and current state which can influence carbon flow.
+                      
+                    </td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>From <strong>PiafMunch</strong> to <strong>CPlantBox</strong></td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Data on carbon flow, sucrose source, and potential carbon limitations.
+                      
+                    </td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>From <strong>CPlantBox</strong> to <strong>DuMux</strong></td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Information about plant growth, root structure, and water requirements.
+                      
+                    </td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>From <strong>DuMux</strong> to <strong>CPlantBox</strong></td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Data on soil water flow, availability, and potential water uptake by the plant.
+                      
+                    </td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>From <strong>CPlantBox</strong> to <strong>FvCB</strong>-Stomatal Regulation</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Information related to plant growth, structure, current state, and environmental conditions that can influence transpiration and photosynthesis.
+                      
+                    </td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>From <strong>FvCB</strong>-Stomatal Regulation to <strong>CPlantBox</strong></td>
+                  
+                   
+                  
+                   
+                    <td>
+                       
+                        <ul>
+                           
+                            <li><strong>Net Assimilation Rate</strong>: Represents the rate of carbon assimilation in the plant.</li>
+                           
+                            <li><strong>Leaf Outer-Xylem Water Potential</strong>: Indicates the water potential in the outer xylem of the leaf, influencing water movement within the plant.</li>
+                          
+                        </ul>
+                      
+                    </td>
+                  
+                   
+                  
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+                  
+          
+              
+       
       </div>
       
       </div>

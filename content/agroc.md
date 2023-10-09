@@ -66,4 +66,26 @@ sections:
       - "Soil carbon: Heterotrophic respiration and organic carbon."
       - "Net ecosystem exchange: Net CO2 exchange between cropland and the atmosphere."
 
+  - name: "Agro-C Model Components Overview"
+    text: "This table provides a concise overview of each Fortran file within the Agro-C model, detailing their primary functions, key subroutines, associated variables, and input/output behaviors. It serves as a quick reference guide for understanding the modular structure and core functionalities of the Agro-C ecosystem model."
+    table:
+      headers: ["File", "Module Name", "Primary Functionality", "Associated Variables", "Input/Output"]
+      rows:
+        - ["carbon.f90", "Carbon", "Manages the carbon cycle within the AgroSea model.", "CO2Top, CO2Bot, NPP, GPP", "Output: Carbon fluxes"]
+        - ["datatypes.f90", "Datatypes", "Defines custom data types and structures.", "Custom data types and structures.", "Not directly applicable"]
+        - ["doxygen.conf", "Doxygen Config", "Configuration for Doxygen documentation.",  "N/A", "N/A"]
+        - ["geometry.f90", "Geometry", "Defines the spatial structure or layout.", "Spatial dimensions or properties.", "Input for spatial setup"]
+        - ["input.f90", "Input", "Reads and processes initial data.",  "lSurf, rSoil, Prec, iTemp, jTemp", "Input: Various datasets"]
+        - ["makefile", "Makefile", "Specifies the compilation and linking rules for building the Agro-C model.",  "N/A", "N/A"]
+        - ["material.f90", "Material", "Defines properties of different soil materials.", "Soil properties", "Input for material properties"]
+        - ["nitrogen.f90", "Nitrogen", "Manages the nitrogen cycle.", "Nitrogen pools and fluxes.", "Output for nitrogen fluxes"]
+        - ["output.f90", "Output", "Processes and presents the results.", "GPP, NPP, TER, NEE", "Output: Simulation results"]
+        - ["phosphorus.f90", "Phosphorus", "Manages the phosphorus cycle.",  "Phosphorus pools and fluxes.", "Output for phosphorus fluxes"]
+        - ["plants.f90", "Plants", "Defines various plant types and properties.",  "Plant types and properties.", "Both, depending on plant data"]
+        - ["sink.f90", "Sink", "Handles the concept of sinks in the model.", "Sink dynamics and quantities.", "Output for modeled sink quantities"]
+        - ["soilco2.f90", "SoilCO2", "Simulates CO2 dynamics within the soil.",  "CO2 pools and fluxes in soil.", "Output for soil CO2 fluxes"]
+        - ["solute.f90", "Solute", "Manages solute movement in the soil.", "Solute concentrations and transport.", "Input for initial solute conditions"]
+        - ["temper.f90", "Temper", "Manages temperature dynamics.",  "Temperature values and fluxes.", "Output for temperature values"]
+        - ["time.f90", "Time", "Handles time-related functionalities.",  "Time values and steps.", "Input for time setup"]
+        - ["watflow.f90", "Watflow", "Simulates water flow in the soil.", "Water flow values and parameters.", "Input for initial water conditions"]
 ---
