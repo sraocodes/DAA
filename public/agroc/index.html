@@ -254,7 +254,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-tight-coupling-with-other-models" >Tight Coupling with other models</a>
+          <a class="nav-link" href="#single-agro-c-model-components-overview" >Agro-C Model Components Overview</a>
         </li>
         
       </ul>
@@ -584,18 +584,14 @@
   
   
   
-  <div id="single-tight-coupling-with-other-models" class="card mb-5">
+  <div id="single-agro-c-model-components-overview" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">Tight Coupling with other models</h2>
+      <h2 class="card-title">Agro-C Model Components Overview</h2>
       <div class="row">
         
         
-        <div class="col-md-12 text-center">
-          <img class="img-fluid rounded mb-2" src="/images/cplantbox4.jpg" alt="Tight Coupling with other models" style="width: 885px; height: 576px;">
-        </div>
-        
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">The main objective of coupling CPlantBox with PiafMunch and Dumux is to simulate the carbon and water flow within the plant-soil system. PiafMunch is responsible for handling the carbon flow module within the plant while DuMux is used to simulate soil water flow. When coupled with CPlantBox, it allows for a comprehensive simulation of the soil–plant–atmosphere continuum, considering both water and carbon fluxes. Similarly the objective of integrating the FvCB-stomatal regulation module with CPlantBox is to simulate the processes of transpiration and photosynthesis, particularly in the leaf blades, and to provide a comprehensive understanding of the plant&rsquo;s response to environmental conditions. The below table gives further details:</p>
+          <p class="card-text" style="font-size: 1.2em;">This table provides a concise overview of each Fortran file within the Agro-C model, detailing their primary functions, key subroutines, associated variables, and input/output behaviors. It serves as a quick reference guide for understanding the modular structure and core functionalities of the Agro-C ecosystem model.</p>
 
           
           
@@ -611,9 +607,15 @@
               <thead>
                 <tr>
                   
-                  <th>Model</th>
+                  <th>File</th>
                   
-                  <th>Parameters Exchanged</th>
+                  <th>Module Name</th>
+                  
+                  <th>Primary Functionality</th>
+                  
+                  <th>Associated Variables</th>
+                  
+                  <th>Input/Output</th>
                   
                 </tr>
               </thead>
@@ -623,16 +625,31 @@
                    
                   
                   
-                    <td>From <strong>CPlantBox</strong> to <strong>PiafMunch</strong></td>
+                    <td>carbon.f90</td>
                   
                    
                   
                    
                     <td>
                       
-                        Information related to plant growth, structure, and current state which can influence carbon flow.
+                        Carbon
                       
                     </td>
+                  
+                   
+                  
+                  
+                    <td>Manages the carbon cycle within the AgroSea model.</td>
+                  
+                   
+                  
+                  
+                    <td>CO2Top, CO2Bot, NPP, GPP</td>
+                  
+                   
+                  
+                  
+                    <td>Output: Carbon fluxes</td>
                   
                    
                   
@@ -642,16 +659,31 @@
                    
                   
                   
-                    <td>From <strong>PiafMunch</strong> to <strong>CPlantBox</strong></td>
+                    <td>datatypes.f90</td>
                   
                    
                   
                    
                     <td>
                       
-                        Data on carbon flow, sucrose source, and potential carbon limitations.
+                        Datatypes
                       
                     </td>
+                  
+                   
+                  
+                  
+                    <td>Defines custom data types and structures.</td>
+                  
+                   
+                  
+                  
+                    <td>Custom data types and structures.</td>
+                  
+                   
+                  
+                  
+                    <td>Not directly applicable</td>
                   
                    
                   
@@ -661,16 +693,31 @@
                    
                   
                   
-                    <td>From <strong>CPlantBox</strong> to <strong>DuMux</strong></td>
+                    <td>doxygen.conf</td>
                   
                    
                   
                    
                     <td>
                       
-                        Information about plant growth, root structure, and water requirements.
+                        Doxygen Config
                       
                     </td>
+                  
+                   
+                  
+                  
+                    <td>Configuration for Doxygen documentation.</td>
+                  
+                   
+                  
+                  
+                    <td>N/A</td>
+                  
+                   
+                  
+                  
+                    <td>N/A</td>
                   
                    
                   
@@ -680,16 +727,31 @@
                    
                   
                   
-                    <td>From <strong>DuMux</strong> to <strong>CPlantBox</strong></td>
+                    <td>geometry.f90</td>
                   
                    
                   
                    
                     <td>
                       
-                        Data on soil water flow, availability, and potential water uptake by the plant.
+                        Geometry
                       
                     </td>
+                  
+                   
+                  
+                  
+                    <td>Defines the spatial structure or layout.</td>
+                  
+                   
+                  
+                  
+                    <td>Spatial dimensions or properties.</td>
+                  
+                   
+                  
+                  
+                    <td>Input for spatial setup</td>
                   
                    
                   
@@ -699,16 +761,31 @@
                    
                   
                   
-                    <td>From <strong>CPlantBox</strong> to <strong>FvCB</strong>-Stomatal Regulation</td>
+                    <td>input.f90</td>
                   
                    
                   
                    
                     <td>
                       
-                        Information related to plant growth, structure, current state, and environmental conditions that can influence transpiration and photosynthesis.
+                        Input
                       
                     </td>
+                  
+                   
+                  
+                  
+                    <td>Reads and processes initial data.</td>
+                  
+                   
+                  
+                  
+                    <td>lSurf, rSoil, Prec, iTemp, jTemp</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Various datasets</td>
                   
                    
                   
@@ -718,22 +795,405 @@
                    
                   
                   
-                    <td>From <strong>FvCB</strong>-Stomatal Regulation to <strong>CPlantBox</strong></td>
+                    <td>makefile</td>
                   
                    
                   
                    
                     <td>
-                       
-                        <ul>
-                           
-                            <li><strong>Net Assimilation Rate</strong>: Represents the rate of carbon assimilation in the plant.</li>
-                           
-                            <li><strong>Leaf Outer-Xylem Water Potential</strong>: Indicates the water potential in the outer xylem of the leaf, influencing water movement within the plant.</li>
-                          
-                        </ul>
+                      
+                        Makefile
                       
                     </td>
+                  
+                   
+                  
+                  
+                    <td>Specifies the compilation and linking rules for building the Agro-C model.</td>
+                  
+                   
+                  
+                  
+                    <td>N/A</td>
+                  
+                   
+                  
+                  
+                    <td>N/A</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>material.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Material
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Defines properties of different soil materials.</td>
+                  
+                   
+                  
+                  
+                    <td>Soil properties</td>
+                  
+                   
+                  
+                  
+                    <td>Input for material properties</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>nitrogen.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Nitrogen
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Manages the nitrogen cycle.</td>
+                  
+                   
+                  
+                  
+                    <td>Nitrogen pools and fluxes.</td>
+                  
+                   
+                  
+                  
+                    <td>Output for nitrogen fluxes</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>output.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Output
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Processes and presents the results.</td>
+                  
+                   
+                  
+                  
+                    <td>GPP, NPP, TER, NEE</td>
+                  
+                   
+                  
+                  
+                    <td>Output: Simulation results</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>phosphorus.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Phosphorus
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Manages the phosphorus cycle.</td>
+                  
+                   
+                  
+                  
+                    <td>Phosphorus pools and fluxes.</td>
+                  
+                   
+                  
+                  
+                    <td>Output for phosphorus fluxes</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>plants.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Plants
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Defines various plant types and properties.</td>
+                  
+                   
+                  
+                  
+                    <td>Plant types and properties.</td>
+                  
+                   
+                  
+                  
+                    <td>Both, depending on plant data</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>sink.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Sink
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Handles the concept of sinks in the model.</td>
+                  
+                   
+                  
+                  
+                    <td>Sink dynamics and quantities.</td>
+                  
+                   
+                  
+                  
+                    <td>Output for modeled sink quantities</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>soilco2.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        SoilCO2
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Simulates CO2 dynamics within the soil.</td>
+                  
+                   
+                  
+                  
+                    <td>CO2 pools and fluxes in soil.</td>
+                  
+                   
+                  
+                  
+                    <td>Output for soil CO2 fluxes</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>solute.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Solute
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Manages solute movement in the soil.</td>
+                  
+                   
+                  
+                  
+                    <td>Solute concentrations and transport.</td>
+                  
+                   
+                  
+                  
+                    <td>Input for initial solute conditions</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>temper.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Temper
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Manages temperature dynamics.</td>
+                  
+                   
+                  
+                  
+                    <td>Temperature values and fluxes.</td>
+                  
+                   
+                  
+                  
+                    <td>Output for temperature values</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>time.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Time
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Handles time-related functionalities.</td>
+                  
+                   
+                  
+                  
+                    <td>Time values and steps.</td>
+                  
+                   
+                  
+                  
+                    <td>Input for time setup</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>watflow.f90</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Watflow
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Simulates water flow in the soil.</td>
+                  
+                   
+                  
+                  
+                    <td>Water flow values and parameters.</td>
+                  
+                   
+                  
+                  
+                    <td>Input for initial water conditions</td>
                   
                    
                   
