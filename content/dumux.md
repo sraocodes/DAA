@@ -5,7 +5,7 @@ draft: false
 
 sections:  
   - name: "What is DuMux-ROSI?"
-    text: "DuMux-ROSI is a novel application of DuMux, integrating the CPlantBox model via a Python binding. This synergy enhances the simulation of soil water dynamics and root-soil interactions. ROSI stands for Root-Soil Interaction. DuMux, an acronym for Dune for multi-{phase, component, scale, physics, domain, . . . } flow and transport in porous media, is a free and open-source simulator for porous media processes. DuMux-ROSI has made significant strides in plant science, particularly in the realm of root-soil interaction modeling."
+    text: "DuMux-ROSI is an application of the DuMux: DUNE for Multi-{Phase, Component, Scale, Physics, …} flow and transport in porous media simulator which is integrated into the CPlantBox framework via a Python binding in order to represent the soil in which the plant roots are growing. ROSI stands for Root-Soil Interaction. This synergy coupling enables to accurately represent soil and rhizosphere processes and their interactions with a growing root architecture."
     image: "images/Rosi1.png"
     imageWidth: "250px"
     imageHeight: "300px"
