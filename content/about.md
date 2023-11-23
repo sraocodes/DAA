@@ -5,7 +5,7 @@ draft: false
 
 sections:  
   - name: "About PhenoRob DAA"
-    text: "Welcome to the future of agriculture! The [PhenoRob](https://www.phenorob.de/) Digital Agricultural Avatar (DAA) is not just another project; it's a revolution. As a pivotal component of the larger PhenoRob initiative, the DAA acts as a digital mirror to our agricultural systems. Imagine having a virtual farm where you can predict outcomes based on various scenarios. That's what DAA offers. Collaboratively developed by [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html), this tool is your crystal ball for sustainable farming, offering actionable insights derived from a blend of models representing everything from soil chemistry to economic factors."
+    text: "Welcome to the future of agriculture! The [PhenoRob](https://www.phenorob.de/) Digital Agricultural Avatar (DAA) is a key element in advancing modern agriculture. As part of the broader PhenoRob initiative, the DAA aims to digitally represent agricultural systems for analysis. Created in collaboration between [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html), DAA will provide data-driven recommendations, integrating models that cover aspects from soil chemistry to economic variables."
     image: "images/DAA.png"
     imageWidth: "300px"
     imageHeight: "300px"

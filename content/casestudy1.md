@@ -82,4 +82,32 @@ sections:
       - "**Sustainable Agriculture**: By providing insights into the effects of soil compaction and weather on crop species, the model plays a pivotal role in promoting sustainable agricultural practices."
       - "Find more on this study from the article [published in Front. Plant Sci. Journal](https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full)"
 
+  - name: "Installation Guide: SIMPLACE-CPlantBox"
+    text: "This section provides the installation guide for setting up SIMPLACE-CPlantBox, along with insights into the Python script that controls the coupling between the models."
+    list:
+      - item: "**Prerequisites**"
+        sublist:
+          - "Create a folder 'workspace' in your home directory."
+          - "Make sure the required modules are loaded in your system."
+      - item: "**Repository Checkout**"
+        sublist:
+          - "Checkout the simplace_wrapper from the SVN repository `svn co svn://svn.simplace.net/svn/simplace_wrapper simplace_wrapper`."
+          - "Navigate to example folder and give execution rights to installation shell scripts. For e.g
+             `chmod +x SIMPLACE_v5.0_install_bonnares.sh`"
+      - item: "**Installation Steps**"
+        sublist:
+          - "Execute the shell scripts to download and compile SIMPLACE and CPlantBox."
+      - item: "**Python Script Configuration**"
+        sublist:
+          - "Python script accepts command-line arguments for various parameters like solution ID, rain scale, and crop type."
+          - "Script initializes root system and sets up simulation parameters."
+      - item: "**Running an Example**"
+        sublist:
+          - "Load the required modules."
+          - "Run the example script located in misc/example_simplace_cplantbox.py."
+          - "Python script controls the iterative interaction between SIMPLACE and CPlantBox, updating parameters and fetching results at each simulation step."
+    videos: 
+    - videoID: "INyTdrHIYAM"
+      videoTitle: "Installation Tutorial Video"
+
 ---

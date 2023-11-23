@@ -342,7 +342,7 @@
         </div>
         
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. At its core lies the Richards equation, a fundamental equation in soil physics that describes unsaturated water flow in porous media. Utilizing the Richards equation, it enables in-depth simulations of soil water flow dynamics. An input file serves to specify model parameters and initial and boundary conditions. The Python binding facilitates coupling DuMux with CPlantBox, thereby enabling concurrent modeling of root growth and water uptake. This Richards equation solved in DuMux-ROSI can be written as: {{&lt; rawhtml &gt;}} [ \frac{\partial (\rho_w \Phi S)}{\partial t} - ∇ . \frac{\kappa}{\mu} \rho_w K (∇ p_w - \rho_w g) = 0 ] {{&lt; /rawhtml &gt;}} where</p>
+          <p class="card-text" style="font-size: 1.2em;">DuMux-ROSI extends the capabilities of DuMux, specializing in porous media flow and transport processes. At its core lies the Richards equation, a fundamental equation in soil physics that describes unsaturated water flow in porous media. Utilizing the Richards equation, it enables in-depth simulations of soil water flow dynamics. An input file serves to specify model parameters and initial and boundary conditions. The Python binding facilitates coupling DuMux with CPlantBox, thereby enabling concurrent modeling of root growth and water uptake. This Richards equation solved in DuMux-ROSI can be written as:  \[ \frac{\partial (\rho_w \Phi S)}{\partial t} - ∇ . \frac{\kappa}{\mu} \rho_w K (∇ p_w - \rho_w g) = 0 \]  where</p>
 
           
           
@@ -352,22 +352,22 @@
               
                   
                   
-                      <li class="list-group-item">{{&lt; rawhtml &gt;}}( S ){{&lt; /rawhtml &gt;}}: Saturation of the soil.</li>
+                      <li class="list-group-item">\( S \): Saturation of the soil.</li>
                   
               
                   
                   
-                      <li class="list-group-item">{{&lt; rawhtml &gt;}}( \Phi ){{&lt; /rawhtml &gt;}}: Porosity of the soil.</li>
+                      <li class="list-group-item">\( \Phi \): Porosity of the soil.</li>
                   
               
                   
                   
-                      <li class="list-group-item">{{&lt; rawhtml &gt;}}( \theta ){{&lt; /rawhtml &gt;}}: Volumetric water content of the soil, given by {{&lt; rawhtml &gt;}}( \theta = \Phi S ){{&lt; /rawhtml &gt;}}. It represents the fraction of the volume of soil that is occupied by water.</li>
+                      <li class="list-group-item">\( \theta \): Volumetric water content of the soil, given by \( \theta = \Phi S \). It represents the fraction of the volume of soil that is occupied by water.</li>
                   
               
                   
                   
-                      <li class="list-group-item">{{&lt; rawhtml &gt;}}( t ){{&lt; /rawhtml &gt;}}: Time. The equation describes how the water content changes over time.</li>
+                      <li class="list-group-item">\( t \): Time. The equation describes how the water content changes over time.</li>
                   
               
                   
@@ -382,27 +382,27 @@
               
                   
                   
-                      <li class="list-group-item">{{&lt; rawhtml &gt;}}( \psi ){{&lt; /rawhtml &gt;}}: Soil water potential. It represents the energy status of water in soil and drives the flow of water.</li>
+                      <li class="list-group-item">\( \psi \): Soil water potential. It represents the energy status of water in soil and drives the flow of water.</li>
                   
               
                   
                   
-                      <li class="list-group-item">{{&lt; rawhtml &gt;}}( \rho_w ){{&lt; /rawhtml &gt;}}: Water density.</li>
+                      <li class="list-group-item">\( \rho_w \): Water density.</li>
                   
               
                   
                   
-                      <li class="list-group-item">{{&lt; rawhtml &gt;}}( \kappa ){{&lt; /rawhtml &gt;}}: Relative permeability.</li>
+                      <li class="list-group-item">\( \kappa \): Relative permeability.</li>
                   
               
                   
                   
-                      <li class="list-group-item">{{&lt; rawhtml &gt;}}( \mu ){{&lt; /rawhtml &gt;}}: Dynamic viscosity.</li>
+                      <li class="list-group-item">\( \mu \): Dynamic viscosity.</li>
                   
               
                   
                   
-                      <li class="list-group-item">{{&lt; rawhtml &gt;}}( p_w ){{&lt; /rawhtml &gt;}}: Absolute pressure of the wetting phase (water).</li>
+                      <li class="list-group-item">\( p_w \): Absolute pressure of the wetting phase (water).</li>
                   
               
                   

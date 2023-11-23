@@ -4,8 +4,13 @@ date: 2023-07-28
 draft: false
 
 sections:  
+<<<<<<< HEAD
   - name: "What is CPlantBox?"
     text: "CPlantBox is a full plant modeling framework that focuses on the growth and development of plant architectures, including both the root and shoot systems. It represents the plant as a single topological network of organs. The simulated plant architecture is made up of nodes or coordinates, and these nodes' properties and interactions form the entire network. For the root part, CPlantBox inherits the flexibility of CRootBox, allowing it to generate any type of root architecture. For the shoot, it has implemented various branching and leaf arrangement patterns. By combining these patterns, CPlantBox can simulate many types of shoot architectures. Further, the latest CPlantBox implementation provides linkage with different modules (photosynthesis and carbon flow) within a single framework, enhancing its capabilities and making it a versatile tool for plant studies. Visit the official [CPlantBox repository](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox) for more information."
+=======
+  - name: "What is C-PlantBox?"
+    text: "CPlantBox is a full plant modeling framework that focuses on the growth and development of plant architectures, including both the root and shoot systems, and its interaction with the soil. It represents the plant and its different organs as a single topological network. The simulated plant architecture is represented by a tree graph, consisting of nodes and edges. The 3D coordinates of each point are known. The edges, also called root segments, connect the nodes. These nodes’ and edges’ properties and interactions form the entire network. For the root part, CPlantBox inherits the flexibility of CRootBox, allowing it to generate any type of root architecture. For the shoot, it has implemented various branching and leaf arrangement patterns. By combining these patterns, CPlantBox can simulate many types of shoot architectures. Further, the latest CPlantBox implementation provides linkage with different modules (photosynthesis, water and carbon flow inside the plant, water flow and solute transport in the soil, exchange of water and solutes between plant and soil) within a single framework, enhancing its capabilities and making it a versatile tool for plant studies. Visit the official [CPlantBox repository](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox) for more information."
+>>>>>>> d525d00193d1f5364e6039788872f734670c5161
     image: "images/Cplantbox1.png"
     imageWidth: "250px"
     imageHeight: "300px"
