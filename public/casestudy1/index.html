@@ -136,12 +136,6 @@
                       
                           
                       
-                      <a class="dropdown-item" href="https://www.phenorobdaa.de//dumux/">Dumux-ROSI</a>
-                  
-                      
-                      
-                          
-                      
                       <a class="dropdown-item" href="https://www.phenorobdaa.de//terrsysmp/">TerrSysMP</a>
                   
               </div>
@@ -239,6 +233,10 @@
         
         <li class="nav-item">
           <a class="nav-link" href="#single-conclusions-what-this-study-can-promise" >Conclusions: What this study can promise?</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#single-installation-guide-simplace-cplantbox" >Installation Guide: SIMPLACE-CPlantBox</a>
         </li>
         
       </ul>
@@ -430,7 +428,7 @@
                               
                                   <li class="list-group-item bg-light"><strong>Growth Prioritization</strong>: Emphasis on soil factors over shoot-derived biomass restrictions.</li>
                               
-                                  <li class="list-group-item bg-light"><strong>Mathematical Representation</strong>: If \( RE_{potential} > RE_{max} \), CRootbox adjusts to ensure \( RLD_{actual} \leq RLD_{potential} \). In other words, if potential root elongation was higher than the maximum allowed, CRootbox would reduce root growth equally across all roots</li>
+                                  <li class="list-group-item bg-light"><strong>Mathematical Representation</strong>: If {{&lt; rawhtml &gt;}}( RE_{potential} &gt; RE_{max} ){{&lt; /rawhtml &gt;}}, CRootbox adjusts to ensure {{&lt; rawhtml &gt;}}( RLD_{actual} \leq RLD_{potential} ){{&lt; /rawhtml &gt;}}. In other words, if potential root elongation was higher than the maximum allowed, CRootbox would reduce root growth equally across all roots</li>
                               
                           </ol>
                       </li>
@@ -578,6 +576,123 @@
       
       </div>
       
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-installation-guide-simplace-cplantbox" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Installation Guide: SIMPLACE-CPlantBox</h2>
+      <div class="row">
+        
+        
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">This section provides the installation guide for setting up SIMPLACE-CPlantBox, along with insights into the Python script that controls the coupling between the models.</p>
+
+          
+          
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <strong>Prerequisites</strong>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light">Create a folder &lsquo;workspace&rsquo; in your home directory.</li>
+                              
+                                  <li class="list-group-item bg-light">Make sure the required modules are loaded in your system.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <strong>Repository Checkout</strong>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light">Checkout the simplace_wrapper from the SVN repository <code>svn co svn://svn.simplace.net/svn/simplace_wrapper simplace_wrapper</code>.</li>
+                              
+                                  <li class="list-group-item bg-light">Navigate to example folder and give execution rights to installation shell scripts. For e.g <code>chmod +x SIMPLACE_v5.0_install_bonnares.sh</code></li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <strong>Installation Steps</strong>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light">Execute the shell scripts to download and compile SIMPLACE and CPlantBox.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <strong>Python Script Configuration</strong>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light">Python script accepts command-line arguments for various parameters like solution ID, rain scale, and crop type.</li>
+                              
+                                  <li class="list-group-item bg-light">Script initializes root system and sets up simulation parameters.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+                  
+                  
+                      <li class="list-group-item">
+                          <strong>Running an Example</strong>
+                          <ol class="list-unstyled ml-4">
+                              
+                                  <li class="list-group-item bg-light">Load the required modules.</li>
+                              
+                                  <li class="list-group-item bg-light">Run the example script located in misc/example_simplace_cplantbox.py.</li>
+                              
+                                  <li class="list-group-item bg-light">Python script controls the iterative interaction between SIMPLACE and CPlantBox, updating parameters and fetching results at each simulation step.</li>
+                              
+                          </ol>
+                      </li>
+                  
+                  
+              
+          </ol>
+          
+
+              
+          
+
+                  
+          
+              
+       
+      </div>
+      
+      </div>
+      
+      
+          
+          <div class="video-title">Installation Tutorial Video</div>  
+          <div class="embed-responsive embed-responsive-16by9 my-4" style="max-width: 60%; margin: auto;">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/INyTdrHIYAM" allowfullscreen></iframe>
+          </div>
+      
+  
     </div>
   </div>
   
