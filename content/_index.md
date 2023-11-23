@@ -56,12 +56,7 @@ slides_set2:
     heading: "SIMPLACE"
     text: "SIMPLACE is an open-source modeling framework for managing crops and ecosystems, understanding complex interactions, and offering customizable agricultural solutions."
     link: "/simplace/"
-
-  - image: "images/Rosi1.png"
-    heading: "DuMux-ROSI"
-    text: "DuMux-ROSI is an advanced integration of DuMux with CPlantBox, offering enhanced soil water dynamics and root-soil interaction simulations, supported by a diverse range of porous media models."
-    link: "/dumux/"
-
+    
   - image: "images/tsmp.png"
     heading: "TerrSysMP"
     text: "TerrSysMP is a comprehensive platform fusing the COSMO or ICON atmospheric models, CLM, and ParFlow for deep insights into interactions between the atmosphere, land surface, and subsurface."
