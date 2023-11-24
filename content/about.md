@@ -12,17 +12,17 @@ sections:
     textPosition: "right"
 
   - name: "Core Concept of DAA"
-    text: "At its heart, DAA is a digital twin of agricultural systems, designed to bridge the physical and digital realms. By feeding real-time field data into sophisticated computational models, DAA aims to provide a dynamic and interactive representation of crops, offering insights that drive informed agricultural decisions. At the heart of PhenoRob DAA are the process-based models (PBMs). Think of PBMs as the brain behind our digital twin. They simulate how crops respond to various environmental challenges, offering a sneak peek into the future of your crops. It's like having a virtual test field, helping farmers make informed decisions [Learn More](/Phenorob-DAA/pbm/). DAA integrates diverse models, from detailed organ-specific analysis to comprehensive field-scale evaluations. Highlights include:"
+    text: "At its heart, DAA is a digital twin of agricultural systems, designed to bridge the physical and digital realms. By feeding real-time field data into sophisticated computational models, DAA aims to provide a dynamic and interactive representation of crops, offering insights that drive informed agricultural decisions. At the heart of PhenoRob DAA are the process-based models (PBMs). Think of PBMs as the brain behind our digital twin. They simulate how crops respond to various environmental challenges, offering a sneak peek into the future of your crops. It's like having a virtual test field, helping farmers make informed decisions [Learn More](/pbm/). DAA integrates diverse models, from detailed organ-specific analysis to comprehensive field-scale evaluations. Highlights include:"
     image: "images/pbm.png"
     imageWidth: "300px"
     imageHeight: "400px"
     textPosition: "left"
     list:
-      - "[GRANAR](/Phenorob-DAA/granar/) and [MECHA](/Phenorob-DAA/mecha/) Models: For anatomical network generation of root cells and Organ-level precision for enhanced hydraulic simulation."
-      - "[CPlantBox](/Phenorob-DAA/cplantbox/) Model: Detailed plant structure modeling, encompassing roots and shoots."
-      - "[AGRO-C](/Phenorob-DAA/agroc/) Model: Focused on carbon dynamics within agricultural soil at crop scale."
-      - "[SIMPLACE](/Phenorob-DAA/simplace/) Model: Simulates interactions among crops, soil, and climate at crop scale."
-      - "[TerrSysMP](/Phenorob-DAA/terrsysmp/) Model: Simulates land-atmosphere interactions at continental scales."
+      - "[GRANAR](/granar/) and [MECHA](/mecha/) Models: For anatomical network generation of root cells and Organ-level precision for enhanced hydraulic simulation."
+      - "[CPlantBox](/cplantbox/) Model: Detailed plant structure modeling, encompassing roots and shoots."
+      - "[AGRO-C](/agroc/) Model: Focused on carbon dynamics within agricultural soil at crop scale."
+      - "[SIMPLACE](/simplace/) Model: Simulates interactions among crops, soil, and climate at crop scale."
+      - "[TerrSysMP](/terrsysmp/) Model: Simulates land-atmosphere interactions at continental scales."
 
   - name: "Phenorob-DAA Platform"
     text: "DAA is more than a scientific tool; it's a platform for collaboration and education. It's designed to be accessible to a wide range of users, from researchers and farmers to educators and breeders. By unifying different modeling approaches, DAA fosters a comprehensive understanding of agricultural systems, making complex data accessible and actionable. As DAA evolves, it aims to not only represent but also predict and optimize crop growth, integrating economic and environmental variables for sustainable agriculture. It symbolizes a fusion of science and technology, paving the way for a data-driven future in agriculture. Here's what's in store:"
@@ -39,7 +39,7 @@ sections:
       - "Future plans for more digital twins of PhenoRob field sites."
 
   - name: "Meet the Team"
-    text: "Driving the PhenoRob DAA forward is a team of visionaries. Hailing from diverse fields like robotics, plant science, and even economics, this interdisciplinary [team](/Phenorob-DAA/members/) from [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html) is the backbone of this initiative. Their collective expertise ensures that [PhenoRob](https://www.phenorob.de/) remains at the forefront of agricultural innovation, making it the only [DFG](https://www.dfg.de/)-funded Cluster of Excellence with a laser focus on agriculture."
+    text: "Driving the PhenoRob DAA forward is a team of visionaries. Hailing from diverse fields like robotics, plant science, and even economics, this interdisciplinary [team](/members/) from [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html) is the backbone of this initiative. Their collective expertise ensures that [PhenoRob](https://www.phenorob.de/) remains at the forefront of agricultural innovation, making it the only [DFG](https://www.dfg.de/)-funded Cluster of Excellence with a laser focus on agriculture."
     image: "images/DAA_about3.png"
     imageWidth: "150px"
     imageHeight: "150px"

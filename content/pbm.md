@@ -26,15 +26,15 @@ sections:
       - videoID: "sz-SMI5Y5mQ"
 
   - name: "Unveiling Complexity: From Cells to Regional Scale"
-    text: "Process-based models provide insights from the cellular level to vast regional landscapes. They offer unique perspectives across scales, from biochemical intricacies within cells to broad agricultural system impacts. Various models developed within the Phenorob partner institutions, such as [GRANAR](/Phenorob-DAA/granar/), [MECHA](/Phenorob-DAA/mecha/), [CPlantBox](/Phenorob-DAA/cplantbox/), [AGRO-C](/Phenorob-DAA/agroc/), [SIMPLACE](/Phenorob-DAA/simplace/), [DuMux-ROSI](/Phenorob-DAA/dumux/), and [TerrSysMP](/Phenorob-DAA/terrsysmp/), cater to different scales and focuses, providing a comprehensive understanding."
+    text: "Process-based models provide insights from the cellular level to vast regional landscapes. They offer unique perspectives across scales, from biochemical intricacies within cells to broad agricultural system impacts. Various models developed within the Phenorob partner institutions, such as [GRANAR](/granar/), [MECHA](/mecha/), [CPlantBox](/cplantbox/), [AGRO-C](/agroc/), [SIMPLACE](/simplace/), [DuMux-ROSI](/dumux/), and [TerrSysMP](/terrsysmp/), cater to different scales and focuses, providing a comprehensive understanding."
     textPosition: "top"
     list:
-      - "[GRANAR](/Phenorob-DAA/granar/) and [MECHA](/Phenorob-DAA/mecha/) Models: Focus on cell-level granular processes and mechanical phenomena."
-      - "[CPlantBox](/Phenorob-DAA/cplantbox/) Model: Comprehensive modeling at both root and shoot levels."
-      - "[AGRO-C](/Phenorob-DAA/agroc/) Model: Focused on carbon dynamics within agricultural soil."
-      - "[SIMPLACE](/Phenorob-DAA/simplace/) Model: An open-source software for understanding interactions among crops, soil, and climate."
-      - "[DuMux-ROSI](/Phenorob-DAA/dumux/) Model: Enhances soil water dynamics and root-soil interactions."
-      - "[TerrSysMP](/Phenorob-DAA/terrsysmp/) Model: Simulates land-atmosphere interactions."
+      - "[GRANAR](/granar/) and [MECHA](/mecha/) Models: Focus on cell-level granular processes and mechanical phenomena."
+      - "[CPlantBox](/cplantbox/) Model: Comprehensive modeling at both root and shoot levels."
+      - "[AGRO-C](/agroc/) Model: Focused on carbon dynamics within agricultural soil."
+      - "[SIMPLACE](/simplace/) Model: An open-source software for understanding interactions among crops, soil, and climate."
+      - "[DuMux-ROSI](/dumux/) Model: Enhances soil water dynamics and root-soil interactions."
+      - "[TerrSysMP](/terrsysmp/) Model: Simulates land-atmosphere interactions."
 
   - name: "Enriching Agricultural Practices for Farmers and Stakeholders"
     text: "These models offer profound insights for farmers, guiding precision agriculture practices such as optimizing resource allocation, planting times, irrigation schedules, and fertilizer rates. Stakeholders and investors can evaluate potential risks and returns of agricultural investments, analyze various scenarios, assess climate change impacts, and estimate future crop yields."
