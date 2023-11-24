@@ -10,6 +10,9 @@ sections:
     imageWidth: "300px"
     imageHeight: "300px"
     textPosition: "right"
+    videos:
+    - videoID: "ZRL_7_onhJs"
+      videoTitle: "What is Digital Agriculture Avatar ? A phenorob talk by Prof. Guillaume Lobet"
 
   - name: "Core Concept of DAA"
     text: "At its heart, DAA is a digital twin of agricultural systems, designed to bridge the physical and digital realms. By feeding real-time field data into sophisticated computational models, DAA aims to provide a dynamic and interactive representation of crops, offering insights that drive informed agricultural decisions. At the heart of PhenoRob DAA are the process-based models (PBMs). Think of PBMs as the brain behind our digital twin. They simulate how crops respond to various environmental challenges, offering a sneak peek into the future of your crops. It's like having a virtual test field, helping farmers make informed decisions [Learn More](/pbm/). DAA integrates diverse models, from detailed organ-specific analysis to comprehensive field-scale evaluations. Our models include:"
