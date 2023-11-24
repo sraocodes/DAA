@@ -25,8 +25,8 @@ sections:
     text: "Our multi-scale modeling arsenal comprises advanced models fine-tuned by the experienced teams at the University of Bonn and Research Center Juelich. These models, which are integral to the PhenoRob DAA, range from understanding granular plant cell processes to analyzing broader agricultural dynamics."
     list:
       - "**[GRANAR](/Phenorob-DAA/granar/) and [MECHA](/Phenorob-DAA/mecha/)**: Developed for cell-level processes and mechanical phenomena."
-      - "**[Dumux-ROSI](/Phenorob-DAA/dumux/) and [CPLANTBOX](/Phenorob-DAA/cplantbox/)**: Target plant and organ scales, focusing on water transport and growth."
-      - "**[Simplace](/Phenorob-DAA/simplace/), [AgroC](/Phenorob-DAA/agroc/), and [TerrSysMP](/Phenorob-DAA/terrsysmp/)**: Designed for crop and regional scales, they dive deep into growth patterns and ecological interactions."
+      - "**[CPLANTBOX](/Phenorob-DAA/cplantbox/)**: Target plant and organ scales, focusing on water transport and growth."
+      - "**[Simplace](/Phenorob-DAA/simplace/), [AgroC](/Phenorob-DAA/agroc/), and [TerrSysMP](/Phenorob-DAA/terrsysmp/)**: Designed for crop and regional scales, they simulate growth patterns and ecological interactions."
     image: "images/3.gif"
     imageWidth: "800px"
     imageHeight: "450px"
