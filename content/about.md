@@ -4,28 +4,28 @@ date: 2023-08-07
 draft: false
 
 sections:  
-  - name: "About PhenoRob DAA"
-    text: "Welcome to the future of agriculture! The [PhenoRob](https://www.phenorob.de/) Digital Agricultural Avatar (DAA) is a key element in advancing modern agriculture. As part of the broader PhenoRob initiative, the DAA aims to digitally represent agricultural systems for analysis. Created in collaboration between [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html), DAA will provide data-driven recommendations, integrating models that cover aspects from soil chemistry to economic variables."
+  - name: "Introduction to PhenoRob DAA"
+    text: "Welcome to the PhenoRob Digital Agricultural Avatar (DAA) - your gateway to the future of precision agriculture. As part of the broader PhenoRob initiative, the DAA aims to digitally represent agricultural systems for analysis. A collaborative effort between [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html), DAA will provide data-driven recommendations, integrating models that cover aspects from soil chemistry to economic variables."
     image: "images/DAA.png"
     imageWidth: "300px"
     imageHeight: "300px"
     textPosition: "right"
 
-  - name: "Process-Based Models"
-    text: "At the heart of PhenoRob DAA are the process-based models (PBMs). Think of PBMs as the brain behind our digital twin. They simulate how crops respond to various environmental challenges, offering a sneak peek into the future of your crops. It's like having a virtual test field, helping farmers make informed decisions [Learn More](/Phenorob-DAA/pbm/)."
+  - name: "Core Concept of DAA"
+    text: "At its heart, DAA is a digital twin of agricultural systems, designed to bridge the physical and digital realms. By feeding real-time field data into sophisticated computational models, DAA aims to provide a dynamic and interactive representation of crops, offering insights that drive informed agricultural decisions. At the heart of PhenoRob DAA are the process-based models (PBMs). Think of PBMs as the brain behind our digital twin. They simulate how crops respond to various environmental challenges, offering a sneak peek into the future of your crops. It's like having a virtual test field, helping farmers make informed decisions [Learn More](/Phenorob-DAA/pbm/). DAA integrates diverse models, from detailed organ-specific analysis to comprehensive field-scale evaluations. Highlights include:"
     image: "images/pbm.png"
     imageWidth: "300px"
     imageHeight: "400px"
     textPosition: "left"
     list:
-      - "Predictive Insights: Dive into the future of crop growth based on current conditions."
-      - "Environmental Analysis: Understand how factors like weather and soil conditions impact yield."
-      - "Resource Optimization: Strategize around irrigation, fertilization, and pest control for maximum efficiency."
-      - "Holistic Approach: Consider both environmental and plant structural factors for comprehensive modeling."
-      - "Informed Decisions: Use the insights to make data-driven decisions in real-world farming."
+      - "[GRANAR](/Phenorob-DAA/granar/) and [MECHA](/Phenorob-DAA/mecha/) Models: For anatomical network generation of root cells and Organ-level precision for enhanced hydraulic simulation."
+      - "[CPlantBox](/Phenorob-DAA/cplantbox/) Model: Detailed plant structure modeling, encompassing roots and shoots."
+      - "[AGRO-C](/Phenorob-DAA/agroc/) Model: Focused on carbon dynamics within agricultural soil at crop scale."
+      - "[SIMPLACE](/Phenorob-DAA/simplace/) Model: Simulates interactions among crops, soil, and climate at crop scale."
+      - "[TerrSysMP](/Phenorob-DAA/terrsysmp/) Model: Simulates land-atmosphere interactions at continental scales."
 
   - name: "Phenorob-DAA Platform"
-    text: "Beyond models and predictions, the Phenorob-DAA is also about community and collaboration. It's a platform where experts meet, ideas merge, and innovations are born. Whether you're a farmer, a policymaker, or just someone interested in the future of food, this platform has something for you. Dive deep into simulations, explore predictions, or just marvel at the digital replicas of real-world PhenoRob sites. Here's what's in store:"
+    text: "DAA is more than a scientific tool; it's a platform for collaboration and education. It's designed to be accessible to a wide range of users, from researchers and farmers to educators and breeders. By unifying different modeling approaches, DAA fosters a comprehensive understanding of agricultural systems, making complex data accessible and actionable. As DAA evolves, it aims to not only represent but also predict and optimize crop growth, integrating economic and environmental variables for sustainable agriculture. It symbolizes a fusion of science and technology, paving the way for a data-driven future in agriculture. Here's what's in store:"
     image: "images/DAA_about2.png"
     imageWidth: "250px"
     imageHeight: "450px"
