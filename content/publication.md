@@ -21,14 +21,10 @@ sections:
       - "**[3]** (2020) Xiao-Ran Zhou, Andrea Schnepf, Jan Vanderborght, Daniel Leitner, André Lacointe, Harry Vereecken, Guillaume Lobet, [CPlantBox, a whole-plant modelling framework for the simulation of water- and carbon-related processes](https://doi.org/10.1093/insilicoplants/diaa001) - in silico Plants, Volume 2, Issue 1"
       - "**[4]** (2019) Couvreur, Valentin, et al., [Multiscale modelling of plant water and carbon fluxes with MECHA and CPlantBox](https://dial.uclouvain.be/pr/boreal/object/boreal:227579) - iCROPM2020, Phenotyping and modeling of plant anchorage and physiology"
       - "**[5]** (2018) Xiao-Ran Zhou et al., [Presentation of CPlantBox: a whole functional-structural plant model (root and shoot) coupled with a mechanistic resolution of carbon and water flows](https://doi.org/10.1109/PMA.2018.8611617) - Conference: 2018 6th International Symposium on Plant Growth Modeling, Simulation, Visualization and Applications (PMA)"
-
-  - name: "Dumux-ROSI"
-    text: "Dumux-ROSI related publications"
-    list:
-      - "**[1]** (2022) Deepanshu Khare, Tobias Selzner, Daniel Leitner, Jan Vanderborght, Harry Vereecken, Andrea Schnepf, [Root System Scale Models Significantly Overestimate Root Water Uptake at Drying Soil Conditions](https://doi.org/10.3389/fpls.2022.798741) - Front. Plant Sci., 14 February 2022, Sec. Functional Plant Ecology, Volume 13"
-      - "**[2]** (2020) Pieterjan De Bauw, Trung Hieu Mai, Andrea Schnepf, Roel Merckx, Erik Smolders, Jan Vanderborght, [A functional–structural model of upland rice root systems reveals the importance of laterals and growing root tips for phosphate uptake from wet and dry soils](https://doi.org/10.1093/aob/mcaa120) - Annals of Botany, Volume 126, Issue 4, 14 September 2020, Pages 789–806"
-      - "**[3]** (2019) Mai, T.H., Schnepf, A., Vereecken, H. et al., [Continuum multiscale model of root water and nutrient uptake from soil with explicit consideration of the 3D root architecture and the rhizosphere gradients](https://doi.org/10.1007/s11104-018-3890-4) - Plant Soil 439, 273–292"
-      - "**[4]** (2018) Timo Koch, Katharina Heck, Natalie Schröder, Holger Class, Rainer Helmig, [A New Simulation Framework for Soil–Root Interaction, Evaporation, Root Growth, and Solute Transport](https://doi.org/10.2136/vzj2017.12.0210) - First published: 23 August 2018. Citations: 30"
+      - "**[6]** (2022) Deepanshu Khare, Tobias Selzner, Daniel Leitner, Jan Vanderborght, Harry Vereecken, Andrea Schnepf, [Root System Scale Models Significantly Overestimate Root Water Uptake at Drying Soil Conditions](https://doi.org/10.3389/fpls.2022.798741) - Front. Plant Sci., 14 February 2022, Sec. Functional Plant Ecology, Volume 13"
+      - "**[7]** (2020) Pieterjan De Bauw, Trung Hieu Mai, Andrea Schnepf, Roel Merckx, Erik Smolders, Jan Vanderborght, [A functional–structural model of upland rice root systems reveals the importance of laterals and growing root tips for phosphate uptake from wet and dry soils](https://doi.org/10.1093/aob/mcaa120) - Annals of Botany, Volume 126, Issue 4, 14 September 2020, Pages 789–806"
+      - "**[8]** (2019) Mai, T.H., Schnepf, A., Vereecken, H. et al., [Continuum multiscale model of root water and nutrient uptake from soil with explicit consideration of the 3D root architecture and the rhizosphere gradients](https://doi.org/10.1007/s11104-018-3890-4) - Plant Soil 439, 273–292"
+      - "**[9]** (2018) Timo Koch, Katharina Heck, Natalie Schröder, Holger Class, Rainer Helmig, [A New Simulation Framework for Soil–Root Interaction, Evaporation, Root Growth, and Solute Transport](https://doi.org/10.2136/vzj2017.12.0210) - First published: 23 August 2018. Citations: 30"
 
 
   - name: "AGRO-C"
