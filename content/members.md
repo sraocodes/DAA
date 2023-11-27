@@ -26,7 +26,7 @@ groups:
         email: "a.klotzsche(at)fz-juelich.de"
         homepage: "https://www.fz-juelich.de/profile/klotzsche_a"
         researchgate: "https://www.researchgate.net/profile/Anja-Klotzsche"
-      - name: "Prof. Dr. Seyed Hamid Ahmadi"
+      - name: "Dr. Seyed Hamid Ahmadi"
         picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/seyed.jpg?raw=true"
         institute: "University of Bonn"
         email: "shahmadi(at)uni-bonn.de"
@@ -49,7 +49,7 @@ groups:
         researchgate: "https://www.researchgate.net/profile/Sathyanarayan-Rao"
         github: "https://github.com/sraocodes"
 
-  - groupTitle: "GRANAR and MECHA Developers"
+  - groupTitle: "Contact for GRANAR and MECHA Models"
     members:
       - name: "Dr. Adrien Heymans"
         github: "https://github.com/HeymansAdrien"
@@ -58,15 +58,7 @@ groups:
         homepage: "https://heymansadrien.github.io/"
         google_scholar: "https://scholar.google.com/citations?user=vy8z0BcAAAAJ&hl=cs"
         researchgate: "https://www.researchgate.net/profile/Adrien-Heymans-2"
-      - name: "Prof. Dr. Guillaume Lobet"
-        picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/guillaume.png?raw=true"
-        institute: "Forschungszentrum Juelich & UC Louvain"
-        email: "g.lobet@fz-juelich.de"
-        researchgate: "https://www.researchgate.net/profile/Guillaume-Lobet-2"
-        homepage: "https://www.guillaumelobet.be/"
-        github: "https://github.com/guillaumelobet"
-        linkedin: "https://www.linkedin.com/in/guillaumelobet/"
-        google_scholar: "https://scholar.google.com/citations?user=XHIe6wsAAAAJ&hl=en"
+        email: "adrien.heymans@slu.se"
       - name: "Prof. Dr. Valentin Couvreur"
         picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/valentin.jpg?raw=true"
         institute: "UCLouvain Faculté des Bioingénieurs"
@@ -75,4 +67,23 @@ groups:
         google_scholar: "https://scholar.google.be/citations?user=zPzIN4QAAAAJ&hl=fr"
         researchgate: "https://www.researchgate.net/profile/Valentin-Couvreur"
         github: "https://github.com/ValentinCouvreur"
+
+  - groupTitle: "Contact for CPlantBox Model"
+    members:
+      - name: "Dr. Daniel Leitner"
+        picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/daniel.jpeg?raw=true"
+        institute: "Forschungszentrum Juelich"
+        email: "d.leitner[at]fz-juelich[dot]de"
+        researchgate: "https://www.researchgate.net/profile/Daniel-Leitner"
+        linkedin: "https://www.linkedin.com/in/daniel-leitner-596657105/"
+        google_scholar: "https://scholar.google.at/citations?user=BR0YF-UAAAAJ&hl=de"
+      - name: "Prof. Dr. Andrea Schnepf"
+        picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/andrea.png?raw=true"
+        institute: "Forschungszentrum Juelich"
+        email: "a.schnepf@fz-juelich.de"
+        researchgate: "https://www.researchgate.net/profile/Andrea-Schnepf"
+        homepage: "https://www.fz-juelich.de/profile/schnepf_a"
+        google_scholar: "https://scholar.google.com/citations?user=vmX3xF0AAAAJ&hl=de"
+
+
 ---
