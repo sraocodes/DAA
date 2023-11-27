@@ -5,12 +5,12 @@ draft: false
 
 sections:  
   - name: "GRANAR-MECHA Combo: Cell to Organ Scale"
-    text: "Root water uptake is influenced by structural and hydraulic properties at multiple scales. Root anatomy sets the baseline for root radial hydraulic properties. Root hydraulic properties (Kx and Kr) influences everything from crop yields to the global water cycle dynamics. While tools like [MECHA](/Phenorob-DAA/mecha/) allow for the analysis of water flow in roots, they require explicit anatomical networks. Obtaining these networks from cross-section images is time-consuming. Hence, there's a need for a high-throughput method like [GRANAR](/Phenorob-DAA/granar/). The coupled GRANAR-MECHA computer model emerges as a beacon in this complex landscape. GRANAR simulates root anatomical networks. It uses key anatomical traits extracted from root cross-sections. GRANAR generates cell networks of root cross sections from a set of root anatomical features. The anatomy generation process places cell layers around the root's center, with the position and size of each cell and layer determined by the cell type radius and user-defined randomness. Together, [GRANAR](/Phenorob-DAA/granar/) and [MECHA](/Phenorob-DAA/mecha/) bridge the gap between the micro and macro, offering a holistic view of root hydraulic conductivity, from the behavior of individual cells to the functionality of the entire root organ."
+    text: "Root water uptake is influenced by structural and hydraulic properties at multiple scales. Root anatomy sets the baseline for root radial hydraulic properties. Root hydraulic properties (Kx and Kr) influences everything from crop yields to the global water cycle dynamics. While tools like [MECHA](/mecha/) allow for the analysis of water flow in roots, they require explicit anatomical networks. Obtaining these networks from cross-section images is time-consuming. Hence, there's a need for a high-throughput method like [GRANAR](/granar/). The coupled GRANAR-MECHA computer model emerges as a beacon in this complex landscape. GRANAR simulates root anatomical networks. It uses key anatomical traits extracted from root cross-sections. GRANAR generates cell networks of root cross sections from a set of root anatomical features. The anatomy generation process places cell layers around the root's center, with the position and size of each cell and layer determined by the cell type radius and user-defined randomness. Together, [GRANAR](/granar/) and [MECHA](/mecha/) bridge the gap between the micro and macro, offering a holistic view of root hydraulic conductivity, from the behavior of individual cells to the functionality of the entire root organ."
     textPosition: "top"
     list:
       - "**GRANAR**: Dive deep into root anatomy with our Generator of Root Anatomy in R. This innovative model crafts detailed root anatomical networks at the cellular level, offering a microscopic view of root structures."
       - "**MECHA**: Introducing MECHA, our Model of Explicit Cross-section Hydraulic Anatomy. Seamlessly compute root hydraulic conductivities, both axial and radial (kx and kr), using the intricate anatomical networks crafted by GRANAR."
-      - "**Bridging Scales**: Experience the perfect blend of micro and macro with the combined power of [GRANAR](/Phenorob-DAA/granar/) and [MECHA](/Phenorob-DAA/mecha/). Transition effortlessly from cellular details to organ-level dynamics, ensuring a holistic grasp of root hydraulics."
+      - "**Bridging Scales**: Experience the perfect blend of micro and macro with the combined power of [GRANAR](/granar/) and [MECHA](/mecha/). Transition effortlessly from cellular details to organ-level dynamics, ensuring a holistic grasp of root hydraulics."
       - "**Efficiency**: Say goodbye to time-consuming processes. Harness the capabilities of our models to swiftly and accurately unravel the mysteries of the root's hydraulic architecture."
     image: "images/granarmecha2.jpg"
     imageWidth: "600px"
@@ -18,14 +18,18 @@ sections:
     textPosition: "bottom"
 
   - name: "GRANAR-MECHA Coupling"
-    text: "In essence, the coupling of [GRANAR](/Phenorob-DAA/granar/) and [MECHA](/Phenorob-DAA/mecha/) allows for a systematic analysis of the impact of root anatomy on hydraulic conductivity in a high-throughput manner. This combination provides insights into how different anatomical features influence the root's ability to conduct water."
+    text: "In essence, the coupling of [GRANAR](/granar/) and [MECHA](/mecha/) allows for a systematic analysis of the impact of root anatomy on hydraulic conductivity in a high-throughput manner. This combination provides insights into how different anatomical features influence the root's ability to conduct water."
     textPosition: "top"
     list:
       - "**Radial Conductivity (k​r​)**: The coupling study estimated the k​r​ for each of the experimental data points."
       - "**Factors**: The simulated **k​r**​ showed variations based on several factors. These include the xylem area, total cortical area, and the proportion of aerenchyma. The most substantial correlation factor to the simulated **k​r**​ was found for the cortex width"
+    image: "images/granar_mecha_coupling.png"
+    imageWidth: "600px"
+    imageHeight: "300px"
+    textPosition: "bottom"
 
   - name: "How was it Coupled ?"
-    text: "The root anatomical networks in [GRANAR](/Phenorob-DAA/granar/) are crafted using easily accessible anatomical features, which can be obtained from open-access image analysis software and root cross-section images. Once the root anatomy is generated, it can be saved as an XML file. This XML file then serves as the geometry input for the [MECHA](/Phenorob-DAA/mecha/) model, bridging the gap between the two tools. "
+    text: "The root anatomical networks in [GRANAR](/granar/) are crafted using easily accessible anatomical features, which can be obtained from open-access image analysis software and root cross-section images. Once the root anatomy is generated, it can be saved as an XML file. This XML file then serves as the geometry input for the [MECHA](/mecha/) model, bridging the gap between the two tools. "
     textPosition: "top"
     list:
       - "**GRANAR Input**: Uses tissue-scale parameters from image analysis software."
