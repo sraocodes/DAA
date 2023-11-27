@@ -49,7 +49,7 @@ groups:
         researchgate: "https://www.researchgate.net/profile/Sathyanarayan-Rao"
         github: "https://github.com/sraocodes"
 
-  - groupTitle: "Contact for GRANAR and MECHA Models"
+  - groupTitle: "GRANAR and MECHA Models"
     members:
       - name: "Dr. Adrien Heymans"
         github: "https://github.com/HeymansAdrien"
@@ -68,7 +68,7 @@ groups:
         researchgate: "https://www.researchgate.net/profile/Valentin-Couvreur"
         github: "https://github.com/ValentinCouvreur"
 
-  - groupTitle: "Contact for CPlantBox Model"
+  - groupTitle: "CPlantBox Model"
     members:
       - name: "Dr. Daniel Leitner"
         picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/daniel.jpeg?raw=true"
@@ -85,7 +85,7 @@ groups:
         homepage: "https://www.fz-juelich.de/profile/schnepf_a"
         google_scholar: "https://scholar.google.com/citations?user=vmX3xF0AAAAJ&hl=de"
 
-  - groupTitle: "Contact for Agro-C Model"
+  - groupTitle: "Agro-C Model"
     members:
       - name: "Dr. Michael Herbst"
         picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/Michael.jpeg?raw=true" 
@@ -93,6 +93,28 @@ groups:
         email: "m.herbst[at]fz-juelich[dot]de"
         researchgate: "https://www.researchgate.net/profile/Michael-Herbst-4"
         google_scholar: "https://scholar.google.de/citations?user=mAPmQqAAAAAJ&hl=de"
+
+  - groupTitle: "Simplace Model"
+    members:
+      - name: "Dr. Andreas Enders"
+        picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/Andreas-Enders.jpg?raw=true"  
+        institute: "Bonn University"
+        email: "simplace@uni-bonn.de"
+        homepage: "https://www.simplace.net/index.php/contacts"
+        researchgate: "https://www.researchgate.net/profile/Andreas-Enders"
+
+      - name: "Dr. Gunther Krauss"
+        picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/DAA_about3.png?raw=true"  
+        institute: "Bonn University"
+        email: "guntherkrauss@uni-bonn.de"
+        homepage: "https://www.lap.uni-bonn.de/de/mitarbeiter/webseiten/gunther-krauss"
+
+      - name: "Dr. Murilo dos Santos Vianna"
+        picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/Murilo.jpeg?raw=true"  
+        institute: "Bonn University"
+        email: "simplace@uni-bonn.de"
+        linkedin: "https://www.linkedin.com/in/murilodsv/"
+        google_scholar: "https://scholar.google.com/citations?user=o43bsz0AAAAJ&hl=en"
 
 
 ---
