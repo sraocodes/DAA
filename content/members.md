@@ -85,5 +85,14 @@ groups:
         homepage: "https://www.fz-juelich.de/profile/schnepf_a"
         google_scholar: "https://scholar.google.com/citations?user=vmX3xF0AAAAJ&hl=de"
 
+  - groupTitle: "Contact for Agro-C Model"
+    members:
+      - name: "Dr. Michael Herbst"
+        picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/Michael.jpeg?raw=true" 
+        institute: "Forschungszentrum Juelich"
+        email: "m.herbst[at]fz-juelich[dot]de"
+        researchgate: "https://www.researchgate.net/profile/Michael-Herbst-4"
+        google_scholar: "https://scholar.google.de/citations?user=mAPmQqAAAAAJ&hl=de"
+
 
 ---
