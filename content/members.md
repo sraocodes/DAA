@@ -116,5 +116,14 @@ groups:
         linkedin: "https://www.linkedin.com/in/murilodsv/"
         google_scholar: "https://scholar.google.com/citations?user=o43bsz0AAAAJ&hl=en"
 
+  - groupTitle: "TerrSysMP"
+    members:
+      - name: "Prof. Stefan Kollet"
+        picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/stefan.png?raw=true"
+        institute: "Forschungszentrum Juelich"
+        email: "s.kollet@fz-juelich.de"
+        homepage: "https://www.fz-juelich.de/profile/kollet_s"
+        google_scholar: "https://scholar.google.de/citations?user=ii8z3_AAAAAJ&hl=en"
+
 
 ---
