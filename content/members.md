@@ -116,7 +116,7 @@ groups:
         linkedin: "https://www.linkedin.com/in/murilodsv/"
         google_scholar: "https://scholar.google.com/citations?user=o43bsz0AAAAJ&hl=en"
 
-  - groupTitle: "TerrSysMP"
+  - groupTitle: "TerrSysMP Model"
     members:
       - name: "Prof. Stefan Kollet"
         picture: "https://github.com/sraocodes/Phenorob-DAA/blob/main/static/images/stefan.png?raw=true"
