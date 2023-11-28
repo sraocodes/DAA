@@ -16,8 +16,8 @@ sections:
       - "**Initial Conditions**: Defines the starting state of the plant system for simulation. This might include initial root length, shoot height, etc."
       - "**Temporal Data**: Information on how certain parameters might change over time, such as light cycles or seasonal changes."
     image: "images/cplantbox2.gif"
-    imageWidth: "1048px"
-    imageHeight: "636px"
+    imageWidth: "588px"
+    imageHeight: "582px"
     textPosition: "bottom"
 
   - name: "C-PlantBox features"
