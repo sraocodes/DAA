@@ -123,3 +123,15 @@ header, footer {
   height: auto; /* Maintain aspect ratio */
   border: 0; /* No border for images */
 }
+
+
+.institution-logo {
+  display: inline-block;
+  margin: 10px; /* Adjust spacing between logos */
+  vertical-align: top; /* Align logos at the top */
+}
+
+.institutions-logos .col {
+  text-align: center; /* Center align the content of each column */
+  padding: 10px; /* Spacing around each logo */
+}
