@@ -99,3 +99,27 @@ header, footer {
   margin: 0 auto;
 }
 
+/* Style for institution logos container */
+.institutions-logos {
+  text-align: center; /* Center align the logos */
+  padding: 20px; /* Add some padding around the logos */
+  background-color: #f5f5f5; /* Light background for the logos section */
+  margin-top: 30px; /* Space above the logos section */
+}
+
+/* Style for each logo */
+.institutions-logos .logos a {
+  display: inline-block; /* Display logos inline */
+  margin: 10px; /* Space around each logo */
+  vertical-align: middle; /* Align logos vertically */
+  text-decoration: none; /* No underline on the links */
+}
+
+/* Style for the images inside the logos */
+.institutions-logos .logos img {
+  max-width: 100px; /* Maximum width for each logo */
+  max-height: 50px; /* Maximum height for each logo */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+  border: 0; /* No border for images */
+}

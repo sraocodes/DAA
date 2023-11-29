@@ -49,6 +49,22 @@
     </div>
     {{ end }}
   </div>
+  
+  <!-- LOGO of participating institutions -->
+  <div class="institutions-logos">
+    <h2>Institutions</h2>
+    <div class="logos">
+      {{ range .Params.institutions }}
+      <div class="institution">
+        <a href="{{ .url }}" target="_blank" class="institution-logo">
+          <img src="{{ .logo }}" alt="Logo of {{ .name }}" style="max-width: {{ .width }}; max-height: {{ .height }};">
+        </a>
+        <a href="{{ .url }}" target="_blank" class="institution-name">{{ .name }}</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  
   <div class="content">
     {{ .Content }}
   </div>

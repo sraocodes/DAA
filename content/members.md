@@ -125,5 +125,16 @@ groups:
         homepage: "https://www.fz-juelich.de/profile/kollet_s"
         google_scholar: "https://scholar.google.de/citations?user=ii8z3_AAAAAJ&hl=en"
 
+institutions:
+  - name: "Institution Name 1"
+    logo: "path_to_logo_image_1"
+    url: "https://institution1.com"
+    width: "100px"
+    height: "50px"
+  - name: "Institution Name 2"
+    logo: "path_to_logo_image_2"
+    url: "https://institution2.com"
+    width: "120px"
+    height: "60px"
 
 ---
