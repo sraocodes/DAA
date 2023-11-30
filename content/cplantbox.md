@@ -57,6 +57,13 @@ sections:
     imageHeight: "576px"
     textPosition: "bottom"
 
+  - name: "Case Studies"
+    text: "CPlantbox has been used to simulate and analyze various aspects of plant growth and soil interactions in numerous studies:"
+    list:
+      - "[Khare et al. (2022)](https://doi.org/10.3389/fpls.2022.798741) utilized CPlantbox to model root water uptake in drying soil conditions. Their study, focusing on soil hydraulic conductivity and its effect on root water uptake, demonstrates the importance of accurate modeling in predicting plant responses to dry soil conditions."
+      - "[De Bauw et al. (2020)](https://doi.org/10.1093/aob/mcaa120) employed CPlantbox for constructing a functional–structural model of upland rice root systems. This study underscores the impact of lateral roots and growing root tips on phosphate uptake, and how CPlantbox can be used to simulate root growth and nutrient uptake under varying soil conditions."
+
+
   - name: "Try It Online with Binder!"
     text: "If you'd like to explore and run C-Plantbox without any installations on your local machine, C-Plantbox team have a convenient solution for you – [Binder](http://b.cplantbox.com/)! With just a click, you can have an interactive environment to play with the code and data in this notebook. What are you waiting for?"
     list:
