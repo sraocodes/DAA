@@ -1,4 +1,5 @@
 ---
+bannerImage: "images/index_banner.gif"
 slides_set1:
   - image: "images/1.gif"
     heading: "What is DAA?"

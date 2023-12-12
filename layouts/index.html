@@ -1,8 +1,14 @@
 {{ define "main" }}
 
+<!-- Banner Image -->
+<div class="banner-image w-100">
+    {{ with .Params.bannerImage }}
+        <img src="{{ . | relURL }}" alt="Banner" class="img-fluid">
+    {{ end }}
+</div>
+
+
 <div class="container mt-5" id="indexPageContainer">
-
-
 
     <!-- Slide set 1 -->
     <h3>Phenorob DAA Overview</h3> <!-- Heading for cardset -->
