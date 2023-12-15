@@ -2,7 +2,7 @@
 bannerImage: "images/index_banner.gif"
 slides_set1:
   - image: "images/1.gif"
-    heading: "What is DAA?"
+    heading: "What is Digital Agricultural Avatar?"
     text: |
       Digital Agricultural Avatar (DAA) serves as a digital twin of the agricultural system, integrating biogeochemical, physical, management, and economic models. The DAA aims to achieve full model-data reciprocity, empowering 
       stakeholders with unparalleled insights.
