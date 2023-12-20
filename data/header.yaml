@@ -11,7 +11,7 @@ Link1Dropdown:
   - name: Research Team
     url: "/members/"
   - name: Research Area
-    url: 
+    url: /researchareas/
   - name: Publications
     url: "/publication/"
     

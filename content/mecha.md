@@ -44,6 +44,13 @@ sections:
     imageHeight: "100px"
     textPosition: "left"   
 
+  - name: "Case Studies"
+    text: "MECHA has been used to simulate and analyze various aspects of plant growth and soil interactions in numerous studies:"
+    list:
+      - "[Emily C. Morris et al.](https://dial.uclouvain.be/pr/boreal/object/boreal%3A198453/datastream/PDF_01/view) utilized the MECHA model to simulate and analyze the asymmetric movement of water within plant roots. This enabled them to understand how variations in water availability on different sides of a root influence the development and positioning of lateral roots, a phenomenon known as hydropatterning."
+      - "[L. Ding et al. (2020)](https://doi.org/10.1104/pp.19.01183) investigated how changes in a specific water channel protein in maize roots affect the plant's ability to absorb and transport water. They used the MECHA model to better understand these effects, revealing insights into how water moves through different parts of the root and how this movement influences the plant's overall water uptake and growth."
+      - "[V. Couvreur et al. (2021)](https://doi.org/10.1101/2021.04.19.439789) resolved a longstanding enigma in plant physiology using the MECHA model. They demonstrated how water can move against expected water potential gradients in plant roots, a phenomenon previously unexplained. Their work revealed the crucial role of solute concentration gradients in facilitating this unexpected water movement, thereby reshaping our understanding of plant water uptake and transport mechanisms."
+
   - name: "Limitations of MECHA"
     text: "Despite MECHA's prowess, it does have certain constraints:"
     list:
