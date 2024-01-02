@@ -59,9 +59,4 @@ sections:
       - "**Longitudinal Variations**: The model does not inherently account for longitudinal variations of hydraulic properties or root environment."
       - "**Focus on Hydraulics**: The model emphasizes the hydraulic properties of cells, potentially overlooking other environmental factors impacting plant water relations."
       - "**Data Dependency**: MECHA necessitates detailed and precise input data, incorporating assumptions that might not encompass the intricacies of real-world processes. The illustrations in the study focus on a limited number of default, high, and low parameter values from the literature. Although a wide range of cell hydraulic parameter values were tested, there might be limitations in capturing the full range of possible hydraulic behaviors in all root types."
-    textPosition: "right"
-    image: "images/Mecha2.gif"
-    imageWidth: "200px"    
-    imageHeight: "500px"  
-    textPosition: "left"
 ---

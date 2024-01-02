@@ -8,10 +8,10 @@ logoImagePath: "/images/DAA.png"
 Link1Name: Research
 Link1Link: https://www.example1.com
 Link1Dropdown:
+  - name: Research Area
+    url: "/research-areas/"
   - name: Research Team
     url: "/members/"
-  - name: Research Area
-    url: /researchareas/
   - name: Publications
     url: "/publication/"
     
