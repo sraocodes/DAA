@@ -1,16 +1,17 @@
 {{ define "main" }}
-<h3 class="text-center mb-4">Research Areas</h3>
 <div class="container">
     {{ range $index, $element := .Params.research_tools }}
-    <div class="row mb-4 {{ if modBool $index 2 }}flex-row-reverse{{ end }}">
-        <div class="col-md-6">
-            <img src="{{ $element.image | relURL }}" alt="{{ $element.heading }}" class="img-fluid">
-        </div>
-        <div class="col-md-6 d-flex align-items-center">
-            <div>
-                <h2 class="display-6">{{ $element.heading }}</h2> <!-- Larger heading -->
-                <p class="lead" style="font-size: 1.25rem;">{{ $element.description | safeHTML }}</p> <!-- Larger paragraph text -->
-                <a href="{{ $.Site.BaseURL }}{{ $element.link }}" class="btn btn-primary btn-lg">Learn more</a> <!-- Larger button -->
+    <div class="mb-5"> <!-- Margin for spacing between each research area -->
+        <h2 class="display-6 text-center">{{ $element.heading }}</h2> <!-- Centered Larger heading -->
+        <div class="row mt-3 {{ if modBool $index 2 }}flex-row-reverse{{ end }}">
+            <div class="col-md-6">
+                <img src="{{ $element.image | relURL }}" alt="{{ $element.heading }}" class="img-fluid">
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <div>
+                    <p class="lead" style="font-size: 1.25rem;">{{ $element.description | safeHTML }}</p> <!-- Larger paragraph text -->
+                    <a href="{{ $.Site.BaseURL }}{{ $element.link }}" class="btn btn-primary btn-lg">Learn more</a> <!-- Larger button -->
+                </div>
             </div>
         </div>
     </div>
