@@ -16,5 +16,12 @@ research_tools:
     link: "/agroc/"
     description: "<span style='color: black;'><strong><em>How do environmental factors shape crop productivity?</em></strong></span> <span style='color: grey;'>Our research explores the complexities of agricultural systems using tools like AgroC, for simulating crop growth and soil dynamics. This research encompasses studies on the impact of climate, soil heterogeneity, and management practices on crop yield and water dynamics. Applications range from precision agriculture to assessing the effects of climate change on crop productivity, providing comprehensive insights into effective and resilient farming strategies.</span>"
 
+  - heading: "Advanced Modeling of Crop and Ecosystem Management"
+    image: "images/SimplaceModeling.png"
+    link: "/simplace/"
+    description: "<span style='color: black;'><strong><em>How can advanced modeling enhance our understanding of agricultural ecosystems?</em></strong></span> <span style='color: grey;'>Our focus is on deciphering the complex dynamics of crop and ecosystem management. Utilizing advanced tools like SIMPLACE, we delve into the intricate interactions between climate, soil, and crops. Our research spans from analyzing local farm conditions to assessing global environmental impacts, aiming to develop sustainable and efficient agricultural strategies. This comprehensive approach is pivotal in adapting farming practices to the ever-evolving environmental challenges, paving the way for a resilient agricultural future.</span>"
+
+
+
 
 ---
