@@ -1,12 +1,14 @@
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  {{$styles:=resources.Get "css/main.css"}}
-  {{$footerStyles:=resources.Get "css/footer.css"}}
-  {{$headerStyles:=resources.Get "css/header.css"}}
-  {{$membersStyles:=resources.Get "css/members.css"}}
-  {{$singleStyles:=resources.Get "css/single.css"}} 
-  {{$backToTopStyles:=resources.Get "css/back2top.css"}} 
-  {{$dropdownStyles:=resources.Get "css/dropdown.css"}} 
+  
+  {{$styles := resources.Get "css/main.css"}}
+  {{$footerStyles := resources.Get "css/footer.css"}}
+  {{$headerStyles := resources.Get "css/header.css"}}
+  {{$membersStyles := resources.Get "css/members.css"}}
+  {{$singleStyles := resources.Get "css/single.css"}} 
+  {{$backToTopStyles := resources.Get "css/back2top.css"}} 
+  {{$dropdownStyles := resources.Get "css/dropdown.css"}} 
+  {{$researchAreasStyles := resources.Get "css/research-areas.css"}} <!-- New line for research-areas.css -->
 
   <link rel="stylesheet" href="{{$styles.RelPermalink}}">
   <link rel="stylesheet" href="{{$footerStyles.RelPermalink}}">
@@ -15,14 +17,16 @@
   <link rel="stylesheet" href="{{$singleStyles.RelPermalink}}"> 
   <link rel="stylesheet" href="{{$backToTopStyles.RelPermalink}}"> 
   <link rel="stylesheet" href="{{$dropdownStyles.RelPermalink}}"> 
-  
+  <link rel="stylesheet" href="{{$researchAreasStyles.RelPermalink}}"> <!-- New line to include research-areas.css -->
+
   <!-- Font Awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <!-- MathJax script -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <!-- Bootstrap JS and Popper.js (Optional: include if you need Bootstrap's JavaScript components) -->
+
+  <!-- Bootstrap JS and Popper.js -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

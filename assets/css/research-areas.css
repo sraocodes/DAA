@@ -1,0 +1,9 @@
+.research_tools h2 {
+  font-weight: normal;
+  color: #333; /* or any color you prefer */
+}
+
+.research_tools .description {
+  font-weight: normal;
+  color: grey; /* or any color you prefer */
+}
