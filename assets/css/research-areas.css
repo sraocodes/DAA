@@ -1,9 +1,22 @@
-.research_tools h2 {
-  font-weight: normal;
-  color: #333; /* or any color you prefer */
+/* Targeting the descriptions in the research area */
+.research-area-content .research-description span {
+  font-family: 'YourPreferredFont', sans-serif; /* Override the font family */
+  color: #333; /* Standardize the text color */
 }
 
-.research_tools .description {
-  font-weight: normal;
-  color: grey; /* or any color you prefer */
+/* Specific style for the black colored span */
+.research-area-content .research-description span[style*="color: black;"] {
+  color: black; /* Ensuring black color text */
+}
+
+/* Specific style for the grey colored span */
+.research-area-content .research-description span[style*="color: grey;"] {
+  color: grey; /* Ensuring grey color text */
+}
+
+/* Override for strong and em tags to normalize font weight and style */
+.research-area-content .research-description strong, 
+.research-area-content .research-description em {
+  font-weight: normal; /* Setting normal font-weight */
+  font-style: normal; /* Setting normal font-style */
 }
