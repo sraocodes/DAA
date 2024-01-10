@@ -41,6 +41,16 @@ sections:
   - name: "Installation Guide"
     text: "For a step-by-step installation guide, please refer to the official [TerrSysMP site](https://www.terrsysmp.org/). The platform is designed to be compatible with various computing environments, from personal laptops to high-performance computing clusters."
 
+  - name: "Case Studies"
+    text: "SIMPLACE has been used to simulate the growth and development of various crops in numerous studies:"
+    list:
+      - "[Furusho-Percot et al. (2022)](https://doi.org/10.1029/2021GL096781) used TerrSysMP to analyze heat waves over a 13-year period in Europe. The study highlighted TerrSysMP's advanced capabilities in simulating heat wave statistics, showing a strong connection between groundwater dynamics and near-surface air temperatures. This led to more accurate heat wave projections compared to other models, emphasizing the importance of detailed hydrological processes in climate modeling."
+      - "[Hartick et al. (2020)](https://doi.org/10.1029/2020WR027828) applied TerrSysMP for a probabilistic assessment of Europe's subsurface water storage. They developed a novel method to predict water deficits by analyzing past and current water storage data. This approach accurately predicted continued water shortages in drought-affected regions, emphasizing the model's ability to integrate groundwater dynamics and long-term memory effects in the terrestrial water cycle for improved water resource planning."
+      - "[Keune et al. (2018)](https://doi.org/10.1029/2018GL077621) utilized TerrSysMP to explore the impact of human water usage on atmospheric moisture in Europe. Their study revealed that groundwater pumping and irrigation significantly influence the regional climate, particularly by weakening the continental sink over arid regions in southern Europe. This research highlights the complex interactions between human activities and atmospheric processes, suggesting broader socio-economic implications for water resource management."
+
+
+
+
   - name: "Development and Collaboration"
     text: "Developed by the Center for High-Performance Scientific Computing in Terrestrial Systems [HPSC-TerrSys](https://www.hpsc-terrsys.de/), TerrSysMP is a collaborative effort involving multiple universities and research centers primarily based in Germany."
 

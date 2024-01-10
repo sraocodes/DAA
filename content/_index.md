@@ -42,7 +42,7 @@ slides_set2:
     text: "MECHA is a mathematical model enhancing understanding of water transport in plant roots. It aids breeders in simulating scenarios related to root water/nutrient transport, and offers interactive online testing via platforms like ShinyApps and Binder."
     link: "/mecha/"
 
-  - image: ""
+  - image: "images/PlantSoilModeling.png"
     heading: "C-PlantBox"
     text: "C-PlantBox is a holistic plant modeling tool, capturing both root and shoot systems. It simulates intricate interactions between carbon and water flows in diverse environmental conditions."
     link: "/cplantbox/"
