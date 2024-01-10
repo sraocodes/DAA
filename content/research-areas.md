@@ -21,7 +21,8 @@ research_tools:
     link: "/simplace/"
     description: "<span style='color: black;'><strong><em>How can advanced modeling enhance our understanding of agricultural ecosystems?</em></strong></span> <span style='color: grey;'>Our focus is on deciphering the complex dynamics of crop and ecosystem management. Utilizing advanced tools like SIMPLACE, we delve into the intricate interactions between climate, soil, and crops. Our research spans from analyzing local farm conditions to assessing global environmental impacts, aiming to develop sustainable and efficient agricultural strategies. This comprehensive approach is pivotal in adapting farming practices to the ever-evolving environmental challenges, paving the way for a resilient agricultural future.</span>"
 
-
-
-
+  - heading: "Regional-Scale Agro-Ecosystem Modeling"
+    image: "images/terrsysmp1.jpg"
+    link: "/terrsysmp/"
+    description: "<span style='color: black;'><strong><em>What are the dynamics of agro-ecosystems at a regional scale?</em></strong></span> <span style='color: grey;'>Focusing on the intricate relationships between agricultural practices, soil moisture, and atmospheric conditions, we delve into regional-scale simulations, exploring how variations in land use, water management, and climatic conditions influence agricultural productivity and sustainability. Using TerrSysMP's integrated approach, we analyze the feedback loops between groundwater dynamics, surface water, and plant growth, enhancing our understanding of the water-energy-food nexus. This research is instrumental in developing strategies for resilient and efficient agricultural practices, tailored to diverse environmental and climatic contexts.</span>"
 ---

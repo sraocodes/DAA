@@ -1,37 +1,3 @@
-/* Specific styles for the research areas content */
-.research-area-content {
-  /* Custom styles for the container of the research areas, if needed */
-}
-
-/* Custom heading styles for research areas, if different from global styles */
-.research-area-content .display-6 {
-  /* Example: changing the font and color */
-  font-family: 'Arial', sans-serif;
-  color: #333333;
-}
-
-/* Custom styles for the images in research areas, if needed */
-.research-area-content .img-fluid {
-  /* Example: adding a border or shadow */
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Custom paragraph styles within research areas */
-.research-area-content .lead {
-  /* Example: Adjusting font size and line height */
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-/* Custom styles for buttons in research areas */
-.research-area-content .btn-primary {
-  /* Example: Changing background and border colors */
-  background-color: #4CAF50;
-  border-color: #4CAF50;
-}
-
-/* Additional custom styles can be added as needed */
 /* Targeting the descriptions in the research area */
 .research-area-content .research-description span {
   font-family: 'YourPreferredFont', sans-serif; /* Override the font family */
@@ -48,11 +14,9 @@
   color: grey; /* Ensuring grey color text */
 }
 
-/* If you want to standardize the font-weight and style */
-.research-area-content .research-description strong {
-  font-weight: normal; /* Example: setting normal font-weight */
-}
-
+/* Override for strong and em tags to normalize font weight and style */
+.research-area-content .research-description strong, 
 .research-area-content .research-description em {
-  font-style: normal; /* Example: setting normal font-style */
+  font-weight: normal; /* Setting normal font-weight */
+  font-style: normal; /* Setting normal font-style */
 }
