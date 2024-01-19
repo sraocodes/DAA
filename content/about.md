@@ -56,7 +56,7 @@ sections:
       - "Innovative Model Coupling: Demonstrating the integration of diverse scales for a holistic agricultural analysis."
 
   - name: "Meet the Team"
-    text: "Driving the PhenoRob DAA forward is a team of visionaries. Hailing from diverse fields like robotics, plant science, and even economics, this interdisciplinary [team](/members/) from [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html) is the backbone of this initiative. Their collective expertise ensures that [PhenoRob](https://www.phenorob.de/) remains at the forefront of agricultural innovation, making it the only [DFG](https://www.dfg.de/)-funded Cluster of Excellence with a laser focus on agriculture."
+    text: "Driving the PhenoRob DAA forward is a team of [scientists](/members/) from [Universität Bonn](https://www.uni-bonn.de/) and [Forschungszentrum Jülich](https://www.fz-juelich.de/portal/EN/Home/home_node.html)."
     image: "images/DAA_about3.png"
     imageWidth: "150px"
     imageHeight: "150px"
