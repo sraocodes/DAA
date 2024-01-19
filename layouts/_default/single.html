@@ -96,8 +96,7 @@
                   <li class="list-group-item">{{ $emoji }} {{ .item | markdownify | safeHTML }}</li>
               {{ else }}
                   <li class="list-group-item">{{ $emoji }} {{ . | markdownify | safeHTML }}</li>
-              {{ end }}
-              
+              {{ end }}              
               {{ end }}
           </ol>
           {{ end }}
