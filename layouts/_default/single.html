@@ -36,12 +36,20 @@
         <div class="col">
           <p class="card-text" style="font-size: 1.2em;">{{ .text | markdownify | safeHTML }}</p>
           {{ if .list }}
+          {{ $emojis := slice "🚜 " "🌾" "🌳" "💧" "🌞"}}
           <div class="list-group">
-            {{ range .list }}
-            <a href="#" class="list-group-item list-group-item-action">{{ . | markdownify | safeHTML }}</a>
-            {{ end }}
+              {{ range $index, $element := .list }}
+                  <!-- Calculate the emoji index using modulo -->
+                  {{ $emojiIndex := mod $index (len $emojis) }}
+                  <!-- Retrieve the emoji from the list -->
+                  {{ $emoji := index $emojis $emojiIndex }}
+          
+                  <!-- Include the emoji in the list item -->
+                  <a href="#" class="list-group-item list-group-item-action">{{ $emoji }} {{ . | markdownify | safeHTML }}</a>
+              {{ end }}
           </div>
           {{ end }}
+          
         </div>
         {{ if eq .textPosition "left" }}
         <div class="col-auto">
@@ -61,30 +69,39 @@
 
           <!------------------------------------------------------------------------------------- -->
           <!-- handle lists in the single pages -->
-          
+          {{ $emojis := slice "🌾" "🌍" "🌦️" "💧" "🚜" }}
           {{ if .list }}
           <ol class="list-group">
-              {{ range .list }}
-                  <!-- If the entry has a sublist -->
+              {{ range $index, $element := .list }}
+                  <!-- Calculate the emoji index using modulo -->
+                  {{ $emojiIndex := mod $index (len $emojis) }}
+                  <!-- Retrieve the emoji from the list -->
+                  {{ $emoji := index $emojis $emojiIndex }}
+          
+                  <!-- Rest of your code for list items -->
                   {{ if and (isset . "item") (isset . "sublist") }}
-                      <li class="list-group-item">
-                          {{ .item | markdownify | safeHTML }}
-                          <ol class="list-unstyled ml-4">
-                              {{ range .sublist }}
-                                  <li class="list-group-item bg-light">{{ . | markdownify | safeHTML }}</li>
-                              {{ end }}
-                          </ol>
-                      </li>
-                  <!-- If the entry does not have a sublist but has an item -->
-                  {{ else if isset . "item" }}
-                      <li class="list-group-item">{{ .item | markdownify | safeHTML }}</li>
-                  <!-- If it's just a regular list entry without named 'item' field -->
-                  {{ else }}
-                      <li class="list-group-item">{{ . | markdownify | safeHTML }}</li>
-                  {{ end }}
+                  <li class="list-group-item">
+                      {{ $emoji }} {{ .item | markdownify | safeHTML }}
+                      <ol class="list-unstyled ml-4">
+                          {{ range $subIndex, $subElement := .sublist }}
+                              {{ $subEmojiIndex := mod $subIndex (len $emojis) }}
+                              {{ $subEmoji := index $emojis $subEmojiIndex }}
+                              <li class="list-group-item bg-light">
+                                  {{ $subEmoji }} {{ $subElement | markdownify | safeHTML }}
+                              </li>
+                          {{ end }}
+                      </ol>
+                  </li>
+              {{ else if isset . "item" }}
+                  <li class="list-group-item">{{ $emoji }} {{ .item | markdownify | safeHTML }}</li>
+              {{ else }}
+                  <li class="list-group-item">{{ $emoji }} {{ . | markdownify | safeHTML }}</li>
+              {{ end }}
+              
               {{ end }}
           </ol>
           {{ end }}
+          
 
           <!------------------------------------------------------------------------------------- -->    
           <!-- handle tables in the single pages -->
@@ -136,7 +153,7 @@
       {{ if .videos }}
       {{ range .videos }}
           <!-- Video Title -->
-          <div class="video-title">{{ .videoTitle }}</div>  
+          <div class="video-title"><i class="fas fa-tv" style="margin-right: 10px;"></i>{{ .videoTitle }}</div>
           <div class="embed-responsive embed-responsive-16by9 my-4" style="max-width: 60%; margin: auto;">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ .videoID }}" allowfullscreen></iframe>
           </div>
