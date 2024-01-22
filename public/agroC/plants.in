@@ -1,0 +1,770 @@
+soilco2 plant input
+2  version number
+CO2_fluxes   respiration   maint_growth (output files)   waterstress   rootExudation   rootDeath   harvestresidues   farquhar
+     f           f              f                            t              f                f            t           f      
+T daily timestep (T = daily, F = hourly)
+2014 08 01  start date of the simulation ( yyyy mm dd )
+5  no of plant types
+2  unit in SOILCO2 1=mm 2=cm 3=dm 4=m 5=km
+1  interception 1=Bormann, 2=Hoyningen-Huene
+53.22245  latitude of the site                                                 (LATITUDE)
+# plant type 1 **************************************************
+1  Whinter Wheat
+3 6 11 11 10 7 8 0 8 4 2 11 3 4 4 3 2   number of rows in the 17 tables
+1  no of dates for planting/emergence and harvests
+50 no of parameters
+3  Kc calculation 1=dvs  2=time 3=computed from LAI                             (AKCTYPE)
+140  209   tstart, tend for senescence (day of year, i.e. Julian Date)
+-100 -1000 -120000 -120000 -158490  p0, p1, p2h, p2l, p3 (mm)
+0  0.0  0.0  0.0   0.0  0.0  0.0   0.0  0.0  0.0   0.0  0.0  0.0  CERES: temperatures (C) (first number: flag for 1=new or 0=old Model)
+0  0.0  0.0  CERES: photoperiod: Popt, Pcrit (h), omega (h(-1))
+0.0  0.0  0.0  CERES: maximum development rate (h(-1))                          (RMAX)
+-10.0     + max depth above there is no root water uptake (mm)                  (RNA_MAX)
+-1480      + max rooting depth (mm)                                    (ROOT_MAX)
+-35.0     + initial rooting depth (mm)                                          (ROOT_INIT)
+0.43      + exudation factor                                                    (EXU_FACT)
+0.43	    + max factor used for deathfac                                        (DEATHFACMAX)
+260       + number of seedlings per m2                                          (NSL)
+0.005     + relative growth rate during exponential leaf area growth (ha/ha/C/d) (RGR)
+1.1       + base temperature for juvenile leaf area growth (C)                  (TEMPBASE)
+0.00098    + specific leaf area of new leaves (ha leaf/kg DM)                    (SLA)
+-1.00e-03 + change of specific leaf area per unit thermal time (ha leaf/kg DM/C/d) (RSLA)
+75 	  + potential CO2-assimilation rate of a unit leaf area for light saturation (kg CO2/ha leaf/h) (AMX)
+0.50      + initial light use efficiency ((kg CO2/ha leaf/h)/(J/m2/s))          (EFF) (is changed from ha to L2 in plants.f90)
+0.75      + extinction coefficient for diffuse PAR flux                         (RKDF)
+0.2       + scattering coefficient of leaves for PAR                            (SCP)
+0.01      + maintenance demand rate for storage organs per unit dry matter (kg CH2O/kg DM/d) (RMAINSO)
+1.41      + conversion efficiency coefficient (assimilation requirement of DM for storage organs) (kg CH2O/kg DM) (ASRQSO)
+436       + start temperature for plant growth (C*day) (crop 1: temp_sum from emergence till 31.Dec + tempstart for spring growth) (TEMPSTART)
+0.62      + dead LAI debris factor                                              (DEBR_FAC)
+0.75      + LAI as switch from temperature to radiation-limited LAI expansion (ha/ha) (LS)
+3.5       + critical LAI for leaf death due to self shading (ha/ha)             (RLAICR)
+0         + initial value of the ear area index (2sided) (crop 1-3,5)           (EAI)
+0.0       + initial value of the maturity class (crop 4)                        (RMATR)
+0.0003    + leaf area of one seedling (m2 leaf/seedling)                        (SSL)
+0.075    + specific root weight (m/g)                                          (SRW)
+0.0       + dead leaf area for outside the season (ha/ha)                       (SLAID_OFF)
+# emergence und harvest date(s)
+2014 09 24  2015 07 23
+# (Tab.1) [for crop 1 2 3 5] #    Temperature sum against reduction factor of the maximal light assimilation rate
+    0.0        1.0
+    1.0        1.0
+    2.0        0.4
+# (Tab.2) [for all crops] #    Effective temperature against reduction factor of the maximal light assimilation rate
+     0.0       0.05
+     4.0       0.3
+    10.0       0.6
+    15.0       0.8
+    20.0       1.0
+    30.0       0.01
+# (Tab.3) [for crop 1 2 3] #    Effective temperature against reduction factor of the development rate, if DVS < 1
+-10	 0.0000
+  0	 0.0000
+  2	 0.0021
+  5	 0.0032
+ 10	 0.0064
+ 15	 0.0167
+ 20	 0.0224
+ 25	 0.0279
+ 30	 0.0335
+ 35	 0.0391
+ 40	 0.0447
+# (Tab.4) [for crop 1 2 3] #    Effective temperature against reduction factor of the development rate, if DVS > 1
+-10	 0.0000
+  0	 0.0000
+ 2	 0.0037
+  5	 0.0083
+ 10	 0.0165
+15	 0.0157
+ 20	 0.0209
+ 25	 0.0262
+ 30	 0.0314
+ 35	 0.0367
+40	 0.0418
+# (Tab.5) [for crop 1 2 3 5] #    DVS against fraction of dry matter allocated to the shoot
+    0.0	       0.33
+    0.1        0.33
+    0.2	       0.42
+    0.35       0.60
+    0.4	       0.67
+    0.5	       0.78
+    0.7	       0.85
+    0.9	       0.92
+    1.2	       1.0
+    2.0	       1.0
+# (Tab.6) [for crop 1 2 3 5] #    Temperature sum against fraction of dry matter allocated to the leaves
+0	0.7
+0.1	0.7
+0.25	0.75
+0.5	0.65
+0.7	0.175
+0.95	0
+2	0
+# (Tab.7) [for crop 1 2 3 5] #    Temperature sum against fraction of dry matter allocated to the stem
+0	0.3
+0.1	0.3
+0.25	0.25
+0.5	0.3
+0.7	0.4
+0.95	0.275
+1.05	0
+2	0
+# (Tab.8) #    [for crop 3] Temperature sum against fraction of dry matter allocated to the cob (FCOBT) #    [for crop 5] fraction of dry matter allocated to the root (FRT)
+# (Tab.9) #    [for crop 1] DVS against death rate of leaves reduction function #    [for crop 3] Specific LAI as a function of development stage
+    0.0        0.0
+    0.59       0.0
+    0.6        0.085
+    0.89       0.085
+    0.9        0.4
+    1.09       0.5
+    1.1        1.0
+    2.0        1.0
+# (Tab.10) #    [for crop 1 and 2] Effective temperature against death rate of the leaves #    [for crop 5] Temperature sum against relative death rate of leaves
+   0.0         0.04
+   10.0        0.02
+   15.0        0.03
+   30.0        0.08
+# (Tab. 11) # [for all crops] #    DVS or time (day of year, i.e. Julian Date) against akc
+   1          0.95
+   2          5.00
+# (Tab.12) [for all crops] #    Relative root depth against root density
+    0.0        0.4568
+    0.1        0.2477
+    0.2        0.1343
+    0.3        0.0728
+    0.4        0.0395
+    0.5        0.0214
+    0.6        0.0116
+    0.7        0.0063
+   0.8        0.0034
+   0.9        0.0019
+   1.0        0.0010
+# (Tab.13) [for all crops if N module switched on] #    DVS against N content leaves XNCLE [kg N kg DM-1] Fei et al., 2020
+0.0  0.01
+1.7  0.011
+2.0  0.011
+# (Tab.14) [for all crops if N module switched on] #    DVS against N content stems XNCST [kg N kg DM-1]  estimated
+0.0  0.004
+1.0  0.004
+1.5  0.004
+2.0  0.004
+# (Tab.15) [for all crops if N module switched on] #    DVS against N content roots  XNCRT [kg N kg DM-1] Miyazawa et al., 2004
+0.0  0.02
+1.0  0.02
+1.5  0.01
+2.0  0.0025
+# (Tab.16) [for all crops if N module switched on] #    DVS against N content storage organs XNCSO [kg N kg DM-1]
+0.0   0.006
+1.8   0.0228
+2.0   0.0228
+# (Tab.17) [for all crops if N module switched on] #    DVS against N content crowns XNCCRN [kg N kg DM-1] 
+0.0   0.0
+2.0   0.0
+# plant type 1 **************************************************
+1  Whinter Wheat
+3 6 11 11 10 7 8 0 8 4 2 11  4 4 4 4 2  number of rows in the 17 tables
+1  no of dates for planting/emergence and harvests
+50 no of parameters
+3  Kc calculation 1=dvs  2=time, 3=computed from LAIg                       (AKCTYPE)
+140  209   tstart, tend for senescence (day of year, i.e. Julian Date)
+-100 -1000 -120000 -120000 -158490    p0, p1, p2h, p2l, p3 (mm)
+0  0.0  0.0  0.0   0.0  0.0  0.0   0.0  0.0  0.0   0.0  0.0  0.0  CERES: temperatures (C) (first number: flag for 1=new or 0=old Model)
+0  0.0  0.0  CERES: photoperiod: Popt, Pcrit (h), omega (h(-1))
+0.0  0.0  0.0  CERES: maximum development rate (h(-1))                          (RMAX)
+-10.0     + max depth above there is no root water uptake (mm)                  (RNA_MAX)
+-1480      + max rooting depth (mm)                                    (ROOT_MAX)
+-35.0     + initial rooting depth (mm)                                          (ROOT_INIT)
+0.43      + exudation factor                                                    (EXU_FACT)
+0.43	    + max factor used for deathfac                                        (DEATHFACMAX)
+260       + number of seedlings per m2                                          (NSL)
+0.005     + relative growth rate during exponential leaf area growth (ha/ha/C/d) (RGR)
+1.3       + base temperature for juvenile leaf area growth (C)                  (TEMPBASE)
+0.0016   + specific leaf area of new leaves (ha leaf/kg DM)                    (SLA)
+-1.00e-03 + change of specific leaf area per unit thermal time (ha leaf/kg DM/C/d) (RSLA)
+65        + potential CO2-assimilation rate of a unit leaf area for light saturation (kg CO2/ha leaf/h) (AMX)
+0.50      + initial light use efficiency ((kg CO2/ha leaf/h)/(J/m2/s))          (EFF) (is changed from ha to L2 in plants.f90)
+0.78      + extinction coefficient for diffuse PAR flux                         (RKDF)
+0.2       + scattering coefficient of leaves for PAR                            (SCP)
+0.01      + maintenance demand rate for storage organs per unit dry matter (kg CH2O/kg DM/d) (RMAINSO)
+1.41      + conversion efficiency coefficient (assimilation requirement of DM for storage organs) (kg CH2O/kg DM) (ASRQSO)
+436       + start temperature for plant growth (C*day) (crop 1: temp_sum from emergence till 31.Dec + tempstart for spring growth) (TEMPSTART)
+0.62      + dead LAI debris factor                                              (DEBR_FAC)
+0.75      + LAI as switch from temperature to radiation-limited LAI expansion (ha/ha) (LS)
+4.0       + critical LAI for leaf death due to self shading (ha/ha)             (RLAICR)
+0         + initial value of the ear area index (2sided) (crop 1-3,5)           (EAI)
+0.0       + initial value of the maturity class (crop 4)                        (RMATR)
+0.0003    + leaf area of one seedling (m2 leaf/seedling)                        (SSL)
+0.075    + specific root weight (m/g)                                          (SRW)
+0.0       + dead leaf area for outside the season (ha/ha)                       (SLAID_OFF)
+# emergence und harvest date(s)
+2015 10 09  2016 07 27
+# (Tab.1) [for crop 1 2 3 5] #    Temperature sum against reduction factor of the maximal light assimilation rate
+    0.0        1.0
+    1.0        1.0
+    2.0        0.4
+# (Tab.2) [for all crops] #    Effective temperature against reduction factor of the maximal light assimilation rate
+     0.0       0.05
+     4.0       0.3
+    10.0       0.6
+    15.0       0.8
+    20.0       1.0
+    30.0       0.01
+# (Tab.3) [for crop 1 2 3] #    Effective temperature against reduction factor of the development rate, if DVS < 1
+-10	 0.0000
+  0	 0.0000
+  2	 0.0021
+  5	 0.0032
+ 10	 0.0064
+ 15	 0.0167
+ 20	 0.0224
+ 25	 0.0279
+ 30	 0.0335
+ 35	 0.0391
+ 40	 0.0447
+# (Tab.4) [for crop 1 2 3] #    Effective temperature against reduction factor of the development rate, if DVS > 1
+-10	 0.0000
+  0	 0.0000
+ 2	 0.0037
+  5	 0.0083
+ 10	 0.0165
+15	 0.0157
+ 20	 0.0209
+ 25	 0.0262
+ 30	 0.0314
+ 35	 0.0367
+40	 0.0418
+# (Tab.5) [for crop 1 2 3 5] #    DVS against fraction of dry matter allocated to the shoot
+    0.0	       0.33
+    0.1        0.33
+    0.2	       0.42
+    0.35       0.60
+    0.4	       0.67
+    0.5	       0.78
+    0.7	       0.85
+    0.9	       0.92
+    1.2	       1.0
+    2.0	       1.0
+# (Tab.6) [for crop 1 2 3 5] #    Temperature sum against fraction of dry matter allocated to the leaves
+0	0.52113
+0.1	0.52113
+0.25	0.651485
+0.5	0.39092
+0.7	0.065105
+0.95	0
+2	0
+# (Tab.7) [for crop 1 2 3 5] #    Temperature sum against fraction of dry matter allocated to the stem
+0	0.21
+0.1	0.21
+0.25	0.15
+0.5	0.41
+0.7	0.75
+0.95	1.0
+1.05	0
+2	0
+# (Tab.8) #    [for crop 3] Temperature sum against fraction of dry matter allocated to the cob (FCOBT) #    [for crop 5] fraction of dry matter allocated to the root (FRT)
+# (Tab.9) #    [for crop 1] DVS against death rate of leaves reduction function #    [for crop 3] Specific LAI as a function of development stage
+    0.0        0.0
+    0.59       0.0
+    0.6        0.085
+    0.89       0.085
+    0.9        0.4
+    1.09       0.5
+    1.1        1.0
+    2.0        1.0
+# (Tab.10) #    [for crop 1 and 2] Effective temperature against death rate of the leaves #    [for crop 5] Temperature sum against relative death rate of leaves
+   0.0         0.04
+   10.0        0.02
+   15.0        0.03
+   30.0        0.08
+# (Tab. 11) # [for all crops] #    DVS or time (day of year, i.e. Julian Date) against akc
+   1           0.95
+   50          5.00
+# (Tab.12) [for all crops] #    Relative root depth against root density
+    0.0        0.4568
+    0.1        0.2477
+    0.2        0.1343
+    0.3        0.0728
+    0.4        0.0395
+    0.5        0.0214
+    0.6        0.0116
+    0.7        0.0063
+   0.8        0.0034
+   0.9        0.0019
+   1.0        0.0010
+# (Tab.13) [for all crops if N module switched on] #    DVS against N content leaves XNCLE [kg N kg DM-1] Fei et al., 2020
+0.0  0.01
+1.7  0.011
+1.8  0.011
+2.0  0.011
+# (Tab.14) [for all crops if N module switched on] #    DVS against N content stems XNCST [kg N kg DM-1]  estimated
+0.0  0.004
+1.0  0.004
+1.5  0.004
+2.0  0.004
+# (Tab.15) [for all crops if N module switched on] #    DVS against N content roots  XNCRT [kg N kg DM-1] Miyazawa et al., 2004
+0.0  0.02
+1.0  0.02
+1.5  0.01
+2.0  0.0025
+# (Tab.16) [for all crops if N module switched on] #    DVS against N content storage organs XNCSO [kg N kg DM-1]
+0.0   0.004
+1.7   0.0172
+1.8   0.0172
+2.0   0.0172
+# (Tab.17) [for all crops if N module switched on] #    DVS against N content crowns XNCCRN [kg N kg DM-1] 
+0.0   0.0
+2.0   0.0
+# plant type 12 **************************************************
+12 Barley
+3 6 11 11 5 7 8 0 8 4 2 11 4 4 4 4 2  number of rows in the 17 tables
+1  no of dates for planting/emergence and harvests
+50 no of parameters
+3  Kc calculation 1=dvs  2=time 3=computed from LAI                                  (AKCTYPE)
+100  185   tstart, tend for senescence (day of year, i.e. Julian Date)
+-100	 -1000	 -90000	 -90000	 -158490	      p0, p1, p2h, p2l, p3 (mm)
+0  0.0  0.0  0.0   0.0  0.0  0.0   0.0  0.0  0.0   0.0  0.0  0.0  CERES: temperatures (C) (first number: flag for 1=new or 0=old Model)
+0  0.0  0.0  CERES: photoperiod: Popt, Pcrit (h), omega (h(-1))
+0.0  0.0  0.0  CERES: maximum development rate (h(-1))                          (RMAX)
+-10.0     + max depth above there is no root water uptake (mm)                  (RNA_MAX)
+-1480      + max rooting depth (mm)                                    (ROOT_MAX)
+-35.0     + initial rooting depth (mm)                                          (ROOT_INIT)
+0.33      + exudation factor                                                    (EXU_FACT)
+0.35	    + max factor used for deathfac                                        (DEATHFACMAX)
+200       + number of seedlings per m2                                          (NSL)
+0.004     + relative growth rate during exponential leaf area growth (ha/ha/C/d) (RGR)
+0.9       + base temperature for juvenile leaf area growth (C)                  (TEMPBASE)
+0.000825    + specific leaf area of new leaves (ha leaf/kg DM)                    (SLA)
+-1.00e-03 + change of specific leaf area per unit thermal time (ha leaf/kg DM/C/d) (RSLA)
+60        + potential CO2-assimilation rate of a unit leaf area for light saturation (kg CO2/ha leaf/h) (AMX)
+0.45      + initial light use efficiency ((kg CO2/ha leaf/h)/(J/m2/s))          (EFF) (is changed from ha to L2 in plants.f90)
+0.6       + extinction coefficient for diffuse PAR flux                         (RKDF)
+0.2       + scattering coefficient of leaves for PAR                            (SCP)
+0.007      + maintenance demand rate for storage organs per unit dry matter (kg CH2O/kg DM/d) (RMAINSO)
+1.41      + conversion efficiency coefficient (assimilation requirement of DM for storage organs) (kg CH2O/kg DM) (ASRQSO)
+7.7112    + start temperature for plant growth (C*day) (crop 1: temp_sum from emergence till 31.Dec + tempstart for spring growth) (TEMPSTART)
+0.70      + dead LAI debris factor                                              (DEBR_FAC)
+0.75      + LAI as switch from temperature to radiation-limited LAI expansion (ha/ha) (LS)
+4.0       + critical LAI for leaf death due to self shading (ha/ha)             (RLAICR)
+0         + initial value of the ear area index (2sided) (crop 1-3,5)           (EAI)
+0.0       + initial value of the maturity class (crop 4)                        (RMATR)
+0.0003    + leaf area of one seedling (m2 leaf/seedling)                        (SSL)
+0.075    + specific root weight (m/g)                                          (SRW)
+0.0       + dead leaf area for outside the season (ha/ha)                       (SLAID_OFF)
+# emergence und harvest date(s)
+2016 10 21  2017 08 02
+# (Tab.1) [for crop 1 2 3 5] #    Temperature sum against reduction factor of the maximal light assimilation rate
+    0.0        1.0
+    1.0        1.0
+    2.0        0.3
+# (Tab.2) [for all crops] #    Effective temperature against reduction factor of the maximal light assimilation rate
+     0.0       0.05
+     4.0       0.3
+    10.0       0.6
+    15.0       0.8
+    20.0       1.0
+    30.0       0.01
+# (Tab.3) [for crop 1 2 3] #    Effective temperature against reduction factor of the development rate, if DVS < 1
+-10	 0.0000
+  0	 0.0000
+  2	 0.0021
+  5	 0.0032
+ 10	 0.0064
+ 15	 0.0167
+ 20	 0.0224
+ 25	 0.0279
+ 30	 0.0335
+ 35	 0.0391
+ 40	 0.0447
+# (Tab.4) [for crop 1 2 3] #    Effective temperature against reduction factor of the development rate, if DVS > 1
+-10	 0.0000
+  0	 0.0000
+ 2	 0.0037
+  5	 0.0083
+ 10	 0.0165
+15	 0.0157
+ 20	 0.0209
+ 25	 0.0262
+ 30	 0.0314
+ 35	 0.0367
+40	 0.0418
+# (Tab.5) [for crop 1 2 3 5] #    DVS against fraction of dry matter allocated to the shoot
+    0.0	   0.3
+    0.51   0.4
+    0.72   0.8
+    1.70   0.98
+    2.0	   1.0
+# (Tab.6) [for crop 1 2 3 5] #    Temperature sum against fraction of dry matter allocated to the leaves
+0       0.9
+0.1     0.9
+0.25    0.95
+0.5     0.9
+0.7     0.775
+0.95    0.4
+2       0
+# (Tab.7) [for crop 1 2 3 5] #    Temperature sum against fraction of dry matter allocated to the stem
+0       0.1
+0.1     0.1
+0.25    0.05
+0.5     0.15
+0.7     0.3
+0.95    0.175
+1.05    0
+2       0
+# (Tab.8) #    [for crop 3] Temperature sum against fraction of dry matter allocated to the cob (FCOBT) #    [for crop 5] fraction of dry matter allocated to the root (FRT)
+# (Tab.9) #    [for crop 1] DVS against death rate of leaves reduction function #    [for crop 3] Specific LAI as a function of development stage
+    0.0        0.0
+    0.59       0.0
+    0.6        0.085
+    0.89       0.085
+    0.9        0.1
+    1.09       0.15
+    1.1        0.2
+    2.0        0.25
+# (Tab.10) #    [for crop 1 and 2] Effective temperature against death rate of the leaves #    [for crop 5] Temperature sum against relative death rate of leaves
+   0.0         0.03
+   10.0        0.03
+   15.0        0.04
+   30.0        0.05
+# (Tab. 11) # [for all crops] #    DVS or time (day of year, i.e. Julian Date) against akc
+    1          0.95
+   40          5.00
+# (Tab.12) [for all crops] #    Relative root depth against root density
+    0.0        0.4568
+    0.1        0.2477
+    0.2        0.1343
+    0.3        0.0728
+    0.4        0.0395
+    0.5        0.0214
+    0.6        0.0116
+    0.7        0.0063
+   0.8         0.0034
+   0.9         0.0019
+   1.0         0.0010
+# (Tab.13) [for all crops if N module switched on] #    DVS against N content leaves XNCLE [kg N kg DM-1] Fei et al., 2020
+0.0  0.01
+1.0  0.01
+1.5  0.01
+2.0  0.01
+# (Tab.14) [for all crops if N module switched on] #    DVS against N content stems XNCST [kg N kg DM-1]  estimated
+0.0  0.0037
+1.0  0.005
+1.5  0.005
+2.0  0.005
+# (Tab.15) [for all crops if N module switched on] #    DVS against N content roots  XNCRT [kg N kg DM-1] Miyazawa et al., 2004
+0.0  0.02
+1.0  0.02
+1.5  0.01
+2.0  0.0025
+# (Tab.16) [for all crops if N module switched on] #    DVS against N content storage organs XNCSO [kg N kg DM-1]0.0304979
+0.0   0.00975
+1.0   0.00975
+1.5   0.01725
+2.0   0.02175
+# (Tab.17) [for all crops if N module switched on] #    DVS against N content crowns XNCCRN [kg N kg DM-1] 
+0.0   0.0
+2.0   0.0
+# plant type 12 **************************************************
+12 Barley
+3 6 11 11 5 8 9 0 8 4 2 11 4 4 4 2 2  number of rows in the 17 tables
+1  no of dates for planting/emergence and harvests
+50 no of parameters
+3  Kc calculation 1=dvs  2=time  3=computed from LAI     (AKCTYPE)
+100  185   tstart, tend for senescence (day of year, i.e. Julian Date)
+-100	 -1000	 -90000	 -90000	 -158490	      p0, p1, p2h, p2l, p3 (mm)
+0  0.0  0.0  0.0   0.0  0.0  0.0   0.0  0.0  0.0   0.0  0.0  0.0  CERES: temperatures (C) (first number: flag for 1=new or 0=old Model)
+0  0.0  0.0  CERES: photoperiod: Popt, Pcrit (h), omega (h(-1))
+0.0  0.0  0.0  CERES: maximum development rate (h(-1))                          (RMAX)
+-10.0     + max depth above there is no root water uptake (mm)                  (RNA_MAX)
+-1480      + max rooting depth (mm)                                    (ROOT_MAX)
+-35.0     + initial rooting depth (mm)                                          (ROOT_INIT)
+0.33      + exudation factor                                                    (EXU_FACT)
+0.35	    + max factor used for deathfac                                        (DEATHFACMAX)
+200       + number of seedlings per m2                                          (NSL)
+0.004     + relative growth rate during exponential leaf area growth (ha/ha/C/d) (RGR)
+1       + base temperature for juvenile leaf area growth (C)                  (TEMPBASE)
+0.001911 + specific leaf area of new leaves (ha leaf/kg DM)                    (SLA)
+-1.00e-03 + change of specific leaf area per unit thermal time (ha leaf/kg DM/C/d) (RSLA)
+ 43 + potential CO2-assimilation rate of a unit leaf area for light saturation (kg CO2/ha leaf/h) (AMX)
+0.50      + initial light use efficiency ((kg CO2/ha leaf/h)/(J/m2/s))          (EFF) (is changed from ha to L2 in plants.f90)
+0.60      + extinction coefficient for diffuse PAR flux                         (RKDF)
+0.2       + scattering coefficient of leaves for PAR                            (SCP)
+0.007      + maintenance demand rate for storage organs per unit dry matter (kg CH2O/kg DM/d) (RMAINSO)
+1.41      + conversion efficiency coefficient (assimilation requirement of DM for storage organs) (kg CH2O/kg DM) (ASRQSO)
+7.7112    + start temperature for plant growth (C*day) (crop 1: temp_sum from emergence till 31.Dec + tempstart for spring growth) (TEMPSTART)
+0.70      + dead LAI debris factor                                              (DEBR_FAC)
+0.75      + LAI as switch from temperature to radiation-limited LAI expansion (ha/ha) (LS)
+4.5       + critical LAI for leaf death due to self shading (ha/ha)             (RLAICR)
+0         + initial value of the ear area index (2sided) (crop 1-3,5)           (EAI)
+0.0       + initial value of the maturity class (crop 4)                        (RMATR)
+0.0009    + leaf area of one seedling (m2 leaf/seedling)                        (SSL)
+0.075    + specific root weight (m/g)                                          (SRW)
+0.0       + dead leaf area for outside the season (ha/ha)                       (SLAID_OFF)
+# emergence und harvest date(s)
+2017 10 27  2018 03 23
+# (Tab.1) [for crop 1 2 3 5] #    Temperature sum against reduction factor of the maximal light assimilation rate
+    0.0        1.0
+    1.0        1.0
+    2.0        0.3
+# (Tab.2) [for all crops] #    Effective temperature against reduction factor of the maximal light assimilation rate
+     0.0       0.05
+     4.0       0.3
+    10.0       0.6
+    15.0       0.8
+    20.0       1.0
+    30.0       0.01
+# (Tab.3) [for crop 1 2 3] #    Effective temperature against reduction factor of the development rate, if DVS < 1
+-10	 0.0000
+  0	 0.0000
+  2	 0.0021
+  5	 0.0032
+ 10	 0.0064
+ 15	 0.0167
+ 20	 0.0224
+ 25	 0.0279
+ 30	 0.0335
+ 35	 0.0391
+ 40	 0.0447
+# (Tab.4) [for crop 1 2 3] #    Effective temperature against reduction factor of the development rate, if DVS > 1
+-10	 0.0000
+  0	 0.0000
+ 2	 0.0037
+  5	 0.0083
+ 10	 0.0165
+15	 0.0157
+ 20	 0.0209
+ 25	 0.0262
+ 30	 0.0314
+ 35	 0.0367
+40	 0.0418
+# (Tab.5) [for crop 1 2 3 5] #    DVS against fraction of dry matter allocated to the shoot
+    0.0	       0.34
+    0.51         0.44
+    0.72	       0.84
+    1.70         0.99
+    2.0	       1.0
+# (Tab.6) [for crop 1 2 3 5] #    Temperature sum against fraction of dry matter allocated to the leaves
+0	0.8371
+0.25	0.69762
+0.51	0.52316
+0.6	0.34881
+0.72	0.15114
+0.83	0.05808
+0.95	0
+2	0
+# (Tab.7) [for crop 1 2 3 5] #    Temperature sum against fraction of dry matter allocated to the stem
+0	0.15202
+0.25	0.25333
+0.51	0.37994
+0.6	0.42218
+0.72	0.65021
+0.83	0.83589
+0.95	0.84436
+1.21	0
+2	0
+# (Tab.8) #    [for crop 3] Temperature sum against fraction of dry matter allocated to the cob (FCOBT) #    [for crop 5] fraction of dry matter allocated to the root (FRT)
+# (Tab.9) #    [for crop 1] DVS against death rate of leaves reduction function #    [for crop 3] Specific LAI as a function of development stage
+    0.0        0.0
+    0.59       0.0
+    0.6        0.085
+    0.89       0.085
+    0.9        0.4
+    1.09       0.5
+    1.1        0.8
+    2.0        1.0
+# (Tab.10) #    [for crop 1 and 2] Effective temperature against death rate of the leaves #    [for crop 5] Temperature sum against relative death rate of leaves
+   0.0         0.03
+   10.0        0.03
+   15.0        0.04
+   30.0        0.05
+# (Tab. 11) # [for all crops] #    DVS or time (day of year, i.e. Julian Date) against akc
+    1          0.95
+   40          5.00
+# (Tab.12) [for all crops] #    Relative root depth against root density
+    0.0        0.4568
+    0.1        0.2477
+    0.2        0.1343
+    0.3        0.0728
+    0.4        0.0395
+    0.5        0.0214
+    0.6        0.0116
+    0.7        0.0063
+   0.8         0.0034
+   0.9         0.0019
+   1.0         0.0010
+# (Tab.13) [for all crops if N module switched on] #    DVS against N content leaves XNCLE [kg N kg DM-1] Fei et al., 2020
+0.0  0.03
+1.0  0.0325
+1.5  0.0275
+2.0  0.0250
+# (Tab.14) [for all crops if N module switched on] #    DVS against N content stems XNCST [kg N kg DM-1]  estimated
+0.0  0.0094
+1.0  0.0094
+1.5  0.0069
+2.0  0.0063
+# (Tab.15) [for all crops if N module switched on] #    DVS against N content roots  XNCRT [kg N kg DM-1] Miyazawa et al., 2004
+0.0  0.02
+1.0  0.02
+1.5  0.01
+2.0  0.0025
+# (Tab.16) [for all crops if N module switched on] #    DVS against N content storage organs XNCSO [kg N kg DM-1]
+0.0   0.02
+2.0   0.035
+# (Tab.17) [for all crops if N module switched on] #    DVS against N content crowns XNCCRN [kg N kg DM-1] 
+0.0   0.0094
+2.0   0.0063
+# plant type 2 **************************************************
+1  Spring Oat
+4 5 11 11 14 7 8 0 8 4 2 11 4 4 4 2 2  number of rows in the 17 tables
+1  no of dates for planting/emergence and harvests
+50 no of parameters
+3  Kc calculation 1=dvs  2=time   3=computed from LAI                         (AKCTYPE)
+140  209   tstart, tend for senescence (day of year, i.e. Julian Date)
+-100	 -1000	 -90000	 -90000	 -158490	      p0, p1, p2h, p2l, p3 (mm)
+0  0.0  19.0  30.0   4.0  24.0  35.0   8.0  24.0  35.0   -1.3  4.9  15.7  CERES: temperatures (C) (first number: flag for 1=new or 0=old Model)
+0  7.0  0.160  CERES: photoperiod: Popt, Pcrit (h), omega (h(-1))
+0.0198  0.0412  0.0381  CERES: maximum development rate (h(-1))                 (RMAX)
+-10.0     + max depth above there is no root water uptake (mm)                  (RNA_MAX)
+-1480     + max rooting depth (mm)                                    (ROOT_MAX)
+-35.0     + initial rooting depth (mm)                                          (ROOT_INIT)
+0.43	  + exudation factor							(EXU FACT)
+0.43	  + max factor used for deathfac                                        (DEATHFACMAX)
+350       + number of seedlings per m2                                          (NSL)
+0.014     + relative growth rate during exponential leaf area growth (ha/ha/C/d)(RGR)
+1         + base temperature for juvenile leaf area growth (C)                  (TEMPBASE)
+0.0010    + specific leaf area of new leaves (ha leaf/kg DM)                    (SLA)
+-1.00e-03 + change of specific leaf area per unit thermal time (ha leaf/kg DM/C/d) (RSLA)
+35        + potential CO2-assimilation rate of a unit leaf area for light saturation (kg CO2/ha leaf/h) (AMX)
+0.45       + initial light use efficiency ((kg CO2/ha leaf/h)/(J/m2/s))          (EFF)
+0.60      + extinction coefficient for diffuse PAR flux                         (RKDF)
+0.2       + scattering coefficient of leaves for PAR                            (SCP)
+0.01      + maintenance demand rate for storage organs per unit dry matter (kg CH2O/kg DM/d) (RMAINSO)
+1.41      + conversion efficiency coefficient (assimilation requirement of DM for storage organs) (kg CH2O/kg DM) (ASRQSO)
+111       + start temperature for plant growth (C*day) (crop 1: temp_sum from emergence till 31.Dec + tempstart for spring growth) (TEMPSTART)
+0.62      + dead LAI debris factor                                              (DEBR_FAC)
+0.75      + LAI as switch from temperature to radiation-limited LAI expansion (ha/ha) (LS)
+4.0       + critical LAI for leaf death due to self shading (ha/ha)             (RLAICR)
+0         + initial value of the ear area index (2sided) (crop 1-3,5)           (EAI)
+0.0       + initial value of the maturity class (crop 4)                        (RMATR)
+0.0003    + leaf area of one seedling (m2 leaf/seedling)                        (SSL)
+0.075     + specific root weight (m/g)                                          (SRW)
+0.0       + dead leaf area for outside the season (ha/ha)                       (SLAID_OFF)
+# emergence und harvest date(s)
+2018 04 19  2018 07 27
+# (Tab.1) [for crop 1 2 3 5] #    DVS against reduction factor of the maximal light assimilation rate (AMDVS)
+    0.0        1.0
+    1.0        1.0
+    2.0        0.5
+    2.5	       0.0
+# (Tab.2) [for all crops] #    Daily average daytime temperature against reduction factor of the maximal light assimilation rate (AMTMP)
+    0.0        0.05
+   10.0        1.0
+   25.0        1.0
+   35.0        0.1
+   50.0        0.1
+# (Tab.3) [for crop 1 2 3] #    Daily average temperature against development rate, if DVS < 1 (RATDVS)
+-10      0.0000
+  0      0.0000
+  2      0.0030
+  5      0.0073
+ 10      0.0148
+ 15      0.0220
+ 20      0.0329
+ 25      0.0410
+ 30      0.0493
+ 35      0.0574
+ 40      0.0657
+# (Tab.4) [for crop 1 2 3] #    Daily average temperature against development rate, if DVS > 1 (RATDVS)
+-10      0.0000
+  0      0.0000
+  2      0.0045
+ 5       0.0115
+ 10      0.0228
+ 15      0.0343
+ 20      0.0120
+ 25      0.0150
+ 30      0.0180
+ 35      0.0210
+ 40      0.0240
+# (Tab.5) [for crop 1 2 3 5] #    DVS against fraction of dry matter allocated to the shoot (FSH)
+    0.0	       0.50
+    0.1          0.50
+    0.2	       0.60
+    0.35         0.78
+   0.4	       0.83
+    0.5	       0.87
+    0.6          0.90
+   0.7	       0.93
+   0.8	       0.95
+    0.9          0.97
+    1.0	       0.98
+    1.1          0.99
+    1.2          1.0
+    2.0	       1.0
+# (Tab.6) [for crop 1 2 3 5] #    DVS against fraction of dry matter allocated to the leaves (FLV)
+0	0.46008
+0.1	0.5
+0.2	0.5
+0.35	0.3681
+0.4	0.15336
+0.95	0.06138
+2	0
+# (Tab.7) [for crop 1 2 3 5] #    DVS against fraction of dry matter allocated to the stem (FST)
+0	0.1
+0.1	0.1
+0.25	0.05
+0.5	0.45
+0.7	0.5
+0.95	0.6
+1.21	0
+2	0
+# (Tab.8) [for crop 3] #    DVS against fraction of dry matter allocated to the cob (FCOBT) #    [for crop 5] fraction of dry matter allocated to the fibrous root (FRT)
+# (Tab.9) [for crop 1] #    DVS against death rate of leaves reduction function #    [for crop 3] Specific LAI as a function of development stage
+    0.0        0.0
+    0.59       0.0
+    0.6        0.085
+    0.89       0.085
+    0.9        0.4
+    1.09       0.5
+    1.1        1.0
+    2.0        1.0
+# (Tab.10) [for crop 1 2] #    Daily effective temperature against death rate of the leaves (RDRDV) #    [for crop 5] Effective temperature dependent reduction factor of the development rate
+   0.0         0.03
+   10.0        0.03
+  15.0         0.04
+   30.0        0.09
+# (Tab.11) #    DVS or time (day of year, i.e. Julian Date) against actual crop factor (AKC)
+  1           0.95
+  50          5.00
+# (Tab.12) #    Relative root depth against root density
+    0.0        0.4568
+    0.1        0.2477
+    0.2        0.1343
+    0.3        0.0728
+    0.4        0.0395
+    0.5        0.0214
+    0.6         0.0116
+    0.7        0.0063
+    0.8         0.0034
+    0.9         0.0019
+    1.0         0.0010
+# (Tab.13) [for all crops if N module switched on] #    DVS against N content leaves XNCLE [kg N kg DM-1] Fei et al., 2020
+0.0  0.01
+1.0  0.0225
+1.5  0.022
+2.0  0.020
+# (Tab.14) [for all crops if N module switched on] #    DVS against N content stems XNCST [kg N kg DM-1]  estimated
+0.0  0.01
+1.0  0.0094
+1.5  0.0069
+2.0  0.0063
+# (Tab.15) [for all crops if N module switched on] #    DVS against N content roots  XNCRT [kg N kg DM-1] Miyazawa et al., 2004
+0.0  0.02
+1.0  0.02
+1.5  0.01
+2.0  0.0025
+# (Tab.16) [for all crops if N module switched on] #    DVS against N content storage organs XNCSO [kg N kg DM-1]
+0.0   0.0018
+2.0   0.08
+# (Tab.17) [for all crops if N module switched on] #    DVS against N content crowns XNCCRN [kg N kg DM-1] 
+0.0   0.0
+2.0   0.0

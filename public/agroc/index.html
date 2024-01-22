@@ -195,7 +195,7 @@
 
           
            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">Contact</a>
+              <a class="nav-link" href="/members/" target="_blank">Contact</a>
            </li>
       </ul>
   </div>
@@ -246,6 +246,10 @@
         </li>
         
         <li class="nav-item">
+          <a class="nav-link" href="#single-data-structure-model-input-and-output-variables" >Data Structure: Model Input and Output Variables</a>
+        </li>
+        
+        <li class="nav-item">
           <a class="nav-link" href="#single-agroc-model-components-overview" >AgroC Model Components Overview</a>
         </li>
         
@@ -275,6 +279,11 @@
         <div class="col">
           <p class="card-text" style="font-size: 1.2em;">AgroC is a computer model used to understand how carbon moves in and out of agricultural soil, which is called the &lsquo;carbon budget&rsquo; of the farm or field. The model helps scientists understand how much carbon is being absorbed by crops, how much is stored in the soil, and how much is exchanged with the atmosphere. Understanding the carbon budget of agroecosystems has implications for climate change mitigation and sustainable land management.Visit the official <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062">AgroC documentation</a> for detailed information.</p>
           
+          
+            
+          
+
+
         </div>
         
         
@@ -294,14 +303,32 @@
         <div class="col">
           <p class="card-text" style="font-size: 1.2em;">The AgroC model is a coupling of the SOILCO2/RothC model and the SUCROS model for crop growth. It simulates water, heat, and CO2 flux in a soil column, as well as the turnover of depth-specific carbon pools. The model has been validated in various laboratory and field studies, ensuring its accuracy and reliability.The AgroC has two main parts:</p>
           
+          
           <div class="list-group">
-            
-            <a href="#" class="list-group-item list-group-item-action">Crop-C: This part simulates how crops grow and take in carbon from the air during photosynthesis.</a>
-            
-            <a href="#" class="list-group-item list-group-item-action">Soil-C: This part simulates what happens to the carbon from crop residues and other organic sources in the soil.</a>
-            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  <a href="#" class="list-group-item list-group-item-action">🚜  Crop-C: This part simulates how crops grow and take in carbon from the air during photosynthesis.</a>
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  <a href="#" class="list-group-item list-group-item-action">🌾 Soil-C: This part simulates what happens to the carbon from crop residues and other organic sources in the soil.</a>
+              
           </div>
           
+          
+            
+          
+
+
         </div>
         
         <div class="col-auto">
@@ -333,6 +360,11 @@
         <div class="col">
           <p class="card-text" style="font-size: 1.2em;">The Crop-C sub-model in AgroC focuses on the journey of carbon in the life of a plant. It calculates how much carbon the plant absorbs from the atmosphere through photosynthesis (also known as Gross Primary Production or GPP). It then considers how much of this carbon the plant uses for its own growth and basic life functions, a process known as Autotrophic Respiration (RA). The remaining carbon, termed as Net Primary Production (NPP), is the balance between what the plant takes in and what it uses. The sub-model also tracks how much of this remaining carbon gets transferred into the soil.</p>
           
+          
+            
+          
+
+
         </div>
         
         
@@ -352,6 +384,7 @@
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">The Soil-C submodel in AgroC helps us understand how organic carbon moves and changes in agricultural soils. It considers the balance between carbon going into the soil and carbon leaving the soil. By considering these processes, the model gives insight into how carbon levels change in agricultural soils over time.</p>
 
+          
           
           
           
@@ -388,6 +421,11 @@
         <div class="col">
           <p class="card-text" style="font-size: 1.2em;">Crop-C and Soil-C submodels are linked through the concept of Net Ecosystem Exchange (NEE). NEE represents the balance between carbon gained by the ecosystem and carbon lost by the ecosystem. Understanding NEE helps us determine whether an ecosystem is acting as a net carbon sink (absorbing more carbon than it releases) or a net carbon source (releasing more carbon than it absorbs).</p>
           
+          
+            
+          
+
+
         </div>
         
         
@@ -415,20 +453,36 @@
               
                   
                   
-                      <li class="list-group-item">Compiler Requirement: To install and run AgroC, you will need a Fortran compiler.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 Compiler Requirement: To install and run AgroC, you will need a Fortran compiler.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Platform Support: The model comes with a makefile for Linux and Mac. However, for Windows users, the installation and setup process is more manual and might require additional steps.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 Platform Support: The model comes with a makefile for Linux and Mac. However, for Windows users, the installation and setup process is more manual and might require additional steps.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Code Repository: The source codes for AgroC can be accessed and downloaded from the SVN repository. Use the following command to checkout the latest version: <code>svn co svn://icg4lts.icg.kfa-juelich.de/agroc_codes_v3</code>.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Code Repository: The source codes for AgroC can be accessed and downloaded from the SVN repository. Use the following command to checkout the latest version: <code>svn co svn://icg4lts.icg.kfa-juelich.de/agroc_codes_v3</code>.</li>
+                            
               
           </ol>
+          
           
 
               
@@ -464,50 +518,261 @@
               
                   
                   
-                      <li class="list-group-item"><strong>Model Input Data</strong>:</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 <strong>Model Input Data</strong>:</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Daily weather data: Maximum, minimum, and mean air temperature, solar radiation, and precipitation.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 Daily weather data: Maximum, minimum, and mean air temperature, solar radiation, and precipitation.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Soil properties: Clay fraction, bulk density, pH, concentrations of organic carbon, and total nitrogen.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Soil properties: Clay fraction, bulk density, pH, concentrations of organic carbon, and total nitrogen.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Farming management: Dates of planting and harvest, timing and rates of fertilizer application, manure inputs, and crop residue management.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 Farming management: Dates of planting and harvest, timing and rates of fertilizer application, manure inputs, and crop residue management.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Atmospheric CO2 concentration.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🚜 Atmospheric CO2 concentration.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><strong>Model Output Data</strong>:</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 <strong>Model Output Data</strong>:</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Crop carbon: Gross primary production, autotrophic respiration, and net primary production.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 Crop carbon: Gross primary production, autotrophic respiration, and net primary production.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Soil carbon: Heterotrophic respiration and organic carbon.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Soil carbon: Heterotrophic respiration and organic carbon.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Net ecosystem exchange: Net CO2 exchange between cropland and the atmosphere.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 Net ecosystem exchange: Net CO2 exchange between cropland and the atmosphere.</li>
+                            
               
           </ol>
+          
+          
+
+              
+          
+
+                  
+          
+              
+       
+      </div>
+      
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-data-structure-model-input-and-output-variables" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">Data Structure: Model Input and Output Variables</h2>
+      <div class="row">
+        
+        
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">The AgroC model requires specific input data and produces detailed output data for comprehensive analysis.</p>
+
+          
+          
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 <strong>Model Input Data</strong>:</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 Daily weather data: Maximum, minimum, and mean air temperature, solar radiation, and precipitation.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Soil properties: Clay fraction, bulk density, pH, concentrations of organic carbon, and total nitrogen.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 Farming management: Dates of planting and harvest, timing and rates of fertilizer application, manure inputs, and crop residue management.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🚜 Atmospheric CO2 concentration.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 <strong>Model Output Data</strong>:</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 Crop carbon: Gross primary production, autotrophic respiration, and net primary production.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Soil carbon: Heterotrophic respiration and organic carbon.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 Net ecosystem exchange: Net CO2 exchange between cropland and the atmosphere.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🚜 <strong>Detailed Input File Description</strong>:</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 <a href="/agroC/plants.in">plants.in</a>: Contains crop-specific parameters and settings for crop growth and management.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 <a href="/agroC/selector.in">selector.in</a>: Configures various simulation options, including settings for soil, water flow, and atmospheric conditions.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ <a href="/agroC/atmosph.in">atmosph.in</a>: Provides meteorological data and atmospheric conditions impacting crop growth, such as temperature and humidity.</li>
+                            
+              
+          </ol>
+          
           
 
               
@@ -535,6 +800,7 @@
         <div class="col-md-12">
           <p class="card-text" style="font-size: 1.2em;">This table provides a concise overview of each Fortran file within the AgroC model, detailing their primary functions, key subroutines, associated variables, and input/output behaviors. It serves as a quick reference guide for understanding the modular structure and core functionalities of the AgroC ecosystem model.</p>
 
+          
           
           
           
@@ -1174,30 +1440,56 @@
               
                   
                   
-                      <li class="list-group-item"><a href="https://doi.org/10.1002/vzj2.20009">Brogi et al. 2020</a> showcased AgroC&rsquo;s application in simulating crop growth and yield relative to soil properties over a square kilometer scale. By integrating a geophysics-based soil map with land use information, the AgroC effectively simulated soil water content dynamics and crop growth for a variety of crops such as sugar beet, maize, potato, wheat, barley, and rapeseed. The study highlights AgroC&rsquo;s accuracy in replicating observed leaf area index and yield data, underscoring its potential in precision agriculture and strategic decision-making.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 <a href="https://doi.org/10.1002/vzj2.20009">Brogi et al. 2020</a> showcased AgroC&rsquo;s application in simulating crop growth and yield relative to soil properties over a square kilometer scale. By integrating a geophysics-based soil map with land use information, the AgroC effectively simulated soil water content dynamics and crop growth for a variety of crops such as sugar beet, maize, potato, wheat, barley, and rapeseed. The study highlights AgroC&rsquo;s accuracy in replicating observed leaf area index and yield data, underscoring its potential in precision agriculture and strategic decision-making.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><a href="https://doi.org/10.1016/j.agrformet.2019.05.013">Constantin et al. 2019</a> illustrated AgroC&rsquo;s role in a comparative study assessing the impact of crop management and spatial data resolution on regional-scale crop model outputs. In this research, AgroC, among other models, was used to simulate winter wheat and maize over 30 years in North Rhine-Westphalia, Germany. The study explored adaptive management strategies considering local climatic conditions, such as varying sowing dates and nitrogen fertilization, and assessed their effects on crop yield, evapotranspiration, and drainage. Notably, AgroC&rsquo;s predictions showed particular sensitivity to these management changes, underlining its utility in modeling agricultural systems where management practices and spatial resolution are crucial factors.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 <a href="https://doi.org/10.1016/j.agrformet.2019.05.013">Constantin et al. 2019</a> illustrated AgroC&rsquo;s role in a comparative study assessing the impact of crop management and spatial data resolution on regional-scale crop model outputs. In this research, AgroC, among other models, was used to simulate winter wheat and maize over 30 years in North Rhine-Westphalia, Germany. The study explored adaptive management strategies considering local climatic conditions, such as varying sowing dates and nitrogen fertilization, and assessed their effects on crop yield, evapotranspiration, and drainage. Notably, AgroC&rsquo;s predictions showed particular sensitivity to these management changes, underlining its utility in modeling agricultural systems where management practices and spatial resolution are crucial factors.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><a href="https://doi.org/10.1002/vzj2.20058">Groh et al. 2020</a> demonstrated AgroC&rsquo;s effectiveness in a model intercomparison study on crop growth and soil water fluxes at erosion-affected sites. Utilizing the TERENO-SOILCan lysimeter network, AgroC effectively simulated various agronomic and environmental variables, emphasizing its critical role in modeling and understanding the complexities of agricultural systems influenced by soil heterogeneity.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ <a href="https://doi.org/10.1002/vzj2.20058">Groh et al. 2020</a> demonstrated AgroC&rsquo;s effectiveness in a model intercomparison study on crop growth and soil water fluxes at erosion-affected sites. Utilizing the TERENO-SOILCan lysimeter network, AgroC effectively simulated various agronomic and environmental variables, emphasizing its critical role in modeling and understanding the complexities of agricultural systems influenced by soil heterogeneity.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><a href="https://doi.org/10.1016/j.eja.2018.11.001">Maharjan et al.</a> investigated how using different levels of detailed information (data aggregation) affects predictions of crop yields in Mediterranean and temperate climates using AgroC and other models. The study revealed significant differences in data aggregation effects between these climates, particularly for spring crops in the Mediterranean region. This highlights the importance of using detailed local data for reliable crop forecasts, especially in areas with diverse weather and soil conditions.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 <a href="https://doi.org/10.1016/j.eja.2018.11.001">Maharjan et al.</a> investigated how using different levels of detailed information (data aggregation) affects predictions of crop yields in Mediterranean and temperate climates using AgroC and other models. The study revealed significant differences in data aggregation effects between these climates, particularly for spring crops in the Mediterranean region. This highlights the importance of using detailed local data for reliable crop forecasts, especially in areas with diverse weather and soil conditions.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><a href="https://doi.org/10.1016/j.agrformet.2018.08.011">Žydelis et al.</a> examined how cooler weather and limited water supply affect maize growth, using the AgroC model. The study, conducted in a region with a cooler climate, showed that AgroC can accurately simulate maize growth in these challenging conditions. It was found that cooler weather has a bigger impact on maize yields than occasional water shortages. This research is important for understanding how to grow maize in areas with cooler temperatures, highlighting the usefulness of AgroC in adapting farming practices to different environmental conditions.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🚜 <a href="https://doi.org/10.1016/j.agrformet.2018.08.011">Žydelis et al.</a> examined how cooler weather and limited water supply affect maize growth, using the AgroC model. The study, conducted in a region with a cooler climate, showed that AgroC can accurately simulate maize growth in these challenging conditions. It was found that cooler weather has a bigger impact on maize yields than occasional water shortages. This research is important for understanding how to grow maize in areas with cooler temperatures, highlighting the usefulness of AgroC in adapting farming practices to different environmental conditions.</li>
+                            
               
           </ol>
+          
           
 
               

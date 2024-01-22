@@ -195,7 +195,7 @@
 
           
            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">Contact</a>
+              <a class="nav-link" href="/members/" target="_blank">Contact</a>
            </li>
       </ul>
   </div>
@@ -269,20 +269,36 @@
               
                   
                   
-                      <li class="list-group-item">Soil compaction hinders nutrient absorption in plants.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 Soil compaction hinders nutrient absorption in plants.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Deep soil compaction&rsquo;s impacts on plant growth are still ambiguous.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 Deep soil compaction&rsquo;s impacts on plant growth are still ambiguous.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Coupled Models shed light on root behaviors in compacted soil, especially deep-rooted reactions.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Coupled Models shed light on root behaviors in compacted soil, especially deep-rooted reactions.</li>
+                            
               
           </ol>
+          
           
 
               
@@ -322,20 +338,36 @@
               
                   
                   
-                      <li class="list-group-item">SIMPLACE offers broad views but might miss detailed root dynamics.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 SIMPLACE offers broad views but might miss detailed root dynamics.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">CRootbox provides deep insights into root behaviors but might overlook larger plant-environment interactions.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 CRootbox provides deep insights into root behaviors but might overlook larger plant-environment interactions.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Coupling both models yields a comprehensive tool, enhancing our understanding of plant responses to environmental shifts.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Coupling both models yields a comprehensive tool, enhancing our understanding of plant responses to environmental shifts.</li>
+                            
               
           </ol>
+          
           
 
               
@@ -375,69 +407,126 @@
               
                   
                   
-                      <li class="list-group-item">
-                          <strong>Integration</strong>:CRootbox and SIMPLACE are coupled to provide a realistic representation of root growth
-                          <ol class="list-unstyled ml-4">
-                              
-                                  <li class="list-group-item bg-light"><strong>Method</strong>: Python interface between the two models.</li>
-                              
-                                  <li class="list-group-item bg-light"><strong>Result</strong>: Combined system termed SIMPLACE-cRootbox.</li>
-                              
-                          </ol>
-                      </li>
                   
                   
+          
+                  
+                  
+                  <li class="list-group-item">
+                      🌾 <strong>Integration</strong>:CRootbox and SIMPLACE are coupled to provide a realistic representation of root growth
+                      <ol class="list-unstyled ml-4">
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌾 <strong>Method</strong>: Python interface between the two models.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌍 <strong>Result</strong>: Combined system termed SIMPLACE-cRootbox.
+                              </li>
+                          
+                      </ol>
+                  </li>
+                            
               
                   
                   
-                      <li class="list-group-item">
-                          <strong>SIMPLACE Components</strong>: Specific components like EvapTranDemand, SlimWater, LintulPhenology, and LintulBiomass are involved in the process
-                          <ol class="list-unstyled ml-4">
-                              
-                                  <li class="list-group-item bg-light"><strong>EvapTranDemand</strong>: Estimates potential crop transpiration and potential soil evaporation using a modified Penman approach.</li>
-                              
-                                  <li class="list-group-item bg-light"><strong>SlimWater</strong>: Computes soil water dynamics, estimating daily change in soil water content based on factors like crop water uptake, soil evaporation,   surface runoff, and seepage below the root zone.</li>
-                              
-                                  <li class="list-group-item bg-light"><strong>LintulPhenology</strong>: Calculates the development stage of a crop.</li>
-                              
-                                  <li class="list-group-item bg-light"><strong>LintulBiomass</strong>: Determines daily root biomass increment.</li>
-                              
-                          </ol>
-                      </li>
                   
                   
+          
+                  
+                  
+                  <li class="list-group-item">
+                      🌍 <strong>SIMPLACE Components</strong>: Specific components like EvapTranDemand, SlimWater, LintulPhenology, and LintulBiomass are involved in the process
+                      <ol class="list-unstyled ml-4">
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌾 <strong>EvapTranDemand</strong>: Estimates potential crop transpiration and potential soil evaporation using a modified Penman approach.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌍 <strong>SlimWater</strong>: Computes soil water dynamics, estimating daily change in soil water content based on factors like crop water uptake, soil evaporation,   surface runoff, and seepage below the root zone.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌦️ <strong>LintulPhenology</strong>: Calculates the development stage of a crop.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  💧 <strong>LintulBiomass</strong>: Determines daily root biomass increment.
+                              </li>
+                          
+                      </ol>
+                  </li>
+                            
               
                   
                   
-                      <li class="list-group-item">
-                          <strong>Data Flow</strong>
-                          <ol class="list-unstyled ml-4">
-                              
-                                  <li class="list-group-item bg-light"><strong>From SIMPLACE to CRootbox</strong>: Potential root elongation (RE) derived from SIMPLACE&rsquo;s components.</li>
-                              
-                                  <li class="list-group-item bg-light"><strong>From CRootbox to SIMPLACE</strong>: Actual root length density (RLD) simulated by CRootbox.</li>
-                              
-                          </ol>
-                      </li>
                   
                   
+          
+                  
+                  
+                  <li class="list-group-item">
+                      🌦️ <strong>Data Flow</strong>
+                      <ol class="list-unstyled ml-4">
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌾 <strong>From SIMPLACE to CRootbox</strong>: Potential root elongation (RE) derived from SIMPLACE&rsquo;s components.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌍 <strong>From CRootbox to SIMPLACE</strong>: Actual root length density (RLD) simulated by CRootbox.
+                              </li>
+                          
+                      </ol>
+                  </li>
+                            
               
                   
                   
-                      <li class="list-group-item">
-                          <strong>Feedback Mechanism</strong>:Ensures that root growth limitations due to soil physical stresses are considered before those due to biomass
-                          <ol class="list-unstyled ml-4">
-                              
-                                  <li class="list-group-item bg-light"><strong>Growth Prioritization</strong>: Emphasis on soil factors over shoot-derived biomass restrictions.</li>
-                              
-                                  <li class="list-group-item bg-light"><strong>Mathematical Representation</strong>: If {{&lt; rawhtml &gt;}}( RE_{potential} &gt; RE_{max} ){{&lt; /rawhtml &gt;}}, CRootbox adjusts to ensure {{&lt; rawhtml &gt;}}( RLD_{actual} \leq RLD_{potential} ){{&lt; /rawhtml &gt;}}. In other words, if potential root elongation was higher than the maximum allowed, CRootbox would reduce root growth equally across all roots</li>
-                              
-                          </ol>
-                      </li>
                   
                   
+          
+                  
+                  
+                  <li class="list-group-item">
+                      💧 <strong>Feedback Mechanism</strong>:Ensures that root growth limitations due to soil physical stresses are considered before those due to biomass
+                      <ol class="list-unstyled ml-4">
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌾 <strong>Growth Prioritization</strong>: Emphasis on soil factors over shoot-derived biomass restrictions.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌍 <strong>Mathematical Representation</strong>: If {{&lt; rawhtml &gt;}}( RE_{potential} &gt; RE_{max} ){{&lt; /rawhtml &gt;}}, CRootbox adjusts to ensure {{&lt; rawhtml &gt;}}( RLD_{actual} \leq RLD_{potential} ){{&lt; /rawhtml &gt;}}. In other words, if potential root elongation was higher than the maximum allowed, CRootbox would reduce root growth equally across all roots
+                              </li>
+                          
+                      </ol>
+                  </li>
+                            
               
           </ol>
+          
           
 
               
@@ -477,30 +566,56 @@
               
                   
                   
-                      <li class="list-group-item"><strong>Enhanced Growth with Loosening</strong>: Deep loosening improved root growth, leading to better crop productivity, especially in dry conditions.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 <strong>Enhanced Growth with Loosening</strong>: Deep loosening improved root growth, leading to better crop productivity, especially in dry conditions.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><strong>Model Accuracy</strong>: The model effectively simulated root growth from emergence to flowering, capturing the effects of subsoil loosening on both roots and shoots.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 <strong>Model Accuracy</strong>: The model effectively simulated root growth from emergence to flowering, capturing the effects of subsoil loosening on both roots and shoots.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><strong>Soil Compaction Insights</strong>: Soil strength, influenced by compaction and moisture, plays a crucial role in root growth. Dense layers can restrict access to deeper soil moisture, especially in warmer climates.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ <strong>Soil Compaction Insights</strong>: Soil strength, influenced by compaction and moisture, plays a crucial role in root growth. Dense layers can restrict access to deeper soil moisture, especially in warmer climates.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><strong>Agronomic Implications</strong>: Understanding root adaptation to soil conditions can guide cultivar selection and breeding, promoting sustainable agriculture.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 <strong>Agronomic Implications</strong>: Understanding root adaptation to soil conditions can guide cultivar selection and breeding, promoting sustainable agriculture.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><strong>Model&rsquo;s Potential</strong>: This tool can assess the impact of different root traits under various conditions, paving the way for advanced cultivar research and selection.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🚜 <strong>Model&rsquo;s Potential</strong>: This tool can assess the impact of different root traits under various conditions, paving the way for advanced cultivar research and selection.</li>
+                            
               
           </ol>
+          
           
 
               
@@ -536,35 +651,66 @@
               
                   
                   
-                      <li class="list-group-item"><strong>In-depth Understanding</strong>: The coupled model offers a comprehensive perspective on root-soil interactions, highlighting the effects of soil compaction.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 <strong>In-depth Understanding</strong>: The coupled model offers a comprehensive perspective on root-soil interactions, highlighting the effects of soil compaction.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><strong>Adaptive Plasticity</strong>: The model effectively simulates the roots&rsquo; ability to adapt to local soil conditions, emphasizing the importance of understanding root system adaptation for site-specific cultivar selection and breeding.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 <strong>Adaptive Plasticity</strong>: The model effectively simulates the roots&rsquo; ability to adapt to local soil conditions, emphasizing the importance of understanding root system adaptation for site-specific cultivar selection and breeding.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><strong>Future Crop Ideotypes</strong>: The model can be used to identify and design future crop ideotypes, aiding in the development of crops best suited for specific environmental conditions.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ <strong>Future Crop Ideotypes</strong>: The model can be used to identify and design future crop ideotypes, aiding in the development of crops best suited for specific environmental conditions.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><strong>In Silico Breeding</strong>: The model allows for the exploration of genotype-environment-management interactions, paving the way for in silico breeding and research on promising root traits.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 <strong>In Silico Breeding</strong>: The model allows for the exploration of genotype-environment-management interactions, paving the way for in silico breeding and research on promising root traits.</li>
+                            
               
                   
                   
-                      <li class="list-group-item"><strong>Sustainable Agriculture</strong>: By providing insights into the effects of soil compaction and weather on crop species, the model plays a pivotal role in promoting sustainable agricultural practices.</li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🚜 <strong>Sustainable Agriculture</strong>: By providing insights into the effects of soil compaction and weather on crop species, the model plays a pivotal role in promoting sustainable agricultural practices.</li>
+                            
               
                   
                   
-                      <li class="list-group-item">Find more on this study from the article <a href="https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full">published in Front. Plant Sci. Journal</a></li>
                   
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 Find more on this study from the article <a href="https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full">published in Front. Plant Sci. Journal</a></li>
+                            
               
           </ol>
+          
           
 
               
@@ -600,80 +746,141 @@
               
                   
                   
-                      <li class="list-group-item">
-                          <strong>Prerequisites</strong>
-                          <ol class="list-unstyled ml-4">
-                              
-                                  <li class="list-group-item bg-light">Create a folder &lsquo;workspace&rsquo; in your home directory.</li>
-                              
-                                  <li class="list-group-item bg-light">Make sure the required modules are loaded in your system.</li>
-                              
-                          </ol>
-                      </li>
                   
                   
+          
+                  
+                  
+                  <li class="list-group-item">
+                      🌾 <strong>Prerequisites</strong>
+                      <ol class="list-unstyled ml-4">
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌾 Create a folder &lsquo;workspace&rsquo; in your home directory.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌍 Make sure the required modules are loaded in your system.
+                              </li>
+                          
+                      </ol>
+                  </li>
+                            
               
                   
                   
-                      <li class="list-group-item">
-                          <strong>Repository Checkout</strong>
-                          <ol class="list-unstyled ml-4">
-                              
-                                  <li class="list-group-item bg-light">Checkout the simplace_wrapper from the SVN repository <code>svn co svn://svn.simplace.net/svn/simplace_wrapper simplace_wrapper</code>.</li>
-                              
-                                  <li class="list-group-item bg-light">Navigate to example folder and give execution rights to installation shell scripts. For e.g <code>chmod +x SIMPLACE_v5.0_install_bonnares.sh</code></li>
-                              
-                          </ol>
-                      </li>
                   
                   
+          
+                  
+                  
+                  <li class="list-group-item">
+                      🌍 <strong>Repository Checkout</strong>
+                      <ol class="list-unstyled ml-4">
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌾 Checkout the simplace_wrapper from the SVN repository <code>svn co svn://svn.simplace.net/svn/simplace_wrapper simplace_wrapper</code>.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌍 Navigate to example folder and give execution rights to installation shell scripts. For e.g <code>chmod +x SIMPLACE_v5.0_install_bonnares.sh</code>
+                              </li>
+                          
+                      </ol>
+                  </li>
+                            
               
                   
                   
-                      <li class="list-group-item">
-                          <strong>Installation Steps</strong>
-                          <ol class="list-unstyled ml-4">
-                              
-                                  <li class="list-group-item bg-light">Execute the shell scripts to download and compile SIMPLACE and CPlantBox.</li>
-                              
-                          </ol>
-                      </li>
                   
                   
+          
+                  
+                  
+                  <li class="list-group-item">
+                      🌦️ <strong>Installation Steps</strong>
+                      <ol class="list-unstyled ml-4">
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌾 Execute the shell scripts to download and compile SIMPLACE and CPlantBox.
+                              </li>
+                          
+                      </ol>
+                  </li>
+                            
               
                   
                   
-                      <li class="list-group-item">
-                          <strong>Python Script Configuration</strong>
-                          <ol class="list-unstyled ml-4">
-                              
-                                  <li class="list-group-item bg-light">Python script accepts command-line arguments for various parameters like solution ID, rain scale, and crop type.</li>
-                              
-                                  <li class="list-group-item bg-light">Script initializes root system and sets up simulation parameters.</li>
-                              
-                          </ol>
-                      </li>
                   
                   
+          
+                  
+                  
+                  <li class="list-group-item">
+                      💧 <strong>Python Script Configuration</strong>
+                      <ol class="list-unstyled ml-4">
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌾 Python script accepts command-line arguments for various parameters like solution ID, rain scale, and crop type.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌍 Script initializes root system and sets up simulation parameters.
+                              </li>
+                          
+                      </ol>
+                  </li>
+                            
               
                   
                   
-                      <li class="list-group-item">
-                          <strong>Running an Example</strong>
-                          <ol class="list-unstyled ml-4">
-                              
-                                  <li class="list-group-item bg-light">Load the required modules.</li>
-                              
-                                  <li class="list-group-item bg-light">Run the example script located in misc/example_simplace_cplantbox.py.</li>
-                              
-                                  <li class="list-group-item bg-light">Python script controls the iterative interaction between SIMPLACE and CPlantBox, updating parameters and fetching results at each simulation step.</li>
-                              
-                          </ol>
-                      </li>
                   
                   
+          
+                  
+                  
+                  <li class="list-group-item">
+                      🚜 <strong>Running an Example</strong>
+                      <ol class="list-unstyled ml-4">
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌾 Load the required modules.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌍 Run the example script located in misc/example_simplace_cplantbox.py.
+                              </li>
+                          
+                              
+                              
+                              <li class="list-group-item bg-light">
+                                  🌦️ Python script controls the iterative interaction between SIMPLACE and CPlantBox, updating parameters and fetching results at each simulation step.
+                              </li>
+                          
+                      </ol>
+                  </li>
+                            
               
           </ol>
+          
           
 
               
@@ -689,7 +896,7 @@
       
       
           
-          <div class="video-title"><i class="fas fa-tv"></i>Installation Tutorial Video</div>  
+          <div class="video-title"><i class="fas fa-tv" style="margin-right: 10px;"></i>Installation Tutorial Video</div>
           <div class="embed-responsive embed-responsive-16by9 my-4" style="max-width: 60%; margin: auto;">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/INyTdrHIYAM" allowfullscreen></iframe>
           </div>
