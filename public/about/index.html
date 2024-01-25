@@ -259,10 +259,6 @@
         <div class="col">
           <p class="card-text" style="font-size: 1.2em;">Welcome to the PhenoRob Digital Agricultural Avatar (DAA) – a transformative step in precision agriculture. As an integral component of the PhenoRob initiative, DAA is designed to digitally encapsulate and analyze agricultural systems. A collaborative effort between <a href="https://www.uni-bonn.de/">Universität Bonn</a> and <a href="https://www.fz-juelich.de/portal/EN/Home/home_node.html">Forschungszentrum Jülich</a>, DAA will offer comprehensive data-driven insights.The DAA not only incorporates models spanning soil physics and plant biology but also extends to encompass economic factors, thereby facilitating a holistic approach to agricultural management and research.</p>
           
-          
-            
-          
-
 
         </div>
         
@@ -471,10 +467,6 @@
               
           </div>
           
-          
-            
-          
-
 
         </div>
         
@@ -540,10 +532,6 @@
               
           </div>
           
-          
-            
-          
-
 
         </div>
         
@@ -574,10 +562,6 @@
         <div class="col">
           <p class="card-text" style="font-size: 1.2em;">Driving the PhenoRob DAA forward is a team of <a href="/members/">scientists</a> from <a href="https://www.uni-bonn.de/">Universität Bonn</a> and <a href="https://www.fz-juelich.de/portal/EN/Home/home_node.html">Forschungszentrum Jülich</a>.</p>
           
-          
-            
-          
-
 
         </div>
         
@@ -598,6 +582,17 @@
   <footer class="site-footer text-center bg-light py-4">
       <p></p>
       <p><a href="/privacy-policy">Privacy Policy</a></p>
+
+        
+        <div id="visitorCount" class="mt-2">Loading page views...</div>
+        <script>
+        fetch('https://api.countapi.xyz/hit/your-unique-key/visits')
+            .then(response => response.json())
+            .then(data => {
+            document.getElementById('visitorCount').innerText = 'Page views: ' + data.value;
+            });
+        </script>
+
       <div class="social-icons mt-3">
           <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
               <i class="fab fa-youtube fa-2x"></i>

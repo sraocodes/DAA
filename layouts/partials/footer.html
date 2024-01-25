@@ -2,6 +2,18 @@
   <footer class="site-footer text-center bg-light py-4">
       <p>{{ .Site.Data.footer.title }}</p>
       <p><a href="{{ .Site.Data.footer.privacy_policy_link }}">{{ .Site.Data.footer.privacy_policy }}</a></p>
+
+        <!-- Visitor Count -->
+        <div id="visitorCount" class="mt-2">Loading page views...</div>
+        <script>
+        fetch('https://api.countapi.xyz/hit/phenorobdaa.de/visits')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('visitorCount').innerText = 'Page views: ' + data.value;
+            });
+        </script>
+
+
       <div class="social-icons mt-3">
           <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
               <i class="fab fa-youtube fa-2x"></i>

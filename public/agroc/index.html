@@ -280,9 +280,34 @@
           <p class="card-text" style="font-size: 1.2em;">AgroC is a computer model used to understand how carbon moves in and out of agricultural soil, which is called the &lsquo;carbon budget&rsquo; of the farm or field. The model helps scientists understand how much carbon is being absorbed by crops, how much is stored in the soil, and how much is exchanged with the atmosphere. Understanding the carbon budget of agroecosystems has implications for climate change mitigation and sustainable land management.Visit the official <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062">AgroC documentation</a> for detailed information.</p>
           
           
-            
+          <div class="list-group">
+              
+                  
+                  
+                  
+                  
           
-
+                  
+                  <a href="#" class="list-group-item list-group-item-action">🚜  Focus: Understanding the carbon cycle in agricultural ecosystems.</a>
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  <a href="#" class="list-group-item list-group-item-action">🌾 Importance: Vital for climate change mitigation strategies.</a>
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  <a href="#" class="list-group-item list-group-item-action">🌳 Use: Assists in calculating carbon absorption by crops and exchange with the atmosphere.</a>
+              
+          </div>
+          
 
         </div>
         
@@ -312,7 +337,7 @@
                   
           
                   
-                  <a href="#" class="list-group-item list-group-item-action">🚜  Crop-C: This part simulates how crops grow and take in carbon from the air during photosynthesis.</a>
+                  <a href="#" class="list-group-item list-group-item-action">🚜  Crop-C: This module simulates crop growth, and handles the intricate processes of photosynthesis and carbon assimilation, offering insights into how crops absorb and utilize atmospheric carbon.</a>
               
                   
                   
@@ -320,14 +345,10 @@
                   
           
                   
-                  <a href="#" class="list-group-item list-group-item-action">🌾 Soil-C: This part simulates what happens to the carbon from crop residues and other organic sources in the soil.</a>
+                  <a href="#" class="list-group-item list-group-item-action">🌾 Soil-C: This module simulates soil carbon dynamics, this component analyzes the fate of carbon from crop residues and other organic sources within the soil, shedding light on the complex soil-carbon interactions.</a>
               
           </div>
           
-          
-            
-          
-
 
         </div>
         
@@ -360,10 +381,6 @@
         <div class="col">
           <p class="card-text" style="font-size: 1.2em;">The Crop-C sub-model in AgroC focuses on the journey of carbon in the life of a plant. It calculates how much carbon the plant absorbs from the atmosphere through photosynthesis (also known as Gross Primary Production or GPP). It then considers how much of this carbon the plant uses for its own growth and basic life functions, a process known as Autotrophic Respiration (RA). The remaining carbon, termed as Net Primary Production (NPP), is the balance between what the plant takes in and what it uses. The sub-model also tracks how much of this remaining carbon gets transferred into the soil.</p>
           
-          
-            
-          
-
 
         </div>
         
@@ -421,10 +438,6 @@
         <div class="col">
           <p class="card-text" style="font-size: 1.2em;">Crop-C and Soil-C submodels are linked through the concept of Net Ecosystem Exchange (NEE). NEE represents the balance between carbon gained by the ecosystem and carbon lost by the ecosystem. Understanding NEE helps us determine whether an ecosystem is acting as a net carbon sink (absorbing more carbon than it releases) or a net carbon source (releasing more carbon than it absorbs).</p>
           
-          
-            
-          
-
 
         </div>
         
@@ -769,6 +782,16 @@
                   
                   
                   <li class="list-group-item">🌦️ <a href="/agroC/atmosph.in">atmosph.in</a>: Provides meteorological data and atmospheric conditions impacting crop growth, such as temperature and humidity.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 <a href="/agroC/agroC_inputs.zip">Download Input Files</a></li>
                             
               
           </ol>
@@ -1517,6 +1540,17 @@
   <footer class="site-footer text-center bg-light py-4">
       <p></p>
       <p><a href="/privacy-policy">Privacy Policy</a></p>
+
+        
+        <div id="visitorCount" class="mt-2">Loading page views...</div>
+        <script>
+        fetch('https://api.countapi.xyz/hit/your-unique-key/visits')
+            .then(response => response.json())
+            .then(data => {
+            document.getElementById('visitorCount').innerText = 'Page views: ' + data.value;
+            });
+        </script>
+
       <div class="social-icons mt-3">
           <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
               <i class="fab fa-youtube fa-2x"></i>
