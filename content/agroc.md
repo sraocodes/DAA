@@ -110,4 +110,10 @@ sections:
       - "[Groh et al. 2020](https://doi.org/10.1002/vzj2.20058) demonstrated AgroC's effectiveness in a model intercomparison study on crop growth and soil water fluxes at erosion-affected sites. Utilizing the TERENO-SOILCan lysimeter network, AgroC effectively simulated various agronomic and environmental variables, emphasizing its critical role in modeling and understanding the complexities of agricultural systems influenced by soil heterogeneity."
       - "[Maharjan et al.](https://doi.org/10.1016/j.eja.2018.11.001) investigated how using different levels of detailed information (data aggregation) affects predictions of crop yields in Mediterranean and temperate climates using AgroC and other models. The study revealed significant differences in data aggregation effects between these climates, particularly for spring crops in the Mediterranean region. This highlights the importance of using detailed local data for reliable crop forecasts, especially in areas with diverse weather and soil conditions."
       - "[Žydelis et al.](https://doi.org/10.1016/j.agrformet.2018.08.011) examined how cooler weather and limited water supply affect maize growth, using the AgroC model. The study, conducted in a region with a cooler climate, showed that AgroC can accurately simulate maize growth in these challenging conditions. It was found that cooler weather has a bigger impact on maize yields than occasional water shortages. This research is important for understanding how to grow maize in areas with cooler temperatures, highlighting the usefulness of AgroC in adapting farming practices to different environmental conditions."
+
+  - name: "AgroC Videos"
+    text: "The videos here demonstrate how AgroC can flexibly accommodate diverse regional climates, management approaches, and specific agricultural requirements:"
+    videos: 
+    - videoID: "ZuNX-8Uojsc"
+      videoTitle: "AgroC Simulations by Dr.Cosimo to analyze and predict the impact of various factors on crop growth"
 ---
