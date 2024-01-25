@@ -586,12 +586,16 @@ stakeholders with unparalleled insights.
         
         <div id="visitorCount" class="mt-2">Loading page views...</div>
         <script>
-        fetch('https://api.countapi.xyz/hit/your-unique-key/visits')
-            .then(response => response.json())
-            .then(data => {
-            document.getElementById('visitorCount').innerText = 'Page views: ' + data.value;
+            document.addEventListener('DOMContentLoaded', (event) => {
+                fetch('https://api.countapi.xyz/hit/phenorobdaa.de/visits')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('visitorCount').innerText = 'Page views: ' + data.value;
+                    });
             });
         </script>
+            
+
 
       <div class="social-icons mt-3">
           <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
