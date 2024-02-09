@@ -238,7 +238,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-cplantbox-model-components-overview" >CPlantBox Model Components Overview</a>
+          <a class="nav-link" href="#single-cplantbox-structural-components-overview" >CPlantBox Structural Components Overview</a>
         </li>
         
         <li class="nav-item">
@@ -809,14 +809,14 @@
   
   
   
-  <div id="single-cplantbox-model-components-overview" class="card mb-5">
+  <div id="single-cplantbox-structural-components-overview" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">CPlantBox Model Components Overview</h2>
+      <h2 class="card-title">CPlantBox Structural Components Overview</h2>
       <div class="row">
         
         
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">This table provides a concise overview of each C++ file within the CPlantBox model, detailing their primary functions, key subroutines, associated variables, and input/output behaviors. It serves as a quick reference guide for understanding the modular structure and core functionalities of the CPlantBox plant modeling framework.</p>
+          <p class="card-text" style="font-size: 1.2em;">Overview of C++ files in CPlantBox Structural Component: functionalities, subroutines, variables, and I/O behaviors.</p>
 
           
           
@@ -835,13 +835,13 @@
                   
                   <th>File</th>
                   
-                  <th>Module Name</th>
+                  <th>Module</th>
                   
-                  <th>Primary Functionality</th>
+                  <th>Functionality</th>
                   
-                  <th>Associated Variables</th>
+                  <th>Variables</th>
                   
-                  <th>Input/Output</th>
+                  <th>I/O</th>
                   
                 </tr>
               </thead>
@@ -851,31 +851,507 @@
                    
                   
                   
-                    <td>Leaf.cpp, Leaf.h</td>
+                    <td>Leaf.cpp</td>
                   
                    
                   
                    
                     <td>
                       
-                        Leaf
+                        Structural
                       
                     </td>
                   
                    
                   
                   
-                    <td>Simulates the growth and development of leaves, including creation, parameter computation, and visualization.</td>
+                    <td>Growth and development of leaves.</td>
                   
                    
                   
                   
-                    <td>Leaf identification, parameters, growth factors, geometric properties, tropism, organ connectivity.</td>
+                    <td>Leaf identification, parameters, growth factors, geometry, tropism, connectivity.</td>
                   
                    
                   
                   
-                    <td>Input: Growth parameters and environmental factors. Output: Structural and physical properties of leaves.</td>
+                    <td>Input: Growth parameters, environment. Output: Leaf properties.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>MappedOrganism.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Plant structure management, 3D soil grid mapping.</td>
+                  
+                   
+                  
+                  
+                    <td>Nodes, segments, radii, organ types, soil index, plant parameters, exchange zones.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Plant structure, soil parameters. Output: Plant structure, growth data.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>Organ.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Base class for plant organs.</td>
+                  
+                   
+                  
+                  
+                    <td>Nodes, segments, organ tree, parameters, type, age, status.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Development parameters, time. Output: Organ structure, growth, geometry.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>Organism.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Simulation interface, RSML support.</td>
+                  
+                   
+                  
+                  
+                    <td>Organ parameters, node/segment geometry, indices, RNG.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Simulation parameters. Output: Organism development, geometry, RSML.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>Plant.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Plant model simulation and management.</td>
+                  
+                   
+                  
+                  
+                    <td>Tropisms, growth functions, soil lookup, parameters, state, callbacks.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Initialization, growth parameters. Output: Growth, utilities.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>Root.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Root growth and lateral root management.</td>
+                  
+                   
+                  
+                  
+                    <td>Root parameters, types, state, node creation, tropism.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Growth parameters, environment. Output: Root growth, new nodes/roots.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>RootDelay.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Delayed lateral root growth.</td>
+                  
+                   
+                  
+                  
+                    <td>Root delay parameters, lateral root creation, root structure.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Growth parameters with delay. Output: Delayed root growth, structure.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>RootSystem.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Root system management and analysis.</td>
+                  
+                   
+                  
+                  
+                    <td>Root parameters, tropisms, growth functions, state, tools.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Configuration, simulation parameters. Output: Root system growth, analysis.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>Seed.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Seed class definition and organ management.</td>
+                  
+                   
+                  
+                  
+                    <td>Seed development, organ management, integration with plant.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Plant configuration, organ parameters. Output: Plant organ initialization.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>Stem.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Stem growth and development.</td>
+                  
+                   
+                  
+                  
+                    <td>Growth simulation, lateral management, parameter computation, growth modes.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Parameters, growth data. Output: Stem growth, data, parameters.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>organparameter.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Organ type configuration and characteristics.</td>
+                  
+                   
+                  
+                  
+                    <td>Organ type setup, parameter handling, random parameter management.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Organism data, configuration. Output: Organ parameters, characteristics.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>rootparameter.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Root parameters and functionalities.</td>
+                  
+                   
+                  
+                  
+                    <td>Root type setup, growth dynamics, tropism, distance management.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Root data, growth configuration. Output: Root parameters, characteristics.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>seedparameter.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Seed-specific parameter handling.</td>
+                  
+                   
+                  
+                  
+                    <td>Seed positioning, root emergence, crown configuration, tiller parameters.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Seed data, configuration. Output: Seed parameters, development.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>stemparameter.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Structural
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Stem-specific parameter management.</td>
+                  
+                   
+                  
+                  
+                    <td>Growth dynamics, branching, tropism, lifespan, nodal functions.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Stem data, growth parameters. Output: Stem parameters, characteristics.</td>
+                  
+                   
+                  
+                </tr>
+                
+                <tr>
+                   
+                  
+                  
+                    <td>tropism.cpp</td>
+                  
+                   
+                  
+                   
+                    <td>
+                      
+                        Behavioral &amp; Dynamic
+                      
+                    </td>
+                  
+                   
+                  
+                  
+                    <td>Tropism behaviors for growth simulation.</td>
+                  
+                   
+                  
+                  
+                    <td>Various tropisms, environmental response mechanisms.</td>
+                  
+                   
+                  
+                  
+                    <td>Input: Environmental stimuli, growth parameters. Output: Growth direction, tropism responses.</td>
                   
                    
                   
