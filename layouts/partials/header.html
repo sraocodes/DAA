@@ -52,22 +52,6 @@
               </div>
           </li>
 
-           <!-- Coupled Models Dropdown -->
-           <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="coupledModelsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ .Site.Data.header.CoupledModelsName }}
-                </a>
-                <div class="dropdown-menu" aria-labelledby="coupledModelsDropdown">
-                    {{ range .Site.Data.header.CoupledModelsDropdown }}
-                        {{ $url := .url }}
-                        {{ if not (strings.HasPrefix $url "http") }}
-                            {{ $url = printf "%s%s" $.Site.BaseURL $url }}
-                        {{ end }}
-                        <a class="dropdown-item" href="{{ $url }}">{{ .name }}</a>
-                    {{ end }}
-                </div>
-           </li>
-
             <!-- Research-->
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

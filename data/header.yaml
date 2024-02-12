@@ -24,31 +24,15 @@ Link2Dropdown:
     url: "/pbm/"
   - name: Multi Scale Models
     url: "/multi_scale/"
-  - name: Coupling Models
-    url: "/couple/"
 
 ToolsName: Tools
 ToolsDropDown:
-  - Name: GRANAR
-    Link: "/granar/"
-  - Name: MECHA
+  - Name: Our Main Tools
+    Link: "/our_main_tools/"
+  - Name: Developer Zone
     Link: "/mecha/"    
-  - Name: CPlantBox
-    Link: "/cplantbox/"
-  - Name: AgroC
-    Link: "/agroc/"
-  - Name: Simplace
-    Link: "/simplace/"
-  - Name: TerrSysMP
-    Link: "/terrsysmp/"
-
-CoupledModelsName: Coupled Models
-CoupledModelsDropdown:
-  - name: Simplace-CPlantbox
-    url: "/casestudy1/"
-  - name: GRANAR-Mecha
-    url: "/casestudy2/"
-
+  - Name: Coupled Models
+    Link: "/couple/"
 
 Link3Name: "Contact"
 Link3Link: "/members/"
