@@ -24,7 +24,7 @@ sections:
     textPosition: "top"
 
   - name: "Components of AgroC Model"
-    text: "AgroC integrates several key components for a holistic agricultural simulation. The SoilCO2 module handles soil processes, RothC simulates organic carbon turnover, and SUCROS models crop growth and dry matter accumulation. AgroC utilizes Farquhar model for photosynthesis and solves Richard’s equation for soil water balance. These components work together to provide a closed carbon balance for cropped ecosystems."
+    text: "AgroC integrates several key components for a holistic agricultural simulation. The SoilCO2 module handles soil processes, RothC simulates organic carbon turnover, and SUCROS models crop growth and dry matter accumulation. AgroC utilizes Farquhar model for photosynthesis and solves Richard’s equation for soil water balance. These components work together to provide a closed carbon balance for cropped ecosystems. Here is the documentation for [AgroC](/agroC/agroc_manual.pdf)"
     list:
       - "SUCROS Module: Focuses on crop growth, handling photosynthesis and dry matter accumulation. It employs the Farquhar model to simulate photosynthesis, factoring in light absorption, water availability, and rubisco concentration."
       - "SOILCO2 Module: Manages soil water, heat, and CO2 fluxes. This module is responsible for modeling soil water balance using Richard’s equation, which calculates soil water storage change, actual evapotranspiration, and infiltration."
