@@ -88,12 +88,6 @@
                       
                       <a class="dropdown-item" href="https://www.phenorobdaa.de//multi_scale/">Multi Scale Models</a>
                   
-                      
-                      
-                          
-                      
-                      <a class="dropdown-item" href="https://www.phenorobdaa.de//couple/">Coupling Models</a>
-                  
               </div>
           </li>
 
@@ -108,62 +102,22 @@
                       
                           
                       
-                      <a class="dropdown-item" href="https://www.phenorobdaa.de//granar/">GRANAR</a>
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//our_main_tools/">Our Main Tools</a>
                   
                       
                       
                           
                       
-                      <a class="dropdown-item" href="https://www.phenorobdaa.de//mecha/">MECHA</a>
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//mecha/">Developer Zone</a>
                   
                       
                       
                           
                       
-                      <a class="dropdown-item" href="https://www.phenorobdaa.de//cplantbox/">CPlantBox</a>
-                  
-                      
-                      
-                          
-                      
-                      <a class="dropdown-item" href="https://www.phenorobdaa.de//agroc/">AgroC</a>
-                  
-                      
-                      
-                          
-                      
-                      <a class="dropdown-item" href="https://www.phenorobdaa.de//simplace/">Simplace</a>
-                  
-                      
-                      
-                          
-                      
-                      <a class="dropdown-item" href="https://www.phenorobdaa.de//terrsysmp/">TerrSysMP</a>
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//couple/">Coupled Models</a>
                   
               </div>
           </li>
-
-           
-           <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="coupledModelsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Coupled Models
-                </a>
-                <div class="dropdown-menu" aria-labelledby="coupledModelsDropdown">
-                    
-                        
-                        
-                            
-                        
-                        <a class="dropdown-item" href="https://www.phenorobdaa.de//casestudy1/">Simplace-CPlantbox</a>
-                    
-                        
-                        
-                            
-                        
-                        <a class="dropdown-item" href="https://www.phenorobdaa.de//casestudy2/">GRANAR-Mecha</a>
-                    
-                </div>
-           </li>
 
             
             <li class="nav-item dropdown">
@@ -218,23 +172,11 @@
       <ul class="navbar-nav">
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-what-is-agroc" >What is AgroC ?</a>
+          <a class="nav-link" href="#single-what-is-agroc" >What is AgroC?</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-description-of-agroc-model" >Description of AgroC Model</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#single-crop-c-sub-model" >Crop-C sub-model</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#single-soil-c-sub-model" >Soil-C sub-model</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#single-net-ecosystem-exchange" >Net Ecosystem Exchange</a>
+          <a class="nav-link" href="#single-components-of-agroc-model" >Components of AgroC Model</a>
         </li>
         
         <li class="nav-item">
@@ -270,144 +212,134 @@
   
   <div id="single-what-is-agroc" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">What is AgroC ?</h2>
+      <h2 class="card-title">What is AgroC?</h2>
       <div class="row">
         
         
-        <div class="col-auto">
-          
-          <img class="img-fluid rounded mb-2" src="/images/AgroC.png" alt="What is AgroC ?" style="width: 250px; height: 250px;">
-          
+        <div class="col-md-12 text-center">
+          <img class="img-fluid rounded mb-2" src="/images/AgroC.png" alt="What is AgroC?" style="width: 250px; height: 250px;">
         </div>
-        
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">AgroC is a computer model used to understand how carbon moves in and out of agricultural soil, which is called the &lsquo;carbon budget&rsquo; of the farm or field. The model helps scientists understand how much carbon is being absorbed by crops, how much is stored in the soil, and how much is exchanged with the atmosphere. Understanding the carbon budget of agroecosystems has implications for climate change mitigation and sustainable land management.Visit the official <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168192308002062">AgroC documentation</a> for detailed information.</p>
-          
-          
-          <div class="list-group">
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  <a href="#" class="list-group-item list-group-item-action">🚜  Focus: Understanding the carbon cycle in agricultural ecosystems.</a>
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  <a href="#" class="list-group-item list-group-item-action">🌾 Importance: Vital for climate change mitigation strategies.</a>
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  <a href="#" class="list-group-item list-group-item-action">🌳 Use: Assists in calculating carbon absorption by crops and exchange with the atmosphere.</a>
-              
-          </div>
-          
-
-        </div>
-        
-        
-      </div>
-      
-    </div>
-  </div>
-  
-  
-  
-  <div id="single-description-of-agroc-model" class="card mb-5">
-    <div class="card-body">
-      <h2 class="card-title">Description of AgroC Model</h2>
-      <div class="row">
-        
-        
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">The AgroC model is a coupling of the SOILCO2/RothC model and the SUCROS model for crop growth. It simulates water, heat, and CO2 flux in a soil column, as well as the turnover of depth-specific carbon pools. The model has been validated in various laboratory and field studies, ensuring its accuracy and reliability.The AgroC has two main parts:</p>
-          
-          
-          <div class="list-group">
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  <a href="#" class="list-group-item list-group-item-action">🚜  Crop-C: This module simulates crop growth, and handles the intricate processes of photosynthesis and carbon assimilation, offering insights into how crops absorb and utilize atmospheric carbon.</a>
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  <a href="#" class="list-group-item list-group-item-action">🌾 Soil-C: This module simulates soil carbon dynamics, this component analyzes the fate of carbon from crop residues and other organic sources within the soil, shedding light on the complex soil-carbon interactions.</a>
-              
-          </div>
-          
-
-        </div>
-        
-        <div class="col-auto">
-          
-          <img class="img-fluid rounded mb-2" src="/images/Agroc2.gif" alt="Description of AgroC Model" style="width: 250px; height: 250px;">
-          
-        </div>
-        
-        
-      </div>
-      
-    </div>
-  </div>
-  
-  
-  
-  <div id="single-crop-c-sub-model" class="card mb-5">
-    <div class="card-body">
-      <h2 class="card-title">Crop-C sub-model</h2>
-      <div class="row">
-        
-        
-        <div class="col-auto">
-          
-          <img class="img-fluid rounded mb-2" src="/images/Agroc3.gif" alt="Crop-C sub-model" style="width: 250px; height: 300px;">
-          
-        </div>
-        
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">The Crop-C sub-model in AgroC focuses on the journey of carbon in the life of a plant. It calculates how much carbon the plant absorbs from the atmosphere through photosynthesis (also known as Gross Primary Production or GPP). It then considers how much of this carbon the plant uses for its own growth and basic life functions, a process known as Autotrophic Respiration (RA). The remaining carbon, termed as Net Primary Production (NPP), is the balance between what the plant takes in and what it uses. The sub-model also tracks how much of this remaining carbon gets transferred into the soil.</p>
-          
-
-        </div>
-        
-        
-      </div>
-      
-    </div>
-  </div>
-  
-  
-  
-  <div id="single-soil-c-sub-model" class="card mb-5">
-    <div class="card-body">
-      <h2 class="card-title">Soil-C sub-model</h2>
-      <div class="row">
-        
         
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">The Soil-C submodel in AgroC helps us understand how organic carbon moves and changes in agricultural soils. It considers the balance between carbon going into the soil and carbon leaving the soil. By considering these processes, the model gives insight into how carbon levels change in agricultural soils over time.</p>
+          <p class="card-text" style="font-size: 1.2em;">AgroC is a 1D integrated model designed for simulating crucial aspects of crop growth and soil interactions, including nutrient dynamics, water fluxes, and carbon cycling. The model is tailored for researchers and practitioners who need an in-depth understanding of crop and soil behavior under various environmental conditions. It accurately models soil carbon turnover, CO2 flux, and plant water stress. Unique features like root exudation and death are considered, highlighting its advanced capabilities in representing real-world agricultural scenarios. AgroC&rsquo;s versatility is demonstrated through its application across diverse study sites with varying climatic conditions and land management practices. Some of its features are:</p>
 
           
           
           
+          
+          <ol class="list-group">
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 Combines soil and crop growth models.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 Detailed analysis of nutrient dynamics, especially phosphorus uptake.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Accurate modeling of water fluxes and soil moisture.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 Models photosynthesis and the impact of environmental stress.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🚜 Manages harvest residues for sustainable agriculture.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 Integrates multiple modules for a comprehensive analysis.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 Differentiates diffusive and convective phosphorus uptake.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Phosphorous uptake influenced by root and soil properties.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 Estimates nutrient content in harvest residues.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🚜 Models root exudation and death.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 Links root dynamics to soil respiration.</li>
+                            
+              
+          </ol>
           
           
 
@@ -427,25 +359,74 @@
   
   
   
-  <div id="single-net-ecosystem-exchange" class="card mb-5">
+  <div id="single-components-of-agroc-model" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">Net Ecosystem Exchange</h2>
+      <h2 class="card-title">Components of AgroC Model</h2>
       <div class="row">
         
         
-        <div class="col-auto">
+        <div class="col-md-12">
+          <p class="card-text" style="font-size: 1.2em;">AgroC integrates several key components for a holistic agricultural simulation. The SoilCO2 module handles soil processes, RothC simulates organic carbon turnover, and SUCROS models crop growth and dry matter accumulation. AgroC utilizes Farquhar model for photosynthesis and solves Richard’s equation for soil water balance. These components work together to provide a closed carbon balance for cropped ecosystems. Here is the documentation for <a href="/agroC/agroc_manual.pdf">AgroC</a></p>
+
           
-          <img class="img-fluid rounded mb-2" src="/images/Agroc4.gif" alt="Net Ecosystem Exchange" style="width: 250px; height: 300px;">
           
-        </div>
-        
-        <div class="col">
-          <p class="card-text" style="font-size: 1.2em;">Crop-C and Soil-C submodels are linked through the concept of Net Ecosystem Exchange (NEE). NEE represents the balance between carbon gained by the ecosystem and carbon lost by the ecosystem. Understanding NEE helps us determine whether an ecosystem is acting as a net carbon sink (absorbing more carbon than it releases) or a net carbon source (releasing more carbon than it absorbs).</p>
+          
+          
+          <ol class="list-group">
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 SUCROS Module: Focuses on crop growth, handling photosynthesis and dry matter accumulation. It employs the Farquhar model to simulate photosynthesis, factoring in light absorption, water availability, and rubisco concentration.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 SOILCO2 Module: Manages soil water, heat, and CO2 fluxes. This module is responsible for modeling soil water balance using Richard’s equation, which calculates soil water storage change, actual evapotranspiration, and infiltration.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ RothC Module: Simulates soil carbon turnover and integrates with other modules to provide a comprehensive view of soil health and carbon cycling. It also evaluates the Net Ecosystem Exchange (NEE), balancing various fluxes like Gross Primary Production (GPP), aboveground and belowground respiration.</li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">💧 Additional Functionalities: AgroC also includes capabilities for quantifying drought stress using the Feddes function, modeling Soil-Plant-Atmosphere Water Relations, and calculating fluorescence emissions using SCOPE model insights.</li>
+                            
+              
+          </ol>
+          
           
 
-        </div>
-        
-        
+              
+          
+
+                  
+          
+              
+       
+      </div>
+      
       </div>
       
     </div>
