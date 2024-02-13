@@ -5,14 +5,14 @@ draft: false
 
 sections:  
   - name: "What are Process-Based Models?"
-    text: "The PhenoRob DAA project harnesses the power of process-based models to revolutionize the field of agronomy. Process-based models are sophisticated mathematical tools used in agriculture to simulate the intricate interplay of biological, physical, and chemical processes within complex systems. These models provide a digital representation of how plants interact with their environment, incorporating factors like temperature, water availability, nutrients, and more. Unlike simple observations, they delve deep into the underlying mechanisms, allowing us to understand and predict how crops respond to varying conditions." 
+    text: "The PhenoRob DAA uses process-based models to improve the field of agronomy. Process-based models are sophisticated mathematical tools used in agriculture to simulate the intricate interplay of biological, physical, and chemical processes within complex systems. These models provide a digital representation of how plants interact with their environment, incorporating factors like temperature, water availability, nutrients, and more. Unlike simple observations, they delve deep into the underlying mechanisms, allowing us to understand and predict how crops respond to varying conditions." 
     image: "images/coupling1.jpg"
     imageWidth: "500px"
     imageHeight: "500px"
     textPosition: "bottom"
     
   - name: "Understanding Process-Based Models"
-    text: "Process-based models intricately emulate the functioning of agricultural systems, incorporating the dynamic relationships between various components and reflecting real-world complexity. They integrate the biological, physical, and chemical processes that govern plant growth, considering both current and historical conditions. Feedback loops iterate between processes, enabling predictions of crop reactions under various scenarios, testing management strategies, and gaining insights. These models are underpinned by several mathematical and operational concepts, including:"
+    text: "Process-based models emulate the functioning of agricultural systems, incorporating the dynamic relationships between various components and reflecting real-world complexity. They integrate the biological, physical, and chemical processes that govern plant growth, considering both current and historical conditions. Feedback loops iterate between processes, enabling predictions of crop reactions under various scenarios, testing management strategies, and gaining insights. These models are underpinned by several mathematical and operational concepts, including:"
     textPosition: "top"
     list:
       - "Mass Balance: A foundational principle rooted in conservation laws, tracking the flow of substances like water and nutrients."

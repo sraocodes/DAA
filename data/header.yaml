@@ -20,10 +20,7 @@ Link2Link: https://www.example2.com
 Link2Dropdown:
   - name: About
     url: "/about/"
-  - name: Process Based Models
-    url: "/pbm/"
-  - name: Multi Scale Models
-    url: "/multi_scale/"
+
 
 ToolsName: Tools
 ToolsDropDown:
