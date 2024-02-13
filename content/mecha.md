@@ -3,15 +3,8 @@ title: "MECHA"
 date: 2023-07-28
 draft: false
 sections:
-  - name: "What is MECHA?"
-    text: "MECHA is a mathematical model designed to compute the flow of water through various parts of individual cells in a complete root cross-section. This includes the cell walls, membranes, and plasmodesmata. The model takes into account detailed root anatomical descriptions and a minimal set of cell-level hydraulic properties. It uses experimental data on the permeability of cell walls, membranes, and plasmodesmata. The model also considers hydraulic principles at both the cell and root segment scales. Dive deeper into MECHA by visiting its [official site](https://mecharoot.github.io/)."
-    image: "images/mecha1.jpg"
-    imageWidth: "600px"    
-    imageHeight: "600px"  
-    textPosition: "top"
-
-  - name: "How Does MECHA Work?"
-    text: "MECHA calculates the root reflection coefficient (sr) and root radial hydraulic conductivity (kr) by combining root anatomical data with cell hydraulic properties. It simulates water flow at the cellular level, resulting in kr predictions that align with experimental findings. MECHA seamlessly transitions from cell-level hydraulics to the broader root cross-section, offering an in-depth view of water transport in roots. Here's a breakdown of how kr of roots are computed in MECHA:"
+  - name: "MECHA Overview"
+    text: "MECHA is a mathematical model designed to compute the flow of water through various parts of individual cells in a complete root cross-section. MECHA calculates the root reflection coefficient (sr) and root radial hydraulic conductivity (kr) by combining root anatomical data with cell hydraulic properties. It simulates water flow at the cellular level, resulting in kr predictions that align with experimental findings. MECHA seamlessly transitions from cell-level hydraulics to the broader root cross-section, offering an in-depth view of water transport in roots. Here's a breakdown of how kr of roots are computed in MECHA:"
     list:
       - "**Cell-Level Hydraulic Network**: MECHA computes the flow of water through the walls, membranes, and plasmodesmata of each individual cell throughout a complete root cross-section. This detailed hydraulic network at the cell level provides the foundation for upscaling."
       - "**Parameterization with Experimental Data**: The model is parameterized using experimental cell-scale hydraulic properties. These properties include:Conductivity of plasma membranes (Lp), Conductivity of cell walls (kw), and Conductance of plasmodesmata (KPD)"

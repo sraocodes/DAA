@@ -3,15 +3,8 @@ title: "GRANAR"
 date: 2023-07-28
 draft: false
 sections:
-  - name: "What is GRANAR?"
-    text: "GRANAR, the Generator of Root ANAtomy in R, is a computational tool designed to simulate root anatomical networks. These networks are crafted using easily accessible anatomical features, which can be obtained from open-access image analysis software and root cross-section images. Once the root anatomy is generated, it can be saved as an XML file. The model can simulate different vascular patterns, depending on whether it's modeling a monocot or dicot root. You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. For a more hands-on experience, explore the [official GRANAR site](https://granar.github.io/)."
-    image: "images/granar_set2.gif"
-    imageWidth: "600px"
-    imageHeight: "400px"
-    textPosition: "bottom"      
-
-  - name: "How Does GRANAR Work?"
-    text: "GRANAR begins with a detailed cross-sectional image of the root, capturing its intricate anatomical features and transform the image into a digital root anatomical network, showcasing the cellular intricacies and connections. GRANAR offers a detailed representation of root network structure, pinpointing the location of each cell and tissue. Let's delve deeper into how GRANAR constructs the root structure and the parameters it uses:"
+  - name: "Generator of Root ANAtomy in R [GRANAR]"
+    text: "GRANAR is a computational tool that simulates root anatomical networks. GRANAR begins with a detailed cross-sectional image of the root, capturing its intricate anatomical features and transform the image into a digital root anatomical network, showcasing the cellular intricacies and connections. GRANAR offers a detailed representation of root network structure, pinpointing the location of each cell and tissue. Let's delve deeper into how GRANAR constructs the root structure and the parameters it uses:"
     list:
       - "GRANAR begins by extracting key anatomical traits from root cross-section images, offering a detailed insight into the root's anatomy."
       - "Using the extracted anatomical traits measured along the root axes, linear regressions are computed against the distance to the root tip for each root type. This helps understand the variations in anatomical traits along the root."

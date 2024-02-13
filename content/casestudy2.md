@@ -4,7 +4,7 @@ date: 2023-07-28
 draft: false
 
 sections:  
-  - name: "GRANAR-MECHA Combo: Cell to Organ Scale"
+  - name: "Cell to Organ Scale"
     text: "Root water uptake is influenced by structural and hydraulic properties at multiple scales. Root anatomy sets the baseline for root radial hydraulic properties. Root hydraulic properties (Kx and Kr) influences everything from crop yields to the global water cycle dynamics. While tools like [MECHA](/mecha/) allow for the analysis of water flow in roots, they require explicit anatomical networks. Obtaining these networks from cross-section images is time-consuming. Hence, there's a need for a high-throughput method like [GRANAR](/granar/). The coupled GRANAR-MECHA computer model emerges as a beacon in this complex landscape. GRANAR simulates root anatomical networks. It uses key anatomical traits extracted from root cross-sections. GRANAR generates cell networks of root cross sections from a set of root anatomical features. The anatomy generation process places cell layers around the root's center, with the position and size of each cell and layer determined by the cell type radius and user-defined randomness. Together, [GRANAR](/granar/) and [MECHA](/mecha/) bridge the gap between the micro and macro, offering a holistic view of root hydraulic conductivity, from the behavior of individual cells to the functionality of the entire root organ."
     textPosition: "top"
     list:
