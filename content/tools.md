@@ -3,6 +3,17 @@ title: "MainTools"
 date: 2024-02-12
 draft: false
 sections:
+  - name: "Our Models"
+    text: "Our multi-scale modeling arsenal comprises advanced models developed at the University of Bonn and Research Center Juelich. These models, which are integral to the PhenoRob DAA, range from understanding granular plant cell processes to analyzing broader agricultural dynamics."
+    list:
+      - "**[GRANAR](/granar/) and [MECHA](/mecha/)**: Developed for cell-level processes and mechanical phenomena."
+      - "**[CPLANTBOX](/cplantbox/)**: Target plant and organ scales, focusing on water transport and growth."
+      - "**[Simplace](/simplace/), [AgroC](/agroc/), and [TerrSysMP](/terrsysmp/)**: Designed for crop and regional scales, they simulate growth patterns and ecological interactions."
+    image: "images/3.gif"
+    imageWidth: "800px"
+    imageHeight: "450px"
+    textPosition: "bottom"
+
   - name: "GRANAR"
     text: "GRANAR, the Generator of Root ANAtomy in R, is a computational plant cell scale model designed to simulate root anatomical networks. These networks are crafted using easily accessible anatomical features, which can be obtained from open-access image analysis software and root cross-section images. Once the root anatomy is generated, it can be saved as an XML file. The model can simulate different vascular patterns, depending on whether it's modeling a monocot or dicot root. You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. Explore more about [GRANAR here](/granar/)."
     image: "images/granar_set2.gif"

@@ -25,7 +25,7 @@ Link2Dropdown:
 ToolsName: Tools
 ToolsDropDown:
   - Name: Our Main Tools
-    Link: "/our_main_tools/"
+    Link: "/tools/"
   - Name: Developer Zone
     Link: "/model_files/"    
   - Name: Coupled Models
