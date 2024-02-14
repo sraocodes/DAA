@@ -13,10 +13,19 @@
     
     <item>
       <title>MainTools</title>
-      <link>https://www.phenorobdaa.de/our_main_tools/</link>
+      <link>https://www.phenorobdaa.de/tools-dev/</link>
       <pubDate>Mon, 12 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://www.phenorobdaa.de/our_main_tools/</guid>
+      <guid>https://www.phenorobdaa.de/tools-dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MainTools</title>
+      <link>https://www.phenorobdaa.de/tools/</link>
+      <pubDate>Mon, 12 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.phenorobdaa.de/tools/</guid>
       <description></description>
     </item>
     
@@ -26,15 +35,6 @@
       <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.phenorobdaa.de/publication/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Multi-Scale Modeling within PhenoRob DAA</title>
-      <link>https://www.phenorobdaa.de/multi_scale/</link>
-      <pubDate>Thu, 17 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.phenorobdaa.de/multi_scale/</guid>
       <description></description>
     </item>
     
@@ -147,11 +147,11 @@
     </item>
     
     <item>
-      <title>Model A</title>
-      <link>https://www.phenorobdaa.de/model_files/</link>
+      <title>CPlantBox</title>
+      <link>https://www.phenorobdaa.de/cplantbox_files/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.phenorobdaa.de/model_files/</guid>
+      <guid>https://www.phenorobdaa.de/cplantbox_files/</guid>
       <description></description>
     </item>
     

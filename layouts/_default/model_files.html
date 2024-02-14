@@ -1,63 +1,89 @@
 {{ define "main" }}
 <div class="container">
-    <div id="lottie-animation" style="position: fixed; top: 100; left: 100; width: 50%; height: 50%; z-index: 1000; display: flex; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0.9); transition: opacity 2s ease-out;"></div>
     <h3>{{ .Title }}</h3>
     <p>{{ .Description }}</p>
 
-    <!-- Loop over each section -->
-    {{ range .Params.sections }}
-    <div>
-        <h4>{{ .section_name }}</h4>
-        <div class="card-deck">
-            <!-- Loop over files in the section -->
-            {{ range .files }}
-            <div class="card">
-                <div class="card-body">
-                    <!-- Check if the file has a link and make the name clickable -->
-                    {{ if .link }}
-                    <h5 class="card-title"><a href="{{ .link }}">{{ .name }}</a></h5>
-                    {{ else }}
-                    <h5 class="card-title">{{ .name }}</h5>
-                    {{ end }}
-                    <p class="card-text">{{ .description }}</p>
+    <!-- Accordion Wrapper -->
+    <div id="accordion">
+        <!-- Loop over each section -->
+        {{ range $index, $section := .Params.sections }}
+        <div class="card">
+            <div class="card-header" id="heading{{ $index }}">
+                <h4 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{ $index }}" aria-expanded="false" aria-controls="collapse{{ $index }}">
+                        {{ $section.section_name }}
+                        <!-- Lottie Animation Next to Section Title -->
+                        <div class="lottie-small" style="width: 50px; height: 50px; display: inline-block;">
+                            <div id="lottie-animation-{{ $index }}" style="width: 100%; height: 100%;"></div>
+                        </div>
+                    </button>
+                </h4>
+            </div>
 
-                    <!-- Responsive Table for Variables and I/O -->
-                    <div class="table-responsive">
-                        <table class="table">
+            <div id="collapse{{ $index }}" class="collapse" aria-labelledby="heading{{ $index }}" data-parent="#accordion">
+                <div class="card-body">
+                    <!-- handle tables in the single pages -->
+                    {{ if $section.table }}
+                    <div class="table-responsive ml-3">
+                        <table class="table table-bordered table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>Variables</th>
-                                    <th>I/O</th>
+                                    {{ range $section.table.headers }}
+                                    <th>{{ . }}</th>
+                                    {{ end }}
                                 </tr>
                             </thead>
                             <tbody>
+                                {{ range $section.table.rows }}
                                 <tr>
-                                    <td>{{ .variables | markdownify | safeHTML }}</td>
-                                    <td>{{ .io | markdownify | safeHTML }}</td>
+                                    {{ $tableIndex := 0 }} <!-- Initialize an index variable -->
+                                    {{ range . }}
+                                    {{ if eq $tableIndex 1 }} <!-- Check if it's the second column -->
+                                    <td>
+                                        {{ if and (isset . 0) (isset . 1) }} <!-- Check if it's a list -->
+                                        <ul>
+                                            {{ range . }} <!-- Loop through the list items -->
+                                            <li>{{ . | markdownify | safeHTML }}</li>
+                                            {{ end }}
+                                        </ul>
+                                        {{ else }}
+                                        {{ . | markdownify | safeHTML }}
+                                        {{ end }}
+                                    </td>
+                                    {{ else }}
+                                    <td>{{ . | markdownify | safeHTML }}</td>
+                                    {{ end }}
+                                    {{ $tableIndex = add $tableIndex 1 }} <!-- Increment the index variable -->
+                                    {{ end }}
                                 </tr>
+                                {{ end }}
                             </tbody>
                         </table>
                     </div>
+                    {{ end }}
                 </div>
             </div>
-            {{ end }}
         </div>
-        <script>
-            var anim = lottie.loadAnimation({
-                container: document.getElementById('lottie-animation'), // the container for the animation
-                renderer: 'svg', // Render as SVG
-                loop: true, // Loop the animation
-                autoplay: true, // Auto-play the animation
-                path: '/anim/dev.json' // Path to the Lottie file
-            });
-
-            // Set a timeout to hide the animation and show the content after 1 second
-            setTimeout(function() {
-                document.getElementById('lottie-animation').style.display = 'none';
-                document.getElementById('content').style.display = 'block';
-            }, 1500); // 1000 milliseconds = 1 second
-        </script>
+        {{ end }}
     </div>
-    {{ end }}
+
+    <script>
+        // Load Lottie animations for each section
+        {{ range $index, $_ := .Params.sections }}
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation-{{ $index }}'), // the container for the animation
+            renderer: 'svg', // Render as SVG
+            loop: true, // Loop the animation
+            autoplay: true, // Auto-play the animation
+            path: '/anim/coffee_code.json' // Path to the Lottie file
+        });
+        {{ end }}
+
+        // Set a timeout to hide the main lottie animation after 1 second
+        setTimeout(function() {
+            document.getElementById('lottie-animation').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }, 1500); // 1000 milliseconds = 1 second
+    </script>
 </div>
 {{ end }}
