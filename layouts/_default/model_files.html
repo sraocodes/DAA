@@ -1,12 +1,12 @@
 {{ define "main" }}
 <div class="container">
+    <div id="lottie-animation" style="position: fixed; top: 100; left: 100; width: 50%; height: 50%; z-index: 1000; display: flex; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0.9); transition: opacity 2s ease-out;"></div>
     <h3>{{ .Title }}</h3>
     <p>{{ .Description }}</p>
 
     <!-- Loop over each section -->
     {{ range .Params.sections }}
     <div>
-        <div id="lottie-animation"></div>       
         <h4>{{ .section_name }}</h4>
         <div class="card-deck">
             <!-- Loop over files in the section -->

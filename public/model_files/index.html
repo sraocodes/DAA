@@ -35,6 +35,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
 </head>
     
     
@@ -155,75 +157,83 @@
     
     
     <div>
+        <div id="lottie-animation"></div>       
         <h4>Function Group 1</h4>
         <div class="card-deck">
             
             
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">File 1</h5>
+                    
+                    
+                    <h5 class="card-title"><a href="https://link-to-file-1">File 1</a></h5>
+                    
                     <p class="card-text">Description of File 1.</p>
 
                     
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Input</th>
-                                <th>Output</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            <tr>
-                                <td>Input 1</td>
-                                <td>Output 1</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>Input 2</td>
-                                <td>Output 2</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-
-                    <a href="https://link-to-file-1" class="btn btn-outline-primary">Link</a>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Variables</th>
+                                    <th>I/O</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>List of variables for File 1.</td>
+                                    <td>Input: &hellip;, Output: &hellip;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">File 2</h5>
+                    
+                    
+                    <h5 class="card-title"><a href="https://link-to-file-2">File 2</a></h5>
+                    
                     <p class="card-text">Description of File 2.</p>
 
                     
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Input</th>
-                                <th>Output</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            <tr>
-                                <td>Input 3</td>
-                                <td>Output 3</td>
-                            </tr>
-                            
-                            <tr>
-                                <td>Input 4</td>
-                                <td>Output 4</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-
-                    <a href="https://link-to-file-2" class="btn btn-outline-primary">Link</a>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Variables</th>
+                                    <th>I/O</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>List of variables for File 2.</td>
+                                    <td>Input: &hellip;, Output: &hellip;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             
         </div>
+        <script>
+            var anim = lottie.loadAnimation({
+                container: document.getElementById('lottie-animation'), 
+                renderer: 'svg', 
+                loop: true, 
+                autoplay: true, 
+                path: '/anim/dev.json' 
+            });
+
+            
+            setTimeout(function() {
+                document.getElementById('lottie-animation').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }, 1500); 
+        </script>
     </div>
     
 </div>
