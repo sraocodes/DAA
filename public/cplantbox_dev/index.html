@@ -430,9 +430,9 @@
                                     
                                     <td>Simulates plant photosynthesis, covering water flux, carbon assimilation, and environmental interactions.</td>
                                     
-                                    <td>MappedPlant object, environmental variables, simulation parameters, error tracking variables.</td>
+                                    <td>MappedPlant object, xylem water potential, intracellular CO2, atmospheric humidity, temperature, soil matric potentials, soil conductivities, error tracking.</td>
                                     
-                                    <td>Input: Environmental conditions, simulation parameters. Output: Plant physiological states.</td>
+                                    <td>Input: Environmental conditions, plant structure. Output: Water potential, gas exchange rates, photosynthetic properties.</td>
                                     
                                 </tr>
                                 
@@ -442,9 +442,9 @@
                                     
                                     <td>Calculates root segment radii based on volume, surface, or length.</td>
                                     
-                                    <td>Cylinder volume type, segment lengths, cell and segment IDs, radii.</td>
+                                    <td>Volume type, cell volumes, segment lengths, cell/segment IDs, radii.</td>
                                     
-                                    <td>Input: Volume type, cell volumes. Output: Calculated outer radii for root segments.</td>
+                                    <td>Input: Volume type, cell volumes. Output: Outer radii for root segments.</td>
                                     
                                 </tr>
                                 
@@ -454,9 +454,9 @@
                                     
                                     <td>Extends FiPy library for plant physiological simulations, handling water and nutrient transport.</td>
                                     
-                                    <td>Custom classes, mesh attributes, gradient and volume computations.</td>
+                                    <td>Custom CellVariablemod, FaceVariablemod, _AddOverFacesVariablemod, _FaceGradVariablemod, _ArithmeticCellToFaceVariablemod, mesh attributes, orientations, area/volume calculations.</td>
                                     
-                                    <td>Input: Plant tissue structure. Output: Transport properties within plant tissues.</td>
+                                    <td>Input: Plant tissue structure. Output: Transport and flow properties in plant tissues.</td>
                                     
                                 </tr>
                                 
@@ -466,9 +466,9 @@
                                     
                                     <td>Models root exudation, considering root growth dynamics and soil properties.</td>
                                     
-                                    <td>Model and numerical parameters, methods for exudation calculation.</td>
+                                    <td>Q, Dl, theta, R, k, l, grid, type, n0, thresh13, calc13, observationRadius, root system data.</td>
                                     
-                                    <td>Input: Root system data, model parameters. Output: Soil exudate distribution.</td>
+                                    <td>Input: Root system, simulation time, parameters. Output: Exudate distribution in soil.</td>
                                     
                                 </tr>
                                 
@@ -478,9 +478,9 @@
                                     
                                     <td>Implements Doussan&rsquo;s root hydraulic model for water movement in roots.</td>
                                     
-                                    <td>Root system, conductivity functions, hydraulic properties.</td>
+                                    <td>Root system (rs), soil matrices, kr_f, kx_f, simulation time, root xylem potentials (rx), axial and transpirational flux.</td>
                                     
-                                    <td>Input: Root structure, environment. Output: Root system hydraulic properties.</td>
+                                    <td>Input: Root structure, environment. Output: Conductivity, axial fluxes, xylem potentials.</td>
                                     
                                 </tr>
                                 
@@ -490,9 +490,9 @@
                                     
                                     <td>Implements the Leuning model for water movement and photosynthesis in plants.</td>
                                     
-                                    <td>Simulation and hydraulic parameters, photosynthetic properties.</td>
+                                    <td>Qlight, VPD, Tl, soil matric potentials, xylem conductivities, root xylem potentials, CO2 concentration, stomatal conductance.</td>
                                     
-                                    <td>Input: Plant data, environment. Output: Hydraulic and photosynthetic properties.</td>
+                                    <td>Input: Plant data, environment. Output: Xylem potentials, stomatal conductance, assimilation rates.</td>
                                     
                                 </tr>
                                 
@@ -502,9 +502,9 @@
                                     
                                     <td>Implements the Mualem - van Genuchten model for soil water.</td>
                                     
-                                    <td>Methods for pressure head and hydraulic conductivity.</td>
+                                    <td>Pressure head, hydraulic conductivity methods, theta_R, theta_S, alpha, n, Ksat.</td>
                                     
-                                    <td>Input: Soil water content, parameters. Output: Hydraulic properties.</td>
+                                    <td>Input: Soil water content, parameters. Output: Pressure head, water content, saturation, conductivity.</td>
                                     
                                 </tr>
                                 
@@ -514,9 +514,9 @@
                                     
                                     <td>Provides functions for root conductivities in growth simulations.</td>
                                     
-                                    <td>Initialization of conductivity scenarios.</td>
+                                    <td>Initialization of constant and age-dependent conductivity values.</td>
                                     
-                                    <td>Used for root hydraulic properties setup.</td>
+                                    <td>Used in root hydraulic properties setup.</td>
                                     
                                 </tr>
                                 
@@ -526,7 +526,7 @@
                                     
                                     <td>Simulates phloem flux and related processes.</td>
                                     
-                                    <td>Methods for calculating segment ages, hydraulic properties.</td>
+                                    <td>Segment ages, node indices, organ types, hydraulic properties.</td>
                                     
                                     <td>Input: Root system data, model parameters. Output: Phloem flux results.</td>
                                     
@@ -538,7 +538,7 @@
                                     
                                     <td>Enhances FiPy&rsquo;s Mesh1D for 3D root system modeling in plants.</td>
                                     
-                                    <td>Adapted mesh properties, methods for geometric calculations.</td>
+                                    <td>Radii, length, vertex coordinates, face normals, methods for cell volumes, face areas, geometric aspects.</td>
                                     
                                     <td>Input: Root system data. Output: Adapted mesh properties.</td>
                                     
@@ -550,7 +550,7 @@
                                     
                                     <td>Analyzes perirhizal zones in root systems.</td>
                                     
-                                    <td>Soil volume cells, segment parameters, 3D Voronoi diagrams methods.</td>
+                                    <td>Soil volume cells, bounding box dimensions, zone densities, segment parameters, outer radii calculations, 3D Voronoi diagrams.</td>
                                     
                                     <td>Input: Root segment data. Output: Perirhizal zone analysis.</td>
                                     
@@ -562,9 +562,9 @@
                                     
                                     <td>C++ module for xylem and soil flux simulation.</td>
                                     
-                                    <td>Functions for flux computations and conductivity settings.</td>
+                                    <td>Linear system assembly, segment/soil flux computation, conductivity settings.</td>
                                     
-                                    <td>Used in plant water flow simulation.</td>
+                                    <td>Used in water flow simulation within plant xylem.</td>
                                     
                                 </tr>
                                 
@@ -574,7 +574,7 @@
                                     
                                     <td>Implements 3D Bresenham&rsquo;s algorithm for line generation.</td>
                                     
-                                    <td>Functions for line drawing in 3D.</td>
+                                    <td>Line drawing function, sphere function for 3D structures.</td>
                                     
                                     <td>Input: Line coordinates. Output: 3D line points.</td>
                                     
@@ -586,7 +586,7 @@
                                     
                                     <td>Models water movement in plant xylems.</td>
                                     
-                                    <td>Root system configuration, hydraulic properties, flux values.</td>
+                                    <td>Root system, hydraulic properties, node/segment info, flux values, soil characteristics, computational matrices.</td>
                                     
                                     <td>Input: RSML root structure files. Output: Xylem pressures, flux values.</td>
                                     
@@ -598,9 +598,9 @@
                                     
                                     <td>Hybrid solver for stomatal conductance and xylem water movement.</td>
                                     
-                                    <td>Environmental factors, root xylem pressure parameters.</td>
+                                    <td>PAR, VPD, temperatures, soil matric potentials, root xylem pressure.</td>
                                     
-                                    <td>Input: Root system data, environmental factors. Output: Stomatal conductance results.</td>
+                                    <td>Input: Root data, environmental factors. Output: Stomatal conductance, xylem pressure.</td>
                                     
                                 </tr>
                                 

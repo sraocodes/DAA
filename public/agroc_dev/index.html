@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroC</title>
+    <meta name="description" content="Here we describe the codes of AgroC implementation as well as the instruction to install it along with its inputs and outputs from developer&#39;s perspective">
+    <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  
+  
+  
+   
+   
+   
+   
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/members.css">
+  <link rel="stylesheet" href="/css/single.css"> 
+  <link rel="stylesheet" href="/css/back2top.css"> 
+  <link rel="stylesheet" href="/css/dropdown.css"> 
+  <link rel="stylesheet" href="/css/research-areas.css">
+ 
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+</head>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+</head>
+<body>        
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="https://www.phenorobdaa.de/">
+      <img src="/images/DAA.png" alt="Logo" style="max-height: 75px;">
+  </a>
+
+  
+  <div class="d-flex flex-grow-1 justify-content-center">
+      <div class="text-center">
+          <h1 class="mb-0 display-4">PhenoRob Digital Agricultural Avatar (DAA)</h1>
+          <h2 class="h5 mb-0">(Process Based Models for the Future of Crop Production)</h2>
+      </div>
+  </div>
+
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DAA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link2Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//about/">About</a>
+                  
+              </div>
+          </li>
+
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tools
+              </a>
+              <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//tools/">Our Main Tools</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//couple/">Coupled Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//tools-dev/">Developer Zone</a>
+                  
+              </div>
+          </li>
+
+            
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Research
+            </a>
+            <div class="dropdown-menu" aria-labelledby="link1Dropdown">
+                
+                    
+                    
+                        
+                    
+                    <a class="dropdown-item" href="https://www.phenorobdaa.de//research-areas/">Research Area</a>
+                
+                    
+                    
+                        
+                    
+                    <a class="dropdown-item" href="https://www.phenorobdaa.de//members/">Research Team</a>
+                
+                    
+                    
+                        
+                    
+                    <a class="dropdown-item" href="https://www.phenorobdaa.de//publication/">Publications</a>
+                
+            </div>
+            </li>
+
+          
+           <li class="nav-item">
+              <a class="nav-link" href="/members/" target="_blank">Contact</a>
+           </li>
+      </ul>
+  </div>
+</nav>
+    
+    <main>
+        
+         
+         <script src="https://www.phenorobdaa.de/js/slider.js"></script> 
+        
+<div class="container">
+    <h3>AgroC</h3>
+    <p>Here we describe the codes of AgroC implementation as well as the instruction to install it along with its inputs and outputs from developer&#39;s perspective</p>
+
+    
+    <div id="accordion">
+        
+        
+        <div class="card">
+            
+            <div class="card-header" id="heading0">
+                <h4>Structural Module</h4>
+                <p>The structural module contains code that simulates plant growth and morphology within the CPlantBox framework. It defines the characteristics and behavior of various plant organs like roots, stems, leaves, and seeds. Additionally, it handles tropism responses, enabling plants to adjust their growth direction in response to environmental cues. In essence, this module forms the basis for realistic plant growth simulations.</p>
+                
+            </div>
+
+            
+            
+            <div class="card-body">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTable0" aria-expanded="false" aria-controls="collapseTable0">
+                        
+                        
+                        <div class="lottie-small" style="width: 50px; height: 50px; display: inline-block;">
+                            <div id="lottie-animation-table-0" style="width: 100%; height: 100%;"></div>
+                        </div>
+                    </button>
+                </h5>
+
+                <div id="collapseTable0" class="collapse" aria-labelledby="heading0" data-parent="#accordion">
+                    <div class="table-responsive ml-3">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>File</th>
+                                    
+                                    <th>Primary Functionality</th>
+                                    
+                                    <th>Associated Variables</th>
+                                    
+                                    <th>Input/Output</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    
+                                    <td>carbon.f90</td>
+                                    
+                                    <td>Models carbon dynamics in soil, including CO2 transport, organic matter decomposition, and microbial interactions.</td>
+                                    
+                                    <td>CO2 concentration layers, soil properties, decomposition rates, organic carbon inputs, microbial biomass variables, atmospheric pressure, gas constant, molecular CO2</td>
+                                    
+                                    <td>Input: Soil properties, environmental parameters, CO2 transport and decomposition parameters. Output: Updated CO2 and organic matter concentrations, CO2 production and decomposition rates, CO2 fluxes, microbial activity, soil carbon dynamics.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>datatypes.f90</td>
+                                    
+                                    <td>Defines custom data types and structures for use in the AgroSea model.</td>
+                                    
+                                    <td>Custom data types and structures.</td>
+                                    
+                                    <td>Not directly applicable</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>doxygen.conf</td>
+                                    
+                                    <td>Configuration file for generating Doxygen documentation of the AgroSea model.</td>
+                                    
+                                    <td>N/A</td>
+                                    
+                                    <td>N/A</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>geometry.f90</td>
+                                    
+                                    <td>Handles geometric aspects in simulations, including defining and manipulating properties of geometric shapes or structures.</td>
+                                    
+                                    <td>Dimensions, coordinates, properties like area, volume, length, angles, transformation procedures</td>
+                                    
+                                    <td>Input: Geometric definitions, configuration settings. Output: Calculated geometric properties, transformed geometric entities.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>input.f90</td>
+                                    
+                                    <td>Manages reading and processing initial data, particularly environmental or atmospheric parameters.</td>
+                                    
+                                    <td>Logical variables like lSurf, real variables like rSoil, Prec, integer indices iTemp, jTemp, array iUnit</td>
+                                    
+                                    <td>Input: Reads from various input files or data streams. Output: Processes and supplies data to other modules.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>makefile</td>
+                                    
+                                    <td>Specifies rules for compilation and linking in building the AgroC model.</td>
+                                    
+                                    <td>N/A</td>
+                                    
+                                    <td>N/A</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>material.f90</td>
+                                    
+                                    <td>Manages properties and behaviors of different materials, with focus on physical, chemical, and mechanical properties.</td>
+                                    
+                                    <td>Material properties, composite materials, temperature and pressure dependencies, environmental interactions</td>
+                                    
+                                    <td>Input: Material property parameters, environmental conditions. Output: Calculated material properties under specified conditions.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>nitrogen.f90</td>
+                                    
+                                    <td>Simulates nitrogen dynamics, covering processes like nitrogen fixation, nitrification, and denitrification.</td>
+                                    
+                                    <td>Nitrogen forms (Urea, NH4, NO3), rates and constants for nitrogen processes, logical flags for processes, C/N ratio of biomass</td>
+                                    
+                                    <td>Input: Environmental parameters, nitrogen concentrations. Output: Updated nitrogen concentrations, process rates and statuses.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>output.f90</td>
+                                    
+                                    <td>Generates output data based on environmental and soil parameters.</td>
+                                    
+                                    <td>Various soil condition and CO2 level variables</td>
+                                    
+                                    <td>Input: Environmental parameters, soil conditions, model iteration data. Output: Data on soil conditions, CO2 levels, other environmental factors.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>phosphorus.f90</td>
+                                    
+                                    <td>Handles phosphorus dynamics in soil, including different soil types and conditions.</td>
+                                    
+                                    <td>Logical variables for phosphorus pools and uptake, integer variables for soil genesis, real variables like CaCO3 concentration, base saturation, soil pH</td>
+                                    
+                                    <td>Input: Soil type and phosphorus-related parameters. Output: Updated phosphorus concentrations, soil chemistry alterations.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>plants.f90</td>
+                                    
+                                    <td>Models aspects related to various plant types in agricultural or ecological simulations.</td>
+                                    
+                                    <td>Plant type integers, additional parameters for growth and biological characteristics</td>
+                                    
+                                    <td>Input: Environmental and biological inputs for plant growth. Output: Plant growth, yield, environmental response predictions.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>sink.f90</td>
+                                    
+                                    <td>Handles source and sink dynamics within a system, integrating spatial, environmental, and carbon dynamics.</td>
+                                    
+                                    <td>Physical quantities like root growth, transpiration, carbon content, internal calculation variables</td>
+                                    
+                                    <td>Input: Root and environmental parameters. Output: Source and sink values, updated spatial and environmental data.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>soilco2.f90</td>
+                                    
+                                    <td>Models CO2 dynamics in soil, including production, transport, and interactions with soil components.</td>
+                                    
+                                    <td>CO2 concentrations, soil properties, biological process variables, environmental factors</td>
+                                    
+                                    <td>Input: Soil characteristics, environmental parameters. Output: CO2 concentrations and fluxes, soil property changes.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>solute.f90</td>
+                                    
+                                    <td>Manages solute dynamics, including transport and chemical reactions in the environment.</td>
+                                    
+                                    <td>General and real variables for solute parameters, allocatable arrays, logical variables for solute dynamics</td>
+                                    
+                                    <td>Input: Environmental parameters, solute concentrations. Output: Updated solute concentrations, reaction rates.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>temper.f90</td>
+                                    
+                                    <td>Calculates heat transport, involving temperature modeling and dynamics.</td>
+                                    
+                                    <td>Temperature, velocity, thermal variables, environmental parameters, material properties</td>
+                                    
+                                    <td>Input: Environmental, temporal, and material parameters. Output: Temperature profiles, heat transport properties.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>time.f90</td>
+                                    
+                                    <td>Handles time-related functionalities in simulations, managing simulation time data and parameters.</td>
+                                    
+                                    <td>Simulation time data, time information, date and time parameters, profile type</td>
+                                    
+                                    <td>Input: Time-related parameters and date information. Output: Updated simulation time and date values.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>watflow.f90</td>
+                                    
+                                    <td>Calculates water flow using data types, geometrical configurations, and material properties.</td>
+                                    
+                                    <td>Time variables, water flow parameters, material properties, local calculation variables</td>
+                                    
+                                    <td>Input: Time and water flow parameters. Output: Updated water flow values, convergence status, iteration details.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td>variables.f90</td>
+                                    
+                                    <td>Includes functions related to calculating water stress and root exudation, managing various program variables.</td>
+                                    
+                                    <td>Variables for water stress, root exudation, nitrogen-related processes</td>
+                                    
+                                    <td>Input: Environmental parameters like water stress and temperature. Output: Managed variables related to environmental aspects.</td>
+                                    
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script>
+        
+        
+        
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation-table-0'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/anim/coffee_code.json'
+        });
+        
+        
+    </script>
+</div>
+
+    </main>
+    <div id="footer" class="container mt-5">
+  <footer class="site-footer text-center bg-light py-4">
+      <p></p>
+      <p><a href="/privacy-policy">Privacy Policy</a></p>
+
+      
+      <div class="flag-counter mt-3">
+        <a href="https://info.flagcounter.com/0BBH">
+            <img src="https://s11.flagcounter.com/count2/0BBH/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
+        </a>
+      </div>            
+
+
+      <div class="social-icons mt-3">
+          <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
+              <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank" class="text-primary mx-3">
+              <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/your_twitter_handle" target="_blank" class="text-info mx-3">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
+      </div>
+  </footer>
+</div>
+
+
+    
+</body>
+</html>

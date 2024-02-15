@@ -4,7 +4,6 @@ description: "Here we describe the codes of CPlantBox implementation as well as 
               inputs and outputs from developer's perspective"
 layout: "model_files"
 sections:
-sections:
   - section_name: "Structural Module"
     description: "The structural module contains code that simulates plant growth and morphology within the CPlantBox framework. It defines the characteristics and behavior of various plant organs like roots, stems, leaves, and seeds. Additionally, it handles tropism responses, enabling plants to adjust their growth direction in response to environmental cues. In essence, this module forms the basis for realistic plant growth simulations."
     table:

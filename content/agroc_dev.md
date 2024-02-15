@@ -1,0 +1,34 @@
+---
+title: "AgroC"
+description: "Here we describe the codes of AgroC implementation as well as the instruction to install it along with its
+              inputs and outputs from developer's perspective"
+layout: "model_files"
+sections:
+  - section_name: "AgroC Model"
+    description: "AgroC model is a comprehensive system for simulating various environmental and ecological processes. Key functionalities include the modeling of carbon, nitrogen, and phosphorus cycles, management of solute and water flow dynamics, and the simulation of plant growth and material properties under varying environmental conditions. The modules integrate complex data related to soil chemistry, atmospheric interactions, and biological processes, providing detailed outputs on environmental variables and system dynamics. "
+    table:
+      title: "Description of Fortran codes in AgroC"
+      headers: ["File", "Primary Functionality", "Associated Variables", "Input/Output"]
+      rows:
+        - ["carbon.f90", "Models carbon dynamics in soil, including CO2 transport, organic matter decomposition, and microbial interactions.", "CO2 concentration layers, soil properties, decomposition rates, organic carbon inputs, microbial biomass variables, atmospheric pressure, gas constant, molecular CO2", "Input: Soil properties, environmental parameters, CO2 transport and decomposition parameters. Output: Updated CO2 and organic matter concentrations, CO2 production and decomposition rates, CO2 fluxes, microbial activity, soil carbon dynamics."]
+        - ["datatypes.f90", "Defines custom data types and structures for use in the AgroSea model.", "Custom data types and structures.", "Not directly applicable"]
+        - ["doxygen.conf", "Configuration file for generating Doxygen documentation of the AgroSea model.", "N/A", "N/A"]
+        - ["geometry.f90", "Handles geometric aspects in simulations, including defining and manipulating properties of geometric shapes or structures.", "Dimensions, coordinates, properties like area, volume, length, angles, transformation procedures", "Input: Geometric definitions, configuration settings. Output: Calculated geometric properties, transformed geometric entities."]
+        - ["input.f90", "Manages reading and processing initial data, particularly environmental or atmospheric parameters.", "Logical variables like lSurf, real variables like rSoil, Prec, integer indices iTemp, jTemp, array iUnit", "Input: Reads from various input files or data streams. Output: Processes and supplies data to other modules."]
+        - ["makefile", "Specifies rules for compilation and linking in building the AgroC model.", "N/A", "N/A"]
+        - ["material.f90", "Manages properties and behaviors of different materials, with focus on physical, chemical, and mechanical properties.", "Material properties, composite materials, temperature and pressure dependencies, environmental interactions", "Input: Material property parameters, environmental conditions. Output: Calculated material properties under specified conditions."]
+        - ["nitrogen.f90", "Simulates nitrogen dynamics, covering processes like nitrogen fixation, nitrification, and denitrification.", "Nitrogen forms (Urea, NH4, NO3), rates and constants for nitrogen processes, logical flags for processes, C/N ratio of biomass", "Input: Environmental parameters, nitrogen concentrations. Output: Updated nitrogen concentrations, process rates and statuses."]
+        - ["output.f90", "Generates output data based on environmental and soil parameters.", "Various soil condition and CO2 level variables", "Input: Environmental parameters, soil conditions, model iteration data. Output: Data on soil conditions, CO2 levels, other environmental factors."]
+        - ["phosphorus.f90", "Handles phosphorus dynamics in soil, including different soil types and conditions.", "Logical variables for phosphorus pools and uptake, integer variables for soil genesis, real variables like CaCO3 concentration, base saturation, soil pH", "Input: Soil type and phosphorus-related parameters. Output: Updated phosphorus concentrations, soil chemistry alterations."]
+        - ["plants.f90", "Models aspects related to various plant types in agricultural or ecological simulations.", "Plant type integers, additional parameters for growth and biological characteristics", "Input: Environmental and biological inputs for plant growth. Output: Plant growth, yield, environmental response predictions."]
+        - ["sink.f90", "Handles source and sink dynamics within a system, integrating spatial, environmental, and carbon dynamics.", "Physical quantities like root growth, transpiration, carbon content, internal calculation variables", "Input: Root and environmental parameters. Output: Source and sink values, updated spatial and environmental data."]
+        - ["soilco2.f90", "Models CO2 dynamics in soil, including production, transport, and interactions with soil components.", "CO2 concentrations, soil properties, biological process variables, environmental factors", "Input: Soil characteristics, environmental parameters. Output: CO2 concentrations and fluxes, soil property changes."]
+        - ["solute.f90", "Manages solute dynamics, including transport and chemical reactions in the environment.", "General and real variables for solute parameters, allocatable arrays, logical variables for solute dynamics", "Input: Environmental parameters, solute concentrations. Output: Updated solute concentrations, reaction rates."]
+        - ["temper.f90", "Calculates heat transport, involving temperature modeling and dynamics.", "Temperature, velocity, thermal variables, environmental parameters, material properties", "Input: Environmental, temporal, and material parameters. Output: Temperature profiles, heat transport properties."]
+        - ["time.f90", "Handles time-related functionalities in simulations, managing simulation time data and parameters.", "Simulation time data, time information, date and time parameters, profile type", "Input: Time-related parameters and date information. Output: Updated simulation time and date values."]
+        - ["watflow.f90", "Calculates water flow using data types, geometrical configurations, and material properties.", "Time variables, water flow parameters, material properties, local calculation variables", "Input: Time and water flow parameters. Output: Updated water flow values, convergence status, iteration details."]
+        - ["variables.f90", "Includes functions related to calculating water stress and root exudation, managing various program variables.", "Variables for water stress, root exudation, nitrogen-related processes", "Input: Environmental parameters like water stress and temperature. Output: Managed variables related to environmental aspects."]
+
+
+
+---
