@@ -389,7 +389,7 @@
             
             <div class="card-header" id="heading1">
                 <h4>Functional Module</h4>
-                <p>The functional module in CPlantBox encompasses a suite of Python scripts that provide models and calculations related to plant-soil-water interactions. This includes implementations of soil hydraulic models, root water uptake models, and other processes essential for simulating how plants interact with their environment. The module leverages scientific models such as the Van Genuchten model for soil water retention and hydraulic conductivity, and includes tools for creating soil parameter lookup tables, computing root conductivities, and more.</p>
+                <p>The Functional Module in CPlantBox includes Python and C++ scripts for plant-soil-water interactions, featuring models like the Van Genuchten model for soil water retention. It offers tools for soil parameter tables, root conductivities, and more.</p>
                 
             </div>
 
@@ -416,9 +416,9 @@
                                     
                                     <th>Functionality</th>
                                     
-                                    <th>Key Functions</th>
+                                    <th>Variables</th>
                                     
-                                    <th>Usage</th>
+                                    <th>Input/Output</th>
                                     
                                 </tr>
                             </thead>
@@ -426,13 +426,85 @@
                                 
                                 <tr>
                                     
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/Photosynthesis.cpp">Photosynthesis.cpp</a></td>
+                                    
+                                    <td>Simulates plant photosynthesis, covering water flux, carbon assimilation, and environmental interactions.</td>
+                                    
+                                    <td>MappedPlant object, environmental variables, simulation parameters, error tracking variables.</td>
+                                    
+                                    <td>Input: Environmental conditions, simulation parameters. Output: Plant physiological states.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/Perirhizal.cpp">Perirhizal.cpp</a></td>
+                                    
+                                    <td>Calculates root segment radii based on volume, surface, or length.</td>
+                                    
+                                    <td>Cylinder volume type, segment lengths, cell and segment IDs, radii.</td>
+                                    
+                                    <td>Input: Volume type, cell volumes. Output: Calculated outer radii for root segments.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/CellVariablemod.py">CellVariablemod.py</a></td>
+                                    
+                                    <td>Extends FiPy library for plant physiological simulations, handling water and nutrient transport.</td>
+                                    
+                                    <td>Custom classes, mesh attributes, gradient and volume computations.</td>
+                                    
+                                    <td>Input: Plant tissue structure. Output: Transport properties within plant tissues.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/ExudationModel.h">ExudationModel.h</a></td>
+                                    
+                                    <td>Models root exudation, considering root growth dynamics and soil properties.</td>
+                                    
+                                    <td>Model and numerical parameters, methods for exudation calculation.</td>
+                                    
+                                    <td>Input: Root system data, model parameters. Output: Soil exudate distribution.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/HydraulicsDoussan.py">HydraulicsDoussan.py</a></td>
+                                    
+                                    <td>Implements Doussan&rsquo;s root hydraulic model for water movement in roots.</td>
+                                    
+                                    <td>Root system, conductivity functions, hydraulic properties.</td>
+                                    
+                                    <td>Input: Root structure, environment. Output: Root system hydraulic properties.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/Leuning.py">Leuning.py</a></td>
+                                    
+                                    <td>Implements the Leuning model for water movement and photosynthesis in plants.</td>
+                                    
+                                    <td>Simulation and hydraulic parameters, photosynthetic properties.</td>
+                                    
+                                    <td>Input: Plant data, environment. Output: Hydraulic and photosynthetic properties.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
                                     <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/van_genuchten.py">van_genuchten.py</a></td>
                                     
-                                    <td>Implements the Mualem-Van Genuchten model for soil water retention and hydraulic conductivity.</td>
+                                    <td>Implements the Mualem - van Genuchten model for soil water.</td>
                                     
-                                    <td>Functions for calculating hydraulic properties like water content, conductivity, and matric potential. Lookup table generation for matric flux potential.</td>
+                                    <td>Methods for pressure head and hydraulic conductivity.</td>
                                     
-                                    <td>Used for simulating soil water dynamics and root water uptake in various soil types.</td>
+                                    <td>Input: Soil water content, parameters. Output: Hydraulic properties.</td>
                                     
                                 </tr>
                                 
@@ -440,11 +512,11 @@
                                     
                                     <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/root_conductivities.py">root_conductivities.py</a></td>
                                     
-                                    <td>Provides helper functions to define age-dependent tabular values for root conductivities.</td>
+                                    <td>Provides functions for root conductivities in growth simulations.</td>
                                     
-                                    <td>Initialization of conductivities with various scenarios including constant and age-dependent values.</td>
+                                    <td>Initialization of conductivity scenarios.</td>
                                     
-                                    <td>Utilized in setting up root hydraulic properties for growth simulations.</td>
+                                    <td>Used for root hydraulic properties setup.</td>
                                     
                                 </tr>
                                 
@@ -452,11 +524,11 @@
                                     
                                     <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/phloem_flux.py">phloem_flux.py</a></td>
                                     
-                                    <td>Wrapper for simulating phloem flux and related processes within the plant.</td>
+                                    <td>Simulates phloem flux and related processes.</td>
                                     
-                                    <td>Methods for calculating segment ages, node indices, organ types, and hydraulic properties.</td>
+                                    <td>Methods for calculating segment ages, hydraulic properties.</td>
                                     
-                                    <td>Applied in modeling the movement of nutrients and sugars through phloem in plants.</td>
+                                    <td>Input: Root system data, model parameters. Output: Phloem flux results.</td>
                                     
                                 </tr>
                                 
@@ -464,11 +536,11 @@
                                     
                                     <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/Mesh1Dmod.py">Mesh1Dmod.py</a></td>
                                     
-                                    <td>Adapts the 1D mesh for 3D networks, facilitating simulations over complex root architectures.</td>
+                                    <td>Enhances FiPy&rsquo;s Mesh1D for 3D root system modeling in plants.</td>
                                     
-                                    <td>Enhancements to support 3D network structures, cell volumes, and face areas.</td>
+                                    <td>Adapted mesh properties, methods for geometric calculations.</td>
                                     
-                                    <td>Key for simulating water and nutrient transport in 3D root systems.</td>
+                                    <td>Input: Root system data. Output: Adapted mesh properties.</td>
                                     
                                 </tr>
                                 
@@ -476,23 +548,11 @@
                                     
                                     <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/Perirhizal.py">Perirhizal.py</a></td>
                                     
-                                    <td>Focused on retrieving information on perirhizal zones around root segments.</td>
+                                    <td>Analyzes perirhizal zones in root systems.</td>
                                     
-                                    <td>Functions for bounding box calculation, node mirroring, and density calculations of perirhizal zones.</td>
+                                    <td>Soil volume cells, segment parameters, 3D Voronoi diagrams methods.</td>
                                     
-                                    <td>Important for understanding root-soil interactions at the micro-level.</td>
-                                    
-                                </tr>
-                                
-                                <tr>
-                                    
-                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/StomataModel.py">StomataModel.py</a></td>
-                                    
-                                    <td>Implements a hybrid flux solver for simulating water movement within plant xylems.</td>
-                                    
-                                    <td>Calculation of stomatal conductance, transpiration rates, and solving flux equations.</td>
-                                    
-                                    <td>Crucial for studying water transport and usage efficiency in plants.</td>
+                                    <td>Input: Root segment data. Output: Perirhizal zone analysis.</td>
                                     
                                 </tr>
                                 
@@ -500,11 +560,11 @@
                                     
                                     <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/XylemFlux.cpp">XylemFlux.cpp</a></td>
                                     
-                                    <td>C++ based module for handling xylem flux, soil fluxes, and segment fluxes.</td>
+                                    <td>C++ module for xylem and soil flux simulation.</td>
                                     
-                                    <td>Functions for assembling linear systems, computing segment and soil fluxes, and handling conductivity settings.</td>
+                                    <td>Functions for flux computations and conductivity settings.</td>
                                     
-                                    <td>Integral for comprehensive simulation of water flow within plant xylem.</td>
+                                    <td>Used in plant water flow simulation.</td>
                                     
                                 </tr>
                                 
@@ -512,11 +572,35 @@
                                     
                                     <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/bresenham3D.py">bresenham3D.py</a></td>
                                     
-                                    <td>Implements the 3D Bresenham&rsquo;s algorithm for generating points on a line in 3D space.</td>
+                                    <td>Implements 3D Bresenham&rsquo;s algorithm for line generation.</td>
                                     
-                                    <td>Bresenham3D function for line drawing, sphere function for creating spherical structures.</td>
+                                    <td>Functions for line drawing in 3D.</td>
                                     
-                                    <td>Used in root architecture modeling and visualization in 3D space.</td>
+                                    <td>Input: Line coordinates. Output: 3D line points.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/xylem_flux.py">xylem_flux.py</a></td>
+                                    
+                                    <td>Models water movement in plant xylems.</td>
+                                    
+                                    <td>Root system configuration, hydraulic properties, flux values.</td>
+                                    
+                                    <td>Input: RSML root structure files. Output: Xylem pressures, flux values.</td>
+                                    
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/functional/StomataModel.py">StomataModel.py</a></td>
+                                    
+                                    <td>Hybrid solver for stomatal conductance and xylem water movement.</td>
+                                    
+                                    <td>Environmental factors, root xylem pressure parameters.</td>
+                                    
+                                    <td>Input: Root system data, environmental factors. Output: Stomatal conductance results.</td>
                                     
                                 </tr>
                                 
