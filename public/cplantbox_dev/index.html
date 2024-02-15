@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPlantBox</title>
+    <meta name="description" content="Here we describe the codes of CPlantBox implementation as well as the instruction to install it along with its inputs and outputs from developer&#39;s perspective">
+    <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  
+  
+  
+   
+   
+   
+   
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/members.css">
+  <link rel="stylesheet" href="/css/single.css"> 
+  <link rel="stylesheet" href="/css/back2top.css"> 
+  <link rel="stylesheet" href="/css/dropdown.css"> 
+  <link rel="stylesheet" href="/css/research-areas.css">
+ 
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+</head>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+</head>
+<body>        
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <a class="navbar-brand" href="https://www.phenorobdaa.de/">
+      <img src="/images/DAA.png" alt="Logo" style="max-height: 75px;">
+  </a>
+
+  
+  <div class="d-flex flex-grow-1 justify-content-center">
+      <div class="text-center">
+          <h1 class="mb-0 display-4">PhenoRob Digital Agricultural Avatar (DAA)</h1>
+          <h2 class="h5 mb-0">(Process Based Models for the Future of Crop Production)</h2>
+      </div>
+  </div>
+
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="link2Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  DAA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="link2Dropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//about/">About</a>
+                  
+              </div>
+          </li>
+
+          
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Tools
+              </a>
+              <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//tools/">Our Main Tools</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//couple/">Coupled Models</a>
+                  
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//tools-dev/">Developer Zone</a>
+                  
+              </div>
+          </li>
+
+            
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="link1Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Research
+            </a>
+            <div class="dropdown-menu" aria-labelledby="link1Dropdown">
+                
+                    
+                    
+                        
+                    
+                    <a class="dropdown-item" href="https://www.phenorobdaa.de//research-areas/">Research Area</a>
+                
+                    
+                    
+                        
+                    
+                    <a class="dropdown-item" href="https://www.phenorobdaa.de//members/">Research Team</a>
+                
+                    
+                    
+                        
+                    
+                    <a class="dropdown-item" href="https://www.phenorobdaa.de//publication/">Publications</a>
+                
+            </div>
+            </li>
+
+          
+           <li class="nav-item">
+              <a class="nav-link" href="/members/" target="_blank">Contact</a>
+           </li>
+      </ul>
+  </div>
+</nav>
+    
+    <main>
+        
+         
+         <script src="https://www.phenorobdaa.de/js/slider.js"></script> 
+        
+<div class="container">
+    <h3>CPlantBox</h3>
+    <p>Here we describe the codes of CPlantBox implementation as well as the instruction to install it along with its inputs and outputs from developer&#39;s perspective</p>
+
+    
+    <div id="accordion">
+        
+        
+        <div class="card">
+            <div class="card-header" id="heading0">
+                <h4 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
+                        CPlantBox Structural Components C&#43;&#43; Codes
+                        
+                        <div class="lottie-small" style="width: 50px; height: 50px; display: inline-block;">
+                            <div id="lottie-animation-0" style="width: 100%; height: 100%;"></div>
+                        </div>
+                    </button>
+                </h4>
+            </div>
+
+            <div id="collapse0" class="collapse" aria-labelledby="heading0" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    
+                    <div class="table-responsive ml-3">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>File</th>
+                                    
+                                    <th>Functionality</th>
+                                    
+                                    <th>Variables</th>
+                                    
+                                    <th>I/O</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/Leaf.cpp">Leaf.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Manages leaf growth and development, covering creation, parameter computation, and visualization. Includes geometric properties and connectivity.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Leaf identification, parameters, growth factors, geometry, tropism, connectivity.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Growth parameters, environment. Output: Leaf properties.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/MappedOrganism.cpp">MappedOrganism.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Handles plant structural management, including 3D soil grid mapping. Oversees initialization and simulation of root and shoot systems.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Nodes, segments, radii, organ types, soil index, plant parameters, exchange zones.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Plant structure, soil parameters. Output: Plant structure, growth data.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/Organ.cpp">Organ.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Serves as a base class for plant organs (seeds, roots, stems, leaves), handling their development, geometry, and tree structure.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Nodes, segments, organ tree, parameters, type, age, status.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Development parameters, time. Output: Organ structure, growth, geometry.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/Organism.cpp">Organism.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Provides simulation interface and manages OrganRandomParameters. Supports RSML and handles global node and organ index counters.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Organ parameters, node/segment geometry, indices, RNG.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Simulation parameters. Output: Organism development, geometry, RSML.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/Plant.cpp">Plant.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Controls plant model simulation, managing tropisms, growth functions, and post-processing. Sets up simulation callbacks for tropisms and growth.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Tropisms, growth functions, soil lookup, parameters, state, callbacks.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Initialization, growth parameters. Output: Growth, utilities.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/Root.cpp">Root.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Describes root growth, managing the creation of lateral roots and root-specific parameters. Provides capabilities for time-span growth simulation.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Root parameters, types, state, node creation, tropism.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Growth parameters, environment. Output: Root growth, new nodes/roots.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/RootDelay.cpp">RootDelay.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Focuses on delayed lateral root growth, inheriting from Root class. Implements delay-based lateral root emergence.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Root delay parameters, lateral root creation, root structure.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Growth parameters with delay. Output: Delayed root growth, structure.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/RootSystem.cpp">RootSystem.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Manages the entire root system, including base roots and parameters. Inherits from Organism class, integrating various root dynamics.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Root parameters, tropisms, growth functions, state, tools.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Configuration, simulation parameters. Output: Root system growth, analysis.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/Seed.cpp">Seed.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Defines the Seed class, representing the plant&rsquo;s seed and managing the development of various organs. Integrates with plant organism structure.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Seed development, organ management, integration with plant.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Plant configuration, organ parameters. Output: Organ initialization.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/Stem.cpp">Stem.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Handles stem growth and development, including lateral stem emergence and parameter computation. Supports various growth scenarios.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Growth simulation, lateral management, parameter computation, growth modes.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Parameters, growth data. Output: Stem growth, data, parameters.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/organparameter.cpp">organparameter.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Central to configuring organ types in plants. Manages organ-specific and randomized parameters for simulation variability.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Organ type setup, parameter handling, random parameter management.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Organism data, configuration. Output: Organ parameters, characteristics.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/rootparameter.cpp">rootparameter.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Defines root-specific parameters and functionalities, handling configurations for growth dynamics and tropism.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Root type setup, growth dynamics, tropism, distance management.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Root data, growth configuration. Output: Root parameters, characteristics.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/seedparameter.cpp">seedparameter.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Handles seed-specific parameters, crucial for modeling early plant development and root system initiation.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Seed positioning, root emergence, crown configuration, tiller parameters.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Seed data, configuration. Output: Seed parameters, development.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/stemparameter.cpp">stemparameter.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Manages stem-specific parameters, key to modeling stem growth, branching, and structural characteristics.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Growth dynamics, branching, tropism, lifespan, nodal functions.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Stem data, growth parameters. Output: Stem parameters, characteristics.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                                <tr>
+                                     
+                                    
+                                    
+                                    <td><a href="https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/behavioral/tropism.cpp">tropism.cpp</a></td>
+                                    
+                                     
+                                    
+                                     
+                                    <td>
+                                        
+                                        Defines tropism behaviors, implementing mechanisms like gravitropism and hydrotropism, crucial for realistic plant growth simulation.
+                                        
+                                    </td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Various tropisms, environmental response mechanisms.</td>
+                                    
+                                     
+                                    
+                                    
+                                    <td>Input: Environmental stimuli, growth parameters. Output: Growth direction, tropism responses.</td>
+                                    
+                                     
+                                    
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        
+        
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation-0'), 
+            renderer: 'svg', 
+            loop: true, 
+            autoplay: true, 
+            path: '/anim/coffee_code.json' 
+        });
+        
+
+        
+        setTimeout(function() {
+            document.getElementById('lottie-animation').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }, 1500); 
+    </script>
+</div>
+
+    </main>
+    <div id="footer" class="container mt-5">
+  <footer class="site-footer text-center bg-light py-4">
+      <p></p>
+      <p><a href="/privacy-policy">Privacy Policy</a></p>
+
+      
+      <div class="flag-counter mt-3">
+        <a href="https://info.flagcounter.com/0BBH">
+            <img src="https://s11.flagcounter.com/count2/0BBH/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
+        </a>
+      </div>            
+
+
+      <div class="social-icons mt-3">
+          <a href="https://www.youtube.com/channel/UCbxAVXpc2pc2sjjn64oPdIQ" target="_blank" class="text-danger mx-3">
+              <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cluster-of-excellence-phenorob/" target="_blank" class="text-primary mx-3">
+              <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/your_twitter_handle" target="_blank" class="text-info mx-3">
+              <i class="fab fa-twitter fa-2x"></i>
+          </a>
+      </div>
+  </footer>
+</div>
+
+
+    
+</body>
+</html>

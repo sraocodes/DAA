@@ -4,8 +4,11 @@ description: "Here we describe the codes of CPlantBox implementation as well as 
               inputs and outputs from developer's perspective"
 layout: "model_files"
 sections:
-  - section_name: "CPlantBox Structural Components C++ Codes"
+sections:
+  - section_name: "Structural Module"
+    description: "The structural module contains code that simulates plant growth and morphology within the CPlantBox framework. It defines the characteristics and behavior of various plant organs like roots, stems, leaves, and seeds. Additionally, it handles tropism responses, enabling plants to adjust their growth direction in response to environmental cues. In essence, this module forms the basis for realistic plant growth simulations."
     table:
+      title: "Description of C++ codes in Structural Module"
       headers: ["File", "Functionality", "Variables", "I/O"]
       rows:
         - ["[Leaf.cpp](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/structural/Leaf.cpp)", "Manages leaf growth and development, covering creation, parameter computation, and visualization. Includes geometric properties and connectivity.", "Leaf identification, parameters, growth factors, geometry, tropism, connectivity.", "Input: Growth parameters, environment. Output: Leaf properties."]
