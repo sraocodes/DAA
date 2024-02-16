@@ -16,6 +16,31 @@
                 <img src="{{ $section.image | relURL }}" alt="{{ $section.section_name }}" class="img-fluid">
                 {{ end }}
             </div>
+            
+            <!-- Collapsible List with Lottie Animation -->
+            {{ if .list }}
+            <div class="card-body">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseList{{ $index }}" aria-expanded="false" aria-controls="collapseList{{ $index }}">
+                        List Title
+                        <!-- Lottie Animation Next to List Title -->
+                        <div class="lottie-small" style="width: 50px; height: 50px; display: inline-block;">
+                            <div id="lottie-animation-list-{{ $index }}" style="width: 100%; height: 100%;"></div>
+                        </div>
+                    </button>
+                </h5>
+                <div id="collapseList{{ $index }}" class="collapse" aria-labelledby="heading{{ $index }}" data-parent="#accordion">
+                    <ol class="list-group ml-3">
+                        {{ $emojis := slice "🌾" "🌍" "🌦️" "💧" "🚜" }}
+                        {{ range $listIndex, $element := .list }}
+                            {{ $emojiIndex := mod $listIndex (len $emojis) }}
+                            {{ $emoji := index $emojis $emojiIndex }}
+                            <li class="list-group-item">{{ $emoji }} {{ $element | markdownify | safeHTML }}</li>
+                        {{ end }}
+                    </ol>
+                </div>
+            </div>
+            {{ end }}
 
             <!-- Collapsible Table with Lottie Animation -->
             {{ if $section.table }}
@@ -29,7 +54,6 @@
                         </div>
                     </button>
                 </h5>
-
                 <div id="collapseTable{{ $index }}" class="collapse" aria-labelledby="heading{{ $index }}" data-parent="#accordion">
                     <div class="table-responsive ml-3">
                         <table class="table table-bordered table-striped table-hover">
@@ -59,11 +83,20 @@
     </div>
 
     <script>
-        // Load Lottie animations for each table section
+        // Load Lottie animations for each list and table section
         {{ range $index, $_ := .Params.sections }}
+        {{ if $_.list }}
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation-list-' + '{{ $index }}'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/anim/coffee_code.json'
+        });
+        {{ end }}
         {{ if $_.table }}
         lottie.loadAnimation({
-            container: document.getElementById('lottie-animation-table-{{ $index }}'),
+            container: document.getElementById('lottie-animation-table-' + '{{ $index }}'),
             renderer: 'svg',
             loop: true,
             autoplay: true,
