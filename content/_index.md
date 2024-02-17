@@ -37,7 +37,7 @@ slides_set2:
       GRANAR is a modeling tool that recreates the cellular structure of plant roots. It not only provides in-depth root anatomy but, when combined with other models, predicts crop performance, aiding in drought-resistant plant breeding. 
     link: "/granar/" 
   
-  - image: "images/mecha1.png"
+  - image: "images/mecha_uptake.gif"
     heading: "MECHA"
     text: "MECHA is a mathematical model enhancing understanding of water transport in plant roots. It aids breeders in simulating scenarios related to root water/nutrient transport, and offers interactive online testing via platforms like ShinyApps and Binder."
     link: "/mecha/"
