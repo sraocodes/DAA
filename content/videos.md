@@ -4,18 +4,25 @@ layout: "videos"
 
 
 sections:
-  - title: "Section 1 Title"
-    description: "Description of Section 1."
+  - title: "Process Based Models"
+    description: "Learn about Process Based models that are at the heart of Digital Agricultural Avatar"
     videos:
-      - title: "Custom Video Title 1"
-        youtube_id: "-YgDnsC3BV8"
-      - title: "Custom Video Title 2"
-        youtube_id: "y6120QOlsfU"
+      - title: "Digital Agricultural Avatar Project Overview: A phenorob talk by Prof. Guillaume Lobet"
+        youtube_id: "ZRL_7_onhJs"
+      - title: "Crop Modeling talk by Prof. Frank Ewert "
+        youtube_id: "sz-SMI5Y5mQ"
 
-  - title: "Section 2 Title"
-    description: "Description of Section 2."
+  - title: "CPlantBox"
+    description: "Learn more about CPlantBox through the videos below"
     videos:
-      - title: "Custom Video Title 3"
-        youtube_id: "Gc2en3nHxA4"
-      
+      - title: "What is C-PlantBox?"
+        youtube_id: "-YgDnsC3BV8"
+      - title: "Mathematics behind C-PlantBox"
+        youtube_id: "dzeV4U58BYA"
+      - title: "Modeling a virtual Plant"
+        youtube_id: "-MjNsvbCf4o"
+      - title: "Benchmarking root and soil interaciton models"
+        youtube_id: "i2zisEZbxMY"
+      - title: "Axisymmetric rhizosphere models"
+        youtube_id: "1l_ZlSl9R3I"
 ---

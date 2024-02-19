@@ -27,20 +27,54 @@
     .sidebar a:hover {
         text-decoration: underline;
     }
+    .clickable-indicator {
+        display: inline-block;
+        width: 10px; /* Size of the indicator */
+        height: 10px;
+        line-height: 10px;
+        text-align: center;
+        border: 1px solid #007bff; /* Color to match theme */
+        color: #007bff;
+        margin-left: 5px;
+        border-radius: 50%; /* Makes the indicator circular */
+        font-size: 0.7em; /* Adjust size */
+        cursor: pointer; /* Change cursor to indicate clickability */
+    }
+    .collapsed-indicator:after {
+        content: '+';
+    }
+    .expanded-indicator:after {
+        content: '-';
+    }
 </style>
 
 <div class="sidebar">
-    <ul id="videoIndex">
-        {{ range .Params.sections }}
-        <li><a href="#section-{{ .title | urlize }}">{{ .title }}</a></li>
-            {{ range .videos }}
-                <li style="margin-left: 20px;"><a href="#video-{{ .title | urlize }}">{{ .title }}</a></li>
+    {{ range $index, $section := .Params.sections }}
+    <div class="mb-2">
+        <a href="#section-{{ $section.title | urlize }}" class="text-decoration-none">
+            <strong>{{ $section.title }}</strong>
+        </a>
+        <a href="#collapse{{ $index }}" class="d-block text-decoration-none" data-toggle="collapse">
+            {{ len $section.videos }} videos
+            <!-- Lottie Animation Container -->
+            <div class="lottie-small" style="width: 30px; height: 30px; display: inline-block;">
+                <div id="lottie-animation-video-{{ $index }}" style="width: 100%; height: 100%;"></div>
+            </div>
+        </a>
+        <div id="collapse{{ $index }}" class="collapse">
+            {{ range $i, $v := $section.videos }}
+            <a href="#video-{{ $v.title | urlize }}" class="d-block text-decoration-none pl-3">
+                {{ add $i 1 }}. {{ $v.title }}
+            </a>
             {{ end }}
-        {{ end }}
-    </ul>
+        </div>
+    </div>
+    {{ end }}
 </div>
 
-<div class="container mt-4" style="margin-left: 220px;"> <!-- Adjust margin to account for sidebar -->
+
+
+<div class="container mt-4" style="margin-left: 220px;">
     {{ with .Params.sections }}
     {{ range . }}
     <div id="section-{{ .title | urlize }}" class="mb-4">
@@ -64,4 +98,18 @@
     {{ end }}
     {{ end }}
 </div>
+
+<script>
+    {{ range $index, $_ := .Params.sections }}
+    lottie.loadAnimation({
+        container: document.getElementById('lottie-animation-video-' + '{{ $index }}'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/anim/click_here.json' // Adjust the path to your Lottie file
+    });
+    {{ end }}
+</script>
+
 {{ end }}
+
