@@ -3,6 +3,19 @@
     max-height: 80px; /* Adjust the logo size */
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays above other content */
+}
+
+/* Adjust Body Padding to Prevent Content Overlap */
+body {
+    padding-top: 90px; /* Adjust based on the actual height of your navbar */
+}
+
 /* Adjusting headline sizes */
 .navbar .text-center h1 {
     color: #333; /* Darker text color */
