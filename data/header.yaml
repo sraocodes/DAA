@@ -30,7 +30,8 @@ ToolsDropDown:
     Link: "/couple/"
   - Name: Developer Zone
     Link: "/tools-dev/"    
-
+  - Name: Media
+    Link: "/videos/" 
 
 Link3Name: "Contact"
 Link3Link: "/members/"

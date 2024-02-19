@@ -18,11 +18,11 @@
             </div>
             
             <!-- Collapsible List with Lottie Animation -->
-            {{ if .list }}
+            {{ if $section.list }}
             <div class="card-body">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseList{{ $index }}" aria-expanded="false" aria-controls="collapseList{{ $index }}">
-                        List Title
+                        {{ $section.list.title }}
                         <!-- Lottie Animation Next to List Title -->
                         <div class="lottie-small" style="width: 50px; height: 50px; display: inline-block;">
                             <div id="lottie-animation-list-{{ $index }}" style="width: 100%; height: 100%;"></div>
@@ -32,7 +32,7 @@
                 <div id="collapseList{{ $index }}" class="collapse" aria-labelledby="heading{{ $index }}" data-parent="#accordion">
                     <ol class="list-group ml-3">
                         {{ $emojis := slice "🌾" "🌍" "🌦️" "💧" "🚜" }}
-                        {{ range $listIndex, $element := .list }}
+                        {{ range $listIndex, $element := $section.list.items }}
                             {{ $emojiIndex := mod $listIndex (len $emojis) }}
                             {{ $emoji := index $emojis $emojiIndex }}
                             <li class="list-group-item">{{ $emoji }} {{ $element | markdownify | safeHTML }}</li>

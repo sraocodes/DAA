@@ -1,0 +1,67 @@
+{{ define "main" }}
+<style>
+    .sidebar {
+        position: fixed;
+        top: 100px; /* Adjust based on your header */
+        left: 0;
+        width: 200px; /* Adjust the width of the sidebar */
+        height: 100%;
+        overflow-y: auto;
+        background-color: #f8f9fa; /* Light background */
+        border-right: 1px solid #ddd; /* Border to separate from content */
+        padding: 10px;
+    }
+    .custom-video-frame {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    /* Style for the sidebar links */
+    .sidebar a {
+        display: block;
+        margin-bottom: 5px;
+        color: #007bff; /* Bootstrap primary color */
+        text-decoration: none;
+    }
+    .sidebar a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="sidebar">
+    <ul id="videoIndex">
+        {{ range .Params.sections }}
+        <li><a href="#section-{{ .title | urlize }}">{{ .title }}</a></li>
+            {{ range .videos }}
+                <li style="margin-left: 20px;"><a href="#video-{{ .title | urlize }}">{{ .title }}</a></li>
+            {{ end }}
+        {{ end }}
+    </ul>
+</div>
+
+<div class="container mt-4" style="margin-left: 220px;"> <!-- Adjust margin to account for sidebar -->
+    {{ with .Params.sections }}
+    {{ range . }}
+    <div id="section-{{ .title | urlize }}" class="mb-4">
+        <h2>{{ .title }}</h2>
+        <p>{{ .description }}</p>
+        <div class="row">
+            {{ range .videos }}
+            <div id="video-{{ .title | urlize }}" class="col-sm-12 col-md-6 mb-3">
+                <div class="card custom-video-frame">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ .title }}</h5>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ .youtube_id }}" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}
