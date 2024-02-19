@@ -22,7 +22,7 @@ Link2Dropdown:
     url: "/about/"
 
 
-ToolsName: Tools
+ToolsName: Resources
 ToolsDropDown:
   - Name: Our Main Tools
     Link: "/tools/"
