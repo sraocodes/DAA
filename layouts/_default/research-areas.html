@@ -1,8 +1,27 @@
 {{ define "main" }}
+<style>
+    /* Dynamic padding based on screen size and orientation */
+    .research-area-content {
+        padding-top: 60px; /* Default padding for smaller screens */
+    }
+
+    @media (min-width: 768px) { /* For tablets and desktops */
+        .research-area-content {
+            padding-top: 100px;
+        }
+    }
+
+    @media (orientation: landscape) { /* For horizontal screen orientation */
+        .research-area-content {
+            padding-top: 80px;
+        }
+    }
+</style>
+
 <div class="container research-area-content">
     {{ range $index, $element := .Params.research_tools }}
     <div class="mb-5"> <!-- Margin for spacing between each research area -->
-        <h2 class="display-6 text-center">{{ $element.heading }}</h2> <!-- Centered Larger heading -->
+        <h2 class="display-6 text-center mt-4">{{ $element.heading }}</h2> <!-- Centered Larger heading -->
         <div class="row mt-3 {{ if modBool $index 2 }}flex-row-reverse{{ end }}">
             <div class="col-md-6">
                 <img src="{{ $element.image | relURL }}" alt="{{ $element.heading }}" class="img-fluid">

@@ -13,11 +13,11 @@ sections:
         youtube_id: "sz-SMI5Y5mQ"
 
   - title: "CPlantBox"
-    description: "Learn more about CPlantBox through the videos below"
+    description: "Learn more about [CPlantBox](/cplantbox/) through the videos below"
     videos:
-      - title: "What is C-PlantBox?"
+      - title: "What is CPlantBox?"
         youtube_id: "-YgDnsC3BV8"
-      - title: "Mathematics behind C-PlantBox"
+      - title: "Mathematics behind CPlantBox"
         youtube_id: "dzeV4U58BYA"
       - title: "Modeling a virtual Plant"
         youtube_id: "-MjNsvbCf4o"

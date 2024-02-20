@@ -78,8 +78,8 @@
     {{ with .Params.sections }}
     {{ range . }}
     <div id="section-{{ .title | urlize }}" class="mb-4">
-        <h2>{{ .title }}</h2>
-        <p>{{ .description }}</p>
+        <h2>{{ .title}}</h2>
+        <p>{{ .description | markdownify | safeHTML }}</p>
         <div class="row">
             {{ range .videos }}
             <div id="video-{{ .title | urlize }}" class="col-sm-12 col-md-6 mb-3">

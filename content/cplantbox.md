@@ -76,21 +76,8 @@ sections:
     imageHeight: "100px"
     textPosition: "left"
 
-  - name: "C-PlantBox lectures"
-    text: "Explore the world of plant shoot and root architecture with insightful talks on the C-PlantBox modeling tool. Dive into the intricate mathematics and operational intricacies that power C-PlantBox tool for simulating and analyzing whole plant growth dynamics."
-    videos: 
-    - videoID: "-YgDnsC3BV8"
-      videoTitle: "What is C-PlantBox?"
-    - videoID: "dzeV4U58BYA"
-      videoTitle: "Mathematics behind C-PlantBox"
-    - videoID: "-MjNsvbCf4o"
-      videoTitle: "Modeling a virtual Plant"
-    - videoID: "i2zisEZbxMY"
-      videoTitle: "Benchmarking root and soil interaciton models"
-    - videoID: "1l_ZlSl9R3I"
-      videoTitle: "Axisymmetric rhizosphere models"
+  - name: "CPlantBox lectures"
+    text: "Explore the world of plant shoot and root architecture with insightful talks on the C-PlantBox modeling tool. Dive into the intricate mathematics and operational intricacies that power CPlantBox tool for simulating and analyzing whole plant growth dynamics by [clicking here](/videos/)🌱" 
 
-    textPosition: "top"    
-  - name: "Youtube"
-    url: "https://www.youtube.com/channel/UCPK-pFfpK94jiamgwHxX32Q"  
+
 ---

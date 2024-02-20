@@ -4,13 +4,13 @@
       <img src="{{ .Site.Data.header.logoImagePath | relURL }}" alt="{{ .Site.Data.header.logoAlt }}" style="max-height: 75px;">
   </a>
 
-  <!-- Main Headline -->
-  <div class="d-flex flex-grow-1 justify-content-center">
-      <div class="text-center">
-          <h1 class="mb-0 display-4">{{ .Site.Data.header.title }}</h1>
-          <h2 class="h5 mb-0">{{ .Site.Data.header.description }}</h2>
-      </div>
+  <div class="d-flex flex-grow-1 justify-content-center d-none d-md-block">
+    <div class="text-center">
+        <h1 class="mb-0 display-4">{{ .Site.Data.header.title }}</h1>
+        <h2 class="h5 mb-0">{{ .Site.Data.header.description }}</h2>
+    </div>
   </div>
+
 
   <!-- Toggler/collapsible Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
