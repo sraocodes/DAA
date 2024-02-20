@@ -1,5 +1,5 @@
 {{ define "main" }}
-<style>
+    <style>
     .sidebar {
         position: fixed;
         top: 100px; /* Adjust based on your header */
@@ -10,45 +10,29 @@
         background-color: #f8f9fa; /* Light background */
         border-right: 1px solid #ddd; /* Border to separate from content */
         padding: 10px;
+        z-index: 1050; /* Ensure sidebar is above other content */
     }
-    .custom-video-frame {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        overflow: hidden;
-        margin-bottom: 30px;
-    }
-    /* Style for the sidebar links */
-    .sidebar a {
-        display: block;
-        margin-bottom: 5px;
-        color: #007bff; /* Bootstrap primary color */
-        text-decoration: none;
-    }
-    .sidebar a:hover {
-        text-decoration: underline;
-    }
-    .clickable-indicator {
-        display: inline-block;
-        width: 10px; /* Size of the indicator */
-        height: 10px;
-        line-height: 10px;
-        text-align: center;
-        border: 1px solid #007bff; /* Color to match theme */
-        color: #007bff;
-        margin-left: 5px;
-        border-radius: 50%; /* Makes the indicator circular */
-        font-size: 0.7em; /* Adjust size */
-        cursor: pointer; /* Change cursor to indicate clickability */
-    }
-    .collapsed-indicator:after {
-        content: '+';
-    }
-    .expanded-indicator:after {
-        content: '-';
-    }
-</style>
 
-<div class="sidebar">
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 220px; /* Adjust based on sidebar width */
+        margin-top: 20px;
+    }
+
+    @media (max-width: 992px) {
+        .sidebar {
+            display: none; /* Hide sidebar on small screens */
+        }
+
+        .container-fluid {
+            margin-left: 0; /* Full width container on small screens */
+        }
+    }
+
+    </style>
+
+<div class="sidebar d-none d-lg-block" id="sidebar">
     {{ range $index, $section := .Params.sections }}
     <div class="mb-2">
         <a href="#section-{{ $section.title | urlize }}" class="text-decoration-none">
@@ -74,7 +58,7 @@
 
 
 
-<div class="container mt-4" style="margin-left: 220px;">
+<div class="container-fluid mt-4" id="main-content">
     {{ with .Params.sections }}
     {{ range . }}
     <div id="section-{{ .title | urlize }}" class="mb-4">
