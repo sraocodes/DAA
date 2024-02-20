@@ -38,9 +38,4 @@ sections:
 
   - name: "Model Integration and Scale Connectivity"
     text: "PhenoRob DAA plans to integrate models across diverse scales, creating a multifaceted view of agricultural systems. We aim to intertwine models like [GRANAR](/granar/), [MECHA](/mecha/), [CPlantBox](/cplantbox/), [AgroC](/agroc/), [SIMPLACE](/simplace/), and [TerrSysMP](/terrsysmp/), to forge a comprehensive understanding of agricultural processes. This integration is important for unraveling the complexities of agricultural ecosystems, from the microcosm of root cell anatomies to the macrocosm of land-atmosphere interactions. Highlighting examples of ongoing [coupling efforts](/couple/), such as linking GRANAR's detailed root anatomies with CPlantBox's whole-plant models, and integrating AgroC's insights on carbon dynamics with TerrSysMP's large-scale environmental simulations, PhenoRob DAA aims to advance predictive power in agricultural science and precision farming."
-
-  - name: "Phenorob Lecture Series"
-    videos:
-    - videoID: "ZRL_7_onhJs"
-      videoTitle: "What is Digital Agriculture Avatar ? A phenorob talk by Prof. Guillaume Lobet"
 ---
