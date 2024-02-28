@@ -17,4 +17,11 @@ sections:
     imageHeight: "200px"  
     textPosition: "right"
 
+  - name: "SIMPLACE"
+    text: "SIMPLACE is an open-source software that helps scientists and farmers manage crops and ecosystems better. SIMPLACE offers a variety of components, each designed to simulate specific processes or interactions in the agricultural domain. Learn more about technical details of [SIMPLACE here](/simplace_dev/)."
+    image: "images/simcomponents.gif"
+    imageWidth: "400px"    
+    imageHeight: "400px"  
+    textPosition: "left"
+
 ---
