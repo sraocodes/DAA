@@ -5,13 +5,13 @@ draft: false
 
 sections:  
   - name: "What is Simplace?"
-    text: "SIMPLACE is an open-source software that helps scientists and farmers manage crops and ecosystems better. It uses computer models to understand complex interactions between crops, soil, and climate. By coupling different modules, each representing a process like water use or plant growth, SIMPLACE offers customizable solutions for different agricultural needs.Its multi-threaded high-performance architecture allows for calibration and simulations at varying spatial scales.You can check the official site of SIMPLACE [here](https://www.simplace.net/index.php)."
+    text: "SIMPLACE is an open-source software that helps scientists to understand and formulate theories about how agroecosystems work. With this tool, it is possible to simulate "What-if" scenarios which can be used to design new management practices solutions that are more efficient and sustainable. For doing so, it contains a collection of algorithms that simulate the complex interactions between crop, soil and climate. You can check the official site of SIMPLACE [here](https://www.simplace.net/index.php)."
     textPosition: "top"
     videos:
     - videoID: "kj6TXkxocCg"
 
   - name: "What can SIMPLACE do?"
-    text: "SIMPLACE can help in understanding how climate change affects crops, finding ways to improve farming practices, and developing useful tools for farmers and policymakers. For example, SIMPLACE has a special component that helps study how heat stress affects crops. It also offers an advanced module that looks into soil water balance in great detail. Its customizable nature allows users to choose and combine different components depending on their specific needs."
+    text: "SIMPLACE can help in understanding how climate change affects crops, finding ways to improve farming practices, and developing useful tools for farmers and policymakers. For example, SIMPLACE has a special component that helps study how [heat stress](https://doi.org/10.1016/j.envsoft.2015.12.003) affects crops. Its flexibility allows to combine different modules that are most suited to the application purpose and data availability. For example, one application may need a detailed description of soil water and nutrients dynamics, while another may need to be more general with respect to the description of soil processes but must have a detailed description of photosynthesis processes."
     list:
       - "Assess climate change impacts: How will changes in climate affect our crops?"
       - "Improve farming strategies: How can we farm more efficiently and sustainably?"
