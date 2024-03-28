@@ -47,7 +47,7 @@ slides_set2:
     text: "C-PlantBox is a holistic plant modeling tool, capturing both root and shoot systems. It simulates intricate interactions between carbon and water flows in diverse environmental conditions."
     link: "/cplantbox/"
 
-  - image: "images/scope1.png"
+  - image: "images/scope_card.gif"
     heading: "SCOPE 2.0"
     text: "SCOPE is a model that simulates radiative transfer and photosynthesis in vegetation canopies, integrating satellite observations with land surface processes."
     link: "/scope/"
