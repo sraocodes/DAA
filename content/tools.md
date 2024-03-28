@@ -8,11 +8,8 @@ sections:
     list:
       - "**[GRANAR](/granar/) and [MECHA](/mecha/)**: Developed for cell-level processes and mechanical phenomena."
       - "**[CPLANTBOX](/cplantbox/)**: Target plant and organ scales, focusing on water transport and growth."
+      - "**[SCOPE](/scope/)**: Simulates radiative transfer and photosynthesis in vegetation canopies, integrating satellite observations with land surface processes."
       - "**[Simplace](/simplace/), [AgroC](/agroc/), and [TerrSysMP](/terrsysmp/)**: Designed for crop and regional scales, they simulate growth patterns and ecological interactions."
-    image: "images/3.gif"
-    imageWidth: "800px"
-    imageHeight: "450px"
-    textPosition: "bottom"
 
   - name: "GRANAR"
     text: "GRANAR, the Generator of Root ANAtomy in R, is a computational plant cell scale model designed to simulate root anatomical networks. These networks are crafted using easily accessible anatomical features, which can be obtained from open-access image analysis software and root cross-section images. Once the root anatomy is generated, it can be saved as an XML file. The model can simulate different vascular patterns, depending on whether it's modeling a monocot or dicot root. You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. Explore more about [GRANAR here](/granar/)."
@@ -41,6 +38,14 @@ sections:
     imageWidth: "150px"
     imageHeight: "150px"
     textPosition: "right"
+
+  - name: "SCOPE 2.0"
+    text: "SCOPE (Soil Canopy Observation, Photochemistry, and Energy fluxes) is a radiative transfer model, that can simulate radiative transfer across soil, leaves, and vegetation canopies, while modeling intricate processes like photosynthesis and heat dissipation.Explore more about [SCOPE here](/scope/)."
+    textPosition: "right"
+    image: "images/scope1.png"
+    imageWidth: "600px"
+    imageHeight: "461px"
+    textPosition: "bottom"
 
   - name: "SIMPLACE"
     text: "SIMPLACE is a crop-scale model that helps understand complex interactions between crops, soil, and climate. By coupling different modules, each representing a process like water use or plant growth, SIMPLACE offers customizable solutions for different agricultural needs.Its multi-threaded high-performance architecture allows for calibration and simulations at varying spatial scales.Explore more about [SIMPLACE here](/simplace/)."

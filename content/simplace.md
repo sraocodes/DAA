@@ -5,7 +5,7 @@ draft: false
 
 sections:  
   - name: "What is Simplace?"
-    text: "SIMPLACE is an open-source software that helps scientists to understand and formulate theories about how agroecosystems work. With this tool, it is possible to simulate "What-if" scenarios which can be used to design new management practices solutions that are more efficient and sustainable. For doing so, it contains a collection of algorithms that simulate the complex interactions between crop, soil and climate. You can check the official site of SIMPLACE [here](https://www.simplace.net/index.php)."
+    text: "SIMPLACE is an open-source software that helps scientists to understand and formulate theories about how agroecosystems work. With this tool, it is possible to simulate 'What-if' scenarios which can be used to design new management practices solutions that are more efficient and sustainable. For doing so, it contains a collection of algorithms that simulate the complex interactions between crop, soil and climate. You can check the official site of SIMPLACE [here](https://www.simplace.net/index.php)."
     textPosition: "top"
     videos:
     - videoID: "kj6TXkxocCg"

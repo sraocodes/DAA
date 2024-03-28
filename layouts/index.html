@@ -1,11 +1,12 @@
 {{ define "main" }}
 
 <!-- Banner Image -->
-<div class="banner-image w-100">
+<div class="banner-image w-100 d-flex justify-content-center">
     {{ with .Params.bannerImage }}
         <img src="{{ . | relURL }}" alt="Banner" class="img-fluid">
     {{ end }}
 </div>
+
 
 
 <div class="container mt-5" id="indexPageContainer">
