@@ -26,8 +26,8 @@ sections:
     table:
       headers: ["Component", "Description", "Function"]
       rows:
-        - ["Radiative Transfer Models", "Simulates the spectrally resolved radiance emanating from vegetation.", "Fundamental for analyzing how light is absorbed, scattered, and transmitted within plant canopies."]
-        - ["Leaf Biochemical Model", "Models the partitioning of energy into fluorescence, heat, or photochemistry within photosystems.", "Crucial for understanding photosynthetic efficiency and plant responses to environmental stress."]
+        - ["Radiative Transfer Models", "Simulates the spectrally resolved radiance emanating from vegetation.", "Essential for analyzing how light is absorbed, scattered, and transmitted within plant canopies."]
+        - ["Leaf Biochemical Model", "Models the partitioning of energy into fluorescence, heat, or photochemistry within photosystems.", "Essential for understanding photosynthetic efficiency and plant responses to environmental stress."]
         - ["Energy Balance Module", "Integrates net radiation, sensible and latent heat fluxes, alongside photosynthesis rates.", "Essential for modeling energy dynamics in both individual elements (soil and leaves) and entire vegetation stands."]
 
 ---

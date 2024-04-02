@@ -43,8 +43,8 @@ slides_set2:
     link: "/mecha/"
 
   - image: "images/cplantbox_card.gif"
-    heading: "C-PlantBox"
-    text: "C-PlantBox is a holistic plant modeling tool, capturing both root and shoot systems. It simulates intricate interactions between carbon and water flows in diverse environmental conditions."
+    heading: "CPlantBox"
+    text: "CPlantBox is a holistic plant modeling tool, capturing both root and shoot systems. It simulates intricate interactions between carbon and water flows in diverse environmental conditions."
     link: "/cplantbox/"
 
   - image: "images/scope_card.gif"
@@ -53,8 +53,8 @@ slides_set2:
     link: "/scope/"
 
   - image: "images/AgroC.png"
-    heading: "Agro-C"
-    text: "Agro-C is a comprehensive model decoding the carbon dynamics in agricultural soil. It delves into the carbon journey of crops and the soil's organic carbon movement. It's pivotal for understanding agricultural carbon budgets and addressing climate change."
+    heading: "AgroC"
+    text: "AgroC is a comprehensive model decoding the carbon dynamics in agricultural soil. It delves into the carbon journey of crops and the soil's organic carbon movement. It's pivotal for understanding agricultural carbon budgets and addressing climate change."
     link: "/agroc/"
 
   - image: "images/simplace.jpg"
