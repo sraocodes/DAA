@@ -5,31 +5,18 @@ draft: false
 
 sections:
   - name: "What is AgroC?"
-    text: "AgroC is a 1D integrated model designed for simulating crucial aspects of crop growth and soil interactions, including nutrient dynamics, water fluxes, and carbon cycling. The model is tailored for researchers and practitioners who need an in-depth understanding of crop and soil behavior under various environmental conditions. It accurately models soil carbon turnover, CO2 flux, and plant water stress. Unique features like root exudation and death are considered, highlighting its advanced capabilities in representing real-world agricultural scenarios. AgroC's versatility is demonstrated through its application across diverse study sites with varying climatic conditions and land management practices. Some of its features are: "
-    list:
-      - "Combines soil and crop growth models."
-      - "Detailed analysis of nutrient dynamics, especially phosphorus uptake."
-      - "Accurate modeling of water fluxes and soil moisture."
-      - "Models photosynthesis and the impact of environmental stress."
-      - "Manages harvest residues for sustainable agriculture."
-      - "Integrates multiple modules for a comprehensive analysis."
-      - "Differentiates diffusive and convective phosphorus uptake."
-      - "Phosphorous uptake influenced by root and soil properties."
-      - "Estimates nutrient content in harvest residues."
-      - "Models root exudation and death."
-      - "Links root dynamics to soil respiration."
+    text: "AgroC is a 1D model integrating the SOILCO2/RothC and SUCROS models, designed for advanced simulation of carbon fluxes, soil processes, and crop growth. It excels in complex analyses such as CO2 and heat flux simulation in soil, root respiration, and autotrophic/heterotrophic interactions in agricultural ecosystems. AgroC employs rigorous methods like the one-dimensional profiles of soil water and temperature for carbon turnover rate calculations, showcasing its high precision in ecosystem modeling."
     image: "images/AgroC.png"
     imageWidth: "250px"
     imageHeight: "250px"
     textPosition: "top"
 
   - name: "Components of AgroC Model"
-    text: "AgroC integrates several key components for a holistic agricultural simulation. The SoilCO2 module handles soil processes, RothC simulates organic carbon turnover, and SUCROS models crop growth and dry matter accumulation. AgroC utilizes Farquhar model for photosynthesis and solves Richard’s equation for soil water balance. These components work together to provide a closed carbon balance for cropped ecosystems. Here is the documentation for [AgroC](/agroC/agroc_manual.pdf)"
-    list:
-      - "SUCROS Module: Focuses on crop growth, handling photosynthesis and dry matter accumulation. It employs the Farquhar model to simulate photosynthesis, factoring in light absorption, water availability, and rubisco concentration."
-      - "SOILCO2 Module: Manages soil water, heat, and CO2 fluxes. This module is responsible for modeling soil water balance using Richard’s equation, which calculates soil water storage change, actual evapotranspiration, and infiltration."
-      - "RothC Module: Simulates soil carbon turnover and integrates with other modules to provide a comprehensive view of soil health and carbon cycling. It also evaluates the Net Ecosystem Exchange (NEE), balancing various fluxes like Gross Primary Production (GPP), aboveground and belowground respiration."
-      - "Additional Functionalities: AgroC also includes capabilities for quantifying drought stress using the Feddes function, modeling Soil-Plant-Atmosphere Water Relations, and calculating fluorescence emissions using SCOPE model insights."
+    text: "The AgroC model encompasses several specialized components, each addressing different aspects of agricultural simulation. The SUCROS model focuses on crop growth, calculating photosynthesis and biomass accumulation, employing the Farquhar model for accuracy. The SOILCO2 module simulates soil processes, including water and CO2 fluxes, and uses Richard’s equation for soil moisture balance. RothC integrates with these to simulate soil carbon turnover, evaluating factors like Gross Primary Production and ecosystem respiration, and achieving a comprehensive carbon balance. Here is the documentation for [AgroC](/agroC/agroc_manual.pdf)"
+    image: "images/agroc_comp.jpg"
+    imageWidth: "445px"
+    imageHeight: "768px"
+    textPosition: "right"
 
   - name: "Software and Implementation"
     text: "AgroC is developed using Fortran90, a powerful and widely-used programming language for numerical and scientific computing."
