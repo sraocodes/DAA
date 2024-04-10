@@ -52,9 +52,9 @@ slides_set2:
     text: "SCOPE is a model that simulates radiative transfer and photosynthesis in vegetation canopies, integrating satellite observations with land surface processes."
     link: "/scope/"
 
-  - image: "images/AgroC.png"
+  - image: "images/agroc_card.gif"
     heading: "AgroC"
-    text: "AgroC is a comprehensive model decoding the carbon dynamics in agricultural soil. It delves into the carbon journey of crops and the soil's organic carbon movement. It's pivotal for understanding agricultural carbon budgets and addressing climate change."
+    text: "AgroC is a 1D model integrating the SOILCO2/RothC and SUCROS models, designed for advanced simulation of carbon fluxes, soil processes, and crop growth."
     link: "/agroc/"
 
   - image: "images/simplace.jpg"
