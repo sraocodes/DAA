@@ -11,6 +11,7 @@ sections:
       - "**[SCOPE](/scope/)**: Simulates radiative transfer and photosynthesis in vegetation canopies, integrating satellite observations with land surface processes."
       - "**[Simplace](/simplace/), [AgroC](/agroc/), and [TerrSysMP](/terrsysmp/)**: Designed for crop and regional scales, they simulate growth patterns and ecological interactions."
 
+
   - name: "GRANAR"
     text: "GRANAR, the Generator of Root ANAtomy in R, is a computational plant cell scale model designed to simulate root anatomical networks. These networks are crafted using easily accessible anatomical features, which can be obtained from open-access image analysis software and root cross-section images. Once the root anatomy is generated, it can be saved as an XML file. The model can simulate different vascular patterns, depending on whether it's modeling a monocot or dicot root. You can think of GRANAR like a computer program that can recreate the structure of plant roots on a cell-by-cell basis. Explore more about [GRANAR here](/granar/)."
     image: "images/granar_set2.gif"

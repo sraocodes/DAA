@@ -6,7 +6,7 @@ draft: false
 sections:  
   - name: "Digital Agricultural Avatar"
     text: "Welcome to the PhenoRob Digital Agricultural Avatar (DAA)-a software demonstrator project within [PhenoRob](https://www.phenorob.de/index.html). The  demonstrator  will  facilitate  access  and  usability  of  [process based](/pbm/) simulation  agro-models  used  within  PhenoRob under  one  roof. Our aim is to provide information and usage platform to make process based Agro-models available in an  appealing  way  both  for  users  as  well  as  for  the  public.  Also, we aim to offer  interfaces  between  various models so that information can be efficiently transferred and combined among different subprojects within [PhenoRob](https://www.phenorob.de/index.html)."
-    image: "images/DAA.png"
+    image: "images/DAA_anim.gif"
     imageWidth: "300px"
     imageHeight: "300px"
     textPosition: "right"
