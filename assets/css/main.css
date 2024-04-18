@@ -68,3 +68,8 @@ body {
 .row.center-last-row {
     justify-content: center;
 }
+
+.banner-image img {
+  width: 100%; /* Stretch the image to fill the container width */
+  height: auto; /* Maintain aspect ratio */
+}

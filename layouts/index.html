@@ -1,10 +1,16 @@
 {{ define "main" }}
 
-<!-- Banner Image -->
-<div class="banner-image w-100 d-flex justify-content-center">
-    {{ with .Params.bannerImage }}
-        <img src="{{ . | relURL }}" alt="Banner" class="img-fluid">
-    {{ end }}
+<div class="d-flex flex-grow-1 justify-content-center d-none d-md-block">
+    <div class="row">
+        <!-- Banner Image -->
+        <div class="col-12">
+            <div class="banner-image w-100 d-flex justify-content-center">
+                {{ with .Params.bannerImage }}
+                    <img src="{{ . | relURL }}" alt="Banner" class="img-fluid">
+                {{ end }}
+            </div>
+        </div>
+    </div>
 </div>
 
 
