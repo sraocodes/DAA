@@ -11,6 +11,9 @@ sections:
         youtube_id: "ZRL_7_onhJs"
       - title: "Crop Modeling talk by Prof. Frank Ewert "
         youtube_id: "sz-SMI5Y5mQ"
+      - title: "Agricultural Digital Avatars: Talk by Prof. Harry Vareecken"
+        youtube_id: "c-ynYlbj1L4"
+     
 
   - title: "CPlantBox"
     description: "Learn more about [CPlantBox](/cplantbox/) through the videos below"

@@ -1,55 +1,82 @@
 {{ define "main" }}
-    <style>
+<style>
     .sidebar {
         position: fixed;
-        top: 100px; /* Adjust based on your header */
+        top: 100px;
         left: 0;
-        width: 200px; /* Adjust the width of the sidebar */
-        height: 100%;
+        width: 200px;
+        height: 100vh;
         overflow-y: auto;
-        background-color: #f8f9fa; /* Light background */
-        border-right: 1px solid #ddd; /* Border to separate from content */
+        background-color: #f8f9fa;
+        border-right: 1px solid #ddd;
         padding: 10px;
-        z-index: 1050; /* Ensure sidebar is above other content */
+        z-index: 1050;
     }
 
     .container-fluid {
         padding-left: 15px;
         padding-right: 15px;
-        margin-left: 220px; /* Adjust based on sidebar width */
+        margin-left: 220px; /* Make sure this matches the sidebar width plus a bit more space */
         margin-top: 20px;
+        transition: margin-left 0.3s ease-in-out;
     }
 
     @media (max-width: 992px) {
         .sidebar {
-            display: none; /* Hide sidebar on small screens */
+            position: fixed;
+            width: 200px; /* Reduced width for smaller screens */
+            height: 100%;
+            z-index: 1050;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
         }
 
         .container-fluid {
-            margin-left: 0; /* Full width container on small screens */
+            margin-left: 0;
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
         }
     }
 
-    </style>
+    .btn-primary {
+        background-color: #ff6666;
+        color: white;
+        border-color: #ff6666; /* Adjust the border color if necessary */
+    }
+
+    .btn-primary:hover, .btn-light-red:focus, .btn-light-red:active {
+        background-color: #e60000; /* Darker shade for hover states */
+        border-color: #cc0000;
+    }
+
+    /* Button to toggle sidebar visibility */
+    .btn-toggle-sidebar {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1060;
+    }
+</style>
 
 <div class="sidebar d-none d-lg-block" id="sidebar">
     {{ range $index, $section := .Params.sections }}
     <div class="mb-2">
-        <a href="#section-{{ $section.title | urlize }}" class="text-decoration-none">
+        <a href="#section-{{ $section.title | urlize }}" class="text-decoration-none" onclick="event.preventDefault(); scrollToSection('section-{{ $section.title | urlize }}')">
             <strong>{{ $section.title }}</strong>
         </a>
         <a href="#collapse{{ $index }}" class="d-block text-decoration-none" data-toggle="collapse">
             {{ len $section.videos }} videos
-            <!-- Lottie Animation Container -->
             <div class="lottie-small" style="width: 30px; height: 30px; display: inline-block;">
                 <div id="lottie-animation-video-{{ $index }}" style="width: 100%; height: 100%;"></div>
             </div>
         </a>
         <div id="collapse{{ $index }}" class="collapse">
             {{ range $i, $v := $section.videos }}
-            <a href="#video-{{ $v.title | urlize }}" class="d-block text-decoration-none pl-3">
+            <a href="#video-{{ $v.title | urlize }}" class="d-block text-decoration-none pl-3" onclick="event.preventDefault(); scrollToSection('video-{{ $v.title | urlize }}')">
                 {{ add $i 1 }}. {{ $v.title }}
-            </a>
+            </a>            
             {{ end }}
         </div>
     </div>
@@ -57,21 +84,40 @@
 </div>
 
 
-
 <div class="container-fluid mt-4" id="main-content">
     {{ with .Params.sections }}
     {{ range . }}
     <div id="section-{{ .title | urlize }}" class="mb-4">
-        <h2>{{ .title}}</h2>
+        <h2>{{ .title }}</h2>
         <p>{{ .description | markdownify | safeHTML }}</p>
-        <div class="row">
+        <div class="row justify-content-center">
             {{ range .videos }}
-            <div id="video-{{ .title | urlize }}" class="col-sm-12 col-md-6 mb-3">
-                <div class="card custom-video-frame">
-                    <div class="card-body">
+             <div class="col-12 mb-4"> <!-- Single column for all screen sizes -->
+                <div class="card mx-auto" style="max-width: 90%;"> <!-- Control width and centering -->
+                    <div class="card-body p-4">
                         <h5 class="card-title">{{ .title }}</h5>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ .youtube_id }}" allowfullscreen></iframe>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo{{ .youtube_id }}">
+                            Play Video
+                        </button>
+                        <div id="lottie-video-play-{{ .youtube_id }}" style="width: 30px; height: 30px; display: inline-block;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalVideo{{ .youtube_id }}" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="videoModalLabel">{{ .title }}</h5>
+                            <button type="button" the="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ .youtube_id }}" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -83,6 +129,10 @@
     {{ end }}
 </div>
 
+
+
+
+
 <script>
     {{ range $index, $_ := .Params.sections }}
     lottie.loadAnimation({
@@ -90,10 +140,36 @@
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '/anim/click_here.json' // Adjust the path to your Lottie file
+        path: '/anim/click_here.json'
     });
     {{ end }}
+
+    function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    // Function to smoothly scroll to a section
+    function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        const topPosition = element.getBoundingClientRect().top + window.pageYOffset - 100; // 100px offset for any fixed header or similar
+        window.scrollTo({
+            top: topPosition,
+            behavior: 'smooth'
+        });
+    }
+    }
+
+// Add event listeners to sidebar links
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();  // Prevent default anchor click behavior
+        const sectionId = this.getAttribute('href').slice(1);  // Get the section id from href
+        scrollToSection(sectionId);
+    });
+});
+
+
 </script>
 
 {{ end }}
-
