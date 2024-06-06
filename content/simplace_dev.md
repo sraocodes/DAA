@@ -1,6 +1,6 @@
 ---
 title: "Simplace"
-description: "Explore the wide range of [SIMPLACE components](https://simplace.net/doc/simplace_modules/index.html), each meticulously crafted to simulate distinct agricultural processes and interactions. This guide categorizes these components into two major sections for an in-depth understanding of their specific functions and applications."
+description: "Simplace components simulate distinct agricultural processes and interactions. This guide categorizes these components into two major sections for an in-depth understanding of their specific functions and applications."
 layout: "model_files"
 
 sections:

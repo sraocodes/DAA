@@ -14,24 +14,21 @@
     }
 
     .container-fluid {
-        padding-left: 15px;
+        padding-left: 220px; /* Ensure padding matches sidebar width */
         padding-right: 15px;
-        margin-left: 220px; /* Make sure this matches the sidebar width plus a bit more space */
         margin-top: 20px;
         transition: margin-left 0.3s ease-in-out;
     }
 
     @media (max-width: 992px) {
         .sidebar {
-            position: fixed;
-            width: 200px; /* Reduced width for smaller screens */
-            height: 100%;
-            z-index: 1050;
+            width: 100%;
             transform: translateX(-100%);
             transition: transform 0.3s ease-in-out;
         }
 
         .container-fluid {
+            padding-left: 15px;
             margin-left: 0;
         }
 
@@ -40,18 +37,22 @@
         }
     }
 
+    .card {
+        width: 45%; /* Smaller width to fit two cards in a row */
+        margin: 2.5%; /* Spacing between cards */
+    }
+
     .btn-primary {
         background-color: #ff6666;
         color: white;
-        border-color: #ff6666; /* Adjust the border color if necessary */
+        border-color: #ff6666;
     }
 
-    .btn-primary:hover, .btn-light-red:focus, .btn-light-red:active {
-        background-color: #e60000; /* Darker shade for hover states */
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+        background-color: #e60000;
         border-color: #cc0000;
     }
 
-    /* Button to toggle sidebar visibility */
     .btn-toggle-sidebar {
         position: fixed;
         top: 10px;
@@ -60,28 +61,20 @@
     }
 </style>
 
+
 <div class="sidebar d-none d-lg-block" id="sidebar">
     {{ range $index, $section := .Params.sections }}
     <div class="mb-2">
+        <!-- Correct the onclick handler to simply navigate to the section -->
         <a href="#section-{{ $section.title | urlize }}" class="text-decoration-none" onclick="event.preventDefault(); scrollToSection('section-{{ $section.title | urlize }}')">
             <strong>{{ $section.title }}</strong>
         </a>
-        <a href="#collapse{{ $index }}" class="d-block text-decoration-none" data-toggle="collapse">
-            {{ len $section.videos }} videos
-            <div class="lottie-small" style="width: 30px; height: 30px; display: inline-block;">
-                <div id="lottie-animation-video-{{ $index }}" style="width: 100%; height: 100%;"></div>
-            </div>
-        </a>
-        <div id="collapse{{ $index }}" class="collapse">
-            {{ range $i, $v := $section.videos }}
-            <a href="#video-{{ $v.title | urlize }}" class="d-block text-decoration-none pl-3" onclick="event.preventDefault(); scrollToSection('video-{{ $v.title | urlize }}')">
-                {{ add $i 1 }}. {{ $v.title }}
-            </a>            
-            {{ end }}
-        </div>
+        <span class="ml-2 text-muted">({{ len $section.videos }} videos)</span>
     </div>
     {{ end }}
 </div>
+
+
 
 
 <div class="container-fluid mt-4" id="main-content">
@@ -92,32 +85,31 @@
         <p>{{ .description | markdownify | safeHTML }}</p>
         <div class="row justify-content-center">
             {{ range .videos }}
-             <div class="col-12 mb-4"> <!-- Single column for all screen sizes -->
-                <div class="card mx-auto" style="max-width: 90%;"> <!-- Control width and centering -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card mx-auto" style="max-width: 90%;">
                     <div class="card-body p-4">
                         <h5 class="card-title">{{ .title }}</h5>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo{{ .youtube_id }}">
-                            Play Video
-                        </button>
-                        <div id="lottie-video-play-{{ .youtube_id }}" style="width: 30px; height: 30px; display: inline-block;"></div>
+                        <div class="d-flex align-items-center">
+                            <span class="mr-2" style="font-size: 24px;">▶️</span> <!-- Camera emoji as an independent element -->
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo{{ .youtube_id }}">
+                                Play Video
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Modal -->
+            <!-- Modal for video playback -->
             <div class="modal fade" id="modalVideo{{ .youtube_id }}" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">{{ .title }}</h5>
-                            <button type="button" the="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ .youtube_id }}" allowfullscreen></iframe>
-                            </div>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ .youtube_id }}" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -130,20 +122,7 @@
 </div>
 
 
-
-
-
 <script>
-    {{ range $index, $_ := .Params.sections }}
-    lottie.loadAnimation({
-        container: document.getElementById('lottie-animation-video-' + '{{ $index }}'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: '/anim/click_here.json'
-    });
-    {{ end }}
-
     function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('active');
     }

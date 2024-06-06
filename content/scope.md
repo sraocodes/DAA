@@ -5,7 +5,7 @@ draft: false
 
 sections:  
   - name: "Introduction to SCOPE"
-    text: "SCOPE (Soil Canopy Observation, Photochemistry, and Energy fluxes) is a comprehensive radiative transfer model, intricately linking satellite observations with terrestrial processes. It simulates radiative transfer across soil, leaves, and vegetation canopies, while modeling intricate processes like photosynthesis and heat dissipation. For more detailed information, visit the official [SCOPE repository](https://github.com/Christiaanvandertol/SCOPE). SCOPE can be applied for:"
+    text: "SCOPE (Soil Canopy Observation, Photochemistry, and Energy fluxes) is a radiative transfer model, linking satellite observations with terrestrial processes. It simulates radiative transfer across soil, leaves, and vegetation canopies, while modeling intricate processes like photosynthesis and heat dissipation. For more detailed information, visit the official [SCOPE repository](https://github.com/Christiaanvandertol/SCOPE). SCOPE can be applied for:"
     list:
       - "Analyzing phenomena such as solar-induced chlorophyll fluorescence, energy balance fluxes, gross primary production, and thermal signals."
       - "Process-based terrestrial ecosystem modeling, enhancing our understanding of energy exchanges between land surfaces and the atmosphere."
