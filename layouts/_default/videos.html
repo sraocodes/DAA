@@ -59,7 +59,50 @@
         left: 10px;
         z-index: 1060;
     }
+    .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; /* Align items to the left */
+    }
 
+    .video-item {
+        flex: 0 1 calc(33.333% - 10px);
+        box-sizing: border-box;
+        margin: 5px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .video-item h5 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .video-item button {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        font-size: 0.875rem;
+    }
+
+    .video-item span {
+        margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .video-item {
+            flex: 0 1 calc(50% - 10px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .video-item {
+            flex: 0 1 calc(100% - 10px);
+        }
+    }
 </style>
 
 
@@ -78,30 +121,28 @@
 
 
 
+
 <div class="container-fluid mt-4" id="main-content">
     {{ with .Params.sections }}
     {{ range . }}
     <div id="section-{{ .title | urlize }}" class="mb-4">
         <h2>{{ .title }}</h2>
         <p>{{ .description | markdownify | safeHTML }}</p>
-        <div class="row justify-content-center">
+        <div class="video-container">
             {{ range .videos }}
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mx-auto" style="max-width: 80%;">
-                    <div class="card-body p-4">
-                        <h5 class="card-title">{{ .title }}</h5>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2" style="font-size: 24px;">▶️</span> <!-- Camera emoji as an independent element -->
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo{{ .youtube_id }}">
-                                Play Video
-                            </button>
-                        </div>
-                    </div>
+            <div class="video-item">
+                <h5>{{ .title }}</h5>
+                <div>
+                    <span style="font-size: 16px;"></span> <!-- Camera emoji as an independent element -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo{{ .youtube_id }}">
+                        ▶Play Video
+                    </button>
                 </div>
             </div>
+
             <!-- Modal with larger frame -->
             <div class="modal fade" id="modalVideo{{ .youtube_id }}" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document"> <!-- Using modal-xl for a larger frame -->
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">{{ .title }}</h5>
@@ -117,7 +158,6 @@
                     </div>
                 </div>
             </div>
-
             {{ end }}
         </div>
     </div>
