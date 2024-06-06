@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Differential Equations</title>
     <meta name="description" content="">
     <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -162,103 +162,160 @@
          
          <script src="https://www.phenorobdaa.de/js/slider.js"></script> 
         
-<style>
-     
-    .research-area-content {
-        padding-top: 60px;  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
     }
 
-    @media (min-width: 768px) {  
-        .research-area-content {
-            padding-top: 100px;
-        }
+    .book-container {
+      display: flex;
     }
 
-    @media (orientation: landscape) {  
-        .research-area-content {
-            padding-top: 80px;
-        }
+    .book-sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: #f8f9fa;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      z-index: 1050;
     }
-</style>
 
-<div class="container research-area-content">
+    .book-content {
+      margin-left: 220px;
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .book-content section {
+      margin-bottom: 40px;
+    }
+
+    .book-content h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .book-sidebar nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .book-sidebar nav ul li {
+      margin-bottom: 10px;
+    }
+
+    .book-sidebar nav ul li a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .book-sidebar nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 992px) {
+      .book-sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .book-content {
+        padding-left: 15px;
+        margin-left: 0;
+      }
+
+      .book-sidebar.active {
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .book-item {
+        flex: 0 1 calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .book-item {
+        flex: 0 1 calc(100% - 10px);
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="book-container">
+    <aside class="book-sidebar" id="book-sidebar">
+      <nav>
+        <ul>
+          
+          <li><a href="#richards-equation">Richards&#39; Equation</a></li>
+          
+          <li><a href="#other-differential-equations">Other Differential Equations</a></li>
+          
+        </ul>
+      </nav>
+    </aside>
     
-    <div class="mb-5"> 
-        <h2 class="display-6 text-center mt-4">Organ-Level Root Hydraulic Modeling</h2> 
-        <div class="row mt-3 flex-row-reverse">
-            <div class="col-md-6">
-                <img src="/images/mecha1.png" alt="Organ-Level Root Hydraulic Modeling" class="img-fluid">
-            </div>
-            <div class="col-md-6 d-flex align-items-center">
-                <div>
-                    <p class="lead research-description" style="font-size: 1.25rem;"><span style='color: black;'><strong><em>How does water navigate through the complex pathways of plant roots?</em></span> <span style='color: grey;'>Our research delves into root hydraulic modeling at both organ and cross-sectional scales. Utilizing computational tools like MECHA and GRANAR, we aim to decode the intricate patterns of water transport within plant roots, blending detailed structural analysis with dynamic hydraulic simulations.</span></p> 
-                    <a href="https://www.phenorobdaa.de//mecha/" class="btn btn-primary btn-lg">Learn more</a> 
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="mb-5"> 
-        <h2 class="display-6 text-center mt-4">Plant-Soil Interaction Modeling</h2> 
-        <div class="row mt-3 ">
-            <div class="col-md-6">
-                <img src="/images/PlantSoilModeling.png" alt="Plant-Soil Interaction Modeling" class="img-fluid">
-            </div>
-            <div class="col-md-6 d-flex align-items-center">
-                <div>
-                    <p class="lead research-description" style="font-size: 1.25rem;"><span style='color: black;'><strong><em> How do plants interact with their surrounding soil ?</em></span> <span style='color: grey;'>The focus is on creating a modular, comprehensive framework to understand how root and shoot architecture influences plant productivity through water and nutrient dynamics. Utilizing tools like Dumux-ROSI and CPlantBox, the research emphasizes the development of standardized benchmarks for model comparison, aiming to streamline and enhance the accuracy of plant-soil interaction studies.</span></p> 
-                    <a href="https://www.phenorobdaa.de//cplantbox/" class="btn btn-primary btn-lg">Learn more</a> 
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="mb-5"> 
-        <h2 class="display-6 text-center mt-4">Agricultural Systems Modeling and Simulation</h2> 
-        <div class="row mt-3 flex-row-reverse">
-            <div class="col-md-6">
-                <img src="/images/AgroCModeling.png" alt="Agricultural Systems Modeling and Simulation" class="img-fluid">
-            </div>
-            <div class="col-md-6 d-flex align-items-center">
-                <div>
-                    <p class="lead research-description" style="font-size: 1.25rem;"><span style='color: black;'><strong><em>How do environmental factors shape crop productivity?</em></strong></span> <span style='color: grey;'>Our research explores the complexities of agricultural systems using tools like AgroC, for simulating crop growth and soil dynamics. This research encompasses studies on the impact of climate, soil heterogeneity, and management practices on crop yield and water dynamics. Applications range from precision agriculture to assessing the effects of climate change on crop productivity, providing comprehensive insights into effective and resilient farming strategies.</span></p> 
-                    <a href="https://www.phenorobdaa.de//agroc/" class="btn btn-primary btn-lg">Learn more</a> 
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="mb-5"> 
-        <h2 class="display-6 text-center mt-4">Advanced Modeling of Crop and Ecosystem Management</h2> 
-        <div class="row mt-3 ">
-            <div class="col-md-6">
-                <img src="/images/SimplaceModeling.png" alt="Advanced Modeling of Crop and Ecosystem Management" class="img-fluid">
-            </div>
-            <div class="col-md-6 d-flex align-items-center">
-                <div>
-                    <p class="lead research-description" style="font-size: 1.25rem;"><span style='color: black;'><strong><em>How can advanced modeling enhance our understanding of agricultural ecosystems?</em></strong></span> <span style='color: grey;'>Our focus is on deciphering the complex dynamics of crop and ecosystem management. Utilizing advanced tools like SIMPLACE, we delve into the intricate interactions between climate, soil, and crops. Our research spans from analyzing local farm conditions to assessing global environmental impacts, aiming to develop sustainable and efficient agricultural strategies. This comprehensive approach is pivotal in adapting farming practices to the ever-evolving environmental challenges, paving the way for a resilient agricultural future.</span></p> 
-                    <a href="https://www.phenorobdaa.de//simplace/" class="btn btn-primary btn-lg">Learn more</a> 
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="mb-5"> 
-        <h2 class="display-6 text-center mt-4">Regional-Scale Agro-Ecosystem Modeling</h2> 
-        <div class="row mt-3 flex-row-reverse">
-            <div class="col-md-6">
-                <img src="/images/terrsysmp1.jpg" alt="Regional-Scale Agro-Ecosystem Modeling" class="img-fluid">
-            </div>
-            <div class="col-md-6 d-flex align-items-center">
-                <div>
-                    <p class="lead research-description" style="font-size: 1.25rem;"><span style='color: black;'><strong><em>What are the dynamics of agro-ecosystems at a regional scale?</em></strong></span> <span style='color: grey;'>Focusing on the intricate relationships between agricultural practices, soil moisture, and atmospheric conditions, we delve into regional-scale simulations, exploring how variations in land use, water management, and climatic conditions influence agricultural productivity and sustainability. Using TerrSysMP's integrated approach, we analyze the feedback loops between groundwater dynamics, surface water, and plant growth, enhancing our understanding of the water-energy-food nexus. This research is instrumental in developing strategies for resilient and efficient agricultural practices, tailored to diverse environmental and climatic contexts.</span></p> 
-                    <a href="https://www.phenorobdaa.de//terrsysmp/" class="btn btn-primary btn-lg">Learn more</a> 
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div>
+    <main class="book-content" id="main-content">
+      
+      <section id="richards-equation">
+        <h2>Richards&#39; Equation</h2>
+        <p><p>Richards&rsquo; equation describes the movement of water in unsaturated soils. The equation is given by:</p>
+<p>$$
+\frac{\partial \theta}{\partial t} = \frac{\partial}{\partial z} \left( K(\theta) \frac{\partial h}{\partial z} \right)
+$$</p>
+<p>where:</p>
+<ul>
+<li>( \theta ) is the volumetric water content,</li>
+<li>( t ) is time,</li>
+<li>( z ) is the vertical coordinate,</li>
+<li>( K(\theta) ) is the hydraulic conductivity,</li>
+<li>( h ) is the hydraulic head.</li>
+</ul>
+<h3 id="discretization-using-finite-difference-method-fdm">Discretization Using Finite Difference Method (FDM)</h3>
+<p>To discretize Richards&rsquo; equation using the finite difference method, we can&hellip;</p>
+</p>
+      </section>
+      
+      <section id="other-differential-equations">
+        <h2>Other Differential Equations</h2>
+        <p>Content for other differential equations goes here&hellip;</p>
+      </section>
+      
+    </main>
+  </div>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const topPosition = element.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({
+          top: topPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    document.querySelectorAll('.book-sidebar a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const sectionId = this.getAttribute('href').slice(1);
+        scrollToSection(sectionId);
+      });
+    });
+  </script>
+</body>
+</html>
 
     </main>
     <div id="footer" class="container mt-5">

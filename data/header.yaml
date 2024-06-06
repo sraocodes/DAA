@@ -23,6 +23,7 @@ Link2Dropdown:
   - name: Videos
     url: "/videos/" 
 
+
 ToolsName: Modelling
 ToolsDropDown:
   - Name: Our Main Tools
@@ -31,7 +32,8 @@ ToolsDropDown:
     Link: "/couple/"
   - Name: Developer Zone
     Link: "/tools-dev/"    
-
+  - Name: Theoritical Zone
+    Link: "/theory/"
 
 Link3Name: "Contact"
 Link3Link: "/members/"

@@ -112,6 +112,12 @@
                       
                       <a class="dropdown-item" href="https://www.phenorobdaa.de//tools-dev/">Developer Zone</a>
                   
+                      
+                      
+                          
+                      
+                      <a class="dropdown-item" href="https://www.phenorobdaa.de//theory/">Theoritical Zone</a>
+                  
               </div>
           </li>
 
@@ -216,9 +222,49 @@
         left: 10px;
         z-index: 1060;
     }
-    .modal-dialog {
-        max-width: 90%;  
-        margin: 30px auto;
+    .video-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;  
+    }
+
+    .video-item {
+        flex: 0 1 calc(33.333% - 10px);
+        box-sizing: border-box;
+        margin: 5px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .video-item h5 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .video-item button {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        font-size: 0.875rem;
+    }
+
+    .video-item span {
+        margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .video-item {
+            flex: 0 1 calc(50% - 10px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .video-item {
+            flex: 0 1 calc(100% - 10px);
+        }
     }
 </style>
 
@@ -246,30 +292,28 @@
 
 
 
+
 <div class="container-fluid mt-4" id="main-content">
     
     
     <div id="section-process-based-models" class="mb-4">
         <h2>Process Based Models</h2>
         <p>Learn about Process Based models that are at the heart of Digital Agricultural Avatar</p>
-        <div class="row justify-content-center">
+        <div class="video-container">
             
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mx-auto" style="max-width: 80%;">
-                    <div class="card-body p-4">
-                        <h5 class="card-title">Digital Agricultural Avatar Project Overview: A phenorob talk by Prof. Guillaume Lobet</h5>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2" style="font-size: 24px;">▶️</span> 
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideoZRL_7_onhJs">
-                                Play Video
-                            </button>
-                        </div>
-                    </div>
+            <div class="video-item">
+                <h5>Digital Agricultural Avatar Project Overview: A phenorob talk by Prof. Guillaume Lobet</h5>
+                <div>
+                    <span style="font-size: 16px;"></span> 
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideoZRL_7_onhJs">
+                        ▶Play Video
+                    </button>
                 </div>
             </div>
 
+            
             <div class="modal fade" id="modalVideoZRL_7_onhJs" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document"> 
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">Digital Agricultural Avatar Project Overview: A phenorob talk by Prof. Guillaume Lobet</h5>
@@ -278,28 +322,27 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com/embed/ZRL_7_onhJs" allowfullscreen></iframe>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ZRL_7_onhJs" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mx-auto" style="max-width: 80%;">
-                    <div class="card-body p-4">
-                        <h5 class="card-title">Crop Modeling talk by Prof. Frank Ewert </h5>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2" style="font-size: 24px;">▶️</span> 
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideosz-SMI5Y5mQ">
-                                Play Video
-                            </button>
-                        </div>
-                    </div>
+            <div class="video-item">
+                <h5>Crop Modeling talk by Prof. Frank Ewert </h5>
+                <div>
+                    <span style="font-size: 16px;"></span> 
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideosz-SMI5Y5mQ">
+                        ▶Play Video
+                    </button>
                 </div>
             </div>
 
+            
             <div class="modal fade" id="modalVideosz-SMI5Y5mQ" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document"> 
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">Crop Modeling talk by Prof. Frank Ewert </h5>
@@ -308,28 +351,27 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com/embed/sz-SMI5Y5mQ" allowfullscreen></iframe>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sz-SMI5Y5mQ" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mx-auto" style="max-width: 80%;">
-                    <div class="card-body p-4">
-                        <h5 class="card-title">Agricultural Digital Avatars: Talk by Prof. Harry Vareecken</h5>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2" style="font-size: 24px;">▶️</span> 
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideoc-ynYlbj1L4">
-                                Play Video
-                            </button>
-                        </div>
-                    </div>
+            <div class="video-item">
+                <h5>Agricultural Digital Avatars: Talk by Prof. Harry Vareecken</h5>
+                <div>
+                    <span style="font-size: 16px;"></span> 
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideoc-ynYlbj1L4">
+                        ▶Play Video
+                    </button>
                 </div>
             </div>
 
+            
             <div class="modal fade" id="modalVideoc-ynYlbj1L4" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document"> 
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">Agricultural Digital Avatars: Talk by Prof. Harry Vareecken</h5>
@@ -338,7 +380,9 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com/embed/c-ynYlbj1L4" allowfullscreen></iframe>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c-ynYlbj1L4" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -350,24 +394,21 @@
     <div id="section-cplantbox" class="mb-4">
         <h2>CPlantBox</h2>
         <p>Learn more about <a href="/cplantbox/">CPlantBox</a> through the videos below</p>
-        <div class="row justify-content-center">
+        <div class="video-container">
             
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mx-auto" style="max-width: 80%;">
-                    <div class="card-body p-4">
-                        <h5 class="card-title">What is CPlantBox?</h5>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2" style="font-size: 24px;">▶️</span> 
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo-YgDnsC3BV8">
-                                Play Video
-                            </button>
-                        </div>
-                    </div>
+            <div class="video-item">
+                <h5>What is CPlantBox?</h5>
+                <div>
+                    <span style="font-size: 16px;"></span> 
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo-YgDnsC3BV8">
+                        ▶Play Video
+                    </button>
                 </div>
             </div>
 
+            
             <div class="modal fade" id="modalVideo-YgDnsC3BV8" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document"> 
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">What is CPlantBox?</h5>
@@ -376,28 +417,27 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com/embed/-YgDnsC3BV8" allowfullscreen></iframe>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-YgDnsC3BV8" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mx-auto" style="max-width: 80%;">
-                    <div class="card-body p-4">
-                        <h5 class="card-title">Mathematics behind CPlantBox</h5>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2" style="font-size: 24px;">▶️</span> 
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideodzeV4U58BYA">
-                                Play Video
-                            </button>
-                        </div>
-                    </div>
+            <div class="video-item">
+                <h5>Mathematics behind CPlantBox</h5>
+                <div>
+                    <span style="font-size: 16px;"></span> 
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideodzeV4U58BYA">
+                        ▶Play Video
+                    </button>
                 </div>
             </div>
 
+            
             <div class="modal fade" id="modalVideodzeV4U58BYA" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document"> 
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">Mathematics behind CPlantBox</h5>
@@ -406,28 +446,27 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com/embed/dzeV4U58BYA" allowfullscreen></iframe>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dzeV4U58BYA" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mx-auto" style="max-width: 80%;">
-                    <div class="card-body p-4">
-                        <h5 class="card-title">Modeling a virtual Plant</h5>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2" style="font-size: 24px;">▶️</span> 
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo-MjNsvbCf4o">
-                                Play Video
-                            </button>
-                        </div>
-                    </div>
+            <div class="video-item">
+                <h5>Modeling a virtual Plant</h5>
+                <div>
+                    <span style="font-size: 16px;"></span> 
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo-MjNsvbCf4o">
+                        ▶Play Video
+                    </button>
                 </div>
             </div>
 
+            
             <div class="modal fade" id="modalVideo-MjNsvbCf4o" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document"> 
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">Modeling a virtual Plant</h5>
@@ -436,28 +475,27 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com/embed/-MjNsvbCf4o" allowfullscreen></iframe>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-MjNsvbCf4o" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mx-auto" style="max-width: 80%;">
-                    <div class="card-body p-4">
-                        <h5 class="card-title">Benchmarking root and soil interaciton models</h5>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2" style="font-size: 24px;">▶️</span> 
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideoi2zisEZbxMY">
-                                Play Video
-                            </button>
-                        </div>
-                    </div>
+            <div class="video-item">
+                <h5>Benchmarking root and soil interaciton models</h5>
+                <div>
+                    <span style="font-size: 16px;"></span> 
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideoi2zisEZbxMY">
+                        ▶Play Video
+                    </button>
                 </div>
             </div>
 
+            
             <div class="modal fade" id="modalVideoi2zisEZbxMY" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document"> 
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">Benchmarking root and soil interaciton models</h5>
@@ -466,28 +504,27 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com/embed/i2zisEZbxMY" allowfullscreen></iframe>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/i2zisEZbxMY" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col-sm-6 col-lg-4">
-                <div class="card mx-auto" style="max-width: 80%;">
-                    <div class="card-body p-4">
-                        <h5 class="card-title">Axisymmetric rhizosphere models</h5>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2" style="font-size: 24px;">▶️</span> 
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo1l_ZlSl9R3I">
-                                Play Video
-                            </button>
-                        </div>
-                    </div>
+            <div class="video-item">
+                <h5>Axisymmetric rhizosphere models</h5>
+                <div>
+                    <span style="font-size: 16px;"></span> 
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalVideo1l_ZlSl9R3I">
+                        ▶Play Video
+                    </button>
                 </div>
             </div>
 
+            
             <div class="modal fade" id="modalVideo1l_ZlSl9R3I" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl" role="document"> 
+                <div class="modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="videoModalLabel">Axisymmetric rhizosphere models</h5>
@@ -496,7 +533,9 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com/embed/1l_ZlSl9R3I" allowfullscreen></iframe>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/1l_ZlSl9R3I" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>

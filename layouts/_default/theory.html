@@ -1,0 +1,162 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .book-container {
+      display: flex;
+    }
+
+    .book-sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 200px;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: #f8f9fa;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      z-index: 1050;
+    }
+
+    .book-content {
+      margin-left: 220px;
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .book-content section {
+      margin-bottom: 40px;
+    }
+
+    .book-content h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .book-content .figure {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .book-content .figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .book-content .figure figcaption {
+      margin-top: 5px;
+      font-style: italic;
+      color: #555;
+    }
+
+    .book-sidebar nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .book-sidebar nav ul li {
+      margin-bottom: 10px;
+    }
+
+    .book-sidebar nav ul li a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .book-sidebar nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 992px) {
+      .book-sidebar {
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .book-content {
+        padding-left: 15px;
+        margin-left: 0;
+      }
+
+      .book-sidebar.active {
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .book-item {
+        flex: 0 1 calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .book-item {
+        flex: 0 1 calc(100% - 10px);
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="book-container">
+    <aside class="book-sidebar" id="book-sidebar">
+      <nav>
+        <ul>
+          {{ range .Params.sections }}
+          <li><a href="#{{ .sectionTitle | urlize }}">{{ .sectionTitle }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="book-content" id="main-content">
+      {{ range .Params.sections }}
+      <section id="{{ .sectionTitle | urlize }}">
+        <h2>{{ .sectionTitle }}</h2>
+        <p>{{ .content | markdownify | safeHTML }}</p>
+        {{ if .figures }}
+        {{ range .figures }}
+        <figure class="figure">
+          <img class="img-fluid rounded mb-2" src="{{ .src | relURL }}" alt="{{ .caption }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+          <figcaption>{{ .caption }}</figcaption>
+        </figure>
+        {{ end }}
+        {{ end }}
+      </section>
+      {{ end }}
+    </main>
+  </div>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const topPosition = element.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({
+          top: topPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    document.querySelectorAll('.book-sidebar a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const sectionId = this.getAttribute('href').slice(1);
+        scrollToSection(sectionId);
+      });
+    });
+  </script>
+</body>
+</html>
+{{ end }}
