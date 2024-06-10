@@ -11,7 +11,6 @@
     border-right: 1px solid #ccc;
   }
 
-  /* Responsive styling for smaller screens */
   @media (max-width: 768px) {
     .book-sidebar {
       width: 0;
@@ -20,47 +19,44 @@
   }
 
   .book-content {
-      margin-left: 270px; /* Existing left margin for sidebar */
-      padding: 1rem; /* Existing padding, adjust if necessary */
-      padding-right: calc(10px + 2vw); /* Dynamic padding: minimum 10px plus a variable component */
+      margin-left: 270px;
+      padding: 1rem;
+      padding-right: calc(10px + 2vw);
   }
 
-  /* Optionally, set specific values for larger screens */
-  @media (min-width: 992px) { /* For large desktops */
+  @media (min-width: 992px) {
       .book-content {
-          padding-right: 200px; /* Fixed large padding for wide screens */
+          padding-right: 200px;
       }
   }
 
-  /* Adjust for smaller screens */
-  @media (max-width: 768px) { /* For tablets and smaller devices */
+  @media (max-width: 768-px) {
       .book-content {
-          padding-right: 50px; /* Smaller fixed padding for narrow screens */
+          padding-right: 50px;
       }
   }
 
   .card {
-    margin-bottom: 2rem; /* Spacing between cards */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for better depth */
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
   .figure img {
-    max-width: 80%; /* Limits image width to maintain aspect ratio */
-    height: auto; /* Ensures the image height auto adjusts */
+    max-width: 80%;
+    height: auto;
   }
 
   .figure-caption {
     margin-top: 0.5rem;
     font-style: italic;
   }
-</p>
 </style>
 
 <div class="container-fluid mt-5">
   <div class="row">
     <!-- Sidebar Navigation -->
     <div class="col-md-3 book-sidebar">
-      <h4 class="sidebar-heading"> Contents </h4>
+      <h4 class="sidebar-heading">Contents</h4>
       <ul class="nav flex-column">
         {{ range .Params.sections }}
         <li class="nav-item">
@@ -93,4 +89,24 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.book-sidebar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 10,  
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+</script>
+
 {{ end }}
