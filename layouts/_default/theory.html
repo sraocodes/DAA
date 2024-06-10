@@ -11,38 +11,56 @@
     border-right: 1px solid #ccc;
   }
 
-  /* Add a media query for screens with max-width 768px */
+  /* Responsive styling for smaller screens */
   @media (max-width: 768px) {
     .book-sidebar {
       width: 0;
       border-right: none;
     }
-
-  .book-content {
-    margin-left: 270px;
-    padding: 1rem;
   }
 
-  .figure {
-    margin-top: 2rem;
-    text-align: center; /* Centers the image */
+  .book-content {
+      margin-left: 270px; /* Existing left margin for sidebar */
+      padding: 1rem; /* Existing padding, adjust if necessary */
+      padding-right: calc(10px + 2vw); /* Dynamic padding: minimum 10px plus a variable component */
+  }
+
+  /* Optionally, set specific values for larger screens */
+  @media (min-width: 992px) { /* For large desktops */
+      .book-content {
+          padding-right: 200px; /* Fixed large padding for wide screens */
+      }
+  }
+
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) { /* For tablets and smaller devices */
+      .book-content {
+          padding-right: 50px; /* Smaller fixed padding for narrow screens */
+      }
+  }
+
+  .card {
+    margin-bottom: 2rem; /* Spacing between cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for better depth */
   }
 
   .figure img {
-    max-width: 80%; /* Limits image width, adjust as needed */
-    height: auto; /* Maintains aspect ratio */
+    max-width: 80%; /* Limits image width to maintain aspect ratio */
+    height: auto; /* Ensures the image height auto adjusts */
   }
 
   .figure-caption {
     margin-top: 0.5rem;
-    font-style: italic; /* Styles for the figure caption */
+    font-style: italic;
   }
+</p>
 </style>
+
 <div class="container-fluid mt-5">
   <div class="row">
     <!-- Sidebar Navigation -->
     <div class="col-md-3 book-sidebar">
-      <h4 class="sidebar-heading">Contents</h4>
+      <h4 class="sidebar-heading"> Contents </h4>
       <ul class="nav flex-column">
         {{ range .Params.sections }}
         <li class="nav-item">
@@ -55,19 +73,21 @@
     <!-- Main Content Sections -->
     <div class="col-md-9 ml-auto book-content">
       {{ range .Params.sections }}
-      <section id="{{ .name | urlize }}" class="mb-5">
-        <h2>{{ .name }}</h2>
-        {{ .content | markdownify | safeHTML }}
-        {{ if .image }}
-        <div class="figure">
-          <img src="{{ .image.url | relURL }}" alt="{{ .image.alt }}" style="width: {{ .image.width }};">
-          <div class="figure-caption">{{ .image.caption }}</div>
+      <section id="{{ .name | urlize }}" class="card">
+        <div class="card-body">
+          <h2 class="card-title">{{ .name }}</h2>
+          <div class="card-text">{{ .content | markdownify | safeHTML }}</div>
+          {{ if .image }}
+          <div class="figure">
+            <img class="img-fluid rounded mb-2" src="{{ .image.url | relURL }}" alt="{{ .image.alt }}">
+            <div class="figure-caption">{{ .image.caption }}</div>
+          </div>
+          {{ end }}
+          {{ range .subsections }}
+          <h3>{{ .name }}</h3>
+          <div>{{ .content | markdownify | safeHTML }}</div>
+          {{ end }}
         </div>
-        {{ end }}
-        {{ range .subsections }}
-        <h3>{{ .name }}</h3>
-        {{ .content | markdownify | safeHTML }}
-        {{ end }}
       </section>
       {{ end }}
     </div>

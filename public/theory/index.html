@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detailed Study of Soil Hydraulics</title>
+    <title>AgroC Numerical Implementation</title>
     <meta name="description" content="">
     <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -174,14 +174,22 @@
     border-right: 1px solid #ccc;
   }
 
+   
+  @media (max-width: 768px) {
+    .book-sidebar {
+      width: 0;
+      border-right: none;
+    }
+  }
+
   .book-content {
     margin-left: 270px;
     padding: 1rem;
   }
 
-  .figure {
-    margin-top: 2rem;
-    text-align: center;  
+  .card {
+    margin-bottom: 2rem;  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
   }
 
   .figure img {
@@ -191,9 +199,11 @@
 
   .figure-caption {
     margin-top: 0.5rem;
-    font-style: italic;  
+    font-style: italic;
   }
+</p>
 </style>
+
 <div class="container-fluid mt-5">
   <div class="row">
     
@@ -202,11 +212,7 @@
       <ul class="nav flex-column">
         
         <li class="nav-item">
-          <a class="nav-link" href="#introduction">Introduction</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="#richards-equation">Richard&#39;s Equation</a>
+          <a class="nav-link" href="#water-flow-richards-equation">Water Flow: Richard&#39;s Equation</a>
         </li>
         
         <li class="nav-item">
@@ -214,7 +220,7 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#conclusion">Conclusion</a>
+          <a class="nav-link" href="#richards-solver">Richard&#39;s Solver</a>
         </li>
         
       </ul>
@@ -223,74 +229,138 @@
     
     <div class="col-md-9 ml-auto book-content">
       
-      <section id="introduction" class="mb-5">
-        <h2>Introduction</h2>
-        This section introduces the basic concepts of soil physics and its importance in environmental science.
-        
-        
-      </section>
-      
-      <section id="richards-equation" class="mb-5">
-        <h2>Richard&#39;s Equation</h2>
-        <p>&ldquo;## Richard&rsquo;s Equation
-Richard&rsquo;s equation is a widely used mathematical model in soil science and hydrology. It describes how water moves through unsaturated soils. Here is the general form of the equation:
+      <section id="water-flow-richards-equation" class="card">
+        <div class="card-body">
+          <h2 class="card-title">Water Flow: Richard&#39;s Equation</h2>
+          <div class="card-text"><p>In the Watflow module of AgroC, Richard&rsquo;s equation is solved to simulate how water moves through unsaturated soils. In terms of water content, this equation can be written as:
 $$
-\frac{\partial \theta}{\partial t} = \nabla \cdot (D(\theta) \nabla \theta) - \frac{\partial K(\theta)}{\partial z}
-$$</p>
-<h3 id="variables-in-the-equation">Variables in the Equation</h3>
+\frac{\partial \theta}{\partial t} = \nabla \cdot (K(h) \nabla h) + S
+$$
+where,</p>
 <ul>
-<li>\(\theta\) is the volumetric water content;</li>
-<li>\(t\) represents time;</li>
-<li>\(D(\theta)\) is the soil water diffusivity;</li>
-<li>\(K(\theta)\) is the hydraulic conductivity;</li>
-<li>\(z\) is the spatial coordinate in the vertical direction (positive downwards).</li>
+<li>\(\theta\) is the volumetric water content (dimensionless, typically expressed as m³/m³);</li>
+<li>\(h\) is the hydraulic head (units: L, typically meters);</li>
+<li>\(t\) represents time (seconds or days);</li>
+<li>\(K(h)\) is the hydraulic conductivity, a function of the hydraulic head (units: L/T, typically m/s);</li>
+<li>\(S\) represents sources or sinks of water such as root water uptake or irrigation (units: L³/L³/T, typically m³/m³/s);</li>
+<li>The spatial derivatives are approximated using finite differences and the temporal derivative is handled via an implicit time-stepping method.</li>
 </ul>
-<p>The equation is used to calculate the water content at any point in the soil given the diffusivity and hydraulic conductivity as functions of the water content.&rdquo;</p>
-
-        
-        <div class="figure">
-          <img src="/images/scope1.png" alt="Soil Water Retention" style="width: 100%;">
-          <div class="figure-caption">Figure 1: Soil Water Retention Characteristics</div>
+<p>In AgroC, we solve this equation by using advanced numerical techniques like Picard iteration for non-linear convergence and a Gauss-Siedel elimination technique to solve the resulting linear system of equations.</p>
+</div>
+          
+          
         </div>
-        
-        
       </section>
       
-      <section id="discretization-of-richards-equation" class="mb-5">
-        <h2>Discretization of Richard&#39;s Equation</h2>
-        <p>&ldquo;## Discretization of Richard&rsquo;s Equation
-To discretize Richards&rsquo; equation for numerical solution methods, a common approach involves transforming the continuous differential equation into a system of algebraic equations using finite difference or finite element methods. Here&rsquo;s a detailed breakdown:</p>
-<h3 id="finite-difference-method-fdm">Finite Difference Method (FDM)</h3>
-<p>For spatial discretization, consider a grid with points spaced at \(\Delta x\) and \(\Delta z\) in the horizontal and vertical directions respectively. The derivatives can be approximated using finite differences:
+      <section id="discretization-of-richards-equation" class="card">
+        <div class="card-body">
+          <h2 class="card-title">Discretization of Richard&#39;s Equation</h2>
+          <div class="card-text"><p>Richard&rsquo;s equation is numerically approximated using a finite difference method (FDM) for spatial discretization and an implicit time-stepping method for temporal discretization. Here is the detailed breakdown:</p>
+<h4 id="finite-difference-method-fdm">Finite Difference Method (FDM)</h4>
+<p>The differential equation:
 $$
-\frac{K_{i+1/2,j} (\theta_{i+1,j} - \theta_{i,j})}{\Delta x} - \frac{K_{i-1/2,j} (\theta_{i,j} - \theta_{i-1,j})}{\Delta x} + \frac{K_{i,j+1/2} (\theta_{i,j+1} - \theta_{i,j})}{\Delta z} - \frac{K_{i,j-1/2} (\theta_{i,j} - \theta_{i,j-1})}{\Delta z}
+\frac{\partial \theta}{\partial t} = \nabla \cdot (K(h) \nabla h) + S
+$$
+is discretized for a computational grid point (i) as follows:
+$$
+\frac{\theta_i^{n+1} - \theta_i^n}{\Delta t} = \frac{K_{i+1/2}^{n+1} (h_{i+1}^{n+1} - h_i^{n+1}) - K_{i-1/2}^{n+1} (h_i^{n+1} - h_{i-1}^{n+1})}{\Delta z^2} + S_i
+$$
+where:</p>
+<ul>
+<li>\(K_{i+1/2}^{n+1}\) and \(K_{i-1/2}^{n+1}\) represent the hydraulic conductivity values interpolated between nodes,</li>
+<li>\(\Delta z\) is the distance between adjacent nodes (vertical discretization),</li>
+<li>\(S_i\) is the source or sink term at node (i), including effects like root water uptake or irrigation.</li>
+</ul>
+<h4 id="handling-of-hydraulic-conductivity">Handling of Hydraulic Conductivity</h4>
+<p>Hydraulic conductivity (K(h)) is a key non-linear component in Richard&rsquo;s equation and is dependent on the hydraulic head (h). In the discretization:
+$$
+K_{i+1/2}^{n+1} = \frac{K(h_{i+1}^{n+1}) + K(h_i^{n+1})}{2}
 $$</p>
-<h3 id="time-discretization">Time Discretization</h3>
-<p>The temporal part of the equation is typically discretized using the backward Euler method for stability, which approximates:
+<h4 id="time-discretization">Time Discretization</h4>
+<p>Time discretization is handled implicitly to ensure stability, especially given the non-linear nature of the soil moisture properties. The backward Euler method is used:
 $$
-\frac{\theta_{i,j}^{n+1} - \theta_{i,j}^n}{\Delta t}
+\frac{\theta_{i}^{n+1} - \theta_{i}^n}{\Delta t}
 $$</p>
-<h3 id="picard-iteration-for-linearization">Picard Iteration for Linearization</h3>
-<p>Picard iteration is used to handle non-linearity in \(K(\theta)\). It involves assuming an initial guess for \(\theta\) or \(h\) and iteratively refining this guess. Linearized at each iteration based on previous values:
+<ul>
+<li>where \(n\) indicates the time level.</li>
+</ul>
+<h4 id="picard-iteration-for-linearization">Picard Iteration for Linearization</h4>
+<p>To manage the non-linear relationship between hydraulic head and hydraulic conductivity, Picard iteration is utilized:
 $$
-\theta_{i,j}^{n+1,k+1} = \theta_{i,j}^{n} + \Delta t \left( \nabla \cdot (K(\theta_{i,j}^{n+1,k}) \nabla h_{i,j}^{n+1,k}) + S \right)
+h_i^{n+1,k+1} = h_i^{n+1,k} + \Delta t \left( \nabla \cdot (K(h_i^{n+1,k}) \nabla h_i^{n+1,k}) + S_i \right)
 $$</p>
-<h3 id="gauss-seidel-method">Gauss-Seidel Method</h3>
-<p>The Gauss-Seidel method sequentially updates each grid point using the most current values, enhancing convergence stability:
-$$
-\theta_{i,j}^{n+1} = \theta_{i,j}^{n} + \Delta t \left( \nabla \cdot (K(\theta_{i,j}^{n+1}) \nabla h_{i,j}^{n+1}) + S \right)
-$$
-&quot;</p>
-
-        
-        
+<ul>
+<li>Here, (k) represents the Picard iteration step within each time step, refining the head approximation iteratively until convergence.</li>
+</ul>
+</div>
+          
+          
+        </div>
       </section>
       
-      <section id="conclusion" class="mb-5">
-        <h2>Conclusion</h2>
-        This section concludes our detailed exploration of soil hydraulics using Richard&rsquo;s equation and discusses future research directions.
-        
-        
+      <section id="richards-solver" class="card">
+        <div class="card-body">
+          <h2 class="card-title">Richard&#39;s Solver</h2>
+          <div class="card-text"><h4 id="gauss-elimination-for-linear-systems">Gauss Elimination for Linear Systems</h4>
+<p>Gauss elimination is employed to solve linear systems formed from the finite difference discretization of Richard&rsquo;s equation. Here&rsquo;s a comprehensive step-by-step description of the entire Gauss elimination process, including the explicit definition and formation of matrix (A):</p>
+<h5 id="formation-of-matrix-a">Formation of Matrix (A)</h5>
+<p>Matrix (A) is formed from the discretization of Richard&rsquo;s equation. It consists of coefficients that account for the hydraulic conductivity between nodes and the storage or capacitance of each node:</p>
+<ul>
+<li>
+<p>Diagonal Entries (Aii): These entries are formed based on the local node&rsquo;s hydraulic conductivity and its soil water capacitance. For node (i), the diagonal entry Aii is given by:
+$$
+A_{ii} = \frac{K_{i+1/2} + K_{i-1/2}}{\Delta z} + \frac{\text{Cap}_i \cdot \Delta z}{\Delta t}
+$$
+where:</p>
+<ul>
+<li>\(K_{i+1/2}\) and \(K_{i-1/2}\) are the conductivities at the interfaces with adjacent nodes,</li>
+<li>\(\Delta z\) is the spatial discretization step,</li>
+<li>\(\Delta t\) is the time step,</li>
+<li>\(\text{Cap}_i\) is the soil water capacitance at node (i).</li>
+</ul>
+</li>
+<li>
+<p>Off-Diagonal Entries Aij: These entries represent the fluxes between node (i) and its adjacent nodes due to hydraulic conductivity:
+$$
+A_{i,i+1} = -\frac{K_{i+1/2}}{\Delta z}, \quad A_{i,i-1} = -\frac{K_{i-1/2}}{\Delta z}
+$$
+These terms account for the influence of neighboring nodes on node (i).</p>
+</li>
+</ul>
+<h5 id="formation-of-vector-b">Formation of Vector (b)</h5>
+<p>Vector (b) accounts for the water content changes and external sources or sinks at each node:
+$$
+b_i = \text{Cap}_i \cdot \frac{\theta_i^n}{\Delta t} + S_i \cdot \Delta z + \text{Boundary Contributions}
+$$
+Here, \(\theta_i^n\) is the previous time step&rsquo;s water content, and \(S_i\) represents sources or sinks such as root uptake or irrigation.</p>
+<p><strong>Boundary Conditions:</strong></p>
+<ul>
+<li><strong>Top Boundary:</strong> Modify the first row of \(A\) and \(b\) depending on specified atmospheric or flux conditions.</li>
+<li><strong>Bottom Boundary:</strong> Modify the last row of \(A\) and \(b\) based on seepage or bottom flux conditions.</li>
+</ul>
+<h5 id="forward-elimination-and-back-substitution">Forward Elimination and Back Substitution</h5>
+<p>The solution process involves:</p>
+<ul>
+<li><strong>Forward Elimination:</strong> Modifying matrix \(A\) to upper triangular form and adjusting vector (b) to reflect these transformations, preparing for back substitution.
+$$
+\text{For each } i \text{ from 3 to } N-1:
+\quad \text{if } |A_{i-1,i-1}| &gt; \epsilon:
+\quad \quad b_i = b_i - \frac{b_{i-1} \cdot A_{i,i-1}}{A_{i-1,i-1}}
+\quad \quad A_{ii} = A_{ii} - \frac{A_{i,i-1}^2}{A_{i-1,i-1}}
+\quad \text{else}:
+\quad \quad \text{Print exception}
+$$</li>
+<li><strong>Back Substitution:</strong> Solving for the unknown hydraulic heads from the last equation to the first by using the modified (A) and \(b\):
+$$
+\text{For each } i \text{ from } N \text{ down to 1}:
+\quad h_i = \frac{b_i - A_{i,i+1} \cdot h_{i+1}}{A_{ii}}
+$$</li>
+</ul>
+<p>Each iteration checks for convergence and, if necessary, the time step is adjusted to ensure accurate and stable solutions.</p>
+</div>
+          
+          
+        </div>
       </section>
       
     </div>
