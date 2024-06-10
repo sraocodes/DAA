@@ -1,20 +1,15 @@
 ---
-title: "Future Coupling in PhenoRob DAA"
+title: "Coupling Models in DAA"
 date: 2023-07-28
 draft: false
 
 sections:  
   - name: "Model Coupling"
-    text: "The PhenoRob Digital Agricultural Avatar (DAA) initiative is poised to redefine the boundaries of agronomic understanding. At this foundational stage, the DAA project envisions harnessing the power of coupling to bridge the complexities of crop modeling. From the nuanced molecular interactions within plant cells to vast regional climate patterns, the plan is to use coupling as an essential strategy in the DAA framework. By aiming to integrate various models in the future, the DAA aspires to offer a more comprehensive and accurate digital twin of the crop ecosystem.While specific implementations are still on the horizon, the goal is to amalgamate different models, ensuring the digital twin effectively represents the vast agronomic system. Through planned coupling techniques, the DAA aims to achieve several key benefits:"
+    text: "At PhenoRob Digital Agricultural Avatar (DAA) initiative We have plans to use model coupling as an essential strategy to offer a more comprehensive and accurate representation of the crop ecosystem. While we are currently working on combining plant scale functional and structural models like [CPlantbox](/Phenorob-DAA/cplabtbox/) with crop and regional scale models like [AGROC](/Phenorob-DAA/agroc/), some coupling examples are already worth mentioning such as that of models GRANAR-MECHA and SIMPLACE-CPlantbox"
     image: "images/4.gif"
     imageWidth: "800px"
     imageHeight: "450px"
     textPosition: "bottom"
-    list:
-      - "Augmented Accuracy: By leveraging the potential strengths of individual models for enhanced precision."
-      - "Holistic Representation: Expanding the scope to provide a comprehensive view as envisioned by the DAA project."
-      - "Mitigated Shortcomings: Aiming to offset model limitations for a robust digital representation."
-      - "Dynamic Feedbacks: Facilitating potential real-time interactions for enriched simulations."
 
   - name: "GRANAR-MECHA"
     text: "The first example of coupling is that of [GRANAR](/Phenorob-DAA/granar/) and [MECHA](/Phenorob-DAA/mecha/), two computational tools that, when combined, offer a holistic view of root anatomy and hydraulics. The coupling of GRANAR, a computational tool designed to generate digital versions of monocotyledon root     anatomical networks, with MECHA, a model estimating root hydraulic properties, has been transformative.Explore more about [GRANAR-MECHA here](/casestudy2/)"
@@ -29,4 +24,6 @@ sections:
     imageWidth: "300px"
     imageHeight: "200px"
     textPosition: "right"
+
+
 ---
