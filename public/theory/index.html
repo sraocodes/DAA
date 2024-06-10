@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Differential Equations</title>
+    <title>Detailed Study of Soil Hydraulics</title>
     <meta name="description" content="">
     <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -162,160 +162,140 @@
          
          <script src="https://www.phenorobdaa.de/js/slider.js"></script> 
         
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
+<style>
+  .book-sidebar {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+  }
 
-    .book-container {
-      display: flex;
-    }
+  .book-content {
+    margin-left: 270px;
+    padding: 1rem;
+  }
 
-    .book-sidebar {
-      position: fixed;
-      top: 100px;
-      left: 0;
-      width: 200px;
-      height: 100vh;
-      overflow-y: auto;
-      background-color: #f8f9fa;
-      border-right: 1px solid #ddd;
-      padding: 20px;
-      z-index: 1050;
-    }
+  .figure {
+    margin-top: 2rem;
+    text-align: center;  
+  }
 
-    .book-content {
-      margin-left: 220px;
-      padding: 20px;
-      flex-grow: 1;
-    }
+  .figure img {
+    max-width: 80%;  
+    height: auto;  
+  }
 
-    .book-content section {
-      margin-bottom: 40px;
-    }
-
-    .book-content h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-
-    .book-sidebar nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .book-sidebar nav ul li {
-      margin-bottom: 10px;
-    }
-
-    .book-sidebar nav ul li a {
-      text-decoration: none;
-      color: #007bff;
-    }
-
-    .book-sidebar nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 992px) {
-      .book-sidebar {
-        width: 100%;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .book-content {
-        padding-left: 15px;
-        margin-left: 0;
-      }
-
-      .book-sidebar.active {
-        transform: translateX(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .book-item {
-        flex: 0 1 calc(50% - 10px);
-      }
-    }
-
-    @media (max-width: 576px) {
-      .book-item {
-        flex: 0 1 calc(100% - 10px);
-      }
-    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<body>
-  <div class="book-container">
-    <aside class="book-sidebar" id="book-sidebar">
-      <nav>
-        <ul>
-          
-          <li><a href="#richards-equation">Richards&#39; Equation</a></li>
-          
-          <li><a href="#other-differential-equations">Other Differential Equations</a></li>
-          
-        </ul>
-      </nav>
-    </aside>
+  .figure-caption {
+    margin-top: 0.5rem;
+    font-style: italic;  
+  }
+</style>
+<div class="container-fluid mt-5">
+  <div class="row">
     
-    <main class="book-content" id="main-content">
+    <div class="col-md-3 book-sidebar">
+      <h4 class="sidebar-heading">Contents</h4>
+      <ul class="nav flex-column">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#introduction">Introduction</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#richards-equation">Richard&#39;s Equation</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#discretization-of-richards-equation">Discretization of Richard&#39;s Equation</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#conclusion">Conclusion</a>
+        </li>
+        
+      </ul>
+    </div>
+
+    
+    <div class="col-md-9 ml-auto book-content">
       
-      <section id="richards-equation">
-        <h2>Richards&#39; Equation</h2>
-        <p><p>Richards&rsquo; equation describes the movement of water in unsaturated soils. The equation is given by:</p>
-<p>$$
-\frac{\partial \theta}{\partial t} = \frac{\partial}{\partial z} \left( K(\theta) \frac{\partial h}{\partial z} \right)
+      <section id="introduction" class="mb-5">
+        <h2>Introduction</h2>
+        This section introduces the basic concepts of soil physics and its importance in environmental science.
+        
+        
+      </section>
+      
+      <section id="richards-equation" class="mb-5">
+        <h2>Richard&#39;s Equation</h2>
+        <p>&ldquo;## Richard&rsquo;s Equation
+Richard&rsquo;s equation is a widely used mathematical model in soil science and hydrology. It describes how water moves through unsaturated soils. Here is the general form of the equation:
+$$
+\frac{\partial \theta}{\partial t} = \nabla \cdot (D(\theta) \nabla \theta) - \frac{\partial K(\theta)}{\partial z}
 $$</p>
-<p>where:</p>
+<h3 id="variables-in-the-equation">Variables in the Equation</h3>
 <ul>
-<li>( \theta ) is the volumetric water content,</li>
-<li>( t ) is time,</li>
-<li>( z ) is the vertical coordinate,</li>
-<li>( K(\theta) ) is the hydraulic conductivity,</li>
-<li>( h ) is the hydraulic head.</li>
+<li>\(\theta\) is the volumetric water content;</li>
+<li>\(t\) represents time;</li>
+<li>\(D(\theta)\) is the soil water diffusivity;</li>
+<li>\(K(\theta)\) is the hydraulic conductivity;</li>
+<li>\(z\) is the spatial coordinate in the vertical direction (positive downwards).</li>
 </ul>
-<h3 id="discretization-using-finite-difference-method-fdm">Discretization Using Finite Difference Method (FDM)</h3>
-<p>To discretize Richards&rsquo; equation using the finite difference method, we can&hellip;</p>
-</p>
+<p>The equation is used to calculate the water content at any point in the soil given the diffusivity and hydraulic conductivity as functions of the water content.&rdquo;</p>
+
+        
+        <div class="figure">
+          <img src="/images/scope1.png" alt="Soil Water Retention" style="width: 100%;">
+          <div class="figure-caption">Figure 1: Soil Water Retention Characteristics</div>
+        </div>
+        
+        
       </section>
       
-      <section id="other-differential-equations">
-        <h2>Other Differential Equations</h2>
-        <p>Content for other differential equations goes here&hellip;</p>
+      <section id="discretization-of-richards-equation" class="mb-5">
+        <h2>Discretization of Richard&#39;s Equation</h2>
+        <p>&ldquo;## Discretization of Richard&rsquo;s Equation
+To discretize Richards&rsquo; equation for numerical solution methods, a common approach involves transforming the continuous differential equation into a system of algebraic equations using finite difference or finite element methods. Here&rsquo;s a detailed breakdown:</p>
+<h3 id="finite-difference-method-fdm">Finite Difference Method (FDM)</h3>
+<p>For spatial discretization, consider a grid with points spaced at \(\Delta x\) and \(\Delta z\) in the horizontal and vertical directions respectively. The derivatives can be approximated using finite differences:
+$$
+\frac{K_{i+1/2,j} (\theta_{i+1,j} - \theta_{i,j})}{\Delta x} - \frac{K_{i-1/2,j} (\theta_{i,j} - \theta_{i-1,j})}{\Delta x} + \frac{K_{i,j+1/2} (\theta_{i,j+1} - \theta_{i,j})}{\Delta z} - \frac{K_{i,j-1/2} (\theta_{i,j} - \theta_{i,j-1})}{\Delta z}
+$$</p>
+<h3 id="time-discretization">Time Discretization</h3>
+<p>The temporal part of the equation is typically discretized using the backward Euler method for stability, which approximates:
+$$
+\frac{\theta_{i,j}^{n+1} - \theta_{i,j}^n}{\Delta t}
+$$</p>
+<h3 id="picard-iteration-for-linearization">Picard Iteration for Linearization</h3>
+<p>Picard iteration is used to handle non-linearity in \(K(\theta)\). It involves assuming an initial guess for \(\theta\) or \(h\) and iteratively refining this guess. Linearized at each iteration based on previous values:
+$$
+\theta_{i,j}^{n+1,k+1} = \theta_{i,j}^{n} + \Delta t \left( \nabla \cdot (K(\theta_{i,j}^{n+1,k}) \nabla h_{i,j}^{n+1,k}) + S \right)
+$$</p>
+<h3 id="gauss-seidel-method">Gauss-Seidel Method</h3>
+<p>The Gauss-Seidel method sequentially updates each grid point using the most current values, enhancing convergence stability:
+$$
+\theta_{i,j}^{n+1} = \theta_{i,j}^{n} + \Delta t \left( \nabla \cdot (K(\theta_{i,j}^{n+1}) \nabla h_{i,j}^{n+1}) + S \right)
+$$
+&quot;</p>
+
+        
+        
       </section>
       
-    </main>
+      <section id="conclusion" class="mb-5">
+        <h2>Conclusion</h2>
+        This section concludes our detailed exploration of soil hydraulics using Richard&rsquo;s equation and discusses future research directions.
+        
+        
+      </section>
+      
+    </div>
   </div>
-
-  <script>
-    function scrollToSection(sectionId) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const topPosition = element.getBoundingClientRect().top + window.pageYOffset - 100;
-        window.scrollTo({
-          top: topPosition,
-          behavior: 'smooth'
-        });
-      }
-    }
-
-    document.querySelectorAll('.book-sidebar a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const sectionId = this.getAttribute('href').slice(1);
-        scrollToSection(sectionId);
-      });
-    });
-  </script>
-</body>
-</html>
+</div>
 
     </main>
     <div id="footer" class="container mt-5">

@@ -1,162 +1,76 @@
 {{ define "main" }}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
+<style>
+  .book-sidebar {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+  }
 
-    .book-container {
-      display: flex;
-    }
-
+  /* Add a media query for screens with max-width 768px */
+  @media (max-width: 768px) {
     .book-sidebar {
-      position: fixed;
-      top: 100px;
-      left: 0;
-      width: 200px;
-      height: 100vh;
-      overflow-y: auto;
-      background-color: #f8f9fa;
-      border-right: 1px solid #ddd;
-      padding: 20px;
-      z-index: 1050;
+      width: 0;
+      border-right: none;
     }
 
-    .book-content {
-      margin-left: 220px;
-      padding: 20px;
-      flex-grow: 1;
-    }
+  .book-content {
+    margin-left: 270px;
+    padding: 1rem;
+  }
 
-    .book-content section {
-      margin-bottom: 40px;
-    }
+  .figure {
+    margin-top: 2rem;
+    text-align: center; /* Centers the image */
+  }
 
-    .book-content h2 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
+  .figure img {
+    max-width: 80%; /* Limits image width, adjust as needed */
+    height: auto; /* Maintains aspect ratio */
+  }
 
-    .book-content .figure {
-      margin: 20px 0;
-      text-align: center;
-    }
-
-    .book-content .figure img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ddd;
-      padding: 10px;
-      background-color: #fff;
-    }
-
-    .book-content .figure figcaption {
-      margin-top: 5px;
-      font-style: italic;
-      color: #555;
-    }
-
-    .book-sidebar nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .book-sidebar nav ul li {
-      margin-bottom: 10px;
-    }
-
-    .book-sidebar nav ul li a {
-      text-decoration: none;
-      color: #007bff;
-    }
-
-    .book-sidebar nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 992px) {
-      .book-sidebar {
-        width: 100%;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .book-content {
-        padding-left: 15px;
-        margin-left: 0;
-      }
-
-      .book-sidebar.active {
-        transform: translateX(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .book-item {
-        flex: 0 1 calc(50% - 10px);
-      }
-    }
-
-    @media (max-width: 576px) {
-      .book-item {
-        flex: 0 1 calc(100% - 10px);
-      }
-    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
-<body>
-  <div class="book-container">
-    <aside class="book-sidebar" id="book-sidebar">
-      <nav>
-        <ul>
-          {{ range .Params.sections }}
-          <li><a href="#{{ .sectionTitle | urlize }}">{{ .sectionTitle }}</a></li>
-          {{ end }}
-        </ul>
-      </nav>
-    </aside>
-    
-    <main class="book-content" id="main-content">
-      {{ range .Params.sections }}
-      <section id="{{ .sectionTitle | urlize }}">
-        <h2>{{ .sectionTitle }}</h2>
-        <p>{{ .content | markdownify | safeHTML }}</p>
-        {{ if .figures }}
-        {{ range .figures }}
-        <figure class="figure">
-          <img class="img-fluid rounded mb-2" src="{{ .src | relURL }}" alt="{{ .caption }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
-          <figcaption>{{ .caption }}</figcaption>
-        </figure>
+  .figure-caption {
+    margin-top: 0.5rem;
+    font-style: italic; /* Styles for the figure caption */
+  }
+</style>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <!-- Sidebar Navigation -->
+    <div class="col-md-3 book-sidebar">
+      <h4 class="sidebar-heading">Contents</h4>
+      <ul class="nav flex-column">
+        {{ range .Params.sections }}
+        <li class="nav-item">
+          <a class="nav-link" href="#{{ .name | urlize }}">{{ .name }}</a>
+        </li>
         {{ end }}
+      </ul>
+    </div>
+
+    <!-- Main Content Sections -->
+    <div class="col-md-9 ml-auto book-content">
+      {{ range .Params.sections }}
+      <section id="{{ .name | urlize }}" class="mb-5">
+        <h2>{{ .name }}</h2>
+        {{ .content | markdownify | safeHTML }}
+        {{ if .image }}
+        <div class="figure">
+          <img src="{{ .image.url | relURL }}" alt="{{ .image.alt }}" style="width: {{ .image.width }};">
+          <div class="figure-caption">{{ .image.caption }}</div>
+        </div>
+        {{ end }}
+        {{ range .subsections }}
+        <h3>{{ .name }}</h3>
+        {{ .content | markdownify | safeHTML }}
         {{ end }}
       </section>
       {{ end }}
-    </main>
+    </div>
   </div>
-
-  <script>
-    function scrollToSection(sectionId) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const topPosition = element.getBoundingClientRect().top + window.pageYOffset - 100;
-        window.scrollTo({
-          top: topPosition,
-          behavior: 'smooth'
-        });
-      }
-    }
-
-    document.querySelectorAll('.book-sidebar a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const sectionId = this.getAttribute('href').slice(1);
-        scrollToSection(sectionId);
-      });
-    });
-  </script>
-</body>
-</html>
+</div>
 {{ end }}
