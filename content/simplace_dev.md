@@ -34,4 +34,8 @@ sections:
         - "ArrayResampler: Adjusts array values between resolutions."
         - "SimpleCounter: A resettable counter for simulation days."
         - "InterpolatedValueFromTable: Interpolates values from x and y table values."
+
+  - section_name: "Download SIMPLACE"
+    description: "Access the latest version of SIMPLACE software from the official download page. [Download SIMPLACE](https://www.simplace.net/index.php/download): Get the latest release of SIMPLACE software for advanced simulation of agricultural processes."
+    
 ---
