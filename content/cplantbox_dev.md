@@ -1,11 +1,11 @@
 ---
 title: "CPlantBox"
-description: "Here we describe the codes of CPlantBox implementation as well as the instruction to install it along with its
+description: "Here we describe the codes of [CPlantBox](/cplantbox/) implementation as well as the instruction to install it along with its
               inputs and outputs from developer's perspective"
 layout: "model_files"
 sections:
   - section_name: "Structural Module"
-    description: "The structural module contains code that simulates plant growth and morphology within the CPlantBox framework. It defines the characteristics and behavior of various plant organs like roots, stems, leaves, and seeds. Additionally, it handles tropism responses, enabling plants to adjust their growth direction in response to environmental cues. In essence, this module forms the basis for realistic plant growth simulations."
+    description: "The structural module contains code that simulates plant growth and morphology within the [CPlantBox](/cplantbox/) framework. It defines the characteristics and behavior of various plant organs like roots, stems, leaves, and seeds. Additionally, it handles tropism responses, enabling plants to adjust their growth direction in response to environmental cues. In essence, this module forms the basis for realistic plant growth simulations."
     table:
       title: "Description of C++ codes in Structural Module"
       headers: ["File", "Functionality", "Variables", "I/O"]
@@ -27,7 +27,7 @@ sections:
         - ["[tropism.cpp](https://github.com/Plant-Root-Soil-Interactions-Modelling/CPlantBox/blob/master/src/behavioral/tropism.cpp)", "Defines tropism behaviors, implementing mechanisms like gravitropism and hydrotropism, crucial for realistic plant growth simulation.", "Various tropisms, environmental response mechanisms.", "Input: Environmental stimuli, growth parameters. Output: Growth direction, tropism responses."]
 
   - section_name: "Functional Module"
-    description: "The Functional Module in CPlantBox includes Python and C++ scripts for plant-soil-water interactions, featuring models like the Van Genuchten model for soil water retention. It offers tools for soil parameter tables, root conductivities, and more."
+    description: "The Functional Module in [CPlantBox](/cplantbox/) includes Python and C++ scripts for plant-soil-water interactions, featuring models like the Van Genuchten model for soil water retention. It offers tools for soil parameter tables, root conductivities, and more."
     table:
       title: "Description of Python Scripts in Functional Module"
       headers: ["File", "Functionality", "Variables", "Input/Output"]

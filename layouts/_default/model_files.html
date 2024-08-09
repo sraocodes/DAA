@@ -3,11 +3,11 @@
 
     <!-- Accordion Wrapper -->
     <div id="accordion">
-        <!-- Responsive Heading and Description inside Accordion Wrapper -->
-        <div class="card">
+         <!-- Responsive Heading and Description inside Accordion Wrapper -->
+         <div class="card">
             <div class="card-header">
                 <h3 class="mt-4">{{ .Title }}</h3>
-                <p>{{ .Description }}</p>
+                <p>{{ .Description | markdownify | safeHTML }}</p>
             </div>
         </div>
         <!-- Loop over each section -->

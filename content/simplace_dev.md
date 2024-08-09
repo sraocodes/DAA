@@ -1,6 +1,6 @@
 ---
 title: "Simplace"
-description: "Simplace components simulate distinct agricultural processes and interactions. This guide categorizes these components into two major sections for an in-depth understanding of their specific functions and applications."
+description: "The [Simplace](/simplace/) components simulate distinct agricultural processes and interactions. This guide categorizes these components into two major sections for an in-depth understanding of their specific functions and applications."
 layout: "model_files"
 
 sections:
@@ -35,7 +35,7 @@ sections:
         - "SimpleCounter: A resettable counter for simulation days."
         - "InterpolatedValueFromTable: Interpolates values from x and y table values."
 
-  - section_name: "Download SIMPLACE"
-    description: "Access the latest version of SIMPLACE software from the official download page. [Download SIMPLACE](https://www.simplace.net/index.php/download): Get the latest release of SIMPLACE software for advanced simulation of agricultural processes."
-    
+  - section_name: "Download Simplace"
+    description: "Access the latest version of Simplace software from the official download page. [Download Simplace](https://www.simplace.net/index.php/download): Get the latest release of Simplace software for advanced simulation of agricultural processes."
+
 ---
