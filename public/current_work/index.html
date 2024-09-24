@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProcessBasedModels</title>
+    <title>Current Work</title>
     <meta name="description" content="">
     <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -162,7 +162,7 @@
          
          <script src="https://www.phenorobdaa.de/js/slider.js"></script> 
         
-<div id="single-processbasedmodels" class="single-container container mt-5">
+<div id="single-current-work" class="single-container container mt-5">
 
 
   
@@ -175,23 +175,23 @@
       <ul class="navbar-nav">
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-what-are-process-based-models" >What are Process-Based Models?</a>
+          <a class="nav-link" href="#single-dockerization-of-models" >🐳 Dockerization of Models 🐳</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-understanding-process-based-models" >Understanding Process-Based Models</a>
+          <a class="nav-link" href="#single-agroc-cplantbox-integration" >🔄 AgroC-CPlantBox Integration 🔄 </a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-unveiling-complexity-from-cells-to-regional-scale" >Unveiling Complexity: From Cells to Regional Scale</a>
+          <a class="nav-link" href="#single-custom-gpt-development" >🤖 Custom GPT Development 💬</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-enriching-agricultural-practices-for-farmers-and-stakeholders" >Enriching Agricultural Practices for Farmers and Stakeholders</a>
+          <a class="nav-link" href="#single-exploring-new-model-integrations" >📡 Exploring New Model Integrations🌀</a>
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#single-learn-more" >Learn More</a>
+          <a class="nav-link" href="#single-%25EF%25B8%258F-graphical-user-interface-%25EF%25B8%258F" >🖥️ Graphical User Interface ⚙️</a>
         </li>
         
       </ul>
@@ -201,49 +201,71 @@
   
   
   
-  <div id="single-what-are-process-based-models" class="card mb-5">
+  <div id="single-dockerization-of-models" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">What are Process-Based Models?</h2>
+      <h2 class="card-title">🐳 Dockerization of Models 🐳</h2>
+      <div class="row">
+        
+        
+        <div class="col">
+          <p class="card-text" style="font-size: 1.2em;">One of our current initiatives involves containerizing key DAA models like CPlantBox and AgroC to enhance accessibility and deployment. These models are specifically built for Linux environment and it is always not straightforward for windows users. Using 🐳 Docker 🐳, we are creating flexible environments where models can run consistently across various systems. This process facilitates collaboration, reproducibility, and integration with other tools.</p>
+          
+          
+          <div class="list-group">
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  <a href="#" class="list-group-item list-group-item-action">🚜  <strong>CPlantBox</strong> with the GUI (using VNC for graphical interface) is now available in a 🐳 Docker 🐳 container. You can pull it using this command: <code>docker pull satraox/cplantbox-gui:tagname</code>.</a>
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  <a href="#" class="list-group-item list-group-item-action">🌾 The <strong>Jupyter</strong> version of CPlantBox, for running examples directly in the browser, will soon be available at: <code>docker pull satraox/ cplantbox-jupyter:tagname</code>.</a>
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  <a href="#" class="list-group-item list-group-item-action">🌳 <strong>AgroC</strong> is currently in the process of being ⚙️ containerized. This will help non-linux users to get started with this crop model.</a>
+              
+          </div>
+          
+
+        </div>
+        
+        <div class="col-auto">
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-agroc-cplantbox-integration" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">🔄 AgroC-CPlantBox Integration 🔄 </h2>
       <div class="row">
         
         
         <div class="col-md-12 text-center">
-          <img class="img-fluid rounded mb-2" src="/images/coupling1.jpg" alt="What are Process-Based Models?" style="width: 500px; height: 500px;">
+          <img class="img-fluid rounded mb-2" src="/images/agroc_anim.gif" alt="🔄 AgroC-CPlantBox Integration 🔄 " style="width: 682px; height: 532px;">
         </div>
         
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">The PhenoRob DAA uses process-based models to improve the field of agronomy. Process-based models are sophisticated mathematical tools used in agriculture to simulate the intricate interplay of biological, physical, and chemical processes within complex systems. These models provide a digital representation of how plants interact with their environment, incorporating factors like temperature, water availability, nutrients, and more. Unlike simple observations, they delve deep into the underlying mechanisms, allowing us to understand and predict how crops respond to varying conditions.</p>
-
-          
-          
-          
-          
-          
-
-              
-          
-
-                  
-          
-              
-       
-      </div>
-      
-      </div>
-      
-    </div>
-  </div>
-  
-  
-  
-  <div id="single-understanding-process-based-models" class="card mb-5">
-    <div class="card-body">
-      <h2 class="card-title">Understanding Process-Based Models</h2>
-      <div class="row">
-        
-        
-        <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">Process-based models emulate the functioning of agricultural systems, incorporating the dynamic relationships between various components and reflecting real-world complexity. They integrate the biological, physical, and chemical processes that govern plant growth, considering both current and historical conditions. Feedback loops iterate between processes, enabling predictions of crop reactions under various scenarios, testing management strategies, and gaining insights. These models are underpinned by several mathematical and operational concepts, including:</p>
+          <p class="card-text" style="font-size: 1.2em;">We are currently updating AgroC to read root data generated by external sources or other modelling tools such as CPlantBox. This integration ensures that dynamic root growth information can directly influence soil and crop simulations in AgroC. Additionally, we are implementing an updated <a href="https://doi.org/10.1002/vzj2.20333">sink</a> term in AgroC for more accurate water and nutrient flow modeling.The current implementation is relatively simple, so we are developing a more mechanistic sink term based on root hydraulic properties, which includes root conductivity data from CPlantBox. This loose coupling between the two models will significantly enhance their synergy, simulating more realistic root-soil interactions.</p>
 
           
           
@@ -258,7 +280,7 @@
           
                   
                   
-                  <li class="list-group-item">🌾 Mass Balance: A foundational principle rooted in conservation laws, tracking the flow of substances like water and nutrients.</li>
+                  <li class="list-group-item">🌾 Implementing a new mechanistic sink term in AgroC based on the parallel root model approach, incorporating variables such as K_r (radial root conductance), K_x (axial root conductance), and SUF (standard uptake fraction).</li>
                             
               
                   
@@ -268,7 +290,7 @@
           
                   
                   
-                  <li class="list-group-item">🌍 Fluid Dynamics: Deals with water movement in soils and plants, using equations like Darcy&rsquo;s law and Richards&rsquo; equation.</li>
+                  <li class="list-group-item">🌍 Integrating CPlantBox-generated dynamic root architecture data, including root length density (RLD) and root distribution, directly into AgroC&rsquo;s soil-water-plant simulations.</li>
                             
               
                   
@@ -278,7 +300,7 @@
           
                   
                   
-                  <li class="list-group-item">🌦️ Differential Equations: Often of the first order, they play a crucial role in the temporal evolution of agricultural processes.</li>
+                  <li class="list-group-item">🌦️ Developing a bidirectional data exchange: AgroC provides soil water potential, nutrient availability, and temperature data to inform root growth in CPlantBox.</li>
                             
               
                   
@@ -288,140 +310,7 @@
           
                   
                   
-                  <li class="list-group-item">💧 Finite Difference Method: A numerical technique commonly employed to solve differential equations by discretizing time and space.</li>
-                            
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  
-                  <li class="list-group-item">🚜 Holistic Integration: Combines physiological, biochemical, and environmental variables, creating a comprehensive view of plant behavior.</li>
-                            
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  
-                  <li class="list-group-item">🌾 Iterative Nature: Incorporates feedback loops, reflecting how past stress events influence a plant&rsquo;s future responses.</li>
-                            
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  
-                  <li class="list-group-item">🌍 Watch the <a href="https://www.youtube.com/watch?v=sz-SMI5Y5mQ">talk</a> by Prof. Frank Ewert on crop modeling:</li>
-                            
-              
-          </ol>
-          
-          
-
-              
-          
-
-                  
-          
-              
-       
-      </div>
-      
-      </div>
-      
-      
-          
-          <div class="video-title"><i class="fas fa-tv" style="margin-right: 10px;"></i></div>
-          <div class="embed-responsive embed-responsive-16by9 my-4" style="max-width: 60%; margin: auto;">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sz-SMI5Y5mQ" allowfullscreen></iframe>
-          </div>
-      
-  
-    </div>
-  </div>
-  
-  
-  
-  <div id="single-unveiling-complexity-from-cells-to-regional-scale" class="card mb-5">
-    <div class="card-body">
-      <h2 class="card-title">Unveiling Complexity: From Cells to Regional Scale</h2>
-      <div class="row">
-        
-        
-        <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">Process-based models provide insights from the cellular level to vast regional landscapes. They offer unique perspectives across scales, from biochemical intricacies within cells to broad agricultural system impacts. Various models developed within the Phenorob partner institutions, such as <a href="/granar/">GRANAR</a>, <a href="/mecha/">MECHA</a>, <a href="/cplantbox/">CPlantBox</a>, <a href="/agroc/">AGRO-C</a>, <a href="/simplace/">SIMPLACE</a>, <a href="/dumux/">DuMux-ROSI</a>, and <a href="/terrsysmp/">TerrSysMP</a>, cater to different scales and focuses, providing a comprehensive understanding.</p>
-
-          
-          
-          
-          
-          <ol class="list-group">
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  
-                  <li class="list-group-item">🌾 <a href="/granar/">GRANAR</a> and <a href="/mecha/">MECHA</a> Models: Focus on cell-level granular processes and mechanical phenomena.</li>
-                            
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  
-                  <li class="list-group-item">🌍 <a href="/cplantbox/">CPlantBox</a> Model: Comprehensive modeling at both root and shoot levels.</li>
-                            
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  
-                  <li class="list-group-item">🌦️ <a href="/agroc/">AGRO-C</a> Model: Focused on carbon dynamics within agricultural soil.</li>
-                            
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  
-                  <li class="list-group-item">💧 <a href="/simplace/">SIMPLACE</a> Model: An open-source software for understanding interactions among crops, soil, and climate.</li>
-                            
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  
-                  <li class="list-group-item">🚜 <a href="/dumux/">DuMux-ROSI</a> Model: Enhances soil water dynamics and root-soil interactions.</li>
-                            
-              
-                  
-                  
-                  
-                  
-          
-                  
-                  
-                  <li class="list-group-item">🌾 <a href="/terrsysmp/">TerrSysMP</a> Model: Simulates land-atmosphere interactions.</li>
+                  <li class="list-group-item">💧 Implementing alpha-supply functions and total supply factors in AgroC to represent maximal water uptake under varying soil conditions.</li>
                             
               
           </ol>
@@ -444,18 +333,52 @@
   
   
   
-  <div id="single-enriching-agricultural-practices-for-farmers-and-stakeholders" class="card mb-5">
+  <div id="single-custom-gpt-development" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">Enriching Agricultural Practices for Farmers and Stakeholders</h2>
+      <h2 class="card-title">🤖 Custom GPT Development 💬</h2>
       <div class="row">
         
         
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">These models offer profound insights for farmers, guiding precision agriculture practices such as optimizing resource allocation, planting times, irrigation schedules, and fertilizer rates. Stakeholders and investors can evaluate potential risks and returns of agricultural investments, analyze various scenarios, assess climate change impacts, and estimate future crop yields.</p>
+          <p class="card-text" style="font-size: 1.2em;">In support of project-wide accessibility, we are building custom GPT models to offer on-demand assistance for researchers and collaborators. While our current GPT models are available to ChatGPT Plus subscribers, we recognize the need for more inclusive access. In response, we are exploring open-source alternatives, such as LLaMA-based models, to make these tools freely accessible to all researchers and students. Currently, the Digital Agricultural Avatar GPT provides project-wide support, while the CPlantBox-specific GPT assists with questions around that this particular model. These tools are designed to increase engagement and streamline user interactions. We have plans to develop GPT&rsquo;s for other models too</p>
 
           
           
           
+          
+          <ol class="list-group">
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌾 Explore our <strong>Project-wide DAA GPT</strong>: <a href="https://chatgpt.com/g/g-I77d6CXPz-digiag-avatar">DigiAg Avatar</a></li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌍 Explore our <strong>CPlantBox GPT</strong>: <a href="https://chatgpt.com/g/g-8mNccFahG-cplantbox">CPlantBox GPT</a></li>
+                            
+              
+                  
+                  
+                  
+                  
+          
+                  
+                  
+                  <li class="list-group-item">🌦️ Future plans include developing similar tools for our other models, prioritizing open accessibility.</li>
+                            
+              
+          </ol>
           
           
 
@@ -475,14 +398,42 @@
   
   
   
-  <div id="single-learn-more" class="card mb-5">
+  <div id="single-exploring-new-model-integrations" class="card mb-5">
     <div class="card-body">
-      <h2 class="card-title">Learn More</h2>
+      <h2 class="card-title">📡 Exploring New Model Integrations🌀</h2>
       <div class="row">
         
         
+        <div class="col">
+          <p class="card-text" style="font-size: 1.2em;">We are investigating potential integrations of radiative transfer models, such as <strong>SCOPE</strong>, with CPlantBox. This integration will allow for simulations of how root zone processes influence remote sensing data, particularly in capturing spectral signatures from aboveground vegetation. By linking models like CPlantBox with SCOPE, we aim to bridge the gap between root zone activity and remote sensing applications.</p>
+          
+
+        </div>
+        
+        <div class="col-auto">
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  <div id="single-%EF%B8%8F-graphical-user-interface-%EF%B8%8F" class="card mb-5">
+    <div class="card-body">
+      <h2 class="card-title">🖥️ Graphical User Interface ⚙️</h2>
+      <div class="row">
+        
+        
+        <div class="col-md-12 text-center">
+          <img class="img-fluid rounded mb-2" src="/images/agroc_gui.png" alt="🖥️ Graphical User Interface ⚙️" style="width: 797px; height: 821px;">
+        </div>
+        
         <div class="col-md-12">
-          <p class="card-text" style="font-size: 1.2em;">Explore more about Process-Based Models and their applications with these insightful videos:</p>
+          <p class="card-text" style="font-size: 1.2em;">We are developing a <strong>Graphical User Interface (GUI)</strong> for easier manipulation of input files needed for AgroC. Our aim is to make it easier for users to set up simulations and explore various crop scenarios efficiently. Our ultimate aim is to run AgroC through this <strong>GUI</strong> and interpret simulation results</p>
 
           
           
@@ -501,26 +452,6 @@
       
       </div>
       
-      
-          
-          <div class="video-title"><i class="fas fa-tv" style="margin-right: 10px;"></i>Modeling Approaches</div>
-          <div class="embed-responsive embed-responsive-16by9 my-4" style="max-width: 60%; margin: auto;">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mPo-n1lZGXE" allowfullscreen></iframe>
-          </div>
-      
-          
-          <div class="video-title"><i class="fas fa-tv" style="margin-right: 10px;"></i>Crop Growth Modeling</div>
-          <div class="embed-responsive embed-responsive-16by9 my-4" style="max-width: 60%; margin: auto;">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kdJI-y14v10" allowfullscreen></iframe>
-          </div>
-      
-          
-          <div class="video-title"><i class="fas fa-tv" style="margin-right: 10px;"></i>Plant Models</div>
-          <div class="embed-responsive embed-responsive-16by9 my-4" style="max-width: 60%; margin: auto;">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-MjNsvbCf4o" allowfullscreen></iframe>
-          </div>
-      
-  
     </div>
   </div>
   
