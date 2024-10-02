@@ -15,6 +15,8 @@ sections:
     imageWidth: "600px"
     imageHeight: "400px"
     textPosition: "bottom"
+    videos:
+      - videoID: "f0jN94SHo1o"
 
   - name: "Rooted Insights: Bridging Models"
     text: "The [study](https://www.frontiersin.org/articles/10.3389/fpls.2022.865188/full) showcases the interconnected dynamics of soil strength and root elongation, highlighting the necessity of a coupled model to understand deep soil compaction. While the process-based dynamic model [SIMPLACE](/simplace/) offers a broad perspective on plant-environment interactions, it might not delve deep enough into root dynamics, a niche [CPlantbox](/cplantbox/) fills expertly. However, solely depending on [CPlantbox](/cplantbox/) could miss the bigger picture of holistic plant dynamics and broader field conditions. Marrying these models provides a holistic lens, capturing the complex interplay between a plant and its multifaceted environment."
@@ -71,7 +73,7 @@ sections:
     imageHeight: "400px"
     textPosition: "bottom"
 
-- name: "Conclusions: Implications of the Study"
+  - name: "Implications of the Study"
     text: "The integration of SIMPLACE and CRootbox models provides insights into root-soil interactions and soil compaction effects. This coupled model simulates relationships between soil compaction, weather, and crop species, offering information relevant to agricultural productivity under varying environmental conditions. The model's simulation of root adaptive plasticity to local soil conditions allows for the exploration of genotype-environment-management interactions. This capability may assist in cultivar selection and research on root traits. The model's approach to analyzing root growth patterns and their impact on yield could contribute to the development of agricultural practices."
     textPosition: "top"
     list:
@@ -106,8 +108,5 @@ sections:
           - "Load the required modules."
           - "Run the example script located in misc/example_simplace_cplantbox.py."
           - "Python script controls the iterative interaction between SIMPLACE and CPlantBox, updating parameters and fetching results at each simulation step."
-    videos: 
-    - videoID: "INyTdrHIYAM"
-      videoTitle: "Installation Tutorial Video"
 
 ---
