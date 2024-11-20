@@ -39,10 +39,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
-  
-  
-  
-  <script src="/js/header.min.b3509fe92c5f507536c742efef9dff6c32f4cfc49dff7f05cadc9f6955c36b49.js"></script>
 
 </head>
     
@@ -537,102 +533,109 @@
         
     </div>
 
+    <div class="separator my-5">
+        <style>
+            .separator {
+                position: relative;
+                height: 30px;
+                overflow: hidden;
+                background: linear-gradient(90deg, transparent 50%, #f5f5f5 50%);
+                background-size: 12px 100%;
+            }
+            .ant {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                font-size: 20px;
+                animation: antWalk 12s linear infinite;
+            }
+            .ant span {
+                margin-right: 30px;
+            }
+            @keyframes antWalk {
+                0% { right: -20px; }
+                100% { right: 100%; }
+            }
+        </style>
+        <div class="ant">
+            <span>🍃🐜</span>
+            <span>🍃🐜</span>
+            <span>🍃🐜</span>
+        </div>
+     </div>
+
     
     
     <div class="mt-4"></div>
     <h3>Research Highlights</h3>
     <div class="row">
-        
-        <div class="col-md-4 mb-4">
-            <div class="card custom-card d-flex flex-column">
-                <img src="/images/research1.gif" alt="Research image" class="card-img-top custom-card-img">
-                <div class="card-body d-flex flex-column">
-                    <h2 class="card-title">Data Integration</h2>
-                    
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                    <p class="card-text">Bridging above-ground and below-ground data through advanced sensing technologies and real-time monitoring systems. Our approach combines remote sensing with rhizosphere observations for comprehensive agricultural insights.</p>
-                    
-                    
-                        
-                    
-                    <a href="https://www.phenorobdaa.de//research-areas/data-integration/" class="card-link learn-more mt-auto">Learn more</a>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card custom-card d-flex flex-column">
+            <img src="/images/research1.gif" 
+                    alt="Research image" 
+                    class="card-img-top custom-card-img">
+            <div class="card-body d-flex flex-column">
+                <h2 class="card-title">Data Integration</h2>
+                <p class="card-text">Bridging above-ground and below-ground data through advanced sensing technologies and real-time monitoring systems. Our approach combines remote sensing with rhizosphere observations for comprehensive agricultural insights.</p>
+                <a href="https://www.nature.com/articles/s41597-023-02570-9" 
+                    class="card-link learn-more mt-auto"
+                    target="_blank" rel="noopener noreferrer">
+                    Learn more
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-md-8 mb-4">
+        <div class="card custom-card">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <img src="/images/research2.gif"
+                        alt="Research image"
+                        class="img-fluid h-100"
+                        style="object-fit: cover;">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body d-flex flex-column h-100">
+                        <h2 class="card-title">Predictive Agricultural Modeling</h2>
+                        <div class="card-text">Developing comprehensive models for agricultural systems under changing climate conditions. Our digital agricultural avatar combines advanced modeling techniques for future-ready agriculture.</div>
+                        <ul class="list-unstyled mt-3">
+                            
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Multi-scale process-based models from cell to ecosystem level</li>
+                            
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Real-time data integration for quick and accurate predictions</li>
+                            
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced software design for robust data integration</li>
+                            
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Holistic understanding across scales, processes, and disciplines</li>
+                            
+                        </ul>
+                        <a href="/research-areas/" 
+                        class="card-link learn-more mt-auto">
+                        Learn more
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="col-md-4 mb-4">
-            <div class="card custom-card d-flex flex-column">
-                <img src="/images/research2.gif" alt="Research image" class="card-img-top custom-card-img">
-                <div class="card-body d-flex flex-column">
-                    <h2 class="card-title">Climate Adaptation</h2>
-                    
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                    <p class="card-text">Developing predictive models for agricultural systems under changing climate conditions. Our research focuses on improving crop resilience and resource efficiency through digital twin technology.</p>
-                    
-                    
-                        
-                    
-                    <a href="https://www.phenorobdaa.de//research-areas/climate/" class="card-link learn-more mt-auto">Learn more</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4 mb-4">
-            <div class="card custom-card d-flex flex-column">
-                <img src="/images/research3.gif" alt="Research image" class="card-img-top custom-card-img">
-                <div class="card-body d-flex flex-column">
-                    <h2 class="card-title">Real-time Predictions</h2>
-                    
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                    <p class="card-text">Implementing advanced software systems for real-time agricultural forecasting and decision support. Our models provide quick, accurate predictions for improved farm management.</p>
-                    
-                    
-                        
-                    
-                    <a href="https://www.phenorobdaa.de//research-areas/predictions/" class="card-link learn-more mt-auto">Learn more</a>
-                </div>
-            </div>
-        </div>
-        
     </div>
     
 
     
     
-    
-    <div class="row mt-4">
-        <div class="col-12">
-            <img src="/images/barrier2.gif" alt="Barrier image" class="img-fluid w-100" style="height: 200px;">
-        </div> 
-    </div>
-    
-    
-    
-    <div class="mt-4"></div> 
+    <div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <img src="/images/barrier2.gif" 
+                     alt="Barrier image" 
+                     class="img-fluid w-100"
+                     style="height: 200px; object-fit: cover;">
+            </div>
+        </div>
+     </div>
 
 
 
