@@ -3,227 +3,185 @@
   --header-font: 'Lato', sans-serif;
   --main-color: #333;
   --highlight-color: #76b077;
-  --background-color: #FFF;
+  --background-color: #ffffff;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --secondary-text: #666666;
   --button-hover-color: #ff4f4f;
-  --section-heading-color: var(--main-color); 
+  --section-heading-color: #333333;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+  --light-gray: #f8f9fa;
+  --hover-gray: #f0f2f5;
 }
 
-/* =================================== *
- * GLOBAL STYLES
- * =================================== */
+/* Global Styles */
 body {
   font-family: var(--main-font);
   background-color: var(--background-color);
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
-/* =================================== *
- * CARD
- * =================================== */
+/* Enhanced Card Styles */
 .card {
   display: flex;
   flex-direction: column;
-  background-color: var(--background-color);
-  border-radius: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-background);
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
   overflow: hidden;
+  transition: transform var(--transition-speed) ease-in-out,
+              box-shadow var(--transition-speed) ease-in-out;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.card img {
-  max-width: 100%;
-  height: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
 }
 
-.card-content {
-  padding: 20px 20px 30px 20px; 
+.card-body {
+  padding: 2rem;
+  background-color: var(--card-background);
+  color: var(--text-color);
 }
 
-/* =================================== *
- * SINGLE CONTAINER
- * =================================== */
-.single-container {
-  padding-top: 80px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background: var(--background-color);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* =================================== *
- * TEXT CONTENT
- * =================================== */
- .text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px; 
-}
-
-.text-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.text-content ul li {
-  font-size: calc(0.7rem + 0.6vw); /* Adjust the size as needed */
-  margin-bottom: 15px;
-  padding: 10px;
-  border-left: 5px solid var(--highlight-color);
-  background-color: #f6f8fa;
-  transition: all 0.3s ease-in-out;
-}
-
-.text-content ul li:hover {
-  background-color: #e9ecef;
-  border-left: 5px solid var(--secondary-color);
-  transform: translateX(10px);
-}
-
-.text-content p {
-  color: var(--main-color);
-  font-size: calc(0.8rem + 0.6vw); /* Adjust the size as needed */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  padding-top: 20px;
-  text-align: justify;
-}
-
-/* =================================== *
- * CONTENT SECTION
- * =================================== */
-.content-section {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin-bottom: 50px;
-}
-
-.content-section h2 {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: var(--header-font);
+.card-title {
   color: var(--section-heading-color);
-  padding-top: 20px;
-  padding: 10px;
-  background-color: var(--highlight-color);
-  width: fit-content;
-  border-radius: 5px;
-}
-
-.content-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* =================================== *
- * SECTION CONTENT
- * =================================== */
-.section-content {
-  display: flex;
-  gap: 20px;
-}
-
-.text-right {
-  flex-direction: row-reverse;
-}
-
-.text-left {
-  flex-direction: row;
-}
-
-.text-top, .text-bottom {
-  flex-direction: column;
-}
-
-.text-top .video-block, .text-bottom .video-block {
-  width: 100%;
-}
-
-.text-top .text-content {
-  order: 1;
-}
-
-.text-top .img-content, .text-top .video-block {
-  order: 2;
-}
-
-.text-bottom .text-content {
-  order: 2;
-}
-
-.text-bottom .img-content, .text-bottom .video-block {
-  order: 1;
-}
-
-/* =================================== *
- * IMG CONTENT
- * =================================== */
-.img-content {
-  flex-shrink: 0;
-  margin: auto;
-}
-
-.img-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin: 20px 0; /* Adjust space above and below the image */
-}
-
-/* =================================== *
- * VIDEO CONTENT
- * =================================== */
-.video-block {
-  width: 60%; 
-  margin: 20px auto;
-}
-
-.video-content {
+  font-family: var(--header-font);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
   position: relative;
-  overflow: hidden;
-  padding-top: 33.75%; 
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 8px;
-  width: 60%;
-  margin: 0 auto;
+  padding-bottom: 0.5rem;
 }
 
-.video-content iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.card-text {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
+/* Enhanced List Styles */
+.list-group-item {
+  border-left: 4px solid transparent;
+  transition: all var(--transition-speed) ease-in-out;
+  background-color: var(--light-gray);
+  margin-bottom: 0.5rem;
+  border-radius: 8px !important;
+  padding: 1rem 1.25rem;
+  color: var(--text-color);
+}
+
+.list-group-item:hover {
+  border-left-color: var(--highlight-color);
+  transform: translateX(10px);
+  background-color: var(--hover-gray);
+}
+
+/* Table Styles */
+.table {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+.table thead th {
+  background-color: var(--highlight-color);
+  color: white;
+  border: none;
+}
+
+.table-hover tbody tr:hover {
+  background-color: var(--hover-gray);
+}
+
+/* Navigation Styles */
+.nav-link {
+  color: var(--text-color);
+  transition: all var(--transition-speed) ease;
+}
+
+.nav-link:hover {
+  color: var(--highlight-color);
+}
+
+/* Video Title */
 .video-title {
+  color: var(--text-color);
+  font-family: var(--header-font);
+  margin: 1rem 0;
   text-align: center;
-  color: rgb(109, 109, 109);
-  margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
-.sublist-link {
-  background-color: #f8f9fa;  /* Light grey, similar to Bootstrap's bg-light */
-  display: block;
-  padding: 0.5rem 1.25rem;   /* This is similar to Bootstrap's list-group-item padding */
-}
-.sublist-link:hover {
-  text-decoration: none; /* To prevent the default underline on hover */
-  background-color: #e9ecef;  /* A slightly darker shade on hover */
+/* Back to Top Button */
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--highlight-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
-/* =================================== *
- * RESPONSIVE STYLES
- * =================================== */
-@media (max-width: 768px) {
-  .section-content {
-    flex-direction: column;
+#backToTopBtn:hover {
+  transform: translateY(-5px);
+  background-color: #5a9c5b;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Optional Dark Mode - Only Applies if User's System is Set to Dark Mode */
+@media (prefers-color-scheme: dark) {
+  /* We'll keep the light theme by default and make dark mode optional */
+  /* If you want to enable dark mode, uncomment the following code */
+  /*
+  :root {
+    --background-color: #ffffff;  // Keeping light background
+    --card-background: #ffffff;   // Keeping light cards
+    --text-color: #333333;       // Keeping dark text
+    --secondary-text: #666666;    // Keeping dark secondary text
+    --light-gray: #f8f9fa;       // Keeping light gray
+    --hover-gray: #f0f2f5;       // Keeping hover gray
+  }
+  */
+}

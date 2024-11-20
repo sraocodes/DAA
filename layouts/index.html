@@ -80,6 +80,40 @@
     </div>
 
     <!----------------------------------------------------------------------------------------------------------------->
+    <!-- Research Highlights Section -->
+    <div class="mt-4"></div>
+    <h3>Research Highlights</h3>
+    <div class="row">
+        {{ range .Params.research_highlights }}
+        <div class="col-md-4 mb-4">
+            <div class="card custom-card d-flex flex-column">
+                <img src="{{ .image | relURL }}" alt="Research image" class="card-img-top custom-card-img">
+                <div class="card-body d-flex flex-column">
+                    <h2 class="card-title">{{ .heading }}</h2>
+                    {{ $text := .text }}
+                    {{ range $key, $value := . }}
+                        {{ if (strings.HasSuffix $key "_link") }}
+                            {{ if not (strings.HasPrefix $value "http") }}
+                                {{ $value = printf "%s%s" $.Site.BaseURL $value }}
+                            {{ end }}
+                            {{ $linkText := (replace $key "_link" "") | upper }}
+                            {{ $text = replace $text $linkText (print "<a href=\"" $value "\">" $linkText "</a>") }}
+                        {{ end }}
+                    {{ end }}
+                    <p class="card-text">{{ $text | safeHTML }}</p>
+                    {{ $link := .link }}
+                    {{ if not (strings.HasPrefix $link "http") }}
+                        {{ $link = printf "%s%s" $.Site.BaseURL $link }}
+                    {{ end }}
+                    <a href="{{ $link }}" class="card-link learn-more mt-auto">Learn more</a>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!----------------------------------------------------------------------------------------------------------------->
     <!-- Barrier 2 -->
     {{ range .Params.barrier_2 }}
     <div class="row mt-4">
@@ -102,7 +136,7 @@
 {{ end }}
 
 {{ define "scripts" }}
-{{ $sliderJs := resources.Get "js/slider.js" }} <!-- Define the variable as $sliderJs -->
+{{ $sliderJs := resources.Get "js/slider.js" }}
 {{ $backToTopJs := resources.Get "js/backtotop.js" }}
 <script src="{{ $sliderJs.Permalink }}"></script>
 <script src="{{ $backToTopJs.Permalink }}"></script>

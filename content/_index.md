@@ -4,16 +4,15 @@ slides_set1:
   - image: "images/1.gif"
     heading: "What is Digital Agricultural Avatar?"
     text: |
-      Digital Agricultural Avatar (DAA) serves as a digital twin of the agricultural system, integrating biogeochemical, physical, management, and economic models. The DAA aims to achieve full model-data reciprocity, empowering 
-      stakeholders with unparalleled insights.
+      The Digital Agricultural Avatar (DAA) is an advanced digital twin system that seamlessly integrates biogeochemical, physical, management, and economic models of agricultural systems. Through innovative model-data reciprocity, the DAA provides stakeholders with comprehensive insights for informed decision-making. Our platform transforms complex agricultural data into actionable intelligence.
     link: "/about/" 
   - image: "images/2.gif"
     heading: "Process-Based Models"
-    text: "The DAA will utilize process-based models to simulate the intricate interactions between biogeochemical, physical, agricultural management, and economic components of agricultural systems."
+    text: "Our Digital Agricultural Avatar leverages sophisticated process-based models to dynamically simulate the complex interactions between biogeochemical processes, physical conditions, agricultural management practices, and economic factors within agricultural systems. This integrated approach enables precise predictions and targeted interventions."
     link: "/pbm/" 
   - image: "images/3.gif"
     heading: "Multi-Scale Models"
-    text: "GRANAR and MECHA models scrutinize cell-level granular processes and mechanical phenomena. CPLANTBOX models focus on plant and organ scales, investigating water transport, growth, and development. SIMPLACE, AGROC, and TSMP models operate at crop and regional scales, unraveling crop growth, carbon dynamics, and broader agricultural interactions."
+    text: "Our comprehensive modeling suite operates across multiple scales: GRANAR and MECHA provide detailed cellular-level analysis of root processes and mechanical phenomena. CPLANTBOX delivers sophisticated plant-scale modeling of water transport and development. At broader scales, SIMPLACE, AGROC, and TSMP integrate to analyze crop growth, carbon dynamics, and ecosystem interactions, offering unprecedented insight into agricultural systems."
     link: "/tools/"  
     GRANAR_link: "/granar/"
     MECHA_link: "/mecha/"
@@ -23,7 +22,7 @@ slides_set1:
     TSMP_link: "/terrsysmp/"
   - image: "images/4.gif"
     heading: "Coupled Models"
-    text: "DAA aims to integrate multi-scale models to solve complex agricultural problems. This involves identifying suitable software, establishing connections between their components, calibrating model parameters, and fostering interdisciplinary collaboration."
+    text: "The DAA represents the future of agricultural modeling by seamlessly integrating multi-scale models to address complex agricultural challenges. Our approach encompasses advanced software integration, sophisticated component coupling, precise parameter calibration, and innovative interdisciplinary collaboration."
     link: "/couple/" 
 
 barrier_1:
@@ -66,6 +65,23 @@ slides_set2:
     heading: "TerrSysMP"
     text: "TerrSysMP is a comprehensive platform fusing the COSMO or ICON atmospheric models, CLM, and ParFlow for deep insights into interactions between the atmosphere, land surface, and subsurface."
     link: "/terrsysmp/"
+
+
+research_highlights:
+  - image: "images/research1.gif"
+    heading: "Data Integration"
+    text: "Bridging above-ground and below-ground data through advanced sensing technologies and real-time monitoring systems. Our approach combines remote sensing with rhizosphere observations for comprehensive agricultural insights."
+    link: "/research-areas/data-integration/"
+    
+  - image: "images/research2.gif"
+    heading: "Climate Adaptation"
+    text: "Developing predictive models for agricultural systems under changing climate conditions. Our research focuses on improving crop resilience and resource efficiency through digital twin technology."
+    link: "/research-areas/climate/"
+    
+  - image: "images/research3.gif"
+    heading: "Real-time Predictions"
+    text: "Implementing advanced software systems for real-time agricultural forecasting and decision support. Our models provide quick, accurate predictions for improved farm management."
+    link: "/research-areas/predictions/"
 
 barrier_2:
   - type: "image"

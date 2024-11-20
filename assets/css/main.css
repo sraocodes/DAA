@@ -1,75 +1,244 @@
+/* Base Styles */
 body {
   font-family: 'Times New Roman', serif;
   background-color: #f5f5f5;
   line-height: 1.6;
+  color: #333; /* Ensuring base text color is dark */
 }
 
-/* Existing Card Styles */
+/* Banner Image Styles */
+.banner-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.banner-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Enhanced Card Styles */
 .custom-card {
   border: 1px solid #e5e5e5;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, opacity 0.3s; /* Merged Transform Transition */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: white;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   opacity: 0;
-  transform: translateY(50px);
+  transform-origin: center;
+  backface-visibility: hidden;
+  perspective: 1000px;
+  position: relative;
 }
 
-.custom-card.in-view {
+.custom-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-card:hover::before {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .custom-card:hover {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-10px) scale(1.1); /* Merged Hover Effect */
-  transform: rotateY(10deg);
-  transition: transform 0.5s;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 123, 0.15);
 }
 
-.card-content h2 {
-  font-size: 2rem;
+/* Card Image Styles */
+.custom-card .card-img-top {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: relative;
+}
+
+.custom-card .card-img-top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.custom-card:hover .card-img-top {
+  transform: scale(1.08);
+}
+
+.custom-card:hover .card-img-top::after {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Custom card image sizes */
+.custom-card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.custom-card-img-sm {
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Card Body Layout */
+.custom-card .card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+  background-color: white; /* Ensuring white background */
+  color: #333; /* Ensuring dark text */
+}
+
+/* Card Title Styles */
+.custom-card .card-title {
+  font-size: 1.5rem;
+  color: #333; /* Dark color for visibility */
   margin-bottom: 1rem;
-  color: #333;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  font-weight: bold; /* Making titles more visible */
 }
 
-.card-content p {
-  margin-bottom: 1rem;
-  color: #555;
+.custom-card .card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007BFF;
+  transition: width 0.3s ease;
 }
 
-.card-content a.learn-more {
+.custom-card:hover .card-title {
   color: #007BFF;
+}
+
+.custom-card:hover .card-title::after {
+  width: 100%;
+}
+
+/* Card Text Styles */
+.custom-card .card-text {
+  color: #444; /* Darker color for better visibility */
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+  font-size: 1rem; /* Ensuring readable size */
+  line-height: 1.6;
+}
+
+.custom-card:hover .card-text {
+  color: #222; /* Even darker on hover */
+}
+
+/* Learn More Link Styles */
+.custom-card .learn-more {
+  color: #0056b3; /* Darker blue for better visibility */
   text-decoration: none;
   font-weight: bold;
-  border-bottom: 2px solid #007BFF;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: auto;
+  position: relative;
+  padding-right: 25px;
 }
 
-.card-content a.learn-more:hover {
-  color: #0056b3;
-  border-color: #0056b3;
+.custom-card .learn-more::after {
+  content: '→';
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
-/* New CSS for Equal Height and Centering Last Row */
-
-.row.equal-height {
-    display: flex;
-    flex-wrap: wrap;
+.custom-card:hover .learn-more::after {
+  opacity: 1;
+  right: 10px;
 }
 
-.card.custom-card {
-    display: flex;
-    flex-direction: column;
+.custom-card .learn-more:hover {
+  color: #003d7a; /* Darker blue on hover */
+  padding-right: 30px;
 }
 
-.card.custom-card .card-body {
-    flex: 1 1 auto;
+/* Section Headings */
+h3 {
+  color: #222; /* Very dark for headings */
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
 }
 
-.row.center-last-row {
-    justify-content: center;
+h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #007BFF;
+  transition: width 0.3s ease;
 }
 
-.banner-image img {
-  width: 100%; /* Stretch the image to fill the container width */
-  height: auto; /* Maintain aspect ratio */
+h3:hover::after {
+  width: 100px;
 }
+
+/* Rest of your styles remain the same, removing dark mode */
+@media (max-width: 768px) {
+  .custom-card {
+    margin-bottom: 1rem;
+  }
+  
+  .custom-card-img,
+  .custom-card-img-sm {
+    height: 180px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-card-img,
+  .custom-card-img-sm {
+    height: 160px;
+  }
+  
+  .custom-card .card-title {
+    font-size: 1.25rem;
+  }
+  
+  #backToTopBtn {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+}
+
