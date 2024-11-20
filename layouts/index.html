@@ -79,52 +79,97 @@
         {{ end }}
     </div>
 
+    <!-- Animated line break -->
+    <div class="separator my-5">
+        <style>
+            .separator {
+                position: relative;
+                height: 30px;
+                overflow: hidden;
+                background: linear-gradient(90deg, transparent 50%, #f5f5f5 50%);
+                background-size: 12px 100%;
+            }
+            .ant {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                font-size: 20px;
+                animation: antWalk 8s linear infinite;
+            }
+            @keyframes antWalk {
+                0% { left: -20px; }
+                100% { left: 100%; }
+            }
+        </style>
+        <div class="ant">🐜</div>
+     </div>
+
     <!----------------------------------------------------------------------------------------------------------------->
     <!-- Research Highlights Section -->
     <div class="mt-4"></div>
     <h3>Research Highlights</h3>
     <div class="row">
-        {{ range .Params.research_highlights }}
-        <div class="col-md-4 mb-4">
-            <div class="card custom-card d-flex flex-column">
-                <img src="{{ .image | relURL }}" alt="Research image" class="card-img-top custom-card-img">
-                <div class="card-body d-flex flex-column">
-                    <h2 class="card-title">{{ .heading }}</h2>
-                    {{ $text := .text }}
-                    {{ range $key, $value := . }}
-                        {{ if (strings.HasSuffix $key "_link") }}
-                            {{ if not (strings.HasPrefix $value "http") }}
-                                {{ $value = printf "%s%s" $.Site.BaseURL $value }}
+    <!-- First card - original format -->
+    <div class="col-md-4 mb-4">
+        <div class="card custom-card d-flex flex-column">
+            <img src="{{ (index .Params.research_highlights 0).image | relURL }}" 
+                    alt="Research image" 
+                    class="card-img-top custom-card-img">
+            <div class="card-body d-flex flex-column">
+                <h2 class="card-title">{{ (index .Params.research_highlights 0).heading }}</h2>
+                <p class="card-text">{{ (index .Params.research_highlights 0).text | safeHTML }}</p>
+                <a href="{{ (index .Params.research_highlights 0).link }}" 
+                    class="card-link learn-more mt-auto"
+                    target="_blank" rel="noopener noreferrer">
+                    Learn more
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second card - wide format with vertical image -->
+    <div class="col-md-8 mb-4">
+        <div class="card custom-card">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <img src="{{ (index .Params.research_highlights 1).image | relURL }}"
+                        alt="Research image"
+                        class="img-fluid h-100"
+                        style="object-fit: cover;">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body d-flex flex-column h-100">
+                        <h2 class="card-title">{{ (index .Params.research_highlights 1).heading }}</h2>
+                        <div class="card-text">{{ (index .Params.research_highlights 1).text | markdownify | safeHTML }}</div>
+                        <ul class="list-unstyled mt-3">
+                            {{ range (index .Params.research_highlights 1).features }}
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>{{ . }}</li>
                             {{ end }}
-                            {{ $linkText := (replace $key "_link" "") | upper }}
-                            {{ $text = replace $text $linkText (print "<a href=\"" $value "\">" $linkText "</a>") }}
-                        {{ end }}
-                    {{ end }}
-                    <p class="card-text">{{ $text | safeHTML }}</p>
-                    {{ $link := .link }}
-                    {{ if not (strings.HasPrefix $link "http") }}
-                        {{ $link = printf "%s%s" $.Site.BaseURL $link }}
-                    {{ end }}
-                    <a href="{{ $link }}" class="card-link learn-more mt-auto">Learn more</a>
+                        </ul>
+                        <a href="{{ (index .Params.research_highlights 1).link | relURL }}" 
+                        class="card-link learn-more mt-auto">
+                        Learn more
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        {{ end }}
     </div>
     <!----------------------------------------------------------------------------------------------------------------->
 
     <!----------------------------------------------------------------------------------------------------------------->
     <!-- Barrier 2 -->
-    {{ range .Params.barrier_2 }}
-    <div class="row mt-4">
-        <div class="col-12">
-            <img src="{{ .content | relURL }}" alt="Barrier image" class="img-fluid w-100" style="height: 200px;">
-        </div> 
-    </div>
-    {{ end }}
-    <!----------------------------------------------------------------------------------------------------------------->
-    <!-- Gap between Barrier 2 and Slide set 3 -->
-    <div class="mt-4"></div> 
+    <div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <img src="{{ (index .Params.barrier_2 0).content | relURL }}" 
+                     alt="Barrier image" 
+                     class="img-fluid w-100"
+                     style="height: 200px; object-fit: cover;">
+            </div>
+        </div>
+     </div>
 
 
 

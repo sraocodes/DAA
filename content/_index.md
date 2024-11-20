@@ -71,17 +71,19 @@ research_highlights:
   - image: "images/research1.gif"
     heading: "Data Integration"
     text: "Bridging above-ground and below-ground data through advanced sensing technologies and real-time monitoring systems. Our approach combines remote sensing with rhizosphere observations for comprehensive agricultural insights."
-    link: "/research-areas/data-integration/"
+    link: "https://www.nature.com/articles/s41597-023-02570-9"
     
   - image: "images/research2.gif"
-    heading: "Climate Adaptation"
-    text: "Developing predictive models for agricultural systems under changing climate conditions. Our research focuses on improving crop resilience and resource efficiency through digital twin technology."
-    link: "/research-areas/climate/"
+    heading: "Predictive Agricultural Modeling"
+    text: "Developing comprehensive models for agricultural systems under changing climate conditions. Our digital agricultural avatar combines advanced modeling techniques for future-ready agriculture."
+    features:
+      - "Multi-scale process-based models from cell to ecosystem level"
+      - "Real-time data integration for quick and accurate predictions"
+      - "Advanced software design for robust data integration"
+      - "Holistic understanding across scales, processes, and disciplines"
+    link: "/research-areas/"
     
-  - image: "images/research3.gif"
-    heading: "Real-time Predictions"
-    text: "Implementing advanced software systems for real-time agricultural forecasting and decision support. Our models provide quick, accurate predictions for improved farm management."
-    link: "/research-areas/predictions/"
+
 
 barrier_2:
   - type: "image"
