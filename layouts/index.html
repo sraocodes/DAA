@@ -79,7 +79,6 @@
         {{ end }}
     </div>
 
-    <!-- Animated line break -->
     <div class="separator my-5">
         <style>
             .separator {
@@ -92,17 +91,24 @@
             .ant {
                 position: absolute;
                 top: 50%;
-                left: 0;
+                right: 0;
                 transform: translateY(-50%);
                 font-size: 20px;
-                animation: antWalk 8s linear infinite;
+                animation: antWalk 12s linear infinite;
+            }
+            .ant span {
+                margin-right: 30px;
             }
             @keyframes antWalk {
-                0% { left: -20px; }
-                100% { left: 100%; }
+                0% { right: -20px; }
+                100% { right: 100%; }
             }
         </style>
-        <div class="ant">🐜</div>
+        <div class="ant">
+            <span>🍃🐜</span>
+            <span>🍃🐜</span>
+            <span>🍃🐜</span>
+        </div>
      </div>
 
     <!----------------------------------------------------------------------------------------------------------------->
