@@ -31,9 +31,5 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Lottie library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
-  <!-- Add the new header.js -->
-  {{$headerJs := resources.Get "js/header.js"}}
-  {{$headerJs := $headerJs | minify | fingerprint}}
-  <script src="{{$headerJs.RelPermalink}}"></script>
 
 </head>

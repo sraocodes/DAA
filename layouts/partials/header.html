@@ -74,9 +74,5 @@
            </li>
       </ul>
   </div>
-{{ $headerJs := resources.Get "js/header.js" }}
-{{ $headerJs := $headerJs | minify | fingerprint }}
-<script src="{{ $headerJs.RelPermalink }}"></script>
-</nav>
 </nav>
 
