@@ -3,16 +3,6 @@ title: "Current Work"
 date: 2024-09-20
 draft: false
 sections:
-  - name: "🐳 Dockerization of Models 🐳"
-    text: "One of our current initiatives involves containerizing key DAA models like CPlantBox and AgroC to enhance accessibility and deployment. These models are specifically built for Linux environment and it is always not straightforward for windows users. Using 🐳 Docker 🐳, we are creating flexible environments where models can run consistently across various systems. This process facilitates collaboration, reproducibility, and integration with other tools."
-    list:
-      - "**CPlantBox** with the GUI (using VNC for graphical interface) is now available in a 🐳 Docker 🐳 container. You can pull it using this command: `docker pull satraox/cplantbox-gui:tagname`."
-      - "The **Jupyter** version of CPlantBox, for running examples directly in the browser, will soon be available at: `docker pull satraox/ cplantbox-jupyter:tagname`."
-      - "**AgroC** is currently in the process of being ⚙️ containerized. This will help non-linux users to get started with this crop model."
-    textPosition: "left"
-    videos:
-    - videoID: "UN6D1_cXeT8"  
-
   - name: "⚡ ParFlow-CPlantBox Integration ⚡"
     text: "We are developing a performance-oriented coupling between ParFlow and CPlantBox to address computational bottlenecks in soil-water dynamics. Currently, the soil water flow calculations and Richards' equation solver in Plant Modeling represent the most time-consuming components of the simulation. By leveraging ParFlow's highly optimized GPU-accelerated Richards' solver, we aim to significantly reduce computation time while maintaining CPlantBox's detailed root architecture modeling. This coupling strategy allows us to offload the intensive soil-water calculations to GPU while keeping the efficient root growth algorithms of CPlantBox."
     list:
@@ -36,7 +26,17 @@ sections:
     imageWidth: "682px"
     imageHeight: "532px"
     textPosition: "top"
-  
+
+  - name: "🐳 Dockerization of Models 🐳"
+    text: "One of our current initiatives involves containerizing key DAA models like CPlantBox and AgroC to enhance accessibility and deployment. These models are specifically built for Linux environment and it is always not straightforward for windows users. Using 🐳 Docker 🐳, we are creating flexible environments where models can run consistently across various systems. This process facilitates collaboration, reproducibility, and integration with other tools."
+    list:
+      - "**CPlantBox** with the GUI (using VNC for graphical interface) is now available in a 🐳 Docker 🐳 container. You can pull it using this command: `docker pull satraox/cplantbox-gui:tagname`."
+      - "The **Jupyter** version of CPlantBox, for running examples directly in the browser, will soon be available at: `docker pull satraox/ cplantbox-jupyter:tagname`."
+      - "**AgroC** is currently in the process of being ⚙️ containerized. This will help non-linux users to get started with this crop model."
+    textPosition: "left"
+    videos:
+    - videoID: "UN6D1_cXeT8" 
+    
   - name: "🤖 Custom GPT Development 💬"
     text: "In support of project-wide accessibility, we are building custom GPT models to offer on-demand assistance for researchers and collaborators. While our current GPT models are available to ChatGPT Plus subscribers, we recognize the need for more inclusive access. In response, we are exploring open-source alternatives, such as LLaMA-based models, to make these tools freely accessible to all researchers and students. Currently, the Digital Agricultural Avatar GPT provides project-wide support, while the CPlantBox-specific GPT assists with questions around that this particular model. These tools are designed to increase engagement and streamline user interactions. We have plans to develop GPT's for other models too"
     list:
