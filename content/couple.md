@@ -7,8 +7,8 @@ sections:
   - name: "Model Coupling"
     text: "At PhenoRob Digital Agricultural Avatar (DAA) initiative We have plans to use model coupling as an essential strategy to offer a more comprehensive and accurate representation of the crop ecosystem. While we are currently working on combining plant scale functional and structural models like [CPlantbox](/Phenorob-DAA/cplabtbox/) with crop and regional scale models like [AGROC](/Phenorob-DAA/agroc/), some coupling examples are already worth mentioning such as that of models GRANAR-MECHA and SIMPLACE-CPlantbox"
     image: "images/4.gif"
-    imageWidth: "800px"
-    imageHeight: "450px"
+    imageWidth: "500px"
+    imageHeight: "230px"
     textPosition: "bottom"
 
   - name: "GRANAR-MECHA"
